@@ -1,0 +1,33 @@
+
+name: Weston Life Daily News
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 22,23 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  daily-news:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download website files
+        uses: actions/checkout@v4
+
+      - name: Check Boston time
+        id: clock
+        run: |
+          echo "hour=$(TZ=America/New_York date +%H)" >> "$GITHUB_OUTPUT"
+
+      - name: Set up Python
+        if: steps.clock.outputs.hour == '18'
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Generate verified news
+        if: steps.clock.outputs.hour == '18'
+        run: python scripts/generate_news.py
