@@ -53,7 +53,7 @@ def discover():
             seen.add(url)
             selected.append({"title": title, "description": (article.get("description") or "")[:500],
                              "url": url, "source": (article.get("source") or {}).get("name", ""),
-                             "published": published})
+                             "published": published, "image": article.get("urlToImage") or ""})
             if len(selected) >= limit:
                 break
         groups.append((section, selected))
@@ -99,7 +99,7 @@ def render(groups, summaries, date):
         for article in entries:
             counter += 1
             summary = summaries[counter]
-            cards.append(f'''<article class="item"><div class="num">{counter:02d}</div>
+            cards.append(f'''<article class="item" id="story-{counter}"><div class="num">{counter:02d}</div>
 <h3>{safe(summary['zh_title'])}</h3><p class="en">{safe(summary['en_title'])}</p>
 <p>{safe(summary['zh_summary'])}</p><p>{safe(summary['en_summary'])}</p>
 <p class="meta">{safe(article['source'])} · {safe(article['published'][:10])}</p>
@@ -123,18 +123,98 @@ main{{max-width:1140px;margin:auto;padding:24px}}h2{{font-size:30px;margin:46px 
 <p>Independent AI-assisted summaries of linked reports. Headlines, dates and source URLs are supplied by NewsAPI; summaries are not independent verification of full articles. Please read original reports for details.</p>
 {''.join(sections)}</main><footer>Weston Life · {safe(date)} · News digest</footer></body></html>'''
 
-def update_index(index_text, date, filename):
-    new_entry = (f'<a href="{filename}" style="display:block;padding:16px 0">'
-                 f'{date} · 今日新闻 / Daily News ↗</a>')
-    if f'href="{filename}"' in index_text:
-        return index_text
-    match = re.search(r'<section\b[^>]*\bid=["\']news-archive["\'][^>]*>', index_text, re.I)
-    if not match:
-        raise RuntimeError("Cannot find news-archive section in index.html; no files changed")
-    closing = index_text.find("</section>", match.end())
-    if closing < 0:
-        raise RuntimeError("Unclosed news archive section; no files changed")
-    return index_text[:closing] + new_entry + index_text[closing:]
+def safe_photo(url):
+    # Use only HTTPS images
+    if not url:
+        return ""
+    parsed = urlparse(url)
+    if parsed.scheme != "https" or not parsed.netloc:
+        return ""
+    return url
+
+
+def homepage_panel(groups, summaries, date, filename):
+    # Individual HTML cards
+    all_items = []
+    number = 0
+    for section, rows in groups:
+        for article in rows:
+            number += 1
+            summary = summaries[number]
+            photo = safe_photo(article.get("image", ""))
+            image_html = (f'<img src="{safe(photo)}" alt="新闻来源配图 / Source image" '
+                          f'loading="lazy" referrerpolicy="no-referrer" '
+                          f'onerror="this.style.display=\'none\'">') if photo else '<div class="wl-img-fallback">Weston Life</div>'
+            all_items.append(f'''<a class="wl-story" href="{filename}#story-{number}" aria-label="{safe(summary['zh_title'])}">
+<span class="wl-index">{number:02d}</span><div class="wl-photo">{image_html}</div>
+<div class="wl-copy"><strong>{safe(summary['zh_title'])}</strong><span class="wl-en">{safe(summary['en_title'])}</span>
+<span class="wl-source">{safe(article['source'])} · {safe(article['published'][:10])}</span></div></a>''')
+    local = "".join(all_items[:5])
+    world = "".join(all_items[5:])
+    display_date = safe(date)
+    return f'''<!-- WESTON-LIFE-AUTO-START -->
+<style>
+/* This replaces the fixed daily poster ONLY. Original lifestyle chapters stay intact. */
+#today-cover, #daily-news {{display:none !important}}
+#wl-auto {{font-family:Georgia,'Times New Roman',serif;background:#fffaf2;color:#283b30;padding:0 14px 28px;max-width:1140px;margin:0 auto 30px;box-sizing:border-box}}
+#wl-auto * {{box-sizing:border-box}}
+#wl-auto .wl-masthead {{position:relative;text-align:center;background:linear-gradient(135deg,#fff6e3 0%,#f4ecda 48%,#dce9dc 100%);padding:35px 10px 30px;border-bottom:4px solid #c87335;overflow:hidden}}
+#wl-auto .wl-masthead:before {{content:'🍁';position:absolute;font-size:90px;left:3%;top:5px;opacity:.55}}
+#wl-auto .wl-masthead:after {{content:'🍂';position:absolute;font-size:85px;right:3%;bottom:0;opacity:.5}}
+#wl-auto .wl-logo {{font-style:italic;font-size:clamp(42px,8vw,78px);line-height:1.1;color:#315c41}}
+#wl-auto .wl-logo em {{color:#b3582b;font-weight:400}}
+#wl-auto .wl-kicker {{letter-spacing:.28em;font:13px Arial,sans-serif;margin:6px 0;color:#385943}}
+#wl-auto .wl-date {{font:14px Arial,sans-serif;color:#725338;margin-top:9px}}
+#wl-auto .wl-tagline {{font:italic 14px Georgia,serif;color:#aa6239;margin:10px 0 0}}
+#wl-auto .wl-columns {{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:16px}}
+#wl-auto .wl-column-title {{font:bold 15px Arial,sans-serif;color:#945126;background:#faebd9;border-radius:7px;padding:11px;margin:0 0 8px}}
+#wl-auto .wl-column-title.world {{color:#315e83;background:#e8f2fa}}
+#wl-auto .wl-story {{position:relative;display:grid;grid-template-columns:104px 1fr;gap:12px;text-decoration:none;color:#233b32 !important;background:white;border-bottom:1px solid #e9e1d7;padding:10px 8px 10px 12px;min-height:105px}}
+#wl-auto .wl-story:hover {{background:#fff4e4}}
+#wl-auto .wl-photo {{height:84px;border-radius:6px;overflow:hidden;background:#ece7dc}}
+#wl-auto .wl-photo img {{width:100%;height:100%;object-fit:cover;display:block}}
+#wl-auto .wl-img-fallback {{height:100%;display:flex;justify-content:center;align-items:center;background:#d9e7dc;color:#4f7558;font-style:italic;text-align:center;font-size:13px}}
+#wl-auto .wl-index {{position:absolute;top:5px;left:2px;background:#df8a39;color:white;border-radius:100%;font:700 13px Arial,sans-serif;padding:6px;z-index:1}}
+#wl-auto .wl-copy strong {{display:block;font-size:15px;line-height:1.4}}
+#wl-auto .wl-en {{display:block;font-size:12px;line-height:1.4;color:#44644e;margin-top:5px}}
+#wl-auto .wl-source {{display:block;font:11px Arial,sans-serif;color:#7a796f;margin-top:6px}}
+#wl-auto .wl-editorial {{margin-top:19px;display:flex;gap:18px;align-items:center;background:#fff3e5;border-top:3px solid #dc985a;border-radius:8px;padding:14px}}
+#wl-auto .wl-editorial img {{width:105px;height:118px;object-fit:cover;border-radius:8px}}
+#wl-auto .wl-editorial h3 {{color:#9d4d28;font-size:23px;margin:0 0 6px}}
+#wl-auto .wl-editorial p {{font-size:14px;line-height:1.5;margin:4px 0}}
+#wl-auto .wl-cta {{text-align:center;padding:18px 4px 2px;font-size:15px}}
+#wl-auto .wl-cta a {{color:#29593d;text-decoration:underline}}
+@media(max-width:720px) {{#wl-auto .wl-columns {{grid-template-columns:1fr}} #wl-auto .wl-story {{grid-template-columns:112px 1fr}} #wl-auto .wl-editorial img {{width:80px;height:95px}}}}
+</style>
+<section id="wl-auto" aria-label="Weston Life 每日新闻">
+<header class="wl-masthead"><div class="wl-logo">Weston<em>Life</em></div><div class="wl-kicker">DAILY NEWS · 每日新闻简报</div>
+<div class="wl-date">{display_date} · Boston / Massachusetts</div><div class="wl-tagline">A More Informed, Brighter New England</div></header>
+<div class="wl-columns"><div><h2 class="wl-column-title">📍 波士顿 · 马萨诸塞州 | BOSTON & MASSACHUSETTS</h2>{local}</div>
+<div><h2 class="wl-column-title world">🌐 美国 · 全球 | U.S. & WORLD</h2>{world}</div></div>
+<div class="wl-editorial"><img src="assets/coco_portrait_original.jpeg" alt="可可豆子 · Coco Bean" onerror="this.style.display='none'">
+<div><h3>可可豆子的今日观点 ♡</h3><p><em>Coco Bean’s View Today</em></p>
+<p>观点栏目独立于自动新闻摘要；在本人撰写或确认前，不自动生成署名个人观点。</p>
+<p><em>Personal commentary is published separately from AI-assisted news summaries.</em></p></div></div>
+<div class="wl-cta"><a href="{filename}">阅读今日完整新闻 / Read the full edition →</a></div>
+</section>
+<!-- WESTON-LIFE-AUTO-END -->'''
+
+
+def update_index(index_text, date, filename, panel):
+    # Replace the prior generated panel, preserving the full original website.
+    index_text = re.sub(r'<!-- WESTON-LIFE-AUTO-START -->.*?<!-- WESTON-LIFE-AUTO-END -->',
+                        '', index_text, flags=re.S)
+    body = re.search(r'<body\b[^>]*>', index_text, re.I)
+    if not body:
+        raise RuntimeError("Cannot locate HTML body; leaving existing site unchanged")
+    index_text = index_text[:body.end()] + '\n' + panel + '\n' + index_text[body.end():]
+    # Add only new-day archive links; do not duplicate existing ones.
+    if f'href="{filename}"' not in re.sub(r'<!-- WESTON-LIFE-AUTO-START -->.*?<!-- WESTON-LIFE-AUTO-END -->', '', index_text, flags=re.S):
+        match = re.search(r'<section\b[^>]*\bid=["\']news-archive["\'][^>]*>', index_text, re.I)
+        if match:
+            entry = f'<p class="wl-archive-entry"><a href="{safe(filename)}">{safe(date)} · 每日新闻 / Daily News ↗</a></p>'
+            index_text = index_text[:match.end()] + entry + index_text[match.end():]
+    return index_text
 
 def main():
     missing = [x for x in ("OPENAI_API_KEY", "NEWS_API_KEY") if not os.environ.get(x)]
@@ -152,7 +232,8 @@ def main():
                              "title": article["title"], "description": article["description"]})
     summaries = summarize(articles)
     page = render(groups, summaries, today)
-    index_updated = update_index(index, today, filename)
+    panel = homepage_panel(groups, summaries, today, filename)
+    index_updated = update_index(index, today, filename, panel)
     (ROOT / filename).write_text(page, encoding="utf-8")
     if index_updated != index:
         index_path.write_text(index_updated, encoding="utf-8")
