@@ -1,4 +1,3 @@
-
 name: Weston Life Daily News
 
 on:
@@ -9,25 +8,43 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: weston-life-news
+  cancel-in-progress: false
+
 jobs:
   daily-news:
     runs-on: ubuntu-latest
-
     steps:
       - name: Download website files
         uses: actions/checkout@v4
 
       - name: Check Boston time
         id: clock
+        shell: bash
         run: |
           echo "hour=$(TZ=America/New_York date +%H)" >> "$GITHUB_OUTPUT"
 
       - name: Set up Python
-        if: steps.clock.outputs.hour == '18'
+        if: github.event_name == 'workflow_dispatch' || steps.clock.outputs.hour == '18'
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
 
       - name: Generate verified news
-        if: steps.clock.outputs.hour == '18'
+        if: github.event_name == 'workflow_dispatch' || steps.clock.outputs.hour == '18'
         run: python scripts/generate_news.py
+
+      - name: Save updated website
+        if: github.event_name == 'workflow_dispatch' || steps.clock.outputs.hour == '18'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "Update Weston Life daily news"
+            git push
+          else
+            echo "No website changes to save"
+          fi
+  
