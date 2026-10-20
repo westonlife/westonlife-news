@@ -2,6 +2,83 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f6f2e8"><meta name="description" content="Weston Life — people, nature, home and seasonal traditions in Weston, Massachusetts."><title>Weston Life — A Life Well Lived</title><style>
 :root{--ink:#283126;--olive:#50614a;--paper:#f8f5ee;--cream:#eeeadf;--line:#ddd5c5;--wine:#713c31}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Georgia,'Times New Roman',serif}a{color:inherit;text-decoration:none}img{display:block;width:100%;height:100%;object-fit:cover}.top{position:sticky;top:0;z-index:9;background:rgba(250,247,239,.96);backdrop-filter:blur(15px);border-bottom:1px solid var(--line);display:flex;gap:20px;align-items:center;justify-content:space-between;padding:13px max(20px,calc((100vw - 1380px)/2));font-family:Arial,sans-serif}.wordmark{font-family:Georgia,serif;font-size:clamp(22px,3vw,34px);letter-spacing:.12em}.top nav{display:flex;gap:20px;flex-wrap:wrap}.top nav a{font-size:11px;letter-spacing:.14em;text-transform:uppercase}.top nav a:hover,.card a:hover{color:#986c3b}.hero{position:relative;overflow:hidden;background:#d9b16a}.hero img{width:100%;height:auto;min-height:360px;max-height:700px;object-fit:cover}.hero-note{display:none}.intro{text-align:center;padding:86px 24px 82px;max-width:900px;margin:auto}.eyebrow{font:12px Arial,sans-serif;letter-spacing:.32em;text-transform:uppercase;color:#6e7a5c}.intro h1,.chapter h2,.section-heading h2{font-weight:400;font-size:clamp(42px,6vw,75px);line-height:1.08;margin:25px 0}.intro p{font-size:clamp(18px,2.3vw,25px);line-height:1.65;color:#4a4d43}.cta{display:inline-block;background:#52664c;color:white;padding:15px 28px;margin-top:22px;font:12px Arial,sans-serif;letter-spacing:.15em;text-transform:uppercase}.cta:hover{background:#344a32;color:white}.feature-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:12px;max-width:1440px;margin:auto;padding:0 20px 74px}.feature{position:relative;min-height:380px;overflow:hidden}.feature img{height:100%;position:absolute;inset:0;transition:transform .5s}.feature:hover img,.card:hover img{transform:scale(1.03)}.feature .overlay{position:absolute;inset:auto 0 0;padding:30px;background:linear-gradient(transparent,rgba(23,28,18,.83));color:white}.feature h3{font-size:28px;font-weight:400;margin:6px 0}.feature p{font-size:16px;line-height:1.5;margin:0}.section-heading{text-align:center;padding:65px 20px 26px}.section-heading h2{font-size:clamp(37px,5vw,58px);margin:18px 0}.section-heading p{font-size:19px;line-height:1.7;max-width:720px;margin:0 auto}.chapter{padding:75px max(22px,calc((100vw - 1350px)/2));border-top:1px solid var(--line)}.chapter-head{display:flex;gap:38px;align-items:end;justify-content:space-between;margin-bottom:35px}.chapter-head h2{margin:14px 0}.chapter-head p{font-size:19px;line-height:1.6;max-width:500px}.chapter-num{font:12px Arial,sans-serif;letter-spacing:.25em;color:#788169;text-transform:uppercase}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:19px}.card{background:#fffdf8;border:1px solid var(--line);overflow:hidden}.card .pic{height:265px;overflow:hidden}.card .content{padding:24px}.card h3{font-size:27px;font-weight:400;margin:0 0 10px}.card p{font-size:16px;line-height:1.6;color:#535b4f;margin:0 0 15px}.card a{font:11px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase}.season{background:#eee6d5}.season .cards{grid-template-columns:repeat(3,1fr)}.season .card .pic{height:330px}.split{display:grid;grid-template-columns:1fr 1fr;min-height:430px;margin:0 auto;max-width:1440px;background:#ede8da}.split>div{min-height:430px}.split .writing{display:flex;justify-content:center;flex-direction:column;padding:clamp(30px,5vw,80px)}.split h2{font-size:clamp(38px,5vw,64px);font-weight:400;margin:10px 0}.split p{font-size:20px;line-height:1.7}.winter{background:#28372e;color:#faf4e7}.winter p,.winter .chapter-num{color:#e5dfce}.winter .card{background:#f9f4eb;color:#283126}.winter .card p{color:#535b4f}.quote{text-align:center;padding:85px 25px;background:#f2ede3}.quote p{font-size:clamp(28px,4vw,49px);font-style:italic;line-height:1.25;max-width:900px;margin:auto}.contact{text-align:center;background:#e6e7dc;padding:80px 20px}.contact h2{font-size:clamp(39px,5vw,63px);font-weight:400;margin:20px}.contact p{font-size:20px}.contact a{border-bottom:1px solid;padding-bottom:3px}footer{text-align:center;padding:30px;font:12px Arial,sans-serif;color:#6b7066;letter-spacing:.08em}.mobile-title{display:none}@media(max-width:800px){.top{display:block;text-align:center;padding:14px}.top nav{justify-content:center;gap:12px;margin-top:12px}.top nav a{font-size:10px}.hero img{min-height:0}.intro{padding:60px 22px}.feature-grid,.cards,.season .cards{grid-template-columns:1fr}.feature-grid{padding:0 15px 40px}.feature{min-height:330px}.chapter{padding:52px 18px}.chapter-head{display:block}.card .pic,.season .card .pic{height:290px}.split{grid-template-columns:1fr}.split>div{min-height:330px}.split .writing{order:2}.mobile-title{display:block;text-align:center;padding:15px;font:12px Arial,sans-serif;letter-spacing:.12em}}
 </style></head><body>
+<!-- WESTON-LIFE-AUTO-START -->
+<style>
+/* This replaces the fixed daily poster ONLY. Original lifestyle chapters stay intact. */
+#today-cover, #daily-news {display:none !important}
+#wl-auto {font-family:Georgia,'Times New Roman',serif;background:#fffaf2;color:#283b30;padding:0 14px 28px;max-width:1140px;margin:0 auto 30px;box-sizing:border-box}
+#wl-auto * {box-sizing:border-box}
+#wl-auto .wl-masthead {position:relative;text-align:center;background:linear-gradient(135deg,#fff6e3 0%,#f4ecda 48%,#dce9dc 100%);padding:35px 10px 30px;border-bottom:4px solid #c87335;overflow:hidden}
+#wl-auto .wl-masthead:before {content:'🍁';position:absolute;font-size:90px;left:3%;top:5px;opacity:.55}
+#wl-auto .wl-masthead:after {content:'🍂';position:absolute;font-size:85px;right:3%;bottom:0;opacity:.5}
+#wl-auto .wl-logo {font-style:italic;font-size:clamp(42px,8vw,78px);line-height:1.1;color:#315c41}
+#wl-auto .wl-logo em {color:#b3582b;font-weight:400}
+#wl-auto .wl-kicker {letter-spacing:.28em;font:13px Arial,sans-serif;margin:6px 0;color:#385943}
+#wl-auto .wl-date {font:14px Arial,sans-serif;color:#725338;margin-top:9px}
+#wl-auto .wl-tagline {font:italic 14px Georgia,serif;color:#aa6239;margin:10px 0 0}
+#wl-auto .wl-columns {display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:16px}
+#wl-auto .wl-column-title {font:bold 15px Arial,sans-serif;color:#945126;background:#faebd9;border-radius:7px;padding:11px;margin:0 0 8px}
+#wl-auto .wl-column-title.world {color:#315e83;background:#e8f2fa}
+#wl-auto .wl-story {position:relative;display:grid;grid-template-columns:104px 1fr;gap:12px;text-decoration:none;color:#233b32 !important;background:white;border-bottom:1px solid #e9e1d7;padding:10px 8px 10px 12px;min-height:105px}
+#wl-auto .wl-story:hover {background:#fff4e4}
+#wl-auto .wl-photo {height:84px;border-radius:6px;overflow:hidden;background:#ece7dc}
+#wl-auto .wl-photo img {width:100%;height:100%;object-fit:cover;display:block}
+#wl-auto .wl-img-fallback {height:100%;display:flex;justify-content:center;align-items:center;background:#d9e7dc;color:#4f7558;font-style:italic;text-align:center;font-size:13px}
+#wl-auto .wl-index {position:absolute;top:5px;left:2px;background:#df8a39;color:white;border-radius:100%;font:700 13px Arial,sans-serif;padding:6px;z-index:1}
+#wl-auto .wl-copy strong {display:block;font-size:15px;line-height:1.4}
+#wl-auto .wl-en {display:block;font-size:12px;line-height:1.4;color:#44644e;margin-top:5px}
+#wl-auto .wl-source {display:block;font:11px Arial,sans-serif;color:#7a796f;margin-top:6px}
+#wl-auto .wl-editorial {margin-top:19px;display:flex;gap:18px;align-items:center;background:#fff3e5;border-top:3px solid #dc985a;border-radius:8px;padding:14px}
+#wl-auto .wl-editorial img {width:105px;height:118px;object-fit:cover;border-radius:8px}
+#wl-auto .wl-editorial h3 {color:#9d4d28;font-size:23px;margin:0 0 6px}
+#wl-auto .wl-editorial p {font-size:14px;line-height:1.5;margin:4px 0}
+#wl-auto .wl-cta {text-align:center;padding:18px 4px 2px;font-size:15px}
+#wl-auto .wl-cta a {color:#29593d;text-decoration:underline}
+@media(max-width:720px) {#wl-auto .wl-columns {grid-template-columns:1fr} #wl-auto .wl-story {grid-template-columns:112px 1fr} #wl-auto .wl-editorial img {width:80px;height:95px}}
+</style>
+<section id="wl-auto" aria-label="Weston Life 每日新闻">
+<header class="wl-masthead"><div class="wl-logo">Weston<em>Life</em></div><div class="wl-kicker">DAILY NEWS · 每日新闻简报</div>
+<div class="wl-date">2026-10-20 · Boston / Massachusetts</div><div class="wl-tagline">A More Informed, Brighter New England</div></header>
+<div class="wl-columns"><div><h2 class="wl-column-title">📍 波士顿 · 马萨诸塞州 | BOSTON & MASSACHUSETTS</h2><a class="wl-story" href="news-2026-10-20.html#story-1" aria-label="首席收入官以“更多的更多”人工智能议程迎接2027年">
+<span class="wl-index">01</span><div class="wl-photo"><img src="https://mmx.prnewswire.com/media/MS1158128/Boston-Consulting-Group-Logo-2026.jpg?id=OA3024838&amp;p=facebook" alt="新闻来源配图 / Source image" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'"></div>
+<div class="wl-copy"><strong>首席收入官以“更多的更多”人工智能议程迎接2027年</strong><span class="wl-en">Chief Revenue Officers Entering 2027 with a &quot;Do More with More&quot; AI Agenda</span>
+<span class="wl-source">PRNewswire · 2026-10-19</span></div></a><a class="wl-story" href="news-2026-10-20.html#story-2" aria-label="共和党如何从各州夺取投票权控制权">
+<span class="wl-index">02</span><div class="wl-photo"><img src="https://lrc-cdn.s3.amazonaws.com/assets/2021/02/LRC-share.jpg" alt="新闻来源配图 / Source image" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'"></div>
+<div class="wl-copy"><strong>共和党如何从各州夺取投票权控制权</strong><span class="wl-en">How the Republicans Seized Control of Voting Rights from the States</span>
+<span class="wl-source">Lewrockwell.com · 2026-10-19</span></div></a><a class="wl-story" href="news-2026-10-20.html#story-3" aria-label="幻想足球第6周回顾 - 我们继续获胜">
+<span class="wl-index">03</span><div class="wl-photo"><img src="https://s.yimg.com/lo/mysterio/api/c66767e41b5ee4cd22fd616aa34a2e55e9484cea39eed62b439b55b53e035305/lightyear_networkapi/resizefill_w1200_h675%3Bquality_80%3Bformat_webp/https%3A%2F%2Fd29szjachogqwa.cloudfront.net%2Fimages%2Fuser-uploaded%2Fweek-1-recap-vod_6865.png" alt="新闻来源配图 / Source image" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'"></div>
+<div class="wl-copy"><strong>幻想足球第6周回顾 - 我们继续获胜</strong><span class="wl-en">Fantasy football week 6 recap - we keep winning</span>
+<span class="wl-source">Yahoo Entertainment · 2026-10-19</span></div></a><a class="wl-story" href="news-2026-10-20.html#story-4" aria-label="霍普的美国：论题、反论题与综合">
+<span class="wl-index">04</span><div class="wl-photo"><img src="https://www.repstatic.it/content/localirep/img/rep-europe/2026/10/17/132135650-aad2b40c-7b04-434d-ac7e-7fbb9ec5d1fe.jpg" alt="新闻来源配图 / Source image" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'"></div>
+<div class="wl-copy"><strong>霍普的美国：论题、反论题与综合</strong><span class="wl-en">Hopper’s America: thesis, antithesis and synthesis</span>
+<span class="wl-source">La Repubblica · 2026-10-19</span></div></a><a class="wl-story" href="news-2026-10-20.html#story-5" aria-label="麦克尔莫尔的英国巡演为10月7日的人质事件筹款">
+<span class="wl-index">05</span><div class="wl-photo"><img src="https://2.a7.org/files/pictures/000/1154296.jpg" alt="新闻来源配图 / Source image" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'"></div>
+<div class="wl-copy"><strong>麦克尔莫尔的英国巡演为10月7日的人质事件筹款</strong><span class="wl-en">Macklemore&#x27;s UK tour to fund justifier of October 7 hostage-taking</span>
+<span class="wl-source">Israelnationalnews.com · 2026-10-19</span></div></a></div>
+<div><h2 class="wl-column-title world">🌐 美国 · 全球 | U.S. & WORLD</h2><a class="wl-story" href="news-2026-10-20.html#story-6" aria-label="印度债券因油价高企和鹰派央行而下滑">
+<span class="wl-index">06</span><div class="wl-photo"><img src="https://bl-i.thgim.com/public/incoming/mmvqyp/article71591052.ece/alternates/LANDSCAPE_1200/iStock-1332829323.jpg" alt="新闻来源配图 / Source image" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'"></div>
+<div class="wl-copy"><strong>印度债券因油价高企和鹰派央行而下滑</strong><span class="wl-en">India bonds to decline on elevated oil, hawkish RBI</span>
+<span class="wl-source">BusinessLine · 2026-10-19</span></div></a><a class="wl-story" href="news-2026-10-20.html#story-7" aria-label="我测试了40年的杀毒软件。谁应该为此付费（谁不应该）">
+<span class="wl-index">07</span><div class="wl-photo"><img src="https://sm.pcmag.com/t/pcmag_me/explainers/i/ive-tested/ive-tested-antivirus-for-40-years-heres-who-should-actually_w3x4.1200.jpg" alt="新闻来源配图 / Source image" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'"></div>
+<div class="wl-copy"><strong>我测试了40年的杀毒软件。谁应该为此付费（谁不应该）</strong><span class="wl-en">I&#x27;ve Tested Antivirus for 40 Years. Here&#x27;s Who Should Actually Pay for It (And Who Shouldn&#x27;t)</span>
+<span class="wl-source">PCMag.com · 2026-10-19</span></div></a><a class="wl-story" href="news-2026-10-20.html#story-8" aria-label="新的真人街头霸王电影在美国首映，全球收入5100万美元">
+<span class="wl-index">08</span><div class="wl-photo"><img src="https://www.animenewsnetwork.com/thumbnails/crop600x315g79/cms/news.9/236466/street-fighter-poster.jpg" alt="新闻来源配图 / Source image" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'"></div>
+<div class="wl-copy"><strong>新的真人街头霸王电影在美国首映，全球收入5100万美元</strong><span class="wl-en">New Live-Action Street Fighter Film Opens at #1 in the U.S., Earns US$51 Million Globally</span>
+<span class="wl-source">Anime News Network · 2026-10-19</span></div></a><a class="wl-story" href="news-2026-10-20.html#story-9" aria-label="教堂服务中最重要的部分是什么？">
+<span class="wl-index">09</span><div class="wl-photo"><img src="https://www.challies.com/media/2026/10/hannah-busing-G-_L3Eqkqmc-unsplash.jpg" alt="新闻来源配图 / Source image" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'"></div>
+<div class="wl-copy"><strong>教堂服务中最重要的部分是什么？</strong><span class="wl-en">What Is the Most Important Part of a Church Service?</span>
+<span class="wl-source">Challies.com · 2026-10-19</span></div></a><a class="wl-story" href="news-2026-10-20.html#story-10" aria-label="亚马逊的新“蜜蜂”可穿戴设备监听您的对话，建议行动">
+<span class="wl-index">10</span><div class="wl-photo"><img src="https://sm.pcmag.com/t/pcmag_me/news/a/amazons-ne/amazons-new-bee-wearables-listen-to-your-conversations-sugge_vdq5.1200.jpg" alt="新闻来源配图 / Source image" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'"></div>
+<div class="wl-copy"><strong>亚马逊的新“蜜蜂”可穿戴设备监听您的对话，建议行动</strong><span class="wl-en">Amazon&#x27;s New &#x27;Bee&#x27; Wearables Listen to Your Conversations, Suggest Actions</span>
+<span class="wl-source">PCMag.com · 2026-10-19</span></div></a></div></div>
+<div class="wl-editorial"><img src="assets/coco_portrait_original.jpeg" alt="可可豆子 · Coco Bean" onerror="this.style.display='none'">
+<div><h3>可可豆子的今日观点 ♡</h3><p><em>Coco Bean’s View Today</em></p>
+<p>观点栏目独立于自动新闻摘要；在本人撰写或确认前，不自动生成署名个人观点。</p>
+<p><em>Personal commentary is published separately from AI-assisted news summaries.</em></p></div></div>
+<div class="wl-cta"><a href="news-2026-10-20.html">阅读今日完整新闻 / Read the full edition →</a></div>
+</section>
+<!-- WESTON-LIFE-AUTO-END -->
+
 <section id="today-cover" style="background:#fff8ed;text-align:center;padding:0 0 18px"><a href="news-2026-10-19.html" aria-label="阅读2026年10月19日完整新闻 Read today’s news"><img src="assets/daily_cover_2026_10_19.jpeg" alt="Weston Life 2026年10月19日双语新闻封面与可可豆子的今日观点" style="display:block;width:100%;height:auto;max-width:1080px;margin:0 auto;object-fit:contain"></a><div style="font:14px Arial,sans-serif;padding:12px 18px;color:#73452d"><a href="news-2026-10-19.html" style="text-decoration:underline">阅读新闻全文 · Read the full edition →</a> &nbsp; · &nbsp; <a href="#heritage-home" style="text-decoration:underline">浏览原来的网站 · Explore Weston Life ↓</a></div></section><div id="heritage-home"></div><header class="top"><a class="wordmark" href="#today-cover">WESTON LIFE</a><nav aria-label="Site navigation"><a href="#today-cover">Today’s Cover</a><a href="#daily-news">News Archive</a><a href="#chapter-one">Nature</a><a href="#chapter-two">At Home</a><a href="#autumn">Autumn</a><a href="#thanksgiving">Thanksgiving</a><a href="#christmas">Christmas</a><a href="#contact">Contact</a></nav></header>
 <main id="top"><section class="hero"><img src="assets/hero.jpg" alt="Weston Life autumn magazine-style cover showing two community gardeners in a golden New England landscape"></section><div class="mobile-title">NATURE · CULTURE · FAMILY · A BRIGHTER TOMORROW</div>
 <section class="intro"><div class="eyebrow">Nature · Culture · Family · A Brighter Tomorrow</div><h1>More Than a Place.<br>A Way of Life.</h1><p>Weston Life celebrates the people, places and pursuits that make life richer — from quiet mornings in the wetlands to beautiful homes, generous neighbors, and the simple joys that bring us together.</p><a class="cta" href="#chapter-one">Explore Weston Life →</a></section>
@@ -19,7 +96,7 @@
 
 
 
-<section id="news-archive" style="max-width:1000px;margin:60px auto;padding:45px 20px;text-align:center;background:#f8f5ee;border:1px solid #ded6c5;border-radius:12px;">
+<section id="news-archive" style="max-width:1000px;margin:60px auto;padding:45px 20px;text-align:center;background:#f8f5ee;border:1px solid #ded6c5;border-radius:12px;"><p class="wl-archive-entry"><a href="news-2026-10-20.html">2026-10-20 · 每日新闻 / Daily News ↗</a></p>
   <h2 style="color:#283126;font-size:32px;">
     Weston Life · 新闻档案
   </h2>
