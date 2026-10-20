@@ -13,10 +13,20 @@ from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parent.parent
 BOSTON = ZoneInfo("America/New_York")
+
 TOPICS = [
-    ("Boston / Massachusetts", 'Boston OR Massachusetts OR "New England"', 5),
-    ("United States / World", 'US economy OR technology OR oil OR Ukraine OR Middle East', 5),
+    (
+        "Weston / Boston / Massachusetts",
+        '("Weston" AND "Massachusetts") OR "Weston MA" OR "Boston Massachusetts" OR "Massachusetts" OR "Middlesex County Massachusetts"',
+        5
+    ),
+    (
+        "World News / Global",
+        '("world leaders" OR "international relations" OR "global economy" OR "geopolitics" OR "artificial intelligence" OR "oil prices" OR "financial markets")',
+        5
+    ),
 ]
+
 
 def get_json(url, headers=None, payload=None):
     data = None if payload is None else json.dumps(payload).encode("utf-8")
