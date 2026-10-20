@@ -77,7 +77,7 @@ def discover():
  
             if section == "Weston / Boston / Massachusetts" and not is_local_news(article):
                 continue
-           url = article.get("url", "")
+            url = article.get("url", "")
             title = article.get("title", "")
             parsed = urlparse(url)
             if (not title or title == "[Removed]" or not parsed.scheme == "https" or not parsed.netloc
