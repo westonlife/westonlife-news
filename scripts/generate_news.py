@@ -34,6 +34,33 @@ def get_json(url, headers=None, payload=None):
     with urlopen(request, timeout=35) as response:
         return json.loads(response.read().decode("utf-8"))
 
+LOCAL_TERMS = (
+    "massachusetts",
+    "boston",
+    "weston, ma",
+    "weston, massachusetts",
+    "cambridge, ma",
+    "newton, ma",
+    "wellesley, ma",
+    "lexington, ma",
+    "needham, ma",
+    "middlesex county",
+    "mass. governor",
+    "mass. legislature",
+    "mass. state",
+    "boston globe",
+    "wbur",
+    "wgbh",
+)
+
+def is_local_news(article):
+    text = " ".join([
+        article.get("title") or "",
+        article.get("description") or "",
+        article.get("content") or "",
+    ]).lower()
+    return any(term in text for term in LOCAL_TERMS)
+
 def discover():
     key = os.environ["NEWS_API_KEY"]
     cutoff = (datetime.now(timezone.utc) - timedelta(days=3)).isoformat(timespec="seconds").replace("+00:00", "Z")
@@ -47,7 +74,10 @@ def discover():
             raise RuntimeError("NewsAPI request failed: " + str(result.get("message", "unknown")))
         selected = []
         for article in result.get("articles", []):
-            url = article.get("url", "")
+ 
+            if section == "Weston / Boston / Massachusetts" and not is_local_news(article):
+                continue
+           url = article.get("url", "")
             title = article.get("title", "")
             parsed = urlparse(url)
             if (not title or title == "[Removed]" or not parsed.scheme == "https" or not parsed.netloc
