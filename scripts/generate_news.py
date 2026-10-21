@@ -153,7 +153,12 @@ def render(groups, summaries, date):
 <h3>{safe(summary['zh_title'])}</h3><p class="en">{safe(summary['en_title'])}</p>
 <p>{safe(summary['zh_summary'])}</p><p>{safe(summary['en_summary'])}</p>
 <p class="meta">{safe(article['source'])} · {safe(article['published'][:10])}</p>
-<a href="{safe(article['url'])}" target="_blank" rel="noopener noreferrer">原始报道 / Original source ↗</a></article>''')
+<p><a href="index.html#wl-auto">← 返回 Weston Life 新闻首页 / Back to Weston Life</a></p>
+<details>
+<summary>查看原始媒体报道（可选）/ Original Source</summary>
+<p><a href="{safe(article['url'])}" target="_blank" rel="noopener noreferrer">打开媒体原文 ↗</a></p>
+</details>
+</article>''')
         sections.append(f'<h2>{safe(section)}</h2><div class="news">{"".join(cards)}</div>')
     return f'''<!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
