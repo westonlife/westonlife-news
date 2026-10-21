@@ -279,6 +279,93 @@ def main():
         index_path.write_text(index_updated, encoding="utf-8")
     print(f"Published {len(articles)} sourced stories to {filename}; archive updated")
 
+# Weston Life bilingual language switch
+_old_homepage = homepage_panel
+_old_render = render
+
+LANG_CSS = """
+<style>
+.wl-langbar{display:flex;justify-content:center;gap:12px;
+padding:16px 8px;position:relative;z-index:5}
+.wl-langbar button{font:bold 20px Arial,sans-serif;
+padding:12px 22px;min-width:120px;
+border:2px solid #315c41;border-radius:10px;
+background:white;color:#315c41;cursor:pointer}
+.wl-langbar button.active{background:#315c41;color:white}
+html[data-wl-lang="zh"] #wl-auto .wl-en{display:none}
+html[data-wl-lang="en"] #wl-auto .wl-copy strong{display:none}
+html[data-wl-lang="zh"] .item p.en,
+html[data-wl-lang="zh"] .item p:nth-of-type(3){display:none}
+html[data-wl-lang="en"] .item h3,
+html[data-wl-lang="en"] .item p:nth-of-type(2){display:none}
+</style>
+"""
+
+LANG_BAR = """
+<nav class="wl-langbar" aria-label="Choose language">
+<button type="button" data-wl-choice="zh">中文</button>
+<button type="button" data-wl-choice="en">English</button>
+</nav>
+"""
+
+LANG_SCRIPT = """
+<script>
+(function(){
+var lang="zh";
+try{
+lang=localStorage.getItem("westonlife-lang")==="en"?"en":"zh";
+}catch(e){}
+function choose(value){
+lang=value==="en"?"en":"zh";
+document.documentElement.dataset.wlLang=lang;
+document.documentElement.lang=lang==="en"?"en":"zh-CN";
+try{localStorage.setItem("westonlife-lang",lang)}catch(e){}
+document.querySelectorAll("[data-wl-choice]").forEach(function(b){
+b.classList.toggle("active",b.dataset.wlChoice===lang);
+b.setAttribute("aria-pressed",String(b.dataset.wlChoice===lang));
+});
+var names={
+".wl-kicker":["每日新闻简报","DAILY NEWS"],
+".wl-column-title:not(.world)":["📍 波士顿 · 马萨诸塞州","📍 BOSTON & MASSACHUSETTS"],
+".wl-column-title.world":["🌐 美国 · 全球","🌐 U.S. & WORLD"],
+".wl-editorial h3":["可可豆子的今日观点 ♡","Coco Bean's View Today"],
+".wl-cta a":["阅读今日完整新闻 →","Read Full Edition →"]
+};
+Object.keys(names).forEach(function(selector){
+var node=document.querySelector("#wl-auto "+selector);
+if(node)node.textContent=names[selector][lang==="en"?1:0];
+});
+document.querySelectorAll(".item").forEach(function(card){
+var link=card.querySelector("a");
+if(link)link.textContent=lang==="en"?"Read Original Source ↗":"阅读原始报道 ↗";
+});
+}
+document.addEventListener("click",function(e){
+var b=e.target.closest("[data-wl-choice]");
+if(b)choose(b.dataset.wlChoice);
+});
+choose(lang);
+})();
+</script>
+"""
+
+def homepage_panel(groups, summaries, date, filename):
+    panel = _old_homepage(groups, summaries, date, filename)
+    panel = panel.replace(
+        '<header class="wl-masthead">',
+        '<header class="wl-masthead">' + LANG_BAR, 1
+    )
+    return LANG_CSS + panel + LANG_SCRIPT
+
+def render(groups, summaries, date):
+    page = _old_render(groups, summaries, date)
+    page = page.replace(
+        "<body><header>",
+        "<body><header>" + LANG_BAR, 1
+    )
+    page = page.replace("</head>", LANG_CSS + "</head>", 1)
+    page = page.replace("</body>", LANG_SCRIPT + "</body>", 1)
+    return page
 if __name__ == "__main__":
     try:
         main()
