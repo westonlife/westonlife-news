@@ -2,6 +2,22 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f6f2e8"><meta name="description" content="Weston Life — people, nature, home and seasonal traditions in Weston, Massachusetts."><title>Weston Life — A Life Well Lived</title><style>
 :root{--ink:#283126;--olive:#50614a;--paper:#f8f5ee;--cream:#eeeadf;--line:#ddd5c5;--wine:#713c31}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Georgia,'Times New Roman',serif}a{color:inherit;text-decoration:none}img{display:block;width:100%;height:100%;object-fit:cover}.top{position:sticky;top:0;z-index:9;background:rgba(250,247,239,.96);backdrop-filter:blur(15px);border-bottom:1px solid var(--line);display:flex;gap:20px;align-items:center;justify-content:space-between;padding:13px max(20px,calc((100vw - 1380px)/2));font-family:Arial,sans-serif}.wordmark{font-family:Georgia,serif;font-size:clamp(22px,3vw,34px);letter-spacing:.12em}.top nav{display:flex;gap:20px;flex-wrap:wrap}.top nav a{font-size:11px;letter-spacing:.14em;text-transform:uppercase}.top nav a:hover,.card a:hover{color:#986c3b}.hero{position:relative;overflow:hidden;background:#d9b16a}.hero img{width:100%;height:auto;min-height:360px;max-height:700px;object-fit:cover}.hero-note{display:none}.intro{text-align:center;padding:86px 24px 82px;max-width:900px;margin:auto}.eyebrow{font:12px Arial,sans-serif;letter-spacing:.32em;text-transform:uppercase;color:#6e7a5c}.intro h1,.chapter h2,.section-heading h2{font-weight:400;font-size:clamp(42px,6vw,75px);line-height:1.08;margin:25px 0}.intro p{font-size:clamp(18px,2.3vw,25px);line-height:1.65;color:#4a4d43}.cta{display:inline-block;background:#52664c;color:white;padding:15px 28px;margin-top:22px;font:12px Arial,sans-serif;letter-spacing:.15em;text-transform:uppercase}.cta:hover{background:#344a32;color:white}.feature-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:12px;max-width:1440px;margin:auto;padding:0 20px 74px}.feature{position:relative;min-height:380px;overflow:hidden}.feature img{height:100%;position:absolute;inset:0;transition:transform .5s}.feature:hover img,.card:hover img{transform:scale(1.03)}.feature .overlay{position:absolute;inset:auto 0 0;padding:30px;background:linear-gradient(transparent,rgba(23,28,18,.83));color:white}.feature h3{font-size:28px;font-weight:400;margin:6px 0}.feature p{font-size:16px;line-height:1.5;margin:0}.section-heading{text-align:center;padding:65px 20px 26px}.section-heading h2{font-size:clamp(37px,5vw,58px);margin:18px 0}.section-heading p{font-size:19px;line-height:1.7;max-width:720px;margin:0 auto}.chapter{padding:75px max(22px,calc((100vw - 1350px)/2));border-top:1px solid var(--line)}.chapter-head{display:flex;gap:38px;align-items:end;justify-content:space-between;margin-bottom:35px}.chapter-head h2{margin:14px 0}.chapter-head p{font-size:19px;line-height:1.6;max-width:500px}.chapter-num{font:12px Arial,sans-serif;letter-spacing:.25em;color:#788169;text-transform:uppercase}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:19px}.card{background:#fffdf8;border:1px solid var(--line);overflow:hidden}.card .pic{height:265px;overflow:hidden}.card .content{padding:24px}.card h3{font-size:27px;font-weight:400;margin:0 0 10px}.card p{font-size:16px;line-height:1.6;color:#535b4f;margin:0 0 15px}.card a{font:11px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase}.season{background:#eee6d5}.season .cards{grid-template-columns:repeat(3,1fr)}.season .card .pic{height:330px}.split{display:grid;grid-template-columns:1fr 1fr;min-height:430px;margin:0 auto;max-width:1440px;background:#ede8da}.split>div{min-height:430px}.split .writing{display:flex;justify-content:center;flex-direction:column;padding:clamp(30px,5vw,80px)}.split h2{font-size:clamp(38px,5vw,64px);font-weight:400;margin:10px 0}.split p{font-size:20px;line-height:1.7}.winter{background:#28372e;color:#faf4e7}.winter p,.winter .chapter-num{color:#e5dfce}.winter .card{background:#f9f4eb;color:#283126}.winter .card p{color:#535b4f}.quote{text-align:center;padding:85px 25px;background:#f2ede3}.quote p{font-size:clamp(28px,4vw,49px);font-style:italic;line-height:1.25;max-width:900px;margin:auto}.contact{text-align:center;background:#e6e7dc;padding:80px 20px}.contact h2{font-size:clamp(39px,5vw,63px);font-weight:400;margin:20px}.contact p{font-size:20px}.contact a{border-bottom:1px solid;padding-bottom:3px}footer{text-align:center;padding:30px;font:12px Arial,sans-serif;color:#6b7066;letter-spacing:.08em}.mobile-title{display:none}@media(max-width:800px){.top{display:block;text-align:center;padding:14px}.top nav{justify-content:center;gap:12px;margin-top:12px}.top nav a{font-size:10px}.hero img{min-height:0}.intro{padding:60px 22px}.feature-grid,.cards,.season .cards{grid-template-columns:1fr}.feature-grid{padding:0 15px 40px}.feature{min-height:330px}.chapter{padding:52px 18px}.chapter-head{display:block}.card .pic,.season .card .pic{height:290px}.split{grid-template-columns:1fr}.split>div{min-height:330px}.split .writing{order:2}.mobile-title{display:block;text-align:center;padding:15px;font:12px Arial,sans-serif;letter-spacing:.12em}}
 </style></head><body>
+
+<style>
+.wl-langbar{display:flex;justify-content:center;gap:12px;
+padding:16px 8px;position:relative;z-index:5}
+.wl-langbar button{font:bold 20px Arial,sans-serif;
+padding:12px 22px;min-width:120px;
+border:2px solid #315c41;border-radius:10px;
+background:white;color:#315c41;cursor:pointer}
+.wl-langbar button.active{background:#315c41;color:white}
+html[data-wl-lang="zh"] #wl-auto .wl-en{display:none}
+html[data-wl-lang="en"] #wl-auto .wl-copy strong{display:none}
+html[data-wl-lang="zh"] .item p.en,
+html[data-wl-lang="zh"] .item p:nth-of-type(3){display:none}
+html[data-wl-lang="en"] .item h3,
+html[data-wl-lang="en"] .item p:nth-of-type(2){display:none}
+</style>
 <!-- WESTON-LIFE-AUTO-START -->
 <style>
 /* This replaces the fixed daily poster ONLY. Original lifestyle chapters stay intact. */
@@ -37,40 +53,45 @@
 @media(max-width:720px) {#wl-auto .wl-columns {grid-template-columns:1fr} #wl-auto .wl-story {grid-template-columns:112px 1fr} #wl-auto .wl-editorial img {width:80px;height:95px}}
 </style>
 <section id="wl-auto" aria-label="Weston Life 每日新闻">
-<header class="wl-masthead"><div class="wl-logo">Weston<em>Life</em></div><div class="wl-kicker">DAILY NEWS · 每日新闻简报</div>
+<header class="wl-masthead">
+<nav class="wl-langbar" aria-label="Choose language">
+<button type="button" data-wl-choice="zh">中文</button>
+<button type="button" data-wl-choice="en">English</button>
+</nav>
+<div class="wl-logo">Weston<em>Life</em></div><div class="wl-kicker">DAILY NEWS · 每日新闻简报</div>
 <div class="wl-date">2026-10-20 · Boston / Massachusetts</div><div class="wl-tagline">A More Informed, Brighter New England</div></header>
-<div class="wl-columns"><div><h2 class="wl-column-title">📍 波士顿 · 马萨诸塞州 | BOSTON & MASSACHUSETTS</h2><a class="wl-story" href="news-2026-10-20.html#story-1" aria-label="安东尼·布朗在新英格兰俱乐部的喜剧首秀被预定，面临谋杀未遂指控">
-<span class="wl-index">01</span><div class="wl-photo"><img src="https://static.foxnews.com/foxnews.com/content/uploads/2026/10/antonio-brown-album-release-party.jpg" alt="新闻来源配图 / Source image" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'"></div>
-<div class="wl-copy"><strong>安东尼·布朗在新英格兰俱乐部的喜剧首秀被预定，面临谋杀未遂指控</strong><span class="wl-en">Antonio Brown booked for comedy debut at New England club while facing attempted murder charge</span>
-<span class="wl-source">Fox News · 2026-10-19</span></div></a><a class="wl-story" href="news-2026-10-20.html#story-2" aria-label="肖恩·奥利弗在事故后对OUI指控不认罪">
-<span class="wl-index">02</span><div class="wl-photo"><img src="https://i.abcnewsfe.com/a/43beb917-a11a-4117-afdb-73bb5a83e484/wirestory_12d0cd82fc419703b661da807b1cfe3e_16x9.jpg?w=1600" alt="新闻来源配图 / Source image" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'"></div>
-<div class="wl-copy"><strong>肖恩·奥利弗在事故后对OUI指控不认罪</strong><span class="wl-en">Shawn Oliver pleads not guilty to OUI charge after crash</span>
-<span class="wl-source">Abcnews.com · 2026-10-19</span></div></a><a class="wl-story" href="news-2026-10-20.html#story-3" aria-label="波士顿凯尔特人宣布与Total Mortgage的新合作">
-<span class="wl-index">03</span><div class="wl-photo"><img src="https://s.yimg.com/lo/mysterio/api/49c6c240fae336b15a61abfedeea00ac04ff5da4b3711c798cf7718a02a50174/lightyear_networkapi/resizefill_w1200_h675%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fceltics_wire_usa_today_sports_articles_699%2Fe703da2205cc26d63bce482c92920185.jpg" alt="新闻来源配图 / Source image" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'"></div>
-<div class="wl-copy"><strong>波士顿凯尔特人宣布与Total Mortgage的新合作</strong><span class="wl-en">Boston Celtics announce new partnership with Total Mortgage</span>
-<span class="wl-source">USA Today · 2026-10-19</span></div></a><a class="wl-story" href="news-2026-10-20.html#story-4" aria-label="保罗·乔治欢迎在乔·马祖拉执教下的波士顿凯尔特人挑战">
-<span class="wl-index">04</span><div class="wl-photo"><img src="https://s.yimg.com/lo/mysterio/api/ea98da9b7e180795cd219f033e67e197a3a9ce879ba469f58102d3d55468cebb/lightyear_networkapi/resizefill_w1200_h675%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fceltics_wire_usa_today_sports_articles_699%2F6aabe8ccaf8c29e7d2ef218f08018dcb.jpg" alt="新闻来源配图 / Source image" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'"></div>
-<div class="wl-copy"><strong>保罗·乔治欢迎在乔·马祖拉执教下的波士顿凯尔特人挑战</strong><span class="wl-en">Paul George welcomes playing under Joe Mazzulla, Boston Celtics challenges</span>
-<span class="wl-source">USA Today · 2026-10-19</span></div></a><a class="wl-story" href="news-2026-10-20.html#story-5" aria-label="1848年，马萨诸塞州的一座石磨开始为纺织厂制造设备">
-<span class="wl-index">05</span><div class="wl-photo"><img src="https://static.toiimg.com/thumb/msid-135055697,width-1280,height-720,resizemode-6,overlay-toi_sw,pt-32,y_pad-600/photo.jpg" alt="新闻来源配图 / Source image" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'"></div>
-<div class="wl-copy"><strong>1848年，马萨诸塞州的一座石磨开始为纺织厂制造设备</strong><span class="wl-en">In 1848, a Massachusetts stone mill began making equipment for textile factories; after standing vacant, the 150,000-sq-ft landmark was restored for $53 million and converted into 86 apartments, 69 of them affordable</span>
-<span class="wl-source">The Times of India · 2026-10-19</span></div></a></div>
-<div><h2 class="wl-column-title world">🌐 美国 · 全球 | U.S. & WORLD</h2><a class="wl-story" href="news-2026-10-20.html#story-6" aria-label="微软退出后，巨型AI数据中心将黑暗直至2030年代">
-<span class="wl-index">06</span><div class="wl-photo"><img src="https://images.dailycaller.com/image/width=1280,height=549,fit=cover,format=webp,f=auto/https://cdn01.dailycaller.com/wp-content/uploads/2026/10/GettyImages-2297745231(1).jpg" alt="新闻来源配图 / Source image" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'"></div>
-<div class="wl-copy"><strong>微软退出后，巨型AI数据中心将黑暗直至2030年代</strong><span class="wl-en">Massive AI Data Center Left In The Dark Until 2030s As Microsoft Walks Away</span>
-<span class="wl-source">The Daily Caller · 2026-10-19</span></div></a><a class="wl-story" href="news-2026-10-20.html#story-7" aria-label="科林蒂安和维多利亚在轮次决赛中争取逃离降级区">
-<span class="wl-index">07</span><div class="wl-photo"><img src="https://s.yimg.com/lo/mysterio/api/be7de18c6fee5f1829e15195f320cda90915d04458a8eee4ffa379dcd1889cf0/lightyear_networkapi/resizefill_w1024_h683%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fonefootball_articles_802%2Fc2b9189e6c37ae562d5324d9b98e6d94.jpg" alt="新闻来源配图 / Source image" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'"></div>
-<div class="wl-copy"><strong>科林蒂安和维多利亚在轮次决赛中争取逃离降级区</strong><span class="wl-en">Corinthians and Vitória line up to escape drop zone in round finale</span>
-<span class="wl-source">Onefootball.com · 2026-10-19</span></div></a><a class="wl-story" href="news-2026-10-20.html#story-8" aria-label="美国人花更多钱驾驶更差的汽车">
-<span class="wl-index">08</span><div class="wl-photo"><div class="wl-img-fallback">Weston Life</div></div>
-<div class="wl-copy"><strong>美国人花更多钱驾驶更差的汽车</strong><span class="wl-en">Americans Are Spending More Money to Drive Worse Cars</span>
-<span class="wl-source">The Atlantic · 2026-10-19</span></div></a><a class="wl-story" href="news-2026-10-20.html#story-9" aria-label="参议员称许可改革是“我们能为国家安全做的最重要的事情”">
-<span class="wl-index">09</span><div class="wl-photo"><img src="https://cdn.nextgov.com/media/img/cd/2026/10/19/GettyImages_2296453417/open-graph.jpg" alt="新闻来源配图 / Source image" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'"></div>
-<div class="wl-copy"><strong>参议员称许可改革是“我们能为国家安全做的最重要的事情”</strong><span class="wl-en">Permitting reform ‘single most important thing we could do for national security,’ senator says</span>
-<span class="wl-source">Nextgov · 2026-10-19</span></div></a><a class="wl-story" href="news-2026-10-20.html#story-10" aria-label="困扰的马克龙在特朗普和范斯的批评中提到美伊战争">
-<span class="wl-index">10</span><div class="wl-photo"><img src="https://static.foxnews.com/foxnews.com/content/uploads/2026/06/trump-versailles-fox-news.jpeg" alt="新闻来源配图 / Source image" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'"></div>
-<div class="wl-copy"><strong>困扰的马克龙在特朗普和范斯的批评中提到美伊战争</strong><span class="wl-en">Beleaguered Macron cites US-Iran war as factor in protests amid Trump, Vance criticism</span>
-<span class="wl-source">Fox News · 2026-10-19</span></div></a></div></div>
+<div class="wl-columns"><div><h2 class="wl-column-title">📍 波士顿 · 马萨诸塞州 | BOSTON & MASSACHUSETTS</h2><a class="wl-story" href="news-2026-10-20.html#story-1" aria-label="德里克·怀特谈波士顿凯尔特人杰伦·布朗交易至费城76人">
+<span class="wl-index">01</span><div class="wl-photo"><img src="https://s.yimg.com/lo/mysterio/api/4b0c4247224eb7cadbeca7f98124c63ba373ac44f3ed96876ec7fb6ba70dc2d0/lightyear_networkapi/resizefill_w1200_h675%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fceltics_wire_usa_today_sports_articles_699%2F96cb7f7ace3e0e63602f05b788ed22c2.jpg" alt="新闻来源配图 / Source image" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'"></div>
+<div class="wl-copy"><strong>德里克·怀特谈波士顿凯尔特人杰伦·布朗交易至费城76人</strong><span class="wl-en">Derrick White opens up about Boston Celtics Jaylen Brown trade to Philadelphia 76ers</span>
+<span class="wl-source">USA Today · 2026-10-20</span></div></a><a class="wl-story" href="news-2026-10-20.html#story-2" aria-label="前洛杉矶湖人首发球员在NBA赛季前一天仍为自由球员">
+<span class="wl-index">02</span><div class="wl-photo"><img src="https://s.yimg.com/lo/mysterio/api/66953b8192d32ce28a9a48d1b3d22508c84366c10de1c2ead4e528613fa4a4a7/lightyear_networkapi/resizefill_w1200_h675%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fheavy_214%2F7267f9e28a21f3afb81cbda6af9441a9.jpg" alt="新闻来源配图 / Source image" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'"></div>
+<div class="wl-copy"><strong>前洛杉矶湖人首发球员在NBA赛季前一天仍为自由球员</strong><span class="wl-en">Ex-Los Angeles Lakers Starter Still A Free Agent One Day Before NBA Season</span>
+<span class="wl-source">Heavy.com · 2026-10-20</span></div></a><a class="wl-story" href="news-2026-10-20.html#story-3" aria-label="爱国者队在罗密欧·道布斯受伤消息后进行首次名单调整">
+<span class="wl-index">03</span><div class="wl-photo"><img src="https://s.yimg.com/lo/mysterio/api/4b8b4ad9fa50fd177345b03084cee144040c41e3a2a2ce04b51d7f6a7a6eb57d/lightyear_networkapi/resizefill_w1200_h675%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fheavy_214%2F37198f4d751612fd9e914c00a067ef5e.jpg" alt="新闻来源配图 / Source image" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'"></div>
+<div class="wl-copy"><strong>爱国者队在罗密欧·道布斯受伤消息后进行首次名单调整</strong><span class="wl-en">Patriots Make First Roster Move After Romeo Doubs Injury News</span>
+<span class="wl-source">Heavy.com · 2026-10-19</span></div></a><a class="wl-story" href="news-2026-10-20.html#story-4" aria-label="马萨诸塞州副州长候选人在被捕后结束竞选">
+<span class="wl-index">04</span><div class="wl-photo"><div class="wl-img-fallback">Weston Life</div></div>
+<div class="wl-copy"><strong>马萨诸塞州副州长候选人在被捕后结束竞选</strong><span class="wl-en">Massachusetts lieutenant governor candidate ends campaign after arrest - The Guardian</span>
+<span class="wl-source">Slashdot.org · 2026-10-19</span></div></a><a class="wl-story" href="news-2026-10-20.html#story-5" aria-label="马萨诸塞州副州长候选人在被捕前翻车，警方报告披露">
+<span class="wl-index">05</span><div class="wl-photo"><div class="wl-img-fallback">Weston Life</div></div>
+<div class="wl-copy"><strong>马萨诸塞州副州长候选人在被捕前翻车，警方报告披露</strong><span class="wl-en">Mass. Lt. Gov. candidate flipped SUV before arrest, police report reveals - MassLive.com</span>
+<span class="wl-source">Slashdot.org · 2026-10-19</span></div></a></div>
+<div><h2 class="wl-column-title world">🌐 美国 · 全球 | U.S. & WORLD</h2><a class="wl-story" href="news-2026-10-20.html#story-6" aria-label="由于中东紧张局势，原油价格保持在每桶110美元附近">
+<span class="wl-index">06</span><div class="wl-photo"><img src="https://static.toiimg.com/thumb/msid-135059440,width-1280,height-720,resizemode-6,overlay-toi_sw,pt-32,y_pad-600/photo.jpg" alt="新闻来源配图 / Source image" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'"></div>
+<div class="wl-copy"><strong>由于中东紧张局势，原油价格保持在每桶110美元附近</strong><span class="wl-en">Crude holds near $110 per barrel as Middle East tensions keep supply concerns alive</span>
+<span class="wl-source">The Times of India · 2026-10-20</span></div></a><a class="wl-story" href="news-2026-10-20.html#story-7" aria-label="股票市场假期：由于杜塞赫拉，BSE和NSE今天停盘交易">
+<span class="wl-index">07</span><div class="wl-photo"><img src="https://bsmedia.business-standard.com/_media/bs/img/article/2026-09/09/thumb/fitandfill/1200X628/1788976134-5276.jpg" alt="新闻来源配图 / Source image" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'"></div>
+<div class="wl-copy"><strong>股票市场假期：由于杜塞赫拉，BSE和NSE今天停盘交易</strong><span class="wl-en">Stock market holiday: BSE, NSE shut for trading today due to Dussehra</span>
+<span class="wl-source">Business Standard · 2026-10-20</span></div></a><a class="wl-story" href="news-2026-10-20.html#story-8" aria-label="正鼎与国立中央大学及合作伙伴推出PCB人才发展平台">
+<span class="wl-index">08</span><div class="wl-photo"><img src="https://img.digitimes.com/newsshow/20261020pd200_files/2_b.jpg" alt="新闻来源配图 / Source image" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'"></div>
+<div class="wl-copy"><strong>正鼎与国立中央大学及合作伙伴推出PCB人才发展平台</strong><span class="wl-en">Zhen Ding launches PCB talent development platform with National Central University, partners</span>
+<span class="wl-source">Digitimes · 2026-10-20</span></div></a><a class="wl-story" href="news-2026-10-20.html#story-9" aria-label="美国股指期货在华尔街科技复苏后保持稳定">
+<span class="wl-index">09</span><div class="wl-photo"><img src="https://biztoc.com/cdn/320f2e982843c04f_s.webp" alt="新闻来源配图 / Source image" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'"></div>
+<div class="wl-copy"><strong>美国股指期货在华尔街科技复苏后保持稳定</strong><span class="wl-en">U.S. stock futures steady after Wall Street rebounds on tech recovery</span>
+<span class="wl-source">Biztoc.com · 2026-10-20</span></div></a><a class="wl-story" href="news-2026-10-20.html#story-10" aria-label="油价小幅下跌但供应风险依然存在">
+<span class="wl-index">10</span><div class="wl-photo"><img src="https://biztoc.com/cdn/996/og.png" alt="新闻来源配图 / Source image" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'"></div>
+<div class="wl-copy"><strong>油价小幅下跌但供应风险依然存在</strong><span class="wl-en">Oil Edges Lower But Supply Risks Linger</span>
+<span class="wl-source">Biztoc.com · 2026-10-20</span></div></a></div></div>
 <div class="wl-editorial"><img src="assets/coco_portrait_original.jpeg" alt="可可豆子 · Coco Bean" onerror="this.style.display='none'">
 <div><h3>可可豆子的今日观点 ♡</h3><p><em>Coco Bean’s View Today</em></p>
 <p>观点栏目独立于自动新闻摘要；在本人撰写或确认前，不自动生成署名个人观点。</p>
@@ -78,6 +99,47 @@
 <div class="wl-cta"><a href="news-2026-10-20.html">阅读今日完整新闻 / Read the full edition →</a></div>
 </section>
 <!-- WESTON-LIFE-AUTO-END -->
+<script>
+(function(){
+var lang="zh";
+try{
+lang=localStorage.getItem("westonlife-lang")==="en"?"en":"zh";
+}catch(e){}
+function choose(value){
+lang=value==="en"?"en":"zh";
+document.documentElement.dataset.wlLang=lang;
+document.documentElement.lang=lang==="en"?"en":"zh-CN";
+try{localStorage.setItem("westonlife-lang",lang)}catch(e){}
+document.querySelectorAll("[data-wl-choice]").forEach(function(b){
+b.classList.toggle("active",b.dataset.wlChoice===lang);
+b.setAttribute("aria-pressed",String(b.dataset.wlChoice===lang));
+});
+var names={
+".wl-kicker":["每日新闻简报","DAILY NEWS"],
+".wl-column-title:not(.world)":["📍 波士顿 · 马萨诸塞州","📍 BOSTON & MASSACHUSETTS"],
+".wl-column-title.world":["🌐 美国 · 全球","🌐 U.S. & WORLD"],
+".wl-editorial h3":["可可豆子的今日观点 ♡","Coco Bean's View Today"],
+".wl-cta a":["阅读今日完整新闻 →","Read Full Edition →"]
+};
+Object.keys(names).forEach(function(selector){
+var node=document.querySelector("#wl-auto "+selector);
+if(node)node.textContent=names[selector][lang==="en"?1:0];
+});
+document.querySelectorAll(".item").forEach(function(card){
+var link=card.querySelector("a");
+if(link)link.textContent=lang==="en"?"Read Original Source ↗":"阅读原始报道 ↗";
+});
+}
+document.addEventListener("click",function(e){
+var b=e.target.closest("[data-wl-choice]");
+if(b)choose(b.dataset.wlChoice);
+});
+choose(lang);
+})();
+</script>
+
+
+
 
 
 <div style="margin:25px 0;padding:24px;background:#f6eee3;border:1px solid #dec9ae;border-radius:12px;text-align:center;">
