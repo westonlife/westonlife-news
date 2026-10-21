@@ -80,6 +80,16 @@ def discover():
             url = article.get("url", "")
             title = article.get("title", "")
             parsed = urlparse(url)
+            
+                # Exclude unreliable news aggregators
+            domain = (parsed.hostname or "").lower()
+            blocked_domains = ("slashdot.org", "alltoc.com")
+            if any(
+                    domain == blocked or domain.endswith("." + blocked)
+                    for blocked in blocked_domains
+                ):
+                    continue
+
             if (not title or title == "[Removed]" or not parsed.scheme == "https" or not parsed.netloc
                     or url in seen or "[Removed]" in article.get("description", "")):
                 continue
