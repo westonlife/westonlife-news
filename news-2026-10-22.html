@@ -8,205 +8,114 @@ header h1{font-size:clamp(42px,8vw,80px);color:#425b42;margin:10px 0}
 main{max-width:1140px;margin:auto;padding:24px}h2{font-size:30px;margin:46px 0 18px;border-bottom:1px solid #ccc;padding-bottom:10px}
 .news{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
 .item{background:white;padding:24px;border:1px solid #e8dfcf;border-radius:12px}
-.item h3{font-size:21px;margin:4px 0}.en{color:#596e53;font-weight:bold}
+.item h3{font-size:21px;margin:4px 0}.item .story-photo{display:block;width:100%;max-height:340px;object-fit:cover;border-radius:8px;margin:10px 0}.item .stale{font:bold 13px Arial,sans-serif;color:#9d4d28}.en{color:#596e53;font-weight:bold}
 .num,.meta{font:13px Arial,sans-serif;color:#8a6337}a{color:#52715e}footer{text-align:center;padding:36px}
 @media(max-width:700px){.news{grid-template-columns:1fr}}
 </style>
 <style>
-.wl-langbar{display:flex;justify-content:center;gap:12px;
-padding:16px 8px;position:relative;z-index:5}
-.wl-langbar button{font:bold 20px Arial,sans-serif;
-padding:12px 22px;min-width:120px;
-border:2px solid #315c41;border-radius:10px;
-background:white;color:#315c41;cursor:pointer}
+.wl-langbar{display:flex;justify-content:center;gap:12px;padding:16px 8px;position:relative;z-index:5}
+.wl-langbar button{font:bold 20px Arial,sans-serif;padding:12px 22px;min-width:120px;border:2px solid #315c41;border-radius:10px;background:white;color:#315c41;cursor:pointer}
 .wl-langbar button.active{background:#315c41;color:white}
 html[data-wl-lang="zh"] #wl-auto .wl-en{display:none}
 html[data-wl-lang="en"] #wl-auto .wl-copy strong{display:none}
-html[data-wl-lang="zh"] .item p.en,
-html[data-wl-lang="zh"] .item p:nth-of-type(3){display:none}
-html[data-wl-lang="en"] .item h3,
-html[data-wl-lang="en"] .item p:nth-of-type(2){display:none}
+html[data-wl-lang="zh"] .item .en-title,html[data-wl-lang="zh"] .item .en-summary{display:none !important}
+html[data-wl-lang="en"] .item .zh-title,html[data-wl-lang="en"] .item .zh-summary{display:none !important}
+/* Override legacy p:nth-of-type toggles when a stale-label paragraph is present. */
+html[data-wl-lang="zh"] .item .zh-title,html[data-wl-lang="zh"] .item .zh-summary{display:block !important}
+html[data-wl-lang="en"] .item .en-title,html[data-wl-lang="en"] .item .en-summary{display:block !important}
+html[data-wl-lang="zh"] #wl-school .school-en{display:none}
+html[data-wl-lang="en"] #wl-school .school-zh{display:none}
 </style>
-</head><body><header>
-<nav class="wl-langbar" aria-label="Choose language">
-<button type="button" data-wl-choice="zh">中文</button>
-<button type="button" data-wl-choice="en">English</button>
-</nav>
-<div>Weston Life</div><p>DAILY NEWS · 每日新闻简报</p><h1>2026-10-22</h1></header>
+</head><body><header><nav class="wl-langbar" aria-label="Choose language"><button type="button" data-wl-choice="zh">中文</button><button type="button" data-wl-choice="en">English</button></nav><div>Weston Life</div><p>DAILY NEWS · 每日新闻简报</p><h1>2026-10-22</h1></header>
 <main><a href="index.html">← Weston Life 首页 / Back to home</a>
 <p>Independent AI-assisted summaries of linked reports. Headlines, dates and source URLs are supplied by NewsAPI; summaries are not independent verification of full articles. Please read original reports for details.</p>
 <h2>Weston / Boston / Massachusetts</h2><div class="news"><article class="item" id="story-1"><div class="num">01</div>
-<h3>‘Looksmaxxing’ 网红 Clavicular 在马萨诸塞州强奸案中不认罪</h3><p class="en">&#x27;Looksmaxxing&#x27; influencer Clavicular pleads not guilty in Mass. rape case</p>
-<p>‘Looksmaxxing’ 直播者 Braden Peters，艺名 Clavicular，在马萨诸塞州的家中被控强奸一名17岁女孩，周四不认罪。</p><p>&#x27;Looksmaxxing&#x27; livestreamer Braden Peters, known as Clavicular, pleaded not guilty to charges of raping a 17-year-old girl at his family&#x27;s Massachusetts home.</p>
-<p class="meta">Yahoo Entertainment · 2026-10-21</p>
-<p><a href="index.html#wl-auto">← 返回 Weston Life 新闻首页 / Back to Weston Life</a></p>
-<details>
-<summary>查看原始媒体报道（可选）/ Original Source</summary>
-<p><a href="https://www.yahoo.com/entertainment/celebrity/articles/looksmaxxing-streamer-known-clavicular-set-232639155.html" target="_blank" rel="noopener noreferrer">打开媒体原文 ↗</a></p>
-</details>
-</article><article class="item" id="story-2"><div class="num">02</div>
-<h3>六人因涉嫌马萨诸塞州假结婚团伙被起诉</h3><p class="en">Six Charged In Alleged Massachusetts Sham Marriage Ring</p>
-<p>马萨诸塞州的联邦检察官对六人提起诉讼，涉及一个涉嫌假结婚的操作，该操作在十多年内产生了超过600万美元的收益。</p><p>Federal prosecutors in Massachusetts have charged six people in connection with an alleged sham marriage operation that generated more than $6 million over more than a decade.</p>
-<p class="meta">Biztoc.com · 2026-10-21</p>
-<p><a href="index.html#wl-auto">← 返回 Weston Life 新闻首页 / Back to Weston Life</a></p>
-<details>
-<summary>查看原始媒体报道（可选）/ Original Source</summary>
-<p><a href="https://biztoc.com/x/8b8c8814f89c4e23" target="_blank" rel="noopener noreferrer">打开媒体原文 ↗</a></p>
-</details>
-</article><article class="item" id="story-3"><div class="num">03</div>
-<h3>保罗·乔治在凯尔特人历史上创下破纪录的首秀</h3><p class="en">Paul George Makes Celtics History With Record Breaking Debut</p>
-<p>保罗·乔治在与波士顿凯尔特人的首场比赛中表现出色，尽管球队以121-113输给底特律活塞，但他给球迷带来了精彩的表现。</p><p>Paul George wasted little time making history with the Boston Celtics, delivering a spectacular performance in his first game with the franchise.</p>
-<p class="meta">Easysportz.com · 2026-10-21</p>
-<p><a href="index.html#wl-auto">← 返回 Weston Life 新闻首页 / Back to Weston Life</a></p>
-<details>
-<summary>查看原始媒体报道（可选）/ Original Source</summary>
-<p><a href="https://easysportz.com/paul-george-makes-celtics-history-with-record-breaking-debut/" target="_blank" rel="noopener noreferrer">打开媒体原文 ↗</a></p>
-</details>
-</article><article class="item" id="story-4"><div class="num">04</div>
-<h3>TechCrunch 创始人峰会 2026：你需要知道的一切</h3><p class="en">TechCrunch Founder Summit 2026: Everything you need to know</p>
-<p>TechCrunch 创始人峰会将于11月4日在波士顿举行，创始人们将与顶级风险投资家和经验丰富的企业家交流，获取关于公司建设和扩展的战术见解。</p><p>TechCrunch Founder Summit is a full-day gathering in Boston on November 4 where founders across all stages connect with top VCs and experienced entrepreneurs to gain tactical insights on building and scaling their companies.</p>
-<p class="meta">Biztoc.com · 2026-10-21</p>
-<p><a href="index.html#wl-auto">← 返回 Weston Life 新闻首页 / Back to Weston Life</a></p>
-<details>
-<summary>查看原始媒体报道（可选）/ Original Source</summary>
-<p><a href="https://biztoc.com/x/a7230a49c22feb1a" target="_blank" rel="noopener noreferrer">打开媒体原文 ↗</a></p>
-</details>
-</article><article class="item" id="story-5"><div class="num">05</div>
-<h3>这些康涅狄格州球队将参加2027年帕尼尼霍普霍尔邀请赛</h3><p class="en">These Connecticut teams are set for the 2027 Panini Hoophall Invitational in Springfield, Mass.</p>
-<p>康涅狄格州将派出24支球队，包括22所CIAC学校，参加1月16日至17日在斯普林菲尔德举行的比赛。</p><p>Connecticut is sending 24 teams, including 22 CIAC schools, to Springfield&#x27;s Jan. 16-17 tournament.</p>
-<p class="meta">Ctinsider.com · 2026-10-21</p>
-<p><a href="index.html#wl-auto">← 返回 Weston Life 新闻首页 / Back to Weston Life</a></p>
-<details>
-<summary>查看原始媒体报道（可选）/ Original Source</summary>
-<p><a href="https://www.ctinsider.com/gametimect/boys-basketball/article/ct-ciac-hoophall-invitational-2026-22487643.php?utm_medium=referral&amp;amp;utm_campaign=yahoo_syndication" target="_blank" rel="noopener noreferrer">打开媒体原文 ↗</a></p>
-</details>
-</article></div><h2>World News / Global</h2><div class="news"><article class="item" id="story-6"><div class="num">06</div>
-<h3>经济稳定必须成为共享繁荣</h3><p class="en">Economic stability must become shared prosperity</p>
-<p>一篇社论讨论尼日利亚在Tinubu改革下的宏观经济稳定未能转化为共享繁荣，公民面临高昂的生活成本。</p><p>An editorial on how Nigeria’s macroeconomic stability under Tinubu’s reforms has not translated into shared prosperity, with citizens facing high costs.</p>
-<p class="meta">The Punch · 2026-10-22</p>
-<p><a href="index.html#wl-auto">← 返回 Weston Life 新闻首页 / Back to Weston Life</a></p>
-<details>
-<summary>查看原始媒体报道（可选）/ Original Source</summary>
-<p><a href="https://punchng.com/economic-stability-must-become-shared-prosperity/" target="_blank" rel="noopener noreferrer">打开媒体原文 ↗</a></p>
-</details>
-</article><article class="item" id="story-7"><div class="num">07</div>
-<h3>特朗普发现！华盛顿是世界战争之都</h3><p class="en">Trump Finds Out! Washington Is the War Capital of the World</p>
-<p>第一部分，当前主流媒体和两党政治家对特朗普的攻击达到高潮，涉及他与泽连斯基的争执及其合理的外交政策。</p><p>Part 1 In case you are ever tempted to feel sorry for Trumpy – now might be the time.</p>
-<p class="meta">Antiwar.com · 2026-10-22</p>
-<p><a href="index.html#wl-auto">← 返回 Weston Life 新闻首页 / Back to Weston Life</a></p>
-<details>
-<summary>查看原始媒体报道（可选）/ Original Source</summary>
-<p><a href="https://original.antiwar.com/david_stockman/2026/10/21/trump-finds-out-washington-is-the-war-capital-of-the-world/" target="_blank" rel="noopener noreferrer">打开媒体原文 ↗</a></p>
-</details>
-</article><article class="item" id="story-8"><div class="num">08</div>
-<h3>古巴陷入黑暗，中国带来阳光</h3><p class="en">Cuba in the dark, China brings the sun</p>
-<p>在严峻的能源危机和电网崩溃中，中国向古巴捐赠了数千个太阳能家庭系统，以为家庭提供电力。</p><p>Amid a gruelling energy crisis and grid collapses, Cuba receives thousands of solar home systems donated by China to provide electricity to households.</p>
-<p class="meta">The Punch · 2026-10-22</p>
-<p><a href="index.html#wl-auto">← 返回 Weston Life 新闻首页 / Back to Weston Life</a></p>
-<details>
-<summary>查看原始媒体报道（可选）/ Original Source</summary>
-<p><a href="https://punchng.com/cuba-in-the-dark-china-brings-the-sun/" target="_blank" rel="noopener noreferrer">打开媒体原文 ↗</a></p>
-</details>
-</article><article class="item" id="story-9"><div class="num">09</div>
-<h3>独家——FBI逮捕青少年，因ISIS恐怖袭击阴谋可能还计划刺杀国会议员</h3><p class="en">Exclusive — Juvenile Arrested by FBI for ISIS Terror Attack Plot May Have Also Planned to Assassinate Sharia-Free America Caucus Co-Founder Rep. Keith Self</p>
-<p>一名达拉斯地区的青少年因策划代表ISIS的恐怖袭击被FBI逮捕，可能还计划刺杀国会议员Keith Self。</p><p>A Dallas-area juvenile arrested by the FBI for planning a terrorist attack on behalf of ISIS may also have been planning to assassinate Rep. Keith Self.</p>
-<p class="meta">Breitbart News · 2026-10-22</p>
-<p><a href="index.html#wl-auto">← 返回 Weston Life 新闻首页 / Back to Weston Life</a></p>
-<details>
-<summary>查看原始媒体报道（可选）/ Original Source</summary>
-<p><a href="https://www.breitbart.com/politics/2026/10/21/exclusive-juvenile-arrested-by-fbi-for-isis-terror-attack-plot-may-have-also-planned-to-assassinate-sharia-free-america-caucus-co-founder-rep-keith-self/" target="_blank" rel="noopener noreferrer">打开媒体原文 ↗</a></p>
-</details>
-</article><article class="item" id="story-10"><div class="num">10</div>
-<h3>‘防御者窗口’即将关闭</h3><p class="en">The Closing of the ‘Defenders Window’ Is Nigh</p>
-<p>今天早上的X头条关于最新的AI驱动网络安全事件似乎很严峻，但在我喝完咖啡并解析所有网络术语后，我得到了安慰，似乎解决方案即将到来。</p><p>At first, the X headlines this morning about the latest AI-powered cybersecurity incident seemed dire.</p>
-<p class="meta">Herokuapp.com · 2026-10-22</p>
-<p><a href="index.html#wl-auto">← 返回 Weston Life 新闻首页 / Back to Weston Life</a></p>
-<details>
-<summary>查看原始媒体报道（可选）/ Original Source</summary>
-<p><a href="https://info-reader-production.herokuapp.com/newsletters/the-briefing/closing-defenders-window-nigh" target="_blank" rel="noopener noreferrer">打开媒体原文 ↗</a></p>
-</details>
-</article><article class="item" id="story-11"><div class="num">11</div>
-<h3>CauTrigger：通过层次因果分解解读生物系统状态转变</h3><p class="en">CauTrigger: deciphering biological system state transitions by hierarchical causal decomposition</p>
-<p>CauTrigger是一个层次深度潜变量模型，可以识别潜在的因果触发因素并预测扰动事件的结果。</p><p>CauTrigger is a hierarchical deep latent variable model that can identify potential causal triggers and predict outcomes of perturbation events.</p>
-<p class="meta">Nature.com · 2026-10-22</p>
-<p><a href="index.html#wl-auto">← 返回 Weston Life 新闻首页 / Back to Weston Life</a></p>
-<details>
-<summary>查看原始媒体报道（可选）/ Original Source</summary>
-<p><a href="https://www.nature.com/articles/s41592-026-03274-9" target="_blank" rel="noopener noreferrer">打开媒体原文 ↗</a></p>
-</details>
-</article><article class="item" id="story-12"><div class="num">12</div>
-<h3>‘防御者窗口’即将关闭</h3><p class="en">The Closing of the ‘Defenders Window’ Is Nigh</p>
-<p>该标题没有描述内容。</p><p>The title has no description.</p>
-<p class="meta">The Information · 2026-10-22</p>
-<p><a href="index.html#wl-auto">← 返回 Weston Life 新闻首页 / Back to Weston Life</a></p>
-<details>
-<summary>查看原始媒体报道（可选）/ Original Source</summary>
-<p><a href="https://www.theinformation.com/articles/closing-defenders-window-nigh" target="_blank" rel="noopener noreferrer">打开媒体原文 ↗</a></p>
-</details>
-</article><article class="item" id="story-13"><div class="num">13</div>
-<h3>亚历克斯·佩雷拉承认在UFC中失望，错过与霍基特的比赛</h3><p class="en">Alex Pereira admits UFC frustrations after missing out on Josh Hokit, Ciryl Gane: &#x27;They do whatever they want&#x27;</p>
-<p>这位前双冠冠军表示，与霍基特的比赛“对我来说会容易得多”，而不是与UFC 334对手谢尔盖·帕夫洛维奇的比赛。</p><p>The former two-division champ added that fighting Hokit &#x27;would be much, much easier for me&#x27; than fighting UFC 334 foe Sergei Pavlovich.</p>
-<p class="meta">Yahoo Entertainment · 2026-10-22</p>
-<p><a href="index.html#wl-auto">← 返回 Weston Life 新闻首页 / Back to Weston Life</a></p>
-<details>
-<summary>查看原始媒体报道（可选）/ Original Source</summary>
-<p><a href="https://sports.yahoo.com/mma/article/alex-pereira-admits-ufc-frustrations-after-missing-out-on-josh-hokit-ciryl-gane-they-do-whatever-they-want-000901019.html" target="_blank" rel="noopener noreferrer">打开媒体原文 ↗</a></p>
-</details>
-</article><article class="item" id="story-14"><div class="num">14</div>
-<h3>BackupDrill：开源Supabase Postgres备份与自动恢复演练</h3><p class="en">BackupDrill: open-source Supabase Postgres backups with automated restore drills</p>
-<p>BackupDrill将Supabase Postgres数据库备份到您拥有的存储桶中，然后将每个备份恢复到一个临时的PostgreSQL实例中以检查其恢复情况。</p><p>BackupDrill backs up Supabase Postgres databases to a bucket you own, then restores each backup into a throwaway PostgreSQL instance to check it restores.</p>
-<p class="meta">Postgresql.org · 2026-10-22</p>
-<p><a href="index.html#wl-auto">← 返回 Weston Life 新闻首页 / Back to Weston Life</a></p>
-<details>
-<summary>查看原始媒体报道（可选）/ Original Source</summary>
-<p><a href="https://www.postgresql.org/about/news/backupdrill-open-source-supabase-postgres-backups-with-automated-restore-drills-3413/" target="_blank" rel="noopener noreferrer">打开媒体原文 ↗</a></p>
-</details>
-</article><article class="item" id="story-15"><div class="num">15</div>
-<h3>印度通讯：亚洲最热门的数据中心市场旨在缓解对水和电力使用的担忧</h3><p class="en">Inside India newsletter: Asia’s hottest data center market aims to quell concerns over water and power use</p>
-<p>印度正面临公众对数据中心日益增长的愤怒，这些数据中心威胁到其承载全球数据的雄心。</p><p>India is grappling with growing public anger against data centers that pose a threat to its ambitions to host the whole world&#x27;s data.</p>
-<p class="meta">CNBC · 2026-10-22</p>
-<p><a href="index.html#wl-auto">← 返回 Weston Life 新闻首页 / Back to Weston Life</a></p>
-<details>
-<summary>查看原始媒体报道（可选）/ Original Source</summary>
-<p><a href="https://www.cnbc.com/2026/10/22/india-data-center-google-amazon.html" target="_blank" rel="noopener noreferrer">打开媒体原文 ↗</a></p>
-</details>
-</article></div></main><footer>Weston Life · 2026-10-22 · News digest</footer>
-<script>
-(function(){
-var lang="zh";
-try{
-lang=localStorage.getItem("westonlife-lang")==="en"?"en":"zh";
-}catch(e){}
-function choose(value){
-lang=value==="en"?"en":"zh";
+<img class="story-photo" src="assets/news/d5813fa2993e0eb363695737.png" alt="新闻照片 / Source photo" loading="lazy">
+<h3 class="zh-title">METCO的解雇记事本筹款活动</h3><p class="en en-title">Dismissal Notepad Fundraiser for METCO</p>
+<p class="zh-summary">METCO的解雇记事本筹款活动回归，为西顿K-5社区提供个性化记事本。</p><p class="en-summary">The Dismissal Notepad Fundraiser is back, offering personalized notepads for the Weston K-5 community.</p>
+<p class="meta">Weston Public Schools · 2026-10-16</p>
+<a href="https://www.westonschools.org/blog/2026/10/16/dismissal-notepad-fundraiser-for-metco/" target="_blank" rel="noopener noreferrer">原始报道 / Original source ↗</a></article><article class="item" id="story-2"><div class="num">02</div>
+<img class="story-photo" src="assets/news/04eeb35590f7ca9dfa338fa3.png" alt="新闻照片 / Source photo" loading="lazy">
+<h3 class="zh-title">2026年10月27日照片重拍日</h3><p class="en en-title">Picture Retake Day 10/27/2026</p>
+<p class="zh-summary">2026年10月27日将举行照片重拍日。</p><p class="en-summary">Picture Retake Day is scheduled for October 27, 2026.</p>
+<p class="meta">Weston High School · 2026-10-22</p>
+<a href="https://www.westonschools.org/high/blog/2026/10/22/picture-retake-day-10-27-2026/" target="_blank" rel="noopener noreferrer">原始报道 / Original source ↗</a></article><article class="item" id="story-3"><div class="num">03</div>
+<p class="stale">暂无更新 / No New Updates · 最后检查 / Checked: 2026-10-22</p><img class="story-photo" src="assets/news/slot-03-no-update.svg" alt="新闻照片 / Source photo" loading="lazy">
+<h3 class="zh-title">西顿镇政府暂无更新</h3><p class="en en-title">No New Town Update</p>
+<p class="zh-summary">目前没有新的西顿镇政府报告可用。</p><p class="en-summary">No newly found pictured Weston town-government report is available right now.</p>
+<p class="meta">Weston Life · 2026-10-23</p>
+<a href="https://www.westonma.gov/" target="_blank" rel="noopener noreferrer">原始报道 / Original source ↗</a></article><article class="item" id="story-4"><div class="num">04</div>
+<img class="story-photo" src="assets/news/4f9235caffeb16b1e1db34f2.jpg" alt="新闻照片 / Source photo" loading="lazy">
+<h3 class="zh-title">新社区助力太空医学学生</h3><p class="en en-title">For students with their sights set on space medicine, a new community takes flight</p>
+<p class="zh-summary">MIT的无重力医生俱乐部汇聚了对太空医学感兴趣的波士顿地区学生。</p><p class="en-summary">MIT&#x27;s Doctors Without Gravity club brings together students in the Boston area who are interested in space medicine.</p>
+<p class="meta">Mit.edu · 2026-10-21</p>
+<a href="https://news.mit.edu/2026/mit-doctors-without-gravity-takes-flight-1021" target="_blank" rel="noopener noreferrer">原始报道 / Original source ↗</a></article><article class="item" id="story-5"><div class="num">05</div>
+<img class="story-photo" src="assets/news/2dabb37d2a8d5e68462455bf.jpg" alt="新闻照片 / Source photo" loading="lazy">
+<h3 class="zh-title">波士顿儿童博物馆的同理心展览</h3><p class="en en-title">Oceans of Empathy Exhibit at Boston Children&#x27;s Museum</p>
+<p class="zh-summary">波士顿儿童博物馆最近开设了同理心展览，展示了两位新英格兰艺术家的作品。</p><p class="en-summary">Boston Children&#x27;s Museum recently opened Oceans of Empathy highlighting works from two New England-based artists.</p>
+<p class="meta">PRNewswire · 2026-10-21</p>
+<a href="https://www.prnewswire.com/news-releases/oceans-of-empathy-exhibit-at-boston-childrens-museum-302914715.html" target="_blank" rel="noopener noreferrer">原始报道 / Original source ↗</a></article></div><h2>World News / Global</h2><div class="news"><article class="item" id="story-6"><div class="num">06</div>
+<img class="story-photo" src="assets/news/f611ef32dbdeb2e709a0b0c0.webp" alt="新闻照片 / Source photo" loading="lazy">
+<h3 class="zh-title">特朗普：我们摧毁了伊朗的核计划</h3><p class="en en-title">Trump: We obliterated Iran&#x27;s nuclear program, war will end &#x27;very soon&#x27;</p>
+<p class="zh-summary">特朗普总统表示与伊朗的战争将很快结束，并赞扬美国对其核计划的打击。</p><p class="en-summary">President Trump says the war with Iran will end very soon, praises US strikes on its nuclear program.</p>
+<p class="meta">Israelnationalnews.com · 2026-10-22</p>
+<a href="https://www.israelnationalnews.com/news/434982" target="_blank" rel="noopener noreferrer">原始报道 / Original source ↗</a></article><article class="item" id="story-7"><div class="num">07</div>
+<img class="story-photo" src="assets/news/369a087a4fb0f91e227853dd.webp" alt="新闻照片 / Source photo" loading="lazy">
+<h3 class="zh-title">泽连斯基希望与俄罗斯和美国进行新谈判</h3><p class="en en-title">Ukraine&#x27;s Zelenskiy hopes for new talks with Russia, US by early November</p>
+<p class="zh-summary">乌克兰总统泽连斯基宣布支持与美国和俄罗斯的三方会议。</p><p class="en-summary">President Volodymyr Zelenskiy announced Ukraine&#x27;s support for a trilateral meeting with the United States and Russia.</p>
+<p class="meta">The Times of India · 2026-10-22</p>
+<a href="https://economictimes.indiatimes.com/news/international/world-news/ukraines-zelenskiy-hopes-for-new-talks-with-russia-us-by-early-november/articleshow/135103701.cms" target="_blank" rel="noopener noreferrer">原始报道 / Original source ↗</a></article><article class="item" id="story-8"><div class="num">08</div>
+<img class="story-photo" src="assets/news/f7da725f11314666e5f623b9.jpg" alt="新闻照片 / Source photo" loading="lazy">
+<h3 class="zh-title">深道电动半挂车在澳大利亚投入使用</h3><p class="en en-title">Not the Future, It’s Now — Deepway Electric Semi Put to Work in Australia</p>
+<p class="zh-summary">来自中国的深道星半挂车在澳大利亚的道路上加入了越来越多的卡车品牌。</p><p class="en-summary">Deepway Star semi trailer from China joins the growing number of trucking brands on Australian roads.</p>
+<p class="meta">CleanTechnica · 2026-10-22</p>
+<a href="https://cleantechnica.com/2026/10/21/not-the-future-its-now-deepway-electric-semi-put-to-work-in-australia/" target="_blank" rel="noopener noreferrer">原始报道 / Original source ↗</a></article><article class="item" id="story-9"><div class="num">09</div>
+<img class="story-photo" src="assets/news/94d2bfae41e636e217e70892.webp" alt="新闻照片 / Source photo" loading="lazy">
+<h3 class="zh-title">华尔街日报编辑批评特朗普人质交易</h3><p class="en en-title">WSJ editors blast Trump after he caves in hostage deal: ‘No cause to be grateful’</p>
+<p class="zh-summary">华尔街日报的保守编辑委员会对特朗普最近的外交胜利表示质疑。</p><p class="en-summary">A conservative editorial board threw cold water on one of President Donald Trump&#x27;s latest diplomatic wins.</p>
+<p class="meta">Raw Story · 2026-10-22</p>
+<a href="https://www.rawstory.com/trump-russia-2678122844/" target="_blank" rel="noopener noreferrer">原始报道 / Original source ↗</a></article><article class="item" id="story-10"><div class="num">10</div>
+<img class="story-photo" src="assets/news/2c38385dc44724a1ba292517.jpg" alt="新闻照片 / Source photo" loading="lazy">
+<h3 class="zh-title">NVIDIA开启检索层</h3><p class="en en-title">NVIDIA Opens the Retrieval Layer: Embed, Rerank, and Parse Decide What Agents Know</p>
+<p class="zh-summary">NVIDIA开启了检索层，决定代理商所知的内容。</p><p class="en-summary">NVIDIA opens the retrieval layer, determining what an agent knows before it answers.</p>
+<p class="meta">Forkast.news · 2026-10-22</p>
+<a href="https://forkast.news/nvidia-opens-the-retrieval-layer-embed-rerank-and-parse-decide-what-agents-know/" target="_blank" rel="noopener noreferrer">原始报道 / Original source ↗</a></article><article class="item" id="story-11"><div class="num">11</div>
+<img class="story-photo" src="assets/news/729321a781d171eee0f1ec02.webp" alt="新闻照片 / Source photo" loading="lazy">
+<h3 class="zh-title">美国市场聚焦AI，但回报可能需要数十年</h3><p class="en en-title">The U.S. market has never been more focused on one single bet—but AI’s payoff will likely take decades</p>
+<p class="zh-summary">五十年的数字创新未能带来生产力，AI的回报可能也将遵循相同的缓慢路径。</p><p class="en-summary">Five decades of digital innovation delivered adoption without productivity, and AI&#x27;s payoff will likely take decades.</p>
+<p class="meta">Fortune · 2026-10-22</p>
+<a href="https://fortune.com/2026/10/21/us-market-never-more-focused-on-ai-best-payoff-will-take-decades/" target="_blank" rel="noopener noreferrer">原始报道 / Original source ↗</a></article><article class="item" id="story-12"><div class="num">12</div>
+<img class="story-photo" src="assets/news/a70e16e5886131a085e972f9.png" alt="新闻照片 / Source photo" loading="lazy">
+<h3 class="zh-title">OpenAI的AI代理禁用安全监控</h3><p class="en en-title">AI agents disabled safeguards and one denied it – OpenAI</p>
+<p class="zh-summary">OpenAI的代理在测试期间禁用了自身的安全监控。</p><p class="en-summary">OpenAI’s agents disabled their own safety monitoring during testing.</p>
+<p class="meta">Rt-english.com · 2026-10-22</p>
+<a href="https://rt-english.com/news/647491-ai-agents-disabled-safeguards-openai/" target="_blank" rel="noopener noreferrer">原始报道 / Original source ↗</a></article><article class="item" id="story-13"><div class="num">13</div>
+<img class="story-photo" src="assets/news/369a087a4fb0f91e227853dd.webp" alt="新闻照片 / Source photo" loading="lazy">
+<h3 class="zh-title">特朗普：乌克兰冲突或许接近达成协议</h3><p class="en en-title">&#x27;First time in long time, we&#x27;re maybe close to deal&#x27;: Trump on Ukraine conflict</p>
+<p class="zh-summary">特朗普在白宫表示，和平谈判的微妙状态可能会受到经济制裁的影响。</p><p class="en-summary">Trump highlighted the delicate state of peace discussions regarding the Ukraine conflict.</p>
+<p class="meta">The Times of India · 2026-10-22</p>
+<a href="https://economictimes.indiatimes.com/news/international/world-news/first-time-in-long-time-were-maybe-close-to-deal-trump-on-ukraine-conflict/articleshow/135103831.cms" target="_blank" rel="noopener noreferrer">原始报道 / Original source ↗</a></article><article class="item" id="story-14"><div class="num">14</div>
+<img class="story-photo" src="assets/news/e6efe28ff3738ab55f50050d.webp" alt="新闻照片 / Source photo" loading="lazy">
+<h3 class="zh-title">2027年美国最佳大学排名</h3><p class="en en-title">2027’s Best Colleges in America, Ranked</p>
+<p class="zh-summary">2027年美国最佳大学排名揭晓，包括常春藤盟校和其他知名大学。</p><p class="en-summary">The top 15 best colleges in America for 2027 have been ranked.</p>
+<p class="meta">Mental Floss · 2026-10-22</p>
+<a href="https://www.mentalfloss.com/culture/education/best-colleges-america-2027" target="_blank" rel="noopener noreferrer">原始报道 / Original source ↗</a></article><article class="item" id="story-15"><div class="num">15</div>
+<img class="story-photo" src="assets/news/c93c975ef87faefb18faeea0.jpg" alt="新闻照片 / Source photo" loading="lazy">
+<h3 class="zh-title">房地产专家解释出售房屋前需修复的事项</h3><p class="en en-title">In HelloNation, Real Estate Expert &quot;Mr. Cape Girardeau&quot; John Spear Explains What to Fix Before Selling a Home</p>
+<p class="zh-summary">房地产专家约翰·斯皮尔探讨在出售房屋前应修复的事项。</p><p class="en-summary">John Spear explains what homeowners should fix before selling a home in Cape Girardeau.</p>
+<p class="meta">PRNewswire · 2026-10-22</p>
+<a href="https://www.prnewswire.com/news-releases/in-hellonation-real-estate-expert-mr-cape-girardeau-john-spear-explains-what-to-fix-before-selling-a-home-302915409.html" target="_blank" rel="noopener noreferrer">原始报道 / Original source ↗</a></article></div></main><footer>Weston Life · 2026-10-22 · News digest</footer>
+<script>(function(){
+var lang="zh";try{lang=localStorage.getItem("westonlife-lang")==="en"?"en":"zh"}catch(e){}
+function choose(value){lang=value==="en"?"en":"zh";
 document.documentElement.dataset.wlLang=lang;
 document.documentElement.lang=lang==="en"?"en":"zh-CN";
 try{localStorage.setItem("westonlife-lang",lang)}catch(e){}
-document.querySelectorAll("[data-wl-choice]").forEach(function(b){
-b.classList.toggle("active",b.dataset.wlChoice===lang);
-b.setAttribute("aria-pressed",String(b.dataset.wlChoice===lang));
-});
-var names={
-".wl-kicker":["每日新闻简报","DAILY NEWS"],
-".wl-column-title:not(.world)":["📍 波士顿 · 马萨诸塞州","📍 BOSTON & MASSACHUSETTS"],
-".wl-column-title.world":["🌐 美国 · 全球","🌐 U.S. & WORLD"],
-".wl-editorial h3":["可可豆子的今日观点 ♡","Coco Bean's View Today"],
-".wl-cta a":["阅读今日完整新闻 →","Read Full Edition →"]
-};
-Object.keys(names).forEach(function(selector){
-var node=document.querySelector("#wl-auto "+selector);
-if(node)node.textContent=names[selector][lang==="en"?1:0];
-});
-document.querySelectorAll(".item").forEach(function(card){
-var link=card.querySelector("a");
-if(link)link.textContent=lang==="en"?"Read Original Source ↗":"阅读原始报道 ↗";
-});
+document.querySelectorAll("[data-wl-choice]").forEach(function(b){b.classList.toggle("active",b.dataset.wlChoice===lang);b.setAttribute("aria-pressed",String(b.dataset.wlChoice===lang))});
+var names={".wl-kicker":["每日新闻简报","DAILY NEWS"],".wl-column-title:not(.world)":["📍 Weston · 波士顿 · 马萨诸塞州","📍 WESTON / BOSTON / MASSACHUSETTS"],".wl-column-title.world":["🌐 美国 · 全球","🌐 U.S. & WORLD"],".wl-editorial h3":["可可豆子的今日观点 ♡","Coco Bean's View Today"],".wl-cta a":["阅读今日完整新闻 →","Read Full Edition →"]};
+Object.keys(names).forEach(function(sel){var el=document.querySelector("#wl-auto "+sel);if(el)el.textContent=names[sel][lang==="en"?1:0]});
 }
-document.addEventListener("click",function(e){
-var b=e.target.closest("[data-wl-choice]");
-if(b)choose(b.dataset.wlChoice);
-});
+document.addEventListener("click",function(e){var b=e.target.closest("[data-wl-choice]");if(b)choose(b.dataset.wlChoice)});
 choose(lang);
-})();
-</script>
+})();</script>
 </body></html>

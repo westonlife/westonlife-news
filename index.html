@@ -4,19 +4,18 @@
 </style></head><body>
 
 <style>
-.wl-langbar{display:flex;justify-content:center;gap:12px;
-padding:16px 8px;position:relative;z-index:5}
-.wl-langbar button{font:bold 20px Arial,sans-serif;
-padding:12px 22px;min-width:120px;
-border:2px solid #315c41;border-radius:10px;
-background:white;color:#315c41;cursor:pointer}
+.wl-langbar{display:flex;justify-content:center;gap:12px;padding:16px 8px;position:relative;z-index:5}
+.wl-langbar button{font:bold 20px Arial,sans-serif;padding:12px 22px;min-width:120px;border:2px solid #315c41;border-radius:10px;background:white;color:#315c41;cursor:pointer}
 .wl-langbar button.active{background:#315c41;color:white}
 html[data-wl-lang="zh"] #wl-auto .wl-en{display:none}
 html[data-wl-lang="en"] #wl-auto .wl-copy strong{display:none}
-html[data-wl-lang="zh"] .item p.en,
-html[data-wl-lang="zh"] .item p:nth-of-type(3){display:none}
-html[data-wl-lang="en"] .item h3,
-html[data-wl-lang="en"] .item p:nth-of-type(2){display:none}
+html[data-wl-lang="zh"] .item .en-title,html[data-wl-lang="zh"] .item .en-summary{display:none !important}
+html[data-wl-lang="en"] .item .zh-title,html[data-wl-lang="en"] .item .zh-summary{display:none !important}
+/* Override legacy p:nth-of-type toggles when a stale-label paragraph is present. */
+html[data-wl-lang="zh"] .item .zh-title,html[data-wl-lang="zh"] .item .zh-summary{display:block !important}
+html[data-wl-lang="en"] .item .en-title,html[data-wl-lang="en"] .item .en-summary{display:block !important}
+html[data-wl-lang="zh"] #wl-school .school-en{display:none}
+html[data-wl-lang="en"] #wl-school .school-zh{display:none}
 </style>
 <!-- WESTON-LIFE-AUTO-START -->
 <style>
@@ -39,7 +38,8 @@ html[data-wl-lang="en"] .item p:nth-of-type(2){display:none}
 #wl-auto .wl-story:hover {background:#fff4e4}
 #wl-auto .wl-photo {height:84px;border-radius:6px;overflow:hidden;background:#ece7dc}
 #wl-auto .wl-photo img {width:100%;height:100%;object-fit:cover;display:block}
-#wl-auto .wl-img-fallback {height:100%;display:flex;justify-content:center;align-items:center;background:#d9e7dc;color:#4f7558;font-style:italic;text-align:center;font-size:13px}
+#wl-auto .wl-stale {display:block;color:#9d4d28;font:bold 12px Arial,sans-serif;margin:0 0 3px}
+#wl-auto .wl-checked {display:block;font:10px Arial,sans-serif;color:#80786d;margin-bottom:4px}
 #wl-auto .wl-index {position:absolute;top:5px;left:2px;background:#df8a39;color:white;border-radius:100%;font:700 13px Arial,sans-serif;padding:6px;z-index:1}
 #wl-auto .wl-copy strong {display:block;font-size:15px;line-height:1.4}
 #wl-auto .wl-en {display:block;font-size:12px;line-height:1.4;color:#44644e;margin-top:5px}
@@ -53,60 +53,55 @@ html[data-wl-lang="en"] .item p:nth-of-type(2){display:none}
 @media(max-width:720px) {#wl-auto .wl-columns {grid-template-columns:1fr} #wl-auto .wl-story {grid-template-columns:112px 1fr} #wl-auto .wl-editorial img {width:80px;height:95px}}
 </style>
 <section id="wl-auto" aria-label="Weston Life 每日新闻">
-<header class="wl-masthead">
-<nav class="wl-langbar" aria-label="Choose language">
-<button type="button" data-wl-choice="zh">中文</button>
-<button type="button" data-wl-choice="en">English</button>
-</nav>
-<div class="wl-logo">Weston<em>Life</em></div><div class="wl-kicker">DAILY NEWS · 每日新闻简报</div>
+<header class="wl-masthead"><nav class="wl-langbar" aria-label="Choose language"><button type="button" data-wl-choice="zh">中文</button><button type="button" data-wl-choice="en">English</button></nav><div class="wl-logo">Weston<em>Life</em></div><div class="wl-kicker">DAILY NEWS · 每日新闻简报</div>
 <div class="wl-date">2026-10-22 · Boston / Massachusetts</div><div class="wl-tagline">A More Informed, Brighter New England</div></header>
-<div class="wl-columns"><div><h2 class="wl-column-title">📍 波士顿 · 马萨诸塞州 | BOSTON & MASSACHUSETTS</h2><a class="wl-story" href="news-2026-10-22.html#story-1" aria-label="‘Looksmaxxing’ 网红 Clavicular 在马萨诸塞州强奸案中不认罪">
-<span class="wl-index">01</span><div class="wl-photo"><img src="https://s.yimg.com/lo/mysterio/api/28ec5826ef68327f06dda82e8647e8a7339a442fe6730c197f145e19c6fa9a97/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fap.org%2Fd334f74dffb359950c27620621108918.jpg" alt="新闻来源配图 / Source image" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'"></div>
-<div class="wl-copy"><strong>‘Looksmaxxing’ 网红 Clavicular 在马萨诸塞州强奸案中不认罪</strong><span class="wl-en">&#x27;Looksmaxxing&#x27; influencer Clavicular pleads not guilty in Mass. rape case</span>
-<span class="wl-source">Yahoo Entertainment · 2026-10-21</span></div></a><a class="wl-story" href="news-2026-10-22.html#story-2" aria-label="六人因涉嫌马萨诸塞州假结婚团伙被起诉">
-<span class="wl-index">02</span><div class="wl-photo"><img src="https://biztoc.com/cdn/8b8c8814f89c4e23_s.webp" alt="新闻来源配图 / Source image" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'"></div>
-<div class="wl-copy"><strong>六人因涉嫌马萨诸塞州假结婚团伙被起诉</strong><span class="wl-en">Six Charged In Alleged Massachusetts Sham Marriage Ring</span>
-<span class="wl-source">Biztoc.com · 2026-10-21</span></div></a><a class="wl-story" href="news-2026-10-22.html#story-3" aria-label="保罗·乔治在凯尔特人历史上创下破纪录的首秀">
-<span class="wl-index">03</span><div class="wl-photo"><img src="https://s.yimg.com/lo/mysterio/api/cbbfd677764cf7b8a81c16390be37c8917aec6923f53d28c1226993bed7c7982/lightyear_networkapi/resizefill_w1200_h675%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Feasy_sportz_188%2F285b5364e176811f793b537c39c6128b.jpg" alt="新闻来源配图 / Source image" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'"></div>
-<div class="wl-copy"><strong>保罗·乔治在凯尔特人历史上创下破纪录的首秀</strong><span class="wl-en">Paul George Makes Celtics History With Record Breaking Debut</span>
-<span class="wl-source">Easysportz.com · 2026-10-21</span></div></a><a class="wl-story" href="news-2026-10-22.html#story-4" aria-label="TechCrunch 创始人峰会 2026：你需要知道的一切">
-<span class="wl-index">04</span><div class="wl-photo"><img src="https://biztoc.com/cdn/a7230a49c22feb1a_s.webp" alt="新闻来源配图 / Source image" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'"></div>
-<div class="wl-copy"><strong>TechCrunch 创始人峰会 2026：你需要知道的一切</strong><span class="wl-en">TechCrunch Founder Summit 2026: Everything you need to know</span>
-<span class="wl-source">Biztoc.com · 2026-10-21</span></div></a><a class="wl-story" href="news-2026-10-22.html#story-5" aria-label="这些康涅狄格州球队将参加2027年帕尼尼霍普霍尔邀请赛">
-<span class="wl-index">05</span><div class="wl-photo"><img src="https://s.yimg.com/lo/mysterio/api/05af5c68eedd35a91073089a6ab713bb59b243de9dd8ffb1be6925828f46611e/lightyear_networkapi/resizefill_w1200_h675%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fct_insider_187%2Fa7748cfada4fadd375ddcc5065158537.jpg" alt="新闻来源配图 / Source image" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'"></div>
-<div class="wl-copy"><strong>这些康涅狄格州球队将参加2027年帕尼尼霍普霍尔邀请赛</strong><span class="wl-en">These Connecticut teams are set for the 2027 Panini Hoophall Invitational in Springfield, Mass.</span>
-<span class="wl-source">Ctinsider.com · 2026-10-21</span></div></a></div>
-<div><h2 class="wl-column-title world">🌐 美国 · 全球 | U.S. & WORLD</h2><a class="wl-story" href="news-2026-10-22.html#story-6" aria-label="经济稳定必须成为共享繁荣">
-<span class="wl-index">06</span><div class="wl-photo"><img src="https://punchng.com/wp-content/uploads/2026/08/Tinubu-and-Oyedele_1786579443.webp" alt="新闻来源配图 / Source image" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'"></div>
-<div class="wl-copy"><strong>经济稳定必须成为共享繁荣</strong><span class="wl-en">Economic stability must become shared prosperity</span>
-<span class="wl-source">The Punch · 2026-10-22</span></div></a><a class="wl-story" href="news-2026-10-22.html#story-7" aria-label="特朗普发现！华盛顿是世界战争之都">
-<span class="wl-index">07</span><div class="wl-photo"><img src="https://dyn3qbr4ue2vr.cloudfront.net/2026/10/trump-stock1.jpg" alt="新闻来源配图 / Source image" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'"></div>
-<div class="wl-copy"><strong>特朗普发现！华盛顿是世界战争之都</strong><span class="wl-en">Trump Finds Out! Washington Is the War Capital of the World</span>
-<span class="wl-source">Antiwar.com · 2026-10-22</span></div></a><a class="wl-story" href="news-2026-10-22.html#story-8" aria-label="古巴陷入黑暗，中国带来阳光">
-<span class="wl-index">08</span><div class="wl-photo"><img src="https://punchng.com/wp-content/uploads/2026/06/Greg-Odogwu.webp" alt="新闻来源配图 / Source image" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'"></div>
-<div class="wl-copy"><strong>古巴陷入黑暗，中国带来阳光</strong><span class="wl-en">Cuba in the dark, China brings the sun</span>
-<span class="wl-source">The Punch · 2026-10-22</span></div></a><a class="wl-story" href="news-2026-10-22.html#story-9" aria-label="独家——FBI逮捕青少年，因ISIS恐怖袭击阴谋可能还计划刺杀国会议员">
-<span class="wl-index">09</span><div class="wl-photo"><img src="https://media.breitbart.com/media/2026/10/GettyImages2282606852-640x335.jpg" alt="新闻来源配图 / Source image" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'"></div>
-<div class="wl-copy"><strong>独家——FBI逮捕青少年，因ISIS恐怖袭击阴谋可能还计划刺杀国会议员</strong><span class="wl-en">Exclusive — Juvenile Arrested by FBI for ISIS Terror Attack Plot May Have Also Planned to Assassinate Sharia-Free America Caucus Co-Founder Rep. Keith Self</span>
-<span class="wl-source">Breitbart News · 2026-10-22</span></div></a><a class="wl-story" href="news-2026-10-22.html#story-10" aria-label="‘防御者窗口’即将关闭">
-<span class="wl-index">10</span><div class="wl-photo"><img src="https://tii.imgix.net/production/articles/18033/1c9ac2e5-5f89-44d6-93f0-3744582775b6-QO1RQ5.png?fm=jpg&amp;auto=compress&amp;w=1200&amp;frame=0" alt="新闻来源配图 / Source image" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'"></div>
-<div class="wl-copy"><strong>‘防御者窗口’即将关闭</strong><span class="wl-en">The Closing of the ‘Defenders Window’ Is Nigh</span>
-<span class="wl-source">Herokuapp.com · 2026-10-22</span></div></a><a class="wl-story" href="news-2026-10-22.html#story-11" aria-label="CauTrigger：通过层次因果分解解读生物系统状态转变">
-<span class="wl-index">11</span><div class="wl-photo"><img src="https://media.springernature.com/m685/springer-static/image/art%3A10.1038%2Fs41592-026-03274-9/MediaObjects/41592_2026_3274_Fig1_HTML.png" alt="新闻来源配图 / Source image" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'"></div>
-<div class="wl-copy"><strong>CauTrigger：通过层次因果分解解读生物系统状态转变</strong><span class="wl-en">CauTrigger: deciphering biological system state transitions by hierarchical causal decomposition</span>
-<span class="wl-source">Nature.com · 2026-10-22</span></div></a><a class="wl-story" href="news-2026-10-22.html#story-12" aria-label="‘防御者窗口’即将关闭">
-<span class="wl-index">12</span><div class="wl-photo"><div class="wl-img-fallback">Weston Life</div></div>
-<div class="wl-copy"><strong>‘防御者窗口’即将关闭</strong><span class="wl-en">The Closing of the ‘Defenders Window’ Is Nigh</span>
-<span class="wl-source">The Information · 2026-10-22</span></div></a><a class="wl-story" href="news-2026-10-22.html#story-13" aria-label="亚历克斯·佩雷拉承认在UFC中失望，错过与霍基特的比赛">
-<span class="wl-index">13</span><div class="wl-photo"><img src="https://s.yimg.com/lo/mysterio/api/9369cff53c055d074b88bf1756eb06f9155f2c34799173ea2a3b7c3b75c1873b/lightyear_networkapi/resizefill_w1200_h675%3Bquality_80%3Bformat_webp/https%3A%2F%2Fd29szjachogqwa.cloudfront.net%2Fimages%2F2026-06%2Fa5338779-4300-4609-8b1a-612d1ca55102" alt="新闻来源配图 / Source image" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'"></div>
-<div class="wl-copy"><strong>亚历克斯·佩雷拉承认在UFC中失望，错过与霍基特的比赛</strong><span class="wl-en">Alex Pereira admits UFC frustrations after missing out on Josh Hokit, Ciryl Gane: &#x27;They do whatever they want&#x27;</span>
-<span class="wl-source">Yahoo Entertainment · 2026-10-22</span></div></a><a class="wl-story" href="news-2026-10-22.html#story-14" aria-label="BackupDrill：开源Supabase Postgres备份与自动恢复演练">
-<span class="wl-index">14</span><div class="wl-photo"><div class="wl-img-fallback">Weston Life</div></div>
-<div class="wl-copy"><strong>BackupDrill：开源Supabase Postgres备份与自动恢复演练</strong><span class="wl-en">BackupDrill: open-source Supabase Postgres backups with automated restore drills</span>
-<span class="wl-source">Postgresql.org · 2026-10-22</span></div></a><a class="wl-story" href="news-2026-10-22.html#story-15" aria-label="印度通讯：亚洲最热门的数据中心市场旨在缓解对水和电力使用的担忧">
-<span class="wl-index">15</span><div class="wl-photo"><img src="https://image.cnbcfm.com/api/v1/image/108436227-1792484468325-gettyimages-2299069320-AFP_C83L2RR.jpeg?v=1792484492&amp;w=1920&amp;h=1080" alt="新闻来源配图 / Source image" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'"></div>
-<div class="wl-copy"><strong>印度通讯：亚洲最热门的数据中心市场旨在缓解对水和电力使用的担忧</strong><span class="wl-en">Inside India newsletter: Asia’s hottest data center market aims to quell concerns over water and power use</span>
-<span class="wl-source">CNBC · 2026-10-22</span></div></a></div></div>
+<div class="wl-columns"><div><h2 class="wl-column-title">📍 波士顿 · 马萨诸塞州 | BOSTON & MASSACHUSETTS</h2><a class="wl-story" href="news-2026-10-22.html#story-1" aria-label="METCO的解雇记事本筹款活动">
+<span class="wl-index">01</span><div class="wl-photo"><img src="assets/news/d5813fa2993e0eb363695737.png" alt="新闻来源配图 / Source image" loading="lazy" decoding="async"></div>
+<div class="wl-copy"><strong>METCO的解雇记事本筹款活动</strong><span class="wl-en">Dismissal Notepad Fundraiser for METCO</span>
+<span class="wl-source">Weston Public Schools · 2026-10-16</span></div></a><a class="wl-story" href="news-2026-10-22.html#story-2" aria-label="2026年10月27日照片重拍日">
+<span class="wl-index">02</span><div class="wl-photo"><img src="assets/news/04eeb35590f7ca9dfa338fa3.png" alt="新闻来源配图 / Source image" loading="lazy" decoding="async"></div>
+<div class="wl-copy"><strong>2026年10月27日照片重拍日</strong><span class="wl-en">Picture Retake Day 10/27/2026</span>
+<span class="wl-source">Weston High School · 2026-10-22</span></div></a><a class="wl-story" href="news-2026-10-22.html#story-3" aria-label="西顿镇政府暂无更新">
+<span class="wl-index">03</span><div class="wl-photo"><img src="assets/news/slot-03-no-update.svg" alt="新闻来源配图 / Source image" loading="lazy" decoding="async"></div>
+<div class="wl-copy"><span class="wl-stale">暂无更新 / No New Updates</span><small class="wl-checked">最后检查 / Checked: 2026-10-22</small><strong>西顿镇政府暂无更新</strong><span class="wl-en">No New Town Update</span>
+<span class="wl-source">Weston Life · 2026-10-23</span></div></a><a class="wl-story" href="news-2026-10-22.html#story-4" aria-label="新社区助力太空医学学生">
+<span class="wl-index">04</span><div class="wl-photo"><img src="assets/news/4f9235caffeb16b1e1db34f2.jpg" alt="新闻来源配图 / Source image" loading="lazy" decoding="async"></div>
+<div class="wl-copy"><strong>新社区助力太空医学学生</strong><span class="wl-en">For students with their sights set on space medicine, a new community takes flight</span>
+<span class="wl-source">Mit.edu · 2026-10-21</span></div></a><a class="wl-story" href="news-2026-10-22.html#story-5" aria-label="波士顿儿童博物馆的同理心展览">
+<span class="wl-index">05</span><div class="wl-photo"><img src="assets/news/2dabb37d2a8d5e68462455bf.jpg" alt="新闻来源配图 / Source image" loading="lazy" decoding="async"></div>
+<div class="wl-copy"><strong>波士顿儿童博物馆的同理心展览</strong><span class="wl-en">Oceans of Empathy Exhibit at Boston Children&#x27;s Museum</span>
+<span class="wl-source">PRNewswire · 2026-10-21</span></div></a></div>
+<div><h2 class="wl-column-title world">🌐 美国 · 全球 | U.S. & WORLD</h2><a class="wl-story" href="news-2026-10-22.html#story-6" aria-label="特朗普：我们摧毁了伊朗的核计划">
+<span class="wl-index">06</span><div class="wl-photo"><img src="assets/news/f611ef32dbdeb2e709a0b0c0.webp" alt="新闻来源配图 / Source image" loading="lazy" decoding="async"></div>
+<div class="wl-copy"><strong>特朗普：我们摧毁了伊朗的核计划</strong><span class="wl-en">Trump: We obliterated Iran&#x27;s nuclear program, war will end &#x27;very soon&#x27;</span>
+<span class="wl-source">Israelnationalnews.com · 2026-10-22</span></div></a><a class="wl-story" href="news-2026-10-22.html#story-7" aria-label="泽连斯基希望与俄罗斯和美国进行新谈判">
+<span class="wl-index">07</span><div class="wl-photo"><img src="assets/news/369a087a4fb0f91e227853dd.webp" alt="新闻来源配图 / Source image" loading="lazy" decoding="async"></div>
+<div class="wl-copy"><strong>泽连斯基希望与俄罗斯和美国进行新谈判</strong><span class="wl-en">Ukraine&#x27;s Zelenskiy hopes for new talks with Russia, US by early November</span>
+<span class="wl-source">The Times of India · 2026-10-22</span></div></a><a class="wl-story" href="news-2026-10-22.html#story-8" aria-label="深道电动半挂车在澳大利亚投入使用">
+<span class="wl-index">08</span><div class="wl-photo"><img src="assets/news/f7da725f11314666e5f623b9.jpg" alt="新闻来源配图 / Source image" loading="lazy" decoding="async"></div>
+<div class="wl-copy"><strong>深道电动半挂车在澳大利亚投入使用</strong><span class="wl-en">Not the Future, It’s Now — Deepway Electric Semi Put to Work in Australia</span>
+<span class="wl-source">CleanTechnica · 2026-10-22</span></div></a><a class="wl-story" href="news-2026-10-22.html#story-9" aria-label="华尔街日报编辑批评特朗普人质交易">
+<span class="wl-index">09</span><div class="wl-photo"><img src="assets/news/94d2bfae41e636e217e70892.webp" alt="新闻来源配图 / Source image" loading="lazy" decoding="async"></div>
+<div class="wl-copy"><strong>华尔街日报编辑批评特朗普人质交易</strong><span class="wl-en">WSJ editors blast Trump after he caves in hostage deal: ‘No cause to be grateful’</span>
+<span class="wl-source">Raw Story · 2026-10-22</span></div></a><a class="wl-story" href="news-2026-10-22.html#story-10" aria-label="NVIDIA开启检索层">
+<span class="wl-index">10</span><div class="wl-photo"><img src="assets/news/2c38385dc44724a1ba292517.jpg" alt="新闻来源配图 / Source image" loading="lazy" decoding="async"></div>
+<div class="wl-copy"><strong>NVIDIA开启检索层</strong><span class="wl-en">NVIDIA Opens the Retrieval Layer: Embed, Rerank, and Parse Decide What Agents Know</span>
+<span class="wl-source">Forkast.news · 2026-10-22</span></div></a><a class="wl-story" href="news-2026-10-22.html#story-11" aria-label="美国市场聚焦AI，但回报可能需要数十年">
+<span class="wl-index">11</span><div class="wl-photo"><img src="assets/news/729321a781d171eee0f1ec02.webp" alt="新闻来源配图 / Source image" loading="lazy" decoding="async"></div>
+<div class="wl-copy"><strong>美国市场聚焦AI，但回报可能需要数十年</strong><span class="wl-en">The U.S. market has never been more focused on one single bet—but AI’s payoff will likely take decades</span>
+<span class="wl-source">Fortune · 2026-10-22</span></div></a><a class="wl-story" href="news-2026-10-22.html#story-12" aria-label="OpenAI的AI代理禁用安全监控">
+<span class="wl-index">12</span><div class="wl-photo"><img src="assets/news/a70e16e5886131a085e972f9.png" alt="新闻来源配图 / Source image" loading="lazy" decoding="async"></div>
+<div class="wl-copy"><strong>OpenAI的AI代理禁用安全监控</strong><span class="wl-en">AI agents disabled safeguards and one denied it – OpenAI</span>
+<span class="wl-source">Rt-english.com · 2026-10-22</span></div></a><a class="wl-story" href="news-2026-10-22.html#story-13" aria-label="特朗普：乌克兰冲突或许接近达成协议">
+<span class="wl-index">13</span><div class="wl-photo"><img src="assets/news/369a087a4fb0f91e227853dd.webp" alt="新闻来源配图 / Source image" loading="lazy" decoding="async"></div>
+<div class="wl-copy"><strong>特朗普：乌克兰冲突或许接近达成协议</strong><span class="wl-en">&#x27;First time in long time, we&#x27;re maybe close to deal&#x27;: Trump on Ukraine conflict</span>
+<span class="wl-source">The Times of India · 2026-10-22</span></div></a><a class="wl-story" href="news-2026-10-22.html#story-14" aria-label="2027年美国最佳大学排名">
+<span class="wl-index">14</span><div class="wl-photo"><img src="assets/news/e6efe28ff3738ab55f50050d.webp" alt="新闻来源配图 / Source image" loading="lazy" decoding="async"></div>
+<div class="wl-copy"><strong>2027年美国最佳大学排名</strong><span class="wl-en">2027’s Best Colleges in America, Ranked</span>
+<span class="wl-source">Mental Floss · 2026-10-22</span></div></a><a class="wl-story" href="news-2026-10-22.html#story-15" aria-label="房地产专家解释出售房屋前需修复的事项">
+<span class="wl-index">15</span><div class="wl-photo"><img src="assets/news/c93c975ef87faefb18faeea0.jpg" alt="新闻来源配图 / Source image" loading="lazy" decoding="async"></div>
+<div class="wl-copy"><strong>房地产专家解释出售房屋前需修复的事项</strong><span class="wl-en">In HelloNation, Real Estate Expert &quot;Mr. Cape Girardeau&quot; John Spear Explains What to Fix Before Selling a Home</span>
+<span class="wl-source">PRNewswire · 2026-10-22</span></div></a></div></div>
 <div class="wl-editorial"><img src="assets/coco_portrait_original.jpeg" alt="可可豆子 · Coco Bean" onerror="this.style.display='none'">
 <div><h3>可可豆子的今日观点 ♡</h3><p><em>Coco Bean’s View Today</em></p>
 <p>观点栏目独立于自动新闻摘要；在本人撰写或确认前，不自动生成署名个人观点。</p>
@@ -114,44 +109,19 @@ html[data-wl-lang="en"] .item p:nth-of-type(2){display:none}
 <div class="wl-cta"><a href="news-2026-10-22.html">阅读今日完整新闻 / Read the full edition →</a></div>
 </section>
 <!-- WESTON-LIFE-AUTO-END -->
-<script>
-(function(){
-var lang="zh";
-try{
-lang=localStorage.getItem("westonlife-lang")==="en"?"en":"zh";
-}catch(e){}
-function choose(value){
-lang=value==="en"?"en":"zh";
+<script>(function(){
+var lang="zh";try{lang=localStorage.getItem("westonlife-lang")==="en"?"en":"zh"}catch(e){}
+function choose(value){lang=value==="en"?"en":"zh";
 document.documentElement.dataset.wlLang=lang;
 document.documentElement.lang=lang==="en"?"en":"zh-CN";
 try{localStorage.setItem("westonlife-lang",lang)}catch(e){}
-document.querySelectorAll("[data-wl-choice]").forEach(function(b){
-b.classList.toggle("active",b.dataset.wlChoice===lang);
-b.setAttribute("aria-pressed",String(b.dataset.wlChoice===lang));
-});
-var names={
-".wl-kicker":["每日新闻简报","DAILY NEWS"],
-".wl-column-title:not(.world)":["📍 波士顿 · 马萨诸塞州","📍 BOSTON & MASSACHUSETTS"],
-".wl-column-title.world":["🌐 美国 · 全球","🌐 U.S. & WORLD"],
-".wl-editorial h3":["可可豆子的今日观点 ♡","Coco Bean's View Today"],
-".wl-cta a":["阅读今日完整新闻 →","Read Full Edition →"]
-};
-Object.keys(names).forEach(function(selector){
-var node=document.querySelector("#wl-auto "+selector);
-if(node)node.textContent=names[selector][lang==="en"?1:0];
-});
-document.querySelectorAll(".item").forEach(function(card){
-var link=card.querySelector("a");
-if(link)link.textContent=lang==="en"?"Read Original Source ↗":"阅读原始报道 ↗";
-});
+document.querySelectorAll("[data-wl-choice]").forEach(function(b){b.classList.toggle("active",b.dataset.wlChoice===lang);b.setAttribute("aria-pressed",String(b.dataset.wlChoice===lang))});
+var names={".wl-kicker":["每日新闻简报","DAILY NEWS"],".wl-column-title:not(.world)":["📍 Weston · 波士顿 · 马萨诸塞州","📍 WESTON / BOSTON / MASSACHUSETTS"],".wl-column-title.world":["🌐 美国 · 全球","🌐 U.S. & WORLD"],".wl-editorial h3":["可可豆子的今日观点 ♡","Coco Bean's View Today"],".wl-cta a":["阅读今日完整新闻 →","Read Full Edition →"]};
+Object.keys(names).forEach(function(sel){var el=document.querySelector("#wl-auto "+sel);if(el)el.textContent=names[sel][lang==="en"?1:0]});
 }
-document.addEventListener("click",function(e){
-var b=e.target.closest("[data-wl-choice]");
-if(b)choose(b.dataset.wlChoice);
-});
+document.addEventListener("click",function(e){var b=e.target.closest("[data-wl-choice]");if(b)choose(b.dataset.wlChoice)});
 choose(lang);
-})();
-</script>
+})();</script>
 
 
 
@@ -440,8 +410,104 @@ choose(lang);
 
 
 
+<style>
+.wl-langbar{display:flex;justify-content:center;gap:12px;
+padding:16px 8px;position:relative;z-index:5}
+.wl-langbar button{font:bold 20px Arial,sans-serif;
+padding:12px 22px;min-width:120px;
+border:2px solid #315c41;border-radius:10px;
+background:white;color:#315c41;cursor:pointer}
+.wl-langbar button.active{background:#315c41;color:white}
+html[data-wl-lang="zh"] #wl-auto .wl-en{display:none}
+html[data-wl-lang="en"] #wl-auto .wl-copy strong{display:none}
+html[data-wl-lang="zh"] .item p.en,
+html[data-wl-lang="zh"] .item p:nth-of-type(3){display:none}
+html[data-wl-lang="en"] .item h3,
+html[data-wl-lang="en"] .item p:nth-of-type(2){display:none}
+</style>
+
+<script>
+(function(){
+var lang="zh";
+try{
+lang=localStorage.getItem("westonlife-lang")==="en"?"en":"zh";
+}catch(e){}
+function choose(value){
+lang=value==="en"?"en":"zh";
+document.documentElement.dataset.wlLang=lang;
+document.documentElement.lang=lang==="en"?"en":"zh-CN";
+try{localStorage.setItem("westonlife-lang",lang)}catch(e){}
+document.querySelectorAll("[data-wl-choice]").forEach(function(b){
+b.classList.toggle("active",b.dataset.wlChoice===lang);
+b.setAttribute("aria-pressed",String(b.dataset.wlChoice===lang));
+});
+var names={
+".wl-kicker":["每日新闻简报","DAILY NEWS"],
+".wl-column-title:not(.world)":["📍 波士顿 · 马萨诸塞州","📍 BOSTON & MASSACHUSETTS"],
+".wl-column-title.world":["🌐 美国 · 全球","🌐 U.S. & WORLD"],
+".wl-editorial h3":["可可豆子的今日观点 ♡","Coco Bean's View Today"],
+".wl-cta a":["阅读今日完整新闻 →","Read Full Edition →"]
+};
+Object.keys(names).forEach(function(selector){
+var node=document.querySelector("#wl-auto "+selector);
+if(node)node.textContent=names[selector][lang==="en"?1:0];
+});
+document.querySelectorAll(".item").forEach(function(card){
+var link=card.querySelector("a");
+if(link)link.textContent=lang==="en"?"Read Original Source ↗":"阅读原始报道 ↗";
+});
+}
+document.addEventListener("click",function(e){
+var b=e.target.closest("[data-wl-choice]");
+if(b)choose(b.dataset.wlChoice);
+});
+choose(lang);
+})();
+</script>
 
 
+
+
+
+<!-- WESTON-SCHOOL-START -->
+<style>
+#wl-school{font-family:Georgia,'Times New Roman',serif;background:#f5f5ed;border:1px solid #d9decd;max-width:1100px;margin:22px auto;padding:22px 26px;border-radius:14px;color:#283b30}
+#wl-school h2{font-size:clamp(26px,4vw,35px);margin:6px 0 8px;color:#315d44}
+#wl-school .school-kicker{font:12px Arial,sans-serif;letter-spacing:.2em;color:#8a6e42}
+#wl-school .school-stats{display:flex;flex-wrap:wrap;gap:14px;margin:16px 0}
+#wl-school .school-stat{flex:1 1 150px;background:#fff;border-radius:9px;padding:15px;border:1px solid #e0e2d8}
+#wl-school .school-stat strong{font:700 29px Arial,sans-serif;color:#366a51;display:block}
+#wl-school .school-stat span{font:13px Arial,sans-serif}
+#wl-school .school-schools{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px 24px;margin:14px 0}
+#wl-school .school-row{display:flex;justify-content:space-between;border-bottom:1px solid #dfe3d8;padding:5px 0;font:13px Arial,sans-serif;gap:10px}
+#wl-school .school-row strong{font-size:15px;color:#315d44}
+#wl-school a{text-decoration:underline;color:#315d44}
+#wl-school summary{cursor:pointer;color:#315d44;margin-top:12px}
+#wl-school .school-notes{color:#60685b;font:12px/1.6 Arial,sans-serif}
+@media(max-width:600px){#wl-school{padding:16px}#wl-school .school-schools{grid-template-columns:1fr}}
+</style>
+<section id="wl-school" aria-label="Weston Schools News">
+<div class="school-kicker">WESTON LIFE · WESTON SCHOOLS</div>
+<h2><span class="school-zh">🎓 Weston校园动态</span><span class="school-en">🎓 Weston School Watch</span></h2>
+<p class="school-latest school-zh">最新学校消息：<a href="https://www.westonschools.org/high/blog/2026/10/22/picture-retake-day-10-27-2026/" target="_blank" rel="noopener noreferrer">Picture Retake Day 10/27/2026</a> <small>(2026-10-22)</small></p>
+<p class="school-latest school-en">Latest school update: <a href="https://www.westonschools.org/high/blog/2026/10/22/picture-retake-day-10-27-2026/" target="_blank" rel="noopener noreferrer">Picture Retake Day 10/27/2026</a> <small>(2026-10-22)</small></p>
+<h3 class="school-zh" style="margin:8px 0">Weston高中升学榜：2025届毕业生去哪了？</h3>
+<h3 class="school-en" style="margin:8px 0">Where Did Weston High School's Class of 2025 Go to College?</h3>
+<p class="school-zh">据Weston镇2026年学校委员会报告，2025届毕业生中约97%继续升学，就读于96所高等教育机构。以下为部分院校的实际入读人数，非录取通知书数量。</p>
+<p class="school-en">According to the Town's 2026 School Committee report, about 97% of the Class of 2025 continued their education at 96 institutions. Counts below are matriculations, not offers of admission.</p>
+<div class="school-stats"><div class="school-stat"><strong>169</strong><span class="school-zh">2026镇报告中的2025届毕业人数</span><span class="school-en">Class of 2025, town-report count</span></div>
+<div class="school-stat"><strong>97%</strong><span class="school-zh">继续接受教育</span><span class="school-en">Continued education</span></div>
+<div class="school-stat"><strong>96</strong><span class="school-zh">入读院校数量</span><span class="school-en">Different institutions</span></div></div>
+<div class="school-schools"><div class="school-row"><span>Northeastern University</span><strong>6</strong></div><div class="school-row"><span>UMass Amherst</span><strong>6</strong></div><div class="school-row"><span>Boston College</span><strong>5</strong></div><div class="school-row"><span>Colgate University</span><strong>5</strong></div><div class="school-row"><span>Cornell University</span><strong>5</strong></div><div class="school-row"><span>Boston University</span><strong>4</strong></div><div class="school-row"><span>University of Connecticut</span><strong>4</strong></div><div class="school-row"><span>University of Virginia</span><strong>4</strong></div><div class="school-row"><span>Harvard University</span><strong>3</strong></div><div class="school-row"><span>Carnegie Mellon University</span><strong>3</strong></div><div class="school-row"><span>Dartmouth College</span><strong>3</strong></div><div class="school-row"><span>Purdue University</span><strong>3</strong></div><div class="school-row"><span>Middlebury College</span><strong>3</strong></div><div class="school-row"><span>Massachusetts Institute of Technology</span><strong>2</strong></div><div class="school-row"><span>New York University</span><strong>2</strong></div><div class="school-row"><span>Columbia University</span><strong>1</strong></div><div class="school-row"><span>Princeton University</span><strong>1</strong></div><div class="school-row"><span>Yale University</span><strong>1</strong></div><div class="school-row"><span>University of Pennsylvania</span><strong>1</strong></div></div>
+<p class="school-zh"><a href="https://www.westonma.gov/DocumentCenter/View/42263/Report-of-the-School-Committee-PDF#page=8" target="_blank" rel="noopener noreferrer">查看2025届完整96所院校去向（官方PDF，第29页） ↗</a></p>
+<p class="school-en"><a href="https://www.westonma.gov/DocumentCenter/View/42263/Report-of-the-School-Committee-PDF#page=8" target="_blank" rel="noopener noreferrer">View complete 2025 college list (Town report, p. 29) ↗</a></p>
+<details><summary><span class="school-zh">查看2024届大学去向对比（13所）</span><span class="school-en">Compare Class of 2024 destinations (13 colleges)</span></summary>
+<div class="school-schools"><div class="school-row"><span>Harvard University</span><strong>5</strong></div><div class="school-row"><span>MIT</span><strong>1</strong></div><div class="school-row"><span>Stanford University</span><strong>3</strong></div><div class="school-row"><span>Yale University</span><strong>2</strong></div><div class="school-row"><span>Cornell University</span><strong>2</strong></div><div class="school-row"><span>Dartmouth College</span><strong>3</strong></div><div class="school-row"><span>Princeton University</span><strong>1</strong></div><div class="school-row"><span>University of Pennsylvania</span><strong>1</strong></div><div class="school-row"><span>New York University</span><strong>2</strong></div><div class="school-row"><span>Northeastern University</span><strong>12</strong></div><div class="school-row"><span>Boston College</span><strong>6</strong></div><div class="school-row"><span>UMass Amherst</span><strong>5</strong></div><div class="school-row"><span>University of Michigan</span><strong>5</strong></div></div>
+<p><a href="https://www.westonschools.org/wp-content/uploads/2025/02/2024-Report-of-the-Weston-Public-Schools-Final.pdf#page=16" target="_blank" rel="noopener noreferrer">2024 official report / 2024届官方报告 ↗</a></p></details>
+<p class="school-notes school-zh">资料年份：2025届去向，公布于2026年。注意：2025–26官方高中概况另列170名毕业生；上文采用同一份2026年镇报告的169人及院校明细，不混用口径。学校并非每天公布新升学数据。</p>
+<p class="school-notes school-en">The 2025 cohort was reported in the 2026 Town Report. A separate WHS profile lists 170 graduates; this feature consistently uses the town report's count of 169. Admissions outcomes do not change daily.</p>
+</section>
+<!-- WESTON-SCHOOL-END -->
 <div style="margin:25px 0;padding:24px;background:#f6eee3;border:1px solid #dec9ae;border-radius:12px;text-align:center;">
   <p style="color:#a36a35;font:12px Arial,sans-serif;letter-spacing:2px;">WESTON LIFE · COMMUNITY STORIES</p>
   <h2 style="font-size:28px;color:#283b30;">🍁 社区游记 · Travel Stories</h2>
