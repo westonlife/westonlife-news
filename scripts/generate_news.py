@@ -381,6 +381,115 @@ def render(groups, summaries, date):
     page = page.replace("</head>", LANG_CSS + "</head>", 1)
     page = page.replace("</body>", LANG_SCRIPT + "</body>", 1)
     return page
+# Weston Life: 5 local headlines first, then 10 world headlines.
+# Place this block BEFORE: if __name__ == "__main__":
+LOCAL_NEWS_QUERIES = [
+    '("Weston Massachusetts" OR "Weston MA") AND (leaves OR roads OR public works OR community)',
+    '"Weston High School" AND (Massachusetts OR school OR students)',
+    '("Weston Massachusetts" OR "Town of Weston") AND (town OR meeting OR notice OR event)',
+    'Boston AND (events OR festival OR activities OR city)',
+    'Massachusetts AND (events OR communities OR activities OR state)',
+]
+WORLD_NEWS_QUERIES = [
+    '(Iran AND (United States OR US)) OR (Middle East AND US)',
+    'Russia AND Ukraine AND (war OR peace OR negotiations)',
+    'China AND (economy OR government OR technology OR policy)',
+    '("Wall Street" OR "S&P 500" OR Nasdaq OR "Treasury yields" OR "Federal Reserve")',
+    '(Nvidia OR NVDA OR Microsoft OR Google OR Broadcom OR Tesla OR Apple) AND (shares OR earnings OR company)',
+    '"artificial intelligence" AND (breakthrough OR research OR discovery OR innovation)',
+    '(OpenAI OR Anthropic OR "Google AI" OR "Microsoft AI" OR "Meta AI")',
+    '("US Congress" OR "White House" OR "Supreme Court" OR "US election")',
+    '("US universities" OR "college admissions" OR "Harvard University" OR "MIT")',
+    '("US housing market" OR "mortgage rates" OR "home prices" OR real estate)',
+]
+
+
+def discover():
+    key = os.environ["NEWS_API_KEY"]
+    cutoff_dt = datetime.now(timezone.utc) - timedelta(days=3)
+    cutoff = cutoff_dt.isoformat(timespec="seconds").replace("+00:00", "Z")
+    seen = set()
+
+    def search_news(query, local=False):
+        params = urlencode({
+            "q": query, "language": "en", "sortBy": "publishedAt",
+            "pageSize": 50, "from": cutoff, "apiKey": key,
+        })
+        response = get_json("https://newsapi.org/v2/everything?" + params)
+        if response.get("status") != "ok":
+            raise RuntimeError("NewsAPI error: " + str(response.get("message", "unknown")))
+        results = []
+        for article in response.get("articles", []):
+            url = article.get("url") or ""
+            title = article.get("title") or ""
+            description = article.get("description") or ""
+            parsed = urlparse(url)
+            domain = (parsed.hostname or "").lower()
+            if not title or title == "[Removed]" or "[Removed]" in description:
+                continue
+            if parsed.scheme != "https" or not parsed.netloc:
+                continue
+            if any(domain == b or domain.endswith("." + b)
+                   for b in ("slashdot.org", "alltoc.com")):
+                continue
+            if local:
+                text = (title + " " + description + " " +
+                        (article.get("content") or "")).lower()
+                if not (is_local_news(article) or "weston" in text):
+                    continue
+            published = article.get("publishedAt") or ""
+            try:
+                if datetime.fromisoformat(published.replace("Z", "+00:00")) < cutoff_dt:
+                    continue
+            except ValueError:
+                continue
+            results.append({
+                "title": title, "description": description[:500],
+                "url": url, "source": (article.get("source") or {}).get("name") or "",
+                "published": published, "image": article.get("urlToImage") or "",
+            })
+        return results
+
+    def pick_in_order(queries, fallbacks, local=False):
+        selected = [None] * len(queries)
+        for position, query in enumerate(queries):
+            for article in search_news(query, local=local):
+                if article["url"] not in seen:
+                    selected[position] = article
+                    seen.add(article["url"])
+                    break
+        # If a specific topic has no fresh sourced article, fill that slot
+        # with another verified local/world story; never invent a headline.
+        for query in fallbacks:
+            if all(selected):
+                break
+            for article in search_news(query, local=local):
+                if article["url"] in seen:
+                    continue
+                empty = next((i for i, item in enumerate(selected) if item is None), None)
+                if empty is None:
+                    break
+                selected[empty] = article
+                seen.add(article["url"])
+        if not all(selected):
+            raise RuntimeError("Fewer than 15 verified stories; previous edition preserved")
+        return selected
+
+    local = pick_in_order(
+        LOCAL_NEWS_QUERIES,
+        ['("Weston MA" OR "Boston" OR "Massachusetts")',
+         '("Massachusetts" OR "Boston") AND (news OR government OR community)'],
+        local=True,
+    )
+    world = pick_in_order(
+        WORLD_NEWS_QUERIES,
+        ['(Iran OR Ukraine OR China OR markets OR AI OR Congress OR universities OR housing)',
+         '("United States" OR international OR economy OR technology)'],
+    )
+    return [
+        ("Weston / Boston / Massachusetts", local),
+        ("World News / Global", world),
+    ]
 if __name__ == "__main__":
     try:
         main()
