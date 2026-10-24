@@ -36,7 +36,7 @@
       "summary": {
         "id": 2,
         "zh_title": "杰森·塔图姆在凯尔特人对尼克斯的胜利中反弹：8个要点",
-        "zh_summary": "在第四节，米切尔·罗宾逊做出了两次响亮的表现，尽管他在比赛中相对安静。",
+        "zh_summary": "在第四节，米切尔·罗宾逊做出了两次响亮的表现，尽管他在比赛中表现相对安静。",
         "en_title": "Jayson Tatum bounces back in Celtics’ statement win over Knicks: 8 takeaways",
         "en_summary": "In the fourth quarter, Mitchell Robinson — who had an otherwise relatively quiet game — made two of the loudest plays you’ll see."
       }
@@ -108,7 +108,7 @@
         "description": "A memo from DNI director Jay Clayton said Iran is in the \"advanced stages\" of planning attacks against Americans.",
         "url": "https://www.cnbc.com/2026/10/24/iran-threats-us-embassies-middle-east.html",
         "source": "CNBC",
-        "published": "2026-10-24T17:22:21+00:00",
+        "published": "2026-10-24T21:07:01+00:00",
         "image": "assets/news/7ac2f1ebce297ac73797b11b.jpg",
         "placeholder": false,
         "topic": "World News / Global"
@@ -116,7 +116,7 @@
       "summary": {
         "id": 6,
         "zh_title": "美国大使馆加强安全措施，因伊朗威胁警告加剧",
-        "zh_summary": "DNI主任杰伊·克莱顿的备忘录称，伊朗正在为针对美国人的攻击进行“高级阶段”的计划。",
+        "zh_summary": "一份来自DNI主任杰伊·克莱顿的备忘录称，伊朗正在对美国人进行攻击的“高级阶段”计划。",
         "en_title": "American embassies tighten security as Iran threat warnings intensify ahead of U.S. midterm elections",
         "en_summary": "A memo from DNI director Jay Clayton said Iran is in the 'advanced stages' of planning attacks against Americans."
       }
@@ -175,8 +175,8 @@
       },
       "summary": {
         "id": 9,
-        "zh_title": "以色列总理承诺在西岸检查站袭击后进行大规模军事行动",
-        "zh_summary": "以色列总理誓言在两名巴勒斯坦枪手袭击以色列军事检查站并导致两名士兵死亡后，发起重大军事行动。",
+        "zh_title": "以色列总理承诺在约旦河西岸检查站袭击后进行大规模军事行动",
+        "zh_summary": "以色列总理誓言在两名巴勒斯坦枪手袭击以色列军事检查站并导致两名士兵死亡后，发起一项重大军事行动。",
         "en_title": "Israeli PM pledges massive military operation after West Bank checkpoint attack",
         "en_summary": "Israel's Prime Minister is vowing to launch a major military operation in the West Bank in response to an attack by two Palestinian gunmen on an Israeli military checkpoint that killed two soldiers."
       }
@@ -196,7 +196,7 @@
       "summary": {
         "id": 10,
         "zh_title": "美国出生率降至创纪录低点，但年长女性生育更多",
-        "zh_summary": "根据疾病控制与预防中心的报告，美国出生率降至历史最低水平，但30岁以上女性的生育率有所上升。",
+        "zh_summary": "根据疾病控制和预防中心的报告，美国出生率降至有记录以来的最低水平，但30岁以上的女性生育更多孩子。",
         "en_title": "U.S. birth rate drops to record low, but older women are having more babies",
         "en_summary": "The U.S. birth rate fell to its lowest level ever recorded, according to a report from the Centers for Disease Control and Prevention."
       }
@@ -216,7 +216,7 @@
       "summary": {
         "id": 11,
         "zh_title": "俄罗斯在中期选举最后阶段加大选举影响力",
-        "zh_summary": "研究人员表示，克里姆林宫支持的团体正在恢复他们在美国和全球选举中播种不信任和分裂的策略。",
+        "zh_summary": "研究人员表示，克里姆林宫支持的团体正在恢复他们在美国和全球之前选举中播种不信任和分裂的策略。",
         "en_title": "Russia steps up election influence efforts in final stretch of midterms",
         "en_summary": "Researchers who track online influence operations say Kremlin-backed groups are renewing tactics they've used to sow distrust and discord in previous elections in the U.S. and around the world."
       }
@@ -236,7 +236,7 @@
       "summary": {
         "id": 12,
         "zh_title": "这款设计软件重新构想日常物品为自我意识设备",
-        "zh_summary": "“X-Hinges”帮助设计和3D打印带有互动功能的物品，如灯具和手套，自动嵌入传感器以感知和适应人类接触。",
+        "zh_summary": "“X-Hinges”帮助设计和3D打印带有互动元素的物品，如灯具和手套，自动嵌入传感器以感知和适应人类接触。",
         "en_title": "This design software reimagines everyday objects as self-aware devices",
         "en_summary": "“X-Hinges” helps design and 3D print items like lamps and gloves with an interactive twist: automatically embedded sensors that perceive and adaptively respond to human contact."
       }
