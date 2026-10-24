@@ -157,39 +157,39 @@
     "9": {
       "topic": "美国股市及经济 / U.S. Markets",
       "article": {
-        "title": "Wall Street piles into Hong Kong’s dim sum bonds despite fading yuan funding edge: BofA",
-        "description": "Hong Kong’s offshore yuan bond market is becoming an increasingly important funding source for global banks, with US lenders driving a surge in issuance even as the currency’s traditional funding advantage over the dollar narrows.\nThe shift offers a glimpse o…",
-        "url": "https://biztoc.com/x/e00203dbf94a6d7d",
-        "source": "Biztoc.com",
-        "published": "2026-10-23T00:09:50Z",
-        "image": "assets/news/24ea9adaf3028b3829bafa64.webp",
+        "title": "FPIs pull out Rs 8,634 crore from financials, buy IT stocks",
+        "description": "In the early days of October, there was a notable retreat of foreign portfolio investors from several sectors, particularly in financial services and FMCG, which saw outflows of ₹8,634 crore and ₹8,172 crore respectively. Conversely, IT stocks caught a breath…",
+        "url": "https://economictimes.indiatimes.com/markets/stocks/news/fpis-pull-out-rs-8634-crore-from-financials-buy-it-stocks/articleshow/135130464.cms",
+        "source": "The Times of India",
+        "published": "2026-10-23T00:15:16Z",
+        "image": "assets/news/d9c174d42650ff68323ec287.gif",
         "topic": "美国股市及经济 / U.S. Markets"
       },
       "summary": {
         "id": 9,
-        "zh_title": "华尔街涌入香港的点心债券，尽管人民币融资优势减弱：美银",
-        "zh_summary": "香港的离岸人民币债券市场正成为全球银行日益重要的融资来源。",
-        "en_title": "Wall Street piles into Hong Kong’s dim sum bonds despite fading yuan funding edge: BofA",
-        "en_summary": "Hong Kong’s offshore yuan bond market is becoming an increasingly important funding source for global banks."
+        "zh_title": "外资从金融领域撤出8634亿卢比，购买IT股票",
+        "zh_summary": "外资投资者在10月初从多个行业撤出资金，金融服务领域流出8634亿卢比。",
+        "en_title": "FPIs pull out Rs 8,634 crore from financials, buy IT stocks",
+        "en_summary": "Foreign portfolio investors notably retreated from several sectors, particularly financial services, withdrawing ₹8,634 crore."
       }
     },
     "10": {
       "topic": "重点股票与公司 / Major Companies",
       "article": {
-        "title": "Google’s AI chip could become a $75 billion business",
-        "description": "built its artificial intelligence chips so Google would not have to depend entirely on Nvidia (NVDA).\nThese chips have the potential to grow into a massive enterprise.\nEvercore ISI predicts $75 billion in 2027 and $113 billion in 2028 sales of Google’s TPUs t…",
-        "url": "https://biztoc.com/x/3e65f4c9ba499cd8",
-        "source": "Biztoc.com",
-        "published": "2026-10-23T00:10:00Z",
-        "image": "assets/news/7fdebba88ebe5ed297a12ae5.webp",
+        "title": "Giant iPhone Duo Installations: Best Proven Features Revealed",
+        "description": "Giant iPhone Duo Installations have been spotted at Apple Fifth Avenue, showcasing exciting new features.",
+        "url": "https://blogdoandroid.com/giant-iphone-duo-installations/",
+        "source": "Blogdoandroid.com",
+        "published": "2026-10-23T00:16:29Z",
+        "image": "assets/news/35a30a2bb980d925b38e623e.jpg",
         "topic": "重点股票与公司 / Major Companies"
       },
       "summary": {
         "id": 10,
-        "zh_title": "谷歌的AI芯片可能成为750亿美元的业务",
-        "zh_summary": "谷歌的人工智能芯片有潜力发展成一个巨大的企业。",
-        "en_title": "Google’s AI chip could become a $75 billion business",
-        "en_summary": "Google’s AI chips have the potential to grow into a massive enterprise."
+        "zh_title": "巨型iPhone Duo安装：最佳功能揭晓",
+        "zh_summary": "在苹果第五大道，巨型iPhone Duo安装展示了令人兴奋的新功能。",
+        "en_title": "Giant iPhone Duo Installations: Best Proven Features Revealed",
+        "en_summary": "Giant iPhone Duo Installations have been spotted at Apple Fifth Avenue, showcasing exciting new features."
       }
     },
     "11": {
@@ -214,39 +214,39 @@
     "12": {
       "topic": "AI科技企业 / AI Companies",
       "article": {
-        "title": "whispero 0.7.0",
-        "description": "Universal audio transcription and deep analysis - fully offline local mode, Gemini native audio, plus any OpenAI-compatible API",
-        "url": "https://pypi.org/project/whispero/0.7.0/",
-        "source": "Pypi.org",
-        "published": "2026-10-23T00:03:54Z",
-        "image": "assets/news/40c54251a9c7734382112504.png",
+        "title": "Anthropic’s Claude Opus 5.5 tops AI index with 61.7 score",
+        "description": "Anthropic's Claude Opus 5.5's lead in AI rankings may shift market dynamics, influencing future AI development and competitive strategies.\nThe post Anthropic’s Claude Opus 5.5 tops AI index with 61.7 score appeared first on Crypto Briefing.",
+        "url": "https://cryptobriefing.com/anthropics-claude-opus-55-tops-ai-index-with-617-score/",
+        "source": "Crypto Briefing",
+        "published": "2026-10-23T00:19:46Z",
+        "image": "assets/news/e80d71ad9e832b30b2f33c0f.webp",
         "topic": "AI科技企业 / AI Companies"
       },
       "summary": {
         "id": 12,
-        "zh_title": "whispero 0.7.0",
-        "zh_summary": "通用音频转录和深度分析，完全离线本地模式。",
-        "en_title": "whispero 0.7.0",
-        "en_summary": "Universal audio transcription and deep analysis - fully offline local mode."
+        "zh_title": "Anthropic的Claude Opus 5.5在AI指数中以61.7分领先",
+        "zh_summary": "Anthropic的Claude Opus 5.5在AI排名中领先，可能会影响市场动态和未来的AI发展。",
+        "en_title": "Anthropic’s Claude Opus 5.5 tops AI index with 61.7 score",
+        "en_summary": "Anthropic's Claude Opus 5.5's lead in AI rankings may shift market dynamics, influencing future AI development."
       }
     },
     "13": {
       "topic": "美国重要新闻 / U.S. News",
       "article": {
-        "title": "Our Failed Constitution",
-        "description": "“The natural progress of things is for liberty to yield, and government to gain ground.” ~ Thomas Jefferson (1743-1826) The U.S. Constitution was ratified to create and to restrain the government. It established boundaries beyond which the government may not …",
-        "url": "https://original.antiwar.com/andrew-p-napolitano/2026/10/22/our-failed-constitution/",
-        "source": "Antiwar.com",
-        "published": "2026-10-23T00:00:49Z",
-        "image": "assets/news/b0927e9275fd415b9b1eced3.jpg",
+        "title": "Voting machines aren't deliberately switching votes. Here's what's likely happening",
+        "description": "U.S. election machines in Florida, South Carolina, Tennessee, Texas and potentially other states are deliberately changing voters’ candidate choices in the 2026 midterms.",
+        "url": "https://www.snopes.com//fact-check/voting-machines-switching-votes-midterms/",
+        "source": "Snopes.com",
+        "published": "2026-10-23T00:15:00Z",
+        "image": "assets/news/a36b19bf02edeb52db724f5f.webp",
         "topic": "美国重要新闻 / U.S. News"
       },
       "summary": {
         "id": 13,
-        "zh_title": "我们失败的宪法",
-        "zh_summary": "美国宪法的建立旨在创造和限制政府。",
-        "en_title": "Our Failed Constitution",
-        "en_summary": "The U.S. Constitution was ratified to create and to restrain the government."
+        "zh_title": "投票机并非故意更改选票，可能发生的情况",
+        "zh_summary": "美国佛罗里达州、南卡罗来纳州、田纳西州、德克萨斯州及其他州的投票机在2026年中期选举中并非故意更改选民的候选人选择。",
+        "en_title": "Voting machines aren't deliberately switching votes. Here's what's likely happening",
+        "en_summary": "U.S. election machines in several states are not deliberately changing voters’ candidate choices."
       }
     },
     "14": {
