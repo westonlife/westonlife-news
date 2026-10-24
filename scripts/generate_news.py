@@ -1697,6 +1697,31 @@ def render(groups, summaries, date):
     return page.replace('<main>', nav + '<main>', 1)
 
 
+# ===== WESTON LIFE: NEWS READER FIX =====
+_WL_READER_ORIGINAL_RENDER = render
+
+def render(groups, summaries, date):
+    page = _WL_READER_ORIGINAL_RENDER(groups, summaries, date)
+    reader_navigation = r'''<script>
+(function(){
+  var anchors = document.querySelectorAll('article.item a[href^="https://"]');
+  anchors.forEach(function(a){
+    var article = a.closest('article.item');
+    if(!article || !article.id) return;
+    var originalUrl = a.href;
+    var readerUrl = new URL('reader.html', window.location.href);
+    readerUrl.searchParams.set('url', originalUrl);
+    readerUrl.searchParams.set('from', window.location.pathname.split('/').pop() + '#' + article.id);
+    a.href = readerUrl.href;
+    a.removeAttribute('target');
+    a.textContent = '原始报道 / Original source →';
+  });
+})();
+</script>'''
+    return page.replace('</body></html>', reader_navigation + '\n</body></html>', 1)
+# ===== END NEWS READER FIX =====
+
+
 if __name__ == "__main__":
     try:
         if "--check" in sys.argv:
