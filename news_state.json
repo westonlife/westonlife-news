@@ -2,141 +2,107 @@
   "checked_at": "2026-10-24",
   "slots": {
     "1": {
-      "topic": "Weston 本地新闻 / Weston Local",
-      "article": {
-        "title": "Dismissal Notepad Fundraiser for METCO",
-        "description": "Dear Weston School K-5 Community, The Dismissal Notepad Fundraiser is back! Simplify your morning with our personalized notepads. Only your child’s name will be printed on each pad so you can use it year after year. Please click the link to order 2026 Notepad Fundraiser The fundraiser will benefit Weston METCO Family Friends programs. To […] \n The post  Dismissal Notepad Fundraiser for METCO  appeared first on  Weston Public Schools . \n (Official Weston, Massachusetts notice)",
-        "url": "https://www.westonschools.org/blog/2026/10/16/dismissal-notepad-fundraiser-for-metco/",
-        "source": "Weston Public Schools",
-        "published": "2026-10-16T15:24:38+00:00",
-        "image": "assets/news/d5813fa2993e0eb363695737.png",
-        "topic": "Weston 本地新闻 / Weston Local"
-      },
-      "summary": {
-        "id": 1,
-        "zh_title": "METCO的解雇记事本筹款活动",
-        "zh_summary": "METCO的解雇记事本筹款活动回归，为西顿K-5社区提供个性化记事本。",
-        "en_title": "Dismissal Notepad Fundraiser for METCO",
-        "en_summary": "The Dismissal Notepad Fundraiser is back, offering personalized notepads for the Weston K-5 community."
-      }
-    },
-    "2": {
-      "topic": "Weston High School 校园动态 / WHS",
+      "topic": "Weston / Boston / Massachusetts",
       "article": {
         "title": "Picture Retake Day 10/27/2026",
         "description": "The post  Picture Retake Day 10/27/2026  appeared first on  Weston High School . \n (Official Weston, Massachusetts notice)",
         "url": "https://www.westonschools.org/high/blog/2026/10/22/picture-retake-day-10-27-2026/",
         "source": "Weston High School",
         "published": "2026-10-22T14:53:51+00:00",
-        "image": "assets/news/04eeb35590f7ca9dfa338fa3.png",
-        "topic": "Weston High School 校园动态 / WHS"
+        "image": "assets/news/fc2efa3cdc4d32043b236a68.png",
+        "placeholder": false,
+        "topic": "Weston / Boston / Massachusetts"
       },
       "summary": {
-        "id": 2,
-        "zh_title": "2026年10月27日照片重拍日",
-        "zh_summary": "2026年10月27日将举行照片重拍日。",
+        "id": 1,
+        "zh_title": "重拍照片日 10/27/2026",
+        "zh_summary": "重拍照片日定于2026年10月27日。",
         "en_title": "Picture Retake Day 10/27/2026",
         "en_summary": "Picture Retake Day is scheduled for October 27, 2026."
       }
     },
-    "3": {
-      "topic": "麻州房地产 / Massachusetts Housing",
+    "2": {
+      "topic": "Weston / Boston / Massachusetts",
       "article": {
-        "title": "Massachusetts home market diverges: house sales rise as condo sales fall",
-        "description": "Massachusetts Association of REALTORS September data show a 4.8% annual rise in single-family home sales and a 6.4% drop in condominium sales. Median sold prices were $670,000 and $525,000, respectively.",
-        "url": "https://bostonagentmagazine.com/2026/10/14/mar-september-data-2026/",
-        "source": "Boston Agent Magazine",
-        "published": "2026-10-14T00:00:00Z",
-        "image": "assets/news/ma-market-sept-2026.jpg",
-        "topic": "麻州房地产 / Massachusetts Housing"
+        "title": "This Weeks WHS Athletic Schedule 10/19/26 – 10/25/26",
+        "description": "Monday, Oct. 19 4:00pm Freshman Football vs. Newton South – Field 6 4:00pm Varsity Field Hockey @ Lincoln Sudbury 4:15pm Varsity Girls Volleyball @ Lincoln Sudbury 5:30pm JV Field Hockey @ Lincoln Sudbury 5:45pm JV Girls Volleyball @ Lincoln Sudbury Tuesday, Oct. 20 9:00am Varsity Golf  @ Stow Acres 4:00pm JV Boys Soccer @ Boston […] \n The post  This Weeks WHS Athletic Schedule 10/19/26 – 10/25/26  appeared first on  Weston High School . \n (Official Weston, Massachusetts notice)",
+        "url": "https://www.westonschools.org/high/blog/2026/10/19/this-weeks-whs-athletic-schedule-10-19-26-10-25-26/",
+        "source": "Weston High School",
+        "published": "2026-10-19T16:38:33+00:00",
+        "image": "assets/news/780f38de8c97ee57c23e6568.png",
+        "placeholder": false,
+        "topic": "Weston / Boston / Massachusetts"
+      },
+      "summary": {
+        "id": 2,
+        "zh_title": "本周WHS体育日程 10/19/26 – 10/25/26",
+        "zh_summary": "本周的WHS体育日程包括多场比赛安排。",
+        "en_title": "This Weeks WHS Athletic Schedule 10/19/26 – 10/25/26",
+        "en_summary": "This week's WHS athletic schedule includes multiple game arrangements."
+      }
+    },
+    "3": {
+      "topic": "Weston / Boston / Massachusetts",
+      "article": {
+        "title": "Class of 2027 Chipotle Fundraiser 10/24",
+        "description": "Chipotle Fundraiser OCTOBER 24th! It is the perfect opportunity to take the night off from cooking dinner and get over to Chipotle in Waltham to grab dinner for the fam and support the class!!!  Click HERE for more details or see flyer below. \n The post  Class of 2027 Chipotle Fundraiser 10/24  appeared first on  Weston High School . \n (Official Weston, Massachusetts notice)",
+        "url": "https://www.westonschools.org/high/blog/2026/10/20/class-of-2027-chipotle-fundraiser-10-24/",
+        "source": "Weston High School",
+        "published": "2026-10-20T16:25:42+00:00",
+        "image": "assets/news/b7be323c2fbf7af4efce5c58.png",
+        "placeholder": false,
+        "topic": "Weston / Boston / Massachusetts"
       },
       "summary": {
         "id": 3,
-        "zh_title": "麻州房市分化：独栋住宅成交量上升4.8%，公寓下降6.4%",
-        "zh_summary": "马萨诸塞州房地产经纪人协会9月数据显示：独栋住宅销量同比增长4.8%，公寓销量下降6.4%；独栋住宅成交中位价为67万美元，公寓为52.5万美元。",
-        "en_title": "Massachusetts home market diverges: house sales rise as condo sales fall",
-        "en_summary": "Massachusetts Association of REALTORS September data show a 4.8% annual rise in single-family home sales and a 6.4% drop in condominium sales. Median sold prices were $670,000 and $525,000, respectively."
+        "zh_title": "2027届Chipotle筹款活动 10/24",
+        "zh_summary": "2027届的Chipotle筹款活动将在10月24日举行。",
+        "en_title": "Class of 2027 Chipotle Fundraiser 10/24",
+        "en_summary": "The Class of 2027 Chipotle fundraiser will take place on October 24."
       }
     },
     "4": {
-      "topic": "波士顿城市动态 / Boston City",
+      "topic": "Weston / Boston / Massachusetts",
       "article": {
-        "title": "For students with their sights set on space medicine, a new community takes flight",
-        "description": "MIT&#039;s Doctors Without Gravity club brings together students in the Boston area who are interested in space medicine.",
-        "url": "https://news.mit.edu/2026/mit-doctors-without-gravity-takes-flight-1021",
-        "source": "Mit.edu",
-        "published": "2026-10-21T20:40:00Z",
-        "image": "assets/news/4f9235caffeb16b1e1db34f2.jpg",
-        "topic": "波士顿城市动态 / Boston City"
+        "title": "Senior Class Lynch Creek Fundraiser",
+        "description": "Lynch Creek Fundraiser is back, and orders can be made now!! Visit the Lynch Creek Farm online shop and support the Class of 2027 by purchasing one the amazing goods, including wreaths, centerpieces, garland and more! The Class of 2027 will receive 15% of the raised amount, so we would love it if you could […] \n The post  Senior Class Lynch Creek Fundraiser  appeared first on  Weston High School . \n (Official Weston, Massachusetts notice)",
+        "url": "https://www.westonschools.org/high/blog/2026/10/20/senior-class-lynch-creek-fundraiser/",
+        "source": "Weston High School",
+        "published": "2026-10-20T16:21:31+00:00",
+        "image": "assets/news/d35cdc3e1401d976986b1b0d.png",
+        "placeholder": false,
+        "topic": "Weston / Boston / Massachusetts"
       },
       "summary": {
         "id": 4,
-        "zh_title": "新社区助力太空医学学生",
-        "zh_summary": "MIT的无重力医生俱乐部汇聚了对太空医学感兴趣的波士顿地区学生。",
-        "en_title": "For students with their sights set on space medicine, a new community takes flight",
-        "en_summary": "MIT's Doctors Without Gravity club brings together students in the Boston area who are interested in space medicine."
+        "zh_title": "高年级班Lynch Creek筹款活动",
+        "zh_summary": "高年级班的Lynch Creek筹款活动现已开始接受订单。",
+        "en_title": "Senior Class Lynch Creek Fundraiser",
+        "en_summary": "The Senior Class Lynch Creek fundraiser is now accepting orders."
       }
     },
     "5": {
-      "topic": "麻州活动 / Massachusetts Events",
+      "topic": "Weston / Boston / Massachusetts",
       "article": {
-        "title": "Oceans of Empathy Exhibit at Boston Children's Museum",
-        "description": "Gallery Exhibit Encourages Visitors to Imagine, Describe, and Understand the Emotions of Others BOSTON, Oct. 21, 2026 /PRNewswire/ -- Boston Children's Museum recently opened Oceans of Empathy highlighting works from two New England-based artists. The exhibit…",
-        "url": "https://www.prnewswire.com/news-releases/oceans-of-empathy-exhibit-at-boston-childrens-museum-302914715.html",
-        "source": "PRNewswire",
-        "published": "2026-10-21T15:03:00Z",
-        "image": "assets/news/2dabb37d2a8d5e68462455bf.jpg",
-        "topic": "麻州活动 / Massachusetts Events"
+        "title": "Senior Class Krispy Kreme Fundraiser",
+        "description": "Krispy Kreme Donuts are coming to Weston. Get your orders in!!  Please help support the senior class by enjoying some delicious donuts! Boxes are $12 for a dozen–you read that right only $12 for a dozen! Click here to order. You must pay $$ through My School Bucks to secure an order; the My School Bucks […] \n The post  Senior Class Krispy Kreme Fundraiser  appeared first on  Weston High School . \n (Official Weston, Massachusetts notice)",
+        "url": "https://www.westonschools.org/high/blog/2026/10/20/senior-class-krispy-kreme-fundraiser-2/",
+        "source": "Weston High School",
+        "published": "2026-10-20T16:07:12+00:00",
+        "image": "assets/news/799f0dcb6ebb8a9c7040124c.jpg",
+        "placeholder": false,
+        "topic": "Weston / Boston / Massachusetts"
       },
       "summary": {
         "id": 5,
-        "zh_title": "波士顿儿童博物馆的同理心展览",
-        "zh_summary": "波士顿儿童博物馆最近开设了同理心展览，展示了两位新英格兰艺术家的作品。",
-        "en_title": "Oceans of Empathy Exhibit at Boston Children's Museum",
-        "en_summary": "Boston Children's Museum recently opened Oceans of Empathy highlighting works from two New England-based artists."
+        "zh_title": "高年级班Krispy Kreme筹款活动",
+        "zh_summary": "高年级班的Krispy Kreme筹款活动正在进行中。",
+        "en_title": "Senior Class Krispy Kreme Fundraiser",
+        "en_summary": "The Senior Class Krispy Kreme fundraiser is currently underway."
       }
     },
     "6": {
-      "topic": "美国与伊朗 / U.S.–Iran",
-      "article": {
-        "title": "美国与伊朗 · 国际报道专题入口",
-        "description": "News topic directory only, not a new article.",
-        "url": "https://news.google.com/search?q=Iran%20United%20States",
-        "source": "Weston Life",
-        "published": "2026-10-24T05:55:41.301671Z",
-        "image": "assets/news/slot-06-no-update.svg",
-        "placeholder": true,
-        "topic": "美国与伊朗 / U.S.–Iran"
-      },
-      "summary": {
-        "id": 6,
-        "zh_title": "美国与伊朗 · 国际报道专题入口",
-        "zh_summary": "专题资料入口，非当日新报道。",
-        "en_title": "Official sources / Topic directory",
-        "en_summary": "Source directory, not a newly reported article."
-      }
-    },
-    "7": {
-      "topic": "俄乌战争 / Russia–Ukraine",
-      "article": {
-        "title": "Support for sending military aid to Ukraine has fallen",
-        "description": "66% of registered voters say they sympathize more with Ukraine in the conflict between Russia and Ukraine, 3% say Russia, and 24% say neither.",
-        "url": "https://biztoc.com/x/0747895da82a67cb",
-        "source": "Biztoc.com",
-        "published": "2026-10-23T00:25:18Z",
-        "image": "assets/news/35aa10aebddcb2b48abe67ef.webp",
-        "topic": "俄乌战争 / Russia–Ukraine"
-      },
-      "summary": {
-        "id": 7,
-        "zh_title": "对向乌克兰提供军事援助的支持下降",
-        "zh_summary": "66%的注册选民表示他们在俄乌冲突中更同情乌克兰，3%表示同情俄罗斯，24%表示两者都不支持。",
-        "en_title": "Support for sending military aid to Ukraine has fallen",
-        "en_summary": "66% of registered voters say they sympathize more with Ukraine in the conflict between Russia and Ukraine, 3% say Russia, and 24% say neither."
-      }
-    },
-    "8": {
-      "topic": "中国重要新闻 / China",
+      "topic": "World News / Global",
       "article": {
         "title": "Hundreds of houses collapse as powerful earthquake hits China (VIDEOS)",
         "description": "Hundreds of houses have collapsed after a powerful earthquake struck China’s Tibet region, killing at least 16 people and injuring dozens more, according to local authorities.",
@@ -144,75 +110,19 @@
         "source": "Rt-english.com",
         "published": "2026-10-23T01:26:20Z",
         "image": "assets/news/f0640b142162aaa3e0ab05b1.png",
-        "topic": "中国重要新闻 / China"
+        "topic": "World News / Global",
+        "placeholder": false
       },
       "summary": {
-        "id": 8,
-        "zh_title": "强烈地震袭击中国，数百房屋倒塌",
-        "zh_summary": "强烈地震袭击中国西藏地区，导致数百栋房屋倒塌，造成至少16人死亡和数十人受伤。",
+        "id": 6,
+        "zh_title": "强烈地震袭击中国，数百栋房屋倒塌（视频）",
+        "zh_summary": "中国西藏地区发生强烈地震，导致数百栋房屋倒塌。",
         "en_title": "Hundreds of houses collapse as powerful earthquake hits China (VIDEOS)",
-        "en_summary": "A powerful earthquake struck China's Tibet region, causing hundreds of houses to collapse and resulting in at least 16 deaths and numerous injuries."
+        "en_summary": "A powerful earthquake struck China's Tibet region, causing hundreds of houses to collapse."
       }
     },
-    "9": {
-      "topic": "美国股市及经济 / U.S. Markets",
-      "article": {
-        "title": "Nasdaq dives more than 750 points as investors worry massive AI spending won't pay off",
-        "description": "Stocks slid sharply on Thursday amid mounting concerns over whether massive investments in artificial intelligence and high oil prices.\nShortly before the close of trading, the Nasdaq Composite Index, where many technology companies exposed to AI are listed, …",
-        "url": "https://biztoc.com/x/1fe385fe7613728d",
-        "source": "Biztoc.com",
-        "published": "2026-10-23T01:27:18Z",
-        "image": "assets/news/460dce6dcdd9deb8388b6757.webp",
-        "topic": "美国股市及经济 / U.S. Markets"
-      },
-      "summary": {
-        "id": 9,
-        "zh_title": "纳斯达克指数下跌超过750点，投资者担心巨额AI支出无法回报",
-        "zh_summary": "由于对人工智能巨额投资和高油价的担忧，股市在周四大幅下滑。",
-        "en_title": "Nasdaq dives more than 750 points as investors worry massive AI spending won't pay off",
-        "en_summary": "Stocks slid sharply on Thursday amid mounting concerns over whether massive investments in artificial intelligence and high oil prices would pay off."
-      }
-    },
-    "10": {
-      "topic": "重点股票与公司 / Major Companies",
-      "article": {
-        "title": "NVIDIA、サプライチェーン パートナーと生産能力を拡大し、AI インフラの構築を加速",
-        "description": "[NVIDIA]\n[画像: https://prcdn.freetls.fastly.net/release_image/12662/671/12662-671-aa0a6a4217e9ea711abdf8706230f4b7-1600x900.jpg?width=536&quality=85%2C75&format=jpeg&auto=webp&fit=bounds&am...",
-        "url": "https://prtimes.jp/main/html/rd/p/000000671.000012662.html",
-        "source": "Prtimes.jp",
-        "published": "2026-10-23T01:17:52Z",
-        "image": "assets/news/268238a2c0f3a0153c17b3c0.webp",
-        "topic": "重点股票与公司 / Major Companies"
-      },
-      "summary": {
-        "id": 10,
-        "zh_title": "NVIDIA与供应链合作伙伴扩大生产能力，加速AI基础设施建设",
-        "zh_summary": "NVIDIA与其供应链合作伙伴合作，扩大生产能力以加速人工智能基础设施的建设。",
-        "en_title": "NVIDIA expands production capacity with supply chain partners to accelerate AI infrastructure building",
-        "en_summary": "NVIDIA is collaborating with supply chain partners to expand production capacity and accelerate the construction of AI infrastructure."
-      }
-    },
-    "11": {
-      "topic": "AI技术突破 / AI Breakthroughs",
-      "article": {
-        "title": "Mave raises $34M to pull existing security tools into one agentic system",
-        "description": "Israeli security operations startup Mave Security Ltd. today revealed it has raised $34 million in new funding to accelerate its frontier artificial intelligence research. Mave offers an agentic platform that pulls an enterprise’s existing security tools toge…",
-        "url": "https://siliconangle.com/2026/10/22/mave-raises-34m-to-pull-existing-security-tools-into-one-agentic-system/",
-        "source": "SiliconANGLE News",
-        "published": "2026-10-22T22:37:46Z",
-        "image": "assets/news/2b856ed104f0b96bf0ab6c3e.png",
-        "topic": "AI技术突破 / AI Breakthroughs"
-      },
-      "summary": {
-        "id": 11,
-        "zh_title": "Mave融资3400万美元以整合现有安全工具",
-        "zh_summary": "以色列安全运营初创公司Mave Security Ltd.宣布已融资3400万美元以加速其前沿人工智能研究。",
-        "en_title": "Mave raises $34M to pull existing security tools into one agentic system",
-        "en_summary": "Mave Security Ltd. has raised $34 million to accelerate its frontier artificial intelligence research."
-      }
-    },
-    "12": {
-      "topic": "AI科技企业 / AI Companies",
+    "7": {
+      "topic": "World News / Global",
       "article": {
         "title": "OpenAI Aims to Lock In $30 Billion Funding Round by Next Week",
         "description": "OpenAI is close to finalizing a funding round in which it could raise as much as $30 billion at a $1.25 trillion pre-money valuation, CNBC reported Thursday (Oct. 22), citing unnamed sources. OpenAI told investors Thursday that it aims to secure signatures by…",
@@ -220,18 +130,39 @@
         "source": "pymnts.com",
         "published": "2026-10-23T01:20:17Z",
         "image": "assets/news/b1ca6d7a3060ab85154b34a0.webp",
-        "topic": "AI科技企业 / AI Companies"
+        "topic": "World News / Global",
+        "placeholder": false
       },
       "summary": {
-        "id": 12,
+        "id": 7,
         "zh_title": "OpenAI计划在下周锁定300亿美元融资",
-        "zh_summary": "OpenAI接近完成一轮融资，预计将筹集高达300亿美元，估值为1.25万亿美元。",
+        "zh_summary": "OpenAI接近完成一轮融资，预计筹集高达300亿美元。",
         "en_title": "OpenAI Aims to Lock In $30 Billion Funding Round by Next Week",
-        "en_summary": "OpenAI is close to finalizing a funding round in which it could raise as much as $30 billion at a $1.25 trillion pre-money valuation."
+        "en_summary": "OpenAI is close to finalizing a funding round aiming to raise up to $30 billion."
       }
     },
-    "13": {
-      "topic": "美国重要新闻 / U.S. News",
+    "8": {
+      "topic": "World News / Global",
+      "article": {
+        "title": "NVIDIA、サプライチェーン パートナーと生産能力を拡大し、AI インフラの構築を加速",
+        "description": "[NVIDIA]\n[画像: https://prcdn.freetls.fastly.net/release_image/12662/671/12662-671-aa0a6a4217e9ea711abdf8706230f4b7-1600x900.jpg?width=536&quality=85%2C75&format=jpeg&auto=webp&fit=bounds&am...",
+        "url": "https://prtimes.jp/main/html/rd/p/000000671.000012662.html",
+        "source": "Prtimes.jp",
+        "published": "2026-10-23T01:17:52Z",
+        "image": "assets/news/268238a2c0f3a0153c17b3c0.webp",
+        "topic": "World News / Global",
+        "placeholder": false
+      },
+      "summary": {
+        "id": 8,
+        "zh_title": "NVIDIA与供应链合作伙伴扩大生产能力，加速AI基础设施建设",
+        "zh_summary": "NVIDIA正在与供应链合作伙伴合作，扩大其生产能力。",
+        "en_title": "NVIDIA, Supply Chain Partners Expand Production Capacity to Accelerate AI Infrastructure",
+        "en_summary": "NVIDIA is collaborating with supply chain partners to expand production capacity."
+      }
+    },
+    "9": {
+      "topic": "World News / Global",
       "article": {
         "title": "Voting machines aren't deliberately switching votes. Here's what's likely happening",
         "description": "U.S. election machines in Florida, South Carolina, Tennessee, Texas and potentially other states are deliberately changing voters’ candidate choices in the 2026 midterms.",
@@ -239,37 +170,19 @@
         "source": "Snopes.com",
         "published": "2026-10-23T00:15:00Z",
         "image": "assets/news/a36b19bf02edeb52db724f5f.webp",
-        "topic": "美国重要新闻 / U.S. News"
+        "topic": "World News / Global",
+        "placeholder": false
       },
       "summary": {
-        "id": 13,
+        "id": 9,
         "zh_title": "投票机并非故意更改选票，可能发生的情况",
-        "zh_summary": "美国佛罗里达州、南卡罗来纳州、田纳西州、德克萨斯州及其他州的投票机在2026年中期选举中并非故意更改选民的候选人选择。",
+        "zh_summary": "美国多个州的投票机在2026年中期选举中并非故意更改选民的候选人选择。",
         "en_title": "Voting machines aren't deliberately switching votes. Here's what's likely happening",
-        "en_summary": "U.S. election machines in several states are not deliberately changing voters’ candidate choices."
+        "en_summary": "Voting machines in several U.S. states are not deliberately changing voters' candidate choices."
       }
     },
-    "14": {
-      "topic": "美国大学与升学 / Higher Education",
-      "article": {
-        "title": "Author Correction: DYNLL1 binds to MRE11 to limit DNA end resection in BRCA1-deficient cells",
-        "description": "Nature - Author Correction: DYNLL1 binds to MRE11 to limit DNA end resection in BRCA1-deficient cells",
-        "url": "https://www.nature.com/articles/s41586-026-11303-y",
-        "source": "Nature.com",
-        "published": "2026-10-23T00:00:00Z",
-        "image": "assets/news/4a02c8386695a9f7aa4cec83.png",
-        "topic": "美国大学与升学 / Higher Education"
-      },
-      "summary": {
-        "id": 14,
-        "zh_title": "作者更正：DYNLL1结合MRE11以限制BRCA1缺陷细胞中的DNA末端重切",
-        "zh_summary": "作者更正：DYNLL1结合MRE11以限制BRCA1缺陷细胞中的DNA末端重切。",
-        "en_title": "Author Correction: DYNLL1 binds to MRE11 to limit DNA end resection in BRCA1-deficient cells",
-        "en_summary": "Author Correction: DYNLL1 binds to MRE11 to limit DNA end resection in BRCA1-deficient cells."
-      }
-    },
-    "15": {
-      "topic": "房地产市场 / Real Estate",
+    "10": {
+      "topic": "World News / Global",
       "article": {
         "title": "Bond traders are backing off Fed rate hike bets — here's what it means for mortgage rates",
         "description": "If oil is about to spark an inflation wave, the bond market hasn't heard about it.\nBrent crude (BZ=F) is trading around $112 a barrel, more than 50% higher than before the Iran war began in late February. Normally, that kind of spike would have bond investors…",
@@ -277,14 +190,95 @@
         "source": "Biztoc.com",
         "published": "2026-10-22T18:36:06Z",
         "image": "assets/news/b85fd768b9fa868d1e3bfc9d.webp",
-        "topic": "房地产市场 / Real Estate"
+        "topic": "World News / Global",
+        "placeholder": false
       },
       "summary": {
-        "id": 15,
-        "zh_title": "债券交易员对美联储加息押注退缩——这对抵押贷款利率意味着什么",
-        "zh_summary": "尽管油价上涨，债券市场似乎未受到影响，可能影响抵押贷款利率。",
+        "id": 10,
+        "zh_title": "债券交易员放弃美联储加息押注——这对抵押贷款利率意味着什么",
+        "zh_summary": "债券市场对油价上涨引发的通胀波动并未表现出担忧。",
         "en_title": "Bond traders are backing off Fed rate hike bets — here's what it means for mortgage rates",
-        "en_summary": "The bond market appears unaffected by rising oil prices, which could have implications for mortgage rates."
+        "en_summary": "The bond market shows no concern over inflation waves sparked by rising oil prices."
+      }
+    },
+    "11": {
+      "topic": "World News / Global",
+      "article": {
+        "title": "Mave raises $34M to pull existing security tools into one agentic system",
+        "description": "Israeli security operations startup Mave Security Ltd. today revealed it has raised $34 million in new funding to accelerate its frontier artificial intelligence research. Mave offers an agentic platform that pulls an enterprise’s existing security tools toge…",
+        "url": "https://siliconangle.com/2026/10/22/mave-raises-34m-to-pull-existing-security-tools-into-one-agentic-system/",
+        "source": "SiliconANGLE News",
+        "published": "2026-10-22T22:37:46Z",
+        "image": "assets/news/2b856ed104f0b96bf0ab6c3e.png",
+        "topic": "World News / Global",
+        "placeholder": false
+      },
+      "summary": {
+        "id": 11,
+        "zh_title": "Mave筹集3400万美元，将现有安全工具整合为一个系统",
+        "zh_summary": "以色列安全初创公司Mave Security Ltd.宣布筹集3400万美元。",
+        "en_title": "Mave raises $34M to pull existing security tools into one agentic system",
+        "en_summary": "Israeli startup Mave Security Ltd. has raised $34 million to integrate existing security tools."
+      }
+    },
+    "12": {
+      "topic": "World News / Global",
+      "article": {
+        "title": "Nasdaq dives more than 750 points as investors worry massive AI spending won't pay off",
+        "description": "Stocks slid sharply on Thursday amid mounting concerns over whether massive investments in artificial intelligence and high oil prices.\nShortly before the close of trading, the Nasdaq Composite Index, where many technology companies exposed to AI are listed, …",
+        "url": "https://biztoc.com/x/1fe385fe7613728d",
+        "source": "Biztoc.com",
+        "published": "2026-10-23T01:27:18Z",
+        "image": "assets/news/460dce6dcdd9deb8388b6757.webp",
+        "topic": "World News / Global",
+        "placeholder": false
+      },
+      "summary": {
+        "id": 12,
+        "zh_title": "纳斯达克指数下跌超过750点，投资者担心AI投资回报",
+        "zh_summary": "纳斯达克指数因对AI投资和高油价的担忧而大幅下跌。",
+        "en_title": "Nasdaq dives more than 750 points as investors worry massive AI spending won't pay off",
+        "en_summary": "The Nasdaq Composite Index fell sharply amid concerns over AI investments and high oil prices."
+      }
+    },
+    "13": {
+      "topic": "World News / Global",
+      "article": {
+        "title": "Support for sending military aid to Ukraine has fallen",
+        "description": "66% of registered voters say they sympathize more with Ukraine in the conflict between Russia and Ukraine, 3% say Russia, and 24% say neither.",
+        "url": "https://biztoc.com/x/0747895da82a67cb",
+        "source": "Biztoc.com",
+        "published": "2026-10-23T00:25:18Z",
+        "image": "assets/news/35aa10aebddcb2b48abe67ef.webp",
+        "topic": "World News / Global",
+        "placeholder": false
+      },
+      "summary": {
+        "id": 13,
+        "zh_title": "对向乌克兰提供军事援助的支持下降",
+        "zh_summary": "66%的登记选民表示更同情乌克兰，支持下降。",
+        "en_title": "Support for sending military aid to Ukraine has fallen",
+        "en_summary": "Support for military aid to Ukraine has decreased among registered voters."
+      }
+    },
+    "14": {
+      "topic": "World News / Global",
+      "article": {
+        "title": "Author Correction: DYNLL1 binds to MRE11 to limit DNA end resection in BRCA1-deficient cells",
+        "description": "Nature - Author Correction: DYNLL1 binds to MRE11 to limit DNA end resection in BRCA1-deficient cells",
+        "url": "https://www.nature.com/articles/s41586-026-11303-y",
+        "source": "Nature.com",
+        "published": "2026-10-23T00:00:00Z",
+        "image": "assets/news/4a02c8386695a9f7aa4cec83.png",
+        "topic": "World News / Global",
+        "placeholder": false
+      },
+      "summary": {
+        "id": 14,
+        "zh_title": "作者更正：DYNLL1与MRE11结合以限制BRCA1缺失细胞中的DNA末端重切",
+        "zh_summary": "Nature期刊发布了关于DYNLL1与MRE11结合的作者更正。",
+        "en_title": "Author Correction: DYNLL1 binds to MRE11 to limit DNA end resection in BRCA1-deficient cells",
+        "en_summary": "An author correction regarding DYNLL1 binding to MRE11 has been published in Nature."
       }
     }
   }
