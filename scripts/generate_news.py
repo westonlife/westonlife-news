@@ -693,7 +693,17 @@ def _complete_photo(article):
     img = article.get("image", "")
     if img.startswith("assets/news/"):
         path = ROOT / img
-        if path.is_file() and path.stat().st_size > 5000 and _photo_extension(path.read_bytes()[:16]):
+        blocked = (
+            "logo", "favicon", "placeholder",
+            "no-image", "default-image",
+            "avatar", "icon", "banner"
+        )
+        if (
+            path.is_file()
+            and path.stat().st_size > 5000
+            and _photo_extension(path.read_bytes()[:16])
+            and not any(word in img.lower() for word in blocked)
+        ):
             return img
     # New material: from NewsAPI article preview, then publisher's own og:image.
     original = img if img.startswith("https://") else ""
