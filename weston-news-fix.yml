@@ -1,0 +1,237 @@
+name: Weston Life - Fix News And Regional Fallback
+on:
+  push:
+    paths:
+      - '.github/workflows/weston-news-fix.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: weston-news-fix
+  cancel-in-progress: false
+jobs:
+  fix-news:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get latest website code
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Update news rules and remove banners
+        shell: bash
+        run: |
+          python - <<'PYCODE'
+          #!/usr/bin/env python3
+          """Weston Life one-time news policy migration, 2026-10-24.
+          
+          Safe rerun: makes only targeted changes to the daily-news publisher and today's
+          HTML; leaves opinion, school statistics, travel, and Guandan JavaScript alone.
+          """
+          from pathlib import Path
+          import json
+          import re
+          import html
+          
+          ROOT=Path(__file__).resolve().parent
+          # When run from .github/workflows action, checkout root is working directory.
+          if not (ROOT/'scripts/generate_news.py').exists():
+              ROOT=Path.cwd()
+          
+          p=ROOT/'scripts/generate_news.py'
+          s=p.read_text(encoding='utf-8')
+          old=s
+          
+          # Remove the stale banners from BOTH the front page panel and article detail.
+          s=re.sub(r'''(?m)^\s*stale = f'<p class="stale">暂无更新 / No New Updates[^\n]+''',
+                   "            stale = ''  # Published source date below remains accurate.", s, count=1)
+          s=re.sub(r'''(?m)^\s*stale = \('<span class="wl-stale">暂无更新 / No New Updates</span>'\s*\n\s*f'<small class="wl-checked">[^\n]+''',
+                   "            stale = ''  # Retained news has no banner; source date stays visible.", s, count=1)
+          
+          # Replace source-hub labels, rather than suggesting a non-existent article is new.
+          start=s.find('def _slot_placeholder_meta(')
+          end=s.find('def _placeholder_svg(',start)
+          assert start>=0 and end>start, 'Publisher function layout changed: no edit performed'
+          new_hubs='''def _slot_placeholder_meta(slot_index, slot):
+              """Source guides are explicitly not news articles; never fabricate reports."""
+              hubs = [
+                  ("Weston 本地资讯 · 官方来源", "Weston local announcements and community resources. This is a source directory, not a new report.", "https://www.westonma.gov/"),
+                  ("Weston High School · 校园公告入口", "Visit the official Weston High School for current school notices. This is a directory, not a new report.", "https://www.westonschools.org/high"),
+                  ("Weston 镇政府 · 官方公告入口", "Visit Weston town government for meetings and announcements. This is a directory, not a new report.", "https://www.westonma.gov/"),
+                  ("波士顿 · 市政资讯入口", "Browse official Boston news and events. This is a directory, not a new report.", "https://www.boston.gov/"),
+                  ("马萨诸塞州 · 本地资讯入口", "Browse Massachusetts announcements and events. This is a directory, not a new report.", "https://www.mass.gov/"),
+                  ("美国与伊朗 · 国际报道专题入口", "A topic directory for U.S. and Iran coverage. Check source and publication dates; this is not a newly reported article.", "https://news.google.com/search?q=Iran%20United%20States"),
+              ]
+              if slot_index < len(hubs):
+                  return hubs[slot_index]
+              return (slot["name"] + " · 专题来源入口", "Browse original reports for this topic, and check the original publication dates. This is a topic directory, not an article.", "https://news.google.com/")
+          
+          '''
+          s=s[:start]+new_hubs+s[end:]
+          s=s.replace('>暂无更新 / No New Updates</text>', '>专题来源入口 / SOURCE DIRECTORY</text>')
+          s=s.replace('This is a safe fallback card so the website never shows a blank item.', 'This links to sources; it is not a new article.')
+          
+          # Prefer legitimate Boston / MA reports whenever a particular Weston category is quiet.
+          # Cache common regional results; avoid introducing extra request per editorial slot.
+          regional='''
+          # Regional flex policy: Weston school / government absence -> Boston or MA report.
+          _REGIONAL_POOL = None
+          
+          def _get_regional_fallback(used):
+              global _REGIONAL_POOL
+              if _REGIONAL_POOL is None:
+                  cutoff = (datetime.now(timezone.utc) - timedelta(days=10)).isoformat(timespec="seconds").replace("+00:00", "Z")
+                  queries = [
+                      '("Boston" AND "Massachusetts" AND ("school" OR "community" OR "local"))',
+                      '("Massachusetts" AND ("education" OR "festival" OR "housing" OR "government"))',
+                      '("Boston" AND ("mayor" OR "city" OR "museum" OR "events"))',
+                  ]
+                  seen, pool = set(), []
+                  for query in queries:
+                      for raw in _fetch_news(query, cutoff, os.environ["NEWS_API_KEY"], page_size=45):
+                          record = _article_record(raw, seen, local=True)
+                          if not record:
+                              continue
+                          article, score = record
+                          blob = (article["title"] + " " + article["description"] + " " + article["source"]).lower()
+                          if not any(term in blob for term in (
+                                  "massachusetts", "boston", "waltham", "newton", "cambridge",
+                                  "wellesley", "lexington", "brookline", "framingham", "weston")):
+                              continue
+                          pool.append((article, score))
+                  pool.sort(key=lambda item: (item[0]["published"], item[1]), reverse=True)
+                  _REGIONAL_POOL = [record for record, _ in pool]
+              for article in _REGIONAL_POOL:
+                  if article["url"] in used:
+                      continue
+                  photo = _complete_photo(article)
+                  if photo:
+                      return dict(article, image=photo, stale=False)
+              return None
+          
+          '''
+          anchor='\ndef discover():\n    """Fill 15 fixed editorial positions. Reserve school and town sources first."""'
+          assert anchor in s, 'Publisher discover hook changed: no edit performed'
+          s=s.replace(anchor, '\n'+regional+anchor,1)
+          needle='        candidate = _get_slot_candidate(i, slot, old, used)\n'
+          assert needle in s, 'Publisher slot selection changed: no edit performed'
+          s=s.replace(needle, needle+'''        # Local fallback does not require a Weston-school article: real Boston/MA is fine.
+                  if i < 5 and not candidate:
+                      candidate = _get_regional_fallback(used)
+          ''', 1)
+          s=s.replace('if not candidate and old and old.get("url") not in used and _matching(slot, old):',
+                      'if not candidate and old and not old.get("placeholder") and old.get("url") not in used and (i < 5 or _matching(slot, old)):',1)
+          # Preserve original news source date on reused reports, as before.
+          # Provide explicit, non-fabricated topic-directory captions to the summarizer.
+          s=s.replace('"description": a["description"], "stale": a.get("stale")}',
+                      '"description": a["description"], "stale": a.get("stale"), "placeholder": a.get("placeholder")}',1)
+          
+          summary_key='''        # The summary of an unchanged article must remain unchanged too.
+                  if article.get("stale") and prior.get("summary"):
+          '''
+          replacement='''        # A source directory is NOT a new report and must not inherit an old banner.
+                  if article.get("placeholder"):
+                      label = _slot_placeholder_meta(number-1, NEWS_SLOTS[number-1])[0]
+                      result[number] = {
+                          "id": number,
+                          "zh_title": label,
+                          "en_title": "Topic sources / Official source directory",
+                          "zh_summary": "专题资料入口：点击查看原始来源与发布日期。本条不是当日新报道。",
+                          "en_summary": "Source directory only, not a new report. Check original publication dates.",
+                      }
+                  # The summary of an unchanged article must remain unchanged too.
+                  elif article.get("stale") and prior.get("summary"):
+          '''
+          assert summary_key in s, 'Publisher summarizer hook changed: no edit performed'
+          s=s.replace(summary_key,replacement,1)
+          # Ensure fallback hub is marked as guide even after reuse.
+          s=s.replace("preserved with no-update labels", "retained without extra update banners")
+          
+          # Code check: make sure generated program cannot create the requested disallowed UI text.
+          assert '暂无更新 / No New Updates' not in s, 'Unwanted phrase still in daily publisher'
+          if s != old:
+              p.write_text(s,encoding='utf-8')
+          print('NEWS GENERATOR UPDATED', s != old)
+          
+          # Today displayed already-generated banners: correct both homepage and full edition.
+          def page_clean(txt):
+              txt=re.sub(r'<span class="wl-stale">.*?</span>\s*<small class="wl-checked">.*?</small>', '', txt, flags=re.S)
+              txt=re.sub(r'<p class="stale">.*?</p>', '', txt, flags=re.S)
+              # Only adjust old placeholder headlines and summaries, not genuine news titles.
+              replacements={
+                  '西顿镇政府暂无更新': 'Weston 镇政府 · 官方资讯入口',
+                  'Weston 镇政府暂无更新 / No New Town Update': 'Weston 镇政府 · 官方资讯入口',
+                  'No New Town Update': 'Official Weston Town Sources',
+                  '美国与伊朗 / U.S.–Iran 暂无更新 / No New Updates': '美国与伊朗 · 国际报道专题入口',
+                  'No New Updates': 'Topic sources',
+                  '暂无更新': '专题来源',
+                  '目前没有新的西顿镇政府报告可用。': '欢迎访问Weston镇政府的官方公告与会议资料。此处为来源入口，不是今日新闻。',
+              }
+              for a,b in replacements.items():
+                  txt=txt.replace(a,b)
+              return txt
+          for name in ('index.html','news-2026-10-24.html'):
+              f=ROOT/name
+              if f.exists():
+                  before=f.read_text(encoding='utf-8')
+                  after=page_clean(before)
+                  if after!=before:
+                      f.write_text(after,encoding='utf-8')
+                  print(name,'UPDATED', after!=before)
+          
+          # The saved state should not recycle a topic directory as a school article.
+          state=ROOT/'news_state.json'
+          if state.exists():
+              data=json.loads(state.read_text(encoding='utf-8'))
+              for key,rec in data.get('slots',{}).items():
+                  art=rec.get('article') or {}
+                  if not art.get('placeholder'):
+                      continue
+                  idx=int(key)-1
+                  if idx<0 or idx>=15:
+                      continue
+                  # Current state placeholders are guides, not current news.
+                  new_title,new_desc,new_url=[
+                      ('Weston 镇政府 · 官方资讯入口','Weston government sources and notices; not a new report.','https://www.westonma.gov/'),
+                      ('美国与伊朗 · 国际报道专题入口','News topic directory only, not a new article.','https://news.google.com/search?q=Iran%20United%20States'),
+                  ][0 if idx==2 else 1] if idx in (2,5) else (art.get('title','专题来源入口').replace('暂无更新','专题来源').replace('No New Updates','Topic sources'), 'Topic-source directory; not a new article.', art.get('url','https://news.google.com/'))
+                  art.update(title=new_title,description=new_desc,url=new_url)
+                  summary=rec.get('summary') or {}
+                  summary.update(zh_title=new_title,en_title='Official sources / Topic directory',zh_summary='专题资料入口，非当日新报道。',en_summary='Source directory, not a newly reported article.')
+              state.write_text(json.dumps(data,ensure_ascii=False,indent=2),encoding='utf-8')
+              print('STATE UPDATED')
+          
+          # Replace only old fallback graphics so they no longer claim a news report exists.
+          for slot,title,subtitle in (
+              (3,'WESTON TOWN','Official sources / Source directory'),
+              (6,'U.S. - IRAN','Topic sources / Original reports')):
+              f=ROOT/f'assets/news/slot-{slot:02d}-no-update.svg'
+              if f.exists():
+                  svg=f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+          <rect width="1200" height="675" fill="#f4eee0"/>
+          <rect x="58" y="58" width="1084" height="559" rx="28" fill="#fffaf0" stroke="#b9b19c" stroke-width="3"/>
+          <text x="95" y="156" font-family="Georgia,serif" font-size="39" fill="#50614a">WESTON LIFE</text>
+          <text x="95" y="310" font-family="Georgia,serif" font-size="76" fill="#283b30">{html.escape(title)}</text>
+          <text x="95" y="404" font-family="Arial,sans-serif" font-size="42" fill="#856444">{html.escape(subtitle)}</text>
+          <text x="95" y="550" font-family="Arial,sans-serif" font-size="26" fill="#667466">Directory only - not a newly reported article</text>
+          </svg>'''
+                  f.write_text(svg,encoding='utf-8')
+                  print('GRAPHIC UPDATED',f.name)
+          
+          print('Migration complete; opinion and other site sections preserved.')
+          PYCODE
+      - name: Validate news generator
+        run: |
+          python -m py_compile scripts/generate_news.py
+          python scripts/generate_news.py --check
+      - name: Publish changes to the main website
+        shell: bash
+        run: |
+          git config user.name "Weston Life News Repair"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add scripts/generate_news.py index.html news-2026-10-24.html news_state.json assets/news/slot-03-no-update.svg assets/news/slot-06-no-update.svg
+          if ! git diff --cached --quiet; then
+            git commit -m "Improve local news coverage and remove no-update labels"
+            git push origin HEAD:main
+          else
+            echo "No changes required"
+          fi
