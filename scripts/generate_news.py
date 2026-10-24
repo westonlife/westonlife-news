@@ -657,8 +657,11 @@ def _save_real_photo(url):
     """Cache publisher's actual raster image within the site; reject broken URLs."""
     if not url or urlparse(url).scheme != "https":
         return ""
-    basename = urlparse(url).path.lower().rsplit("/", 1)[-1]
-    if any(term in basename for term in ("placeholder", "favicon", "site-logo", "no-image", "default-image", "brand-logo", "spacer")):
+    image_path = urlparse(url).path.lower()
+    blocked = ("placeholder", "favicon", "logo", "no-image",
+               "default-image", "spacer", "avatar", "icon",
+               "banner", "advertisement", "branding")
+    if any(term in image_path for term in blocked):
         return ""
     digest = sha256(url.encode("utf-8")).hexdigest()[:24]
     PHOTO_DIR.mkdir(parents=True, exist_ok=True)
