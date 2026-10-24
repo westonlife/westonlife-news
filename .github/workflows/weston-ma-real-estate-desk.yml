@@ -1,0 +1,151 @@
+name: Weston Life - Massachusetts Real Estate Desk
+on:
+  push:
+    paths:
+      - '.github/workflows/weston-ma-real-estate-desk.yml'
+  workflow_dispatch:
+  schedule:
+    - cron: '30 22,23 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: weston-life-news
+  cancel-in-progress: false
+jobs:
+  market-section:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check Boston local time
+        id: localtime
+        shell: bash
+        run: echo "hour=$(TZ=America/New_York date +%H)" >> "$GITHUB_OUTPUT"
+      - name: Checkout website
+        if: github.event_name != 'schedule' || steps.localtime.outputs.hour == '18'
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Install standalone Massachusetts market script
+        if: github.event_name != 'schedule' || steps.localtime.outputs.hour == '18'
+        shell: bash
+        run: |
+          mkdir -p scripts
+          python - <<'PYINSTALL'
+          import base64, zlib
+          from pathlib import Path
+          data = ''.join('''
+          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
+          '''.split())
+          content = zlib.decompress(base64.b64decode(data))
+          Path('scripts/generate_ma_real_estate.py').write_bytes(content)
+          print('Independent MA real estate publisher installed')
+          PYINSTALL
+      - name: Update Massachusetts property market before Weston School
+        if: github.event_name != 'schedule' || steps.localtime.outputs.hour == '18'
+        timeout-minutes: 14
+        shell: bash
+        run: |
+          python -m py_compile scripts/generate_ma_real_estate.py
+          python scripts/generate_ma_real_estate.py
+      - name: Publish updates
+        if: github.event_name != 'schedule' || steps.localtime.outputs.hour == '18'
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html scripts/generate_ma_real_estate.py
+          if ! git diff --cached --quiet; then
+            git commit -m "Add Massachusetts housing market before Today Weston School"
+            git push
+          else
+            echo 'MA real estate data already up to date'
+          fi
