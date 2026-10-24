@@ -1,4 +1,4 @@
-/* Weston Life | Coco's Coffee | France 2026 | preserved Russia archive */
+/* Weston Life | Coco's Coffee | France 2026 | Russia archive preserved | mobile layout fix */
 (function(){
   function mount(){
     if(document.getElementById('coco-editorial-2026')) return;
@@ -7,18 +7,31 @@
     #coco-editorial-2026{max-width:1180px;margin:36px auto;padding:22px;background:#fffaf5;border-top:5px solid #984144;border-bottom:1px solid #e1d7ca;color:#34443b;box-sizing:border-box;font-family:Georgia,"Noto Serif SC",serif}
     #coco-editorial-2026 *{box-sizing:border-box}
     #coco-editorial-2026 .coco-kicker{font:700 13px/1.6 Arial,sans-serif;letter-spacing:.11em;color:#8b3b36;margin:0 0 16px}
-    #coco-editorial-2026 .coco-grid{display:grid;grid-template-columns:minmax(0,3fr) minmax(210px,1fr);gap:24px}
+    #coco-editorial-2026 .coco-grid{display:grid;grid-template-columns:minmax(0,3fr) minmax(210px,1fr);gap:24px;align-items:start}
+    #coco-editorial-2026 .coco-main,#coco-editorial-2026 .coco-aside{min-width:0}
     #coco-editorial-2026 a{text-decoration:none;color:inherit}
     #coco-editorial-2026 a:hover{text-decoration:underline}
-    #coco-editorial-2026 .coco-main img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px}
+    /* Explicit height:auto cancels the site's global img{height:100%} rule. */
+    #coco-editorial-2026 .coco-main img{display:block;width:100%;max-width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:8px}
     #coco-editorial-2026 h2{color:#983d3b!important;font:500 clamp(27px,4vw,45px)/1.3 Georgia,"Noto Serif SC",serif!important;margin:16px 0 9px!important}
     #coco-editorial-2026 p{font-size:15px;line-height:1.7;color:#5b5e55;margin:8px 0}
-    #coco-editorial-2026 .coco-portrait{display:block;width:100%;max-height:255px;object-fit:cover;object-position:top;border-radius:8px}
-    #coco-editorial-2026 .coco-archive-label{font:700 14px Arial,sans-serif;color:#7f503e;margin:14px 0 7px}
-    #coco-editorial-2026 .coco-old{display:block;padding:13px 12px;background:#f2eadf;border-radius:8px;font:14px/1.6 Arial,sans-serif!important;color:#465444!important}
+    #coco-editorial-2026 .coco-portrait{display:block;width:100%;height:auto;max-height:255px;object-fit:cover;object-position:top;border-radius:8px}
+    #coco-editorial-2026 .coco-archive-label{font:700 14px/1.5 Arial,sans-serif;color:#7f503e;margin:14px 0 7px}
+    #coco-editorial-2026 .coco-old{display:block;padding:13px 12px;background:#f2eadf;border-radius:8px;font:14px/1.6 Arial,sans-serif!important;color:#465444!important;overflow-wrap:anywhere}
     #coco-editorial-2026 .coco-all{display:block;margin-top:14px;color:#91423e;font:13px Arial,sans-serif;text-decoration:underline}
     #coco-editorial-2026 .coco-credit{font:11px/1.6 Arial,sans-serif;color:#8b857b;margin-top:6px}
-    @media(max-width:720px){#coco-editorial-2026{margin:22px 12px;padding:15px}#coco-editorial-2026 .coco-grid{grid-template-columns:1fr}#coco-editorial-2026 .coco-aside{display:grid;grid-template-columns:105px 1fr;column-gap:13px}#coco-editorial-2026 .coco-portrait{height:135px;grid-row:span 3}#coco-editorial-2026 .coco-archive-label{margin:0}#coco-editorial-2026 .coco-old{align-self:start}#coco-editorial-2026 .coco-all{grid-column:1/-1}}
+    @media(max-width:720px){
+      #coco-editorial-2026{margin:22px 12px;padding:15px;overflow:hidden}
+      #coco-editorial-2026 .coco-grid{display:flex;flex-direction:column;gap:22px}
+      #coco-editorial-2026 .coco-main,#coco-editorial-2026 .coco-aside{position:static;float:none;width:100%;min-width:0;clear:both}
+      #coco-editorial-2026 .coco-main img{height:auto;aspect-ratio:16/9}
+      #coco-editorial-2026 .coco-main h2{font-size:clamp(25px,6vw,31px)!important;line-height:1.38!important;overflow-wrap:anywhere}
+      #coco-editorial-2026 .coco-aside{display:grid;grid-template-columns:95px minmax(0,1fr);column-gap:14px;row-gap:8px;align-items:start;padding-top:14px;border-top:1px solid #e2d6c9}
+      #coco-editorial-2026 .coco-portrait{width:95px;height:120px;grid-row:span 2;object-fit:cover}
+      #coco-editorial-2026 .coco-archive-label{margin:0;font-size:13px;line-height:1.5}
+      #coco-editorial-2026 .coco-old{align-self:start;padding:10px 11px;font-size:13px!important}
+      #coco-editorial-2026 .coco-all{grid-column:1/-1;margin-top:4px}
+    }
     `;
     document.head.appendChild(style);
     var panel=document.createElement('section');panel.id='coco-editorial-2026';
