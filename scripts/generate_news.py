@@ -693,6 +693,13 @@ def _save_real_photo(url):
 def _complete_photo(article):
     """The story itself must have its own image; no unrelated substitute."""
     img = article.get("image", "")
+    bad_images = {
+        "db273726a3eb11b439530865.png",
+        "1ef733b51a8b1f5f49b2f939.webp",
+        "cc1d77794f4beefbae50e189.webp",
+    }
+    if Path(img).name in bad_images:
+        img = ""
     if img.startswith("assets/news/"):
         path = ROOT / img
         blocked = (
