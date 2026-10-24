@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#315d44">
+<title>Weston Life · 新闻阅读 / News Reader</title>
+<style>
+:root{--forest:#315d44;--cream:#f8f5ee;--line:#dbd3c4}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);font-family:Arial,"PingFang SC","Microsoft YaHei",sans-serif;color:#29392e}
+a{color:inherit}header{position:sticky;top:0;z-index:20;background:#fffdf8;display:flex;flex-wrap:wrap;align-items:center;gap:9px;padding:10px max(10px,calc((100vw - 1120px)/2));box-shadow:0 2px 15px #0002;border-bottom:2px solid var(--line)}
+header a{white-space:nowrap;background:var(--forest);color:white;font:bold 13px Arial,sans-serif;padding:12px;text-decoration:none;border-radius:8px}
+header a.home{background:#e9f0e9;color:var(--forest)}header .brand{margin-left:auto;font:italic 22px Georgia,serif;color:var(--forest)}
+main{max-width:1120px;margin:auto;padding:15px 12px}.intro{background:white;border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:12px}
+.meta{font:12px/1.5 Arial,sans-serif;letter-spacing:.04em;color:#7d795e}
+h1{font:normal clamp(23px,4vw,32px)/1.35 Georgia,serif;margin:9px 0;color:#253e2e}#enTitle{font:16px/1.5 Georgia,serif;color:#5f765f;margin:5px 0}
+.controls{display:flex;flex-wrap:wrap;align-items:center;gap:9px;margin:13px 0}
+.controls button,.controls a{display:inline-block;padding:11px 13px;border-radius:8px;border:1px solid var(--forest);font:bold 14px Arial,sans-serif;background:white;color:var(--forest);text-decoration:none;cursor:pointer}
+.controls button.active,.controls a{background:var(--forest);color:white}
+.note{padding:10px 12px;border-radius:8px;background:#edf1e9;font:13px/1.6 Arial,sans-serif;color:#415442}
+.panel{border:1px solid var(--line);background:white;border-radius:12px;overflow:hidden}.frame-label{background:#f0eadc;padding:12px 15px;font:700 14px Arial,sans-serif}iframe{border:0;width:100%;height:75vh;min-height:470px;display:block;background:white}
+#summary{display:none;background:white;border:1px solid var(--line);border-radius:12px;padding:18px 20px;line-height:1.8;font-size:17px}
+#summary p{margin:0 0 16px}body.show-summary #summary{display:block}body.show-summary .panel{display:none}footer{text-align:center;color:#8a8b80;font-size:12px;padding:18px}
+@media(max-width:600px){header{gap:6px;padding:8px}header a{font-size:12px;padding:11px 9px}header .brand{font-size:16px}h1{font-size:23px}iframe{height:72vh;min-height:430px}}
+</style>
+</head>
+<body>
+<header>
+<a href="index.html" id="backNews">← 返回新闻 / Back</a>
+<a href="index.html" class="home">⌂ 网站首页 / Home</a>
+<span class="brand">Weston Life</span>
+</header>
+<main>
+<div class="intro">
+<div id="source" class="meta">WESTON LIFE · 原始新闻来源</div>
+<h1 id="title">原始报道 / Publisher article</h1>
+<div id="enTitle"></div>
+<div class="controls">
+<button type="button" id="viewOriginal" class="active">原文 / Original</button>
+<button type="button" id="viewSummary">中英摘要 / Summary</button>
+<a href="index.html" id="external" target="_blank" rel="noopener noreferrer">↗ 在新页面打开原文</a>
+</div>
+<div class="note">上方“返回新闻”始终属于 Weston Life。部分媒体（包括 CNBC）可能禁止其他网站嵌入其页面。如果原文区域空白，请点击“在新页面打开原文”；Weston Life 会留在原标签页，方便回到新闻列表。</div>
+</div>
+<section id="summary" aria-label="新闻中英摘要">
+<p id="zhSummary">请查看原始报道及来源信息。</p>
+<p id="enSummary"></p>
+<p class="meta">Weston Life 新闻摘要并非媒体全文转载，完整报道及图片版权属于原出版方。/ Summary only; full coverage and rights belong to the publisher.</p>
+</section>
+<section class="panel" id="originalPanel" aria-label="原始媒体阅读区域">
+<div class="frame-label">原始媒体页面 / Publisher website · <span id="host"></span></div>
+<iframe id="publisher" title="原始媒体文章 / Original publisher article" loading="eager" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+</section>
+</main>
+<footer>Weston Life · Read, return, explore again</footer>
+<script>
+(function(){
+'use strict';
+var query=new URLSearchParams(location.search);
+var original;
+try{
+  original=new URL(query.get('url')||'');
+  if(original.protocol!=='https:' || !original.hostname) original=null;
+}catch(e){original=null}
+var from=query.get('from')||'';
+var match=/^(news-\d{4}-\d{2}-\d{2}\.html)(?:#(story-\d+))?$/.exec(from);
+var back=match?match[1]+(match[2]?'#'+match[2]:''):'index.html';
+document.getElementById('backNews').href=back;
+var originalButton=document.getElementById('viewOriginal');
+var summaryButton=document.getElementById('viewSummary');
+function switchView(showSummary){
+  document.body.classList.toggle('show-summary',showSummary);
+  originalButton.classList.toggle('active',!showSummary);
+  summaryButton.classList.toggle('active',showSummary);
+}
+originalButton.addEventListener('click',function(){switchView(false)});
+summaryButton.addEventListener('click',function(){switchView(true)});
+if(!original){
+  document.getElementById('title').textContent='原文链接无效 / Invalid source URL';
+  document.getElementById('originalPanel').style.display='none';
+  document.getElementById('external').style.display='none';
+  return;
+}
+document.getElementById('external').href=original.href;
+document.getElementById('source').textContent='SOURCE · '+original.hostname;
+document.getElementById('host').textContent=original.hostname;
+document.getElementById('publisher').src=original.href;
+if(!match || !match[2]){
+  document.getElementById('title').textContent=original.hostname+' · 原文报道';
+  return;
+}
+fetch(match[1],{credentials:'same-origin'}).then(function(response){
+  if(!response.ok) throw new Error('News page unavailable');
+  return response.text();
+}).then(function(text){
+  var doc=new DOMParser().parseFromString(text,'text/html');
+  var art=doc.getElementById(match[2]);
+  if(!art) return;
+  function getText(selector){var element=art.querySelector(selector);return element?element.textContent.trim():''}
+  var zh=getText('.zh-title'),en=getText('.en-title');
+  document.getElementById('title').textContent=zh||en||'原始媒体报道';
+  document.getElementById('enTitle').textContent=en;
+  document.getElementById('zhSummary').textContent=getText('.zh-summary')||'请查看原始报道。';
+  document.getElementById('enSummary').textContent=getText('.en-summary');
+  document.getElementById('source').textContent=getText('.meta')||original.hostname;
+}).catch(function(){document.getElementById('title').textContent=original.hostname+' · 原始报道'});
+})();
+</script>
+</body>
+</html>
