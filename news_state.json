@@ -36,7 +36,7 @@
       "summary": {
         "id": 2,
         "zh_title": "杰森·塔图姆在凯尔特人对尼克斯的胜利中反弹：8个要点",
-        "zh_summary": "在第四节，米切尔·罗宾逊做出了两次响亮的表现，尽管他在比赛中相对安静。",
+        "zh_summary": "在第四节，米切尔·罗宾逊做出了两次响亮的表现，尽管他在比赛中表现相对安静。",
         "en_title": "Jayson Tatum bounces back in Celtics’ statement win over Knicks: 8 takeaways",
         "en_summary": "In the fourth quarter, Mitchell Robinson — who had an otherwise relatively quiet game — made two of the loudest plays you’ll see."
       }
@@ -76,7 +76,7 @@
       "summary": {
         "id": 4,
         "zh_title": "伊曼纽尔学院提议在LMA建设10层实验室大楼",
-        "zh_summary": "伊曼纽尔学院房地产官员提交了在波士顿长木医疗区开发一座10层、306,000平方英尺实验室大楼的计划。",
+        "zh_summary": "伊曼纽尔学院的房地产官员提交了在波士顿长木医疗区开发一座10层、306,000平方英尺实验室大楼的计划。",
         "en_title": "Emmanuel College Proposes 10-Story Lab Building in LMA",
         "en_summary": "Emmanuel College real estate officials submitted plans to develop a 10-story, 306,000 square-foot lab building in Boston’s Longwood Medical Area."
       }
@@ -115,13 +115,53 @@
       },
       "summary": {
         "id": 6,
-        "zh_title": "特朗普推动大规模人工智能建设，选民对此持谨慎态度",
-        "zh_summary": "一项新的CNBC调查发现，选民普遍反对附近的人工智能数据中心，这给特朗普和共和党带来了政治挑战。",
+        "zh_title": "特朗普推动大规模AI建设，选民对此持谨慎态度",
+        "zh_summary": "一项新的CNBC调查发现，选民对附近的AI数据中心普遍反对，这给特朗普和共和党带来了政治挑战。",
         "en_title": "Trump is pushing a massive AI buildout. His own voters are wary of what comes with it",
         "en_summary": "A new CNBC survey finds broad voter opposition to nearby AI data centers, creating a political challenge for Trump and Republicans ahead of the midterm election."
       }
     },
     "7": {
+      "topic": "World News / Global",
+      "article": {
+        "title": "America by the numbers: How voters feel about the economy, inflation, AI and Trump",
+        "description": "With the U.S. midterm elections looming, Americans are nearly as gloomy about the economy as they were when the nation was emerging from the pandemic.",
+        "url": "https://www.cnbc.com/2026/10/23/america-by-the-numbers-how-voters-feel-about-the-economy-inflation-ai-and-trump.html",
+        "source": "CNBC",
+        "published": "2026-10-24T10:58:30+00:00",
+        "image": "assets/news/527122470b35477633dec675.jpg",
+        "placeholder": false,
+        "topic": "World News / Global"
+      },
+      "summary": {
+        "id": 7,
+        "zh_title": "美国选民对经济、通货膨胀、AI和特朗普的看法",
+        "zh_summary": "随着美国中期选举临近，民众对经济的看法几乎与疫情结束时一样悲观。",
+        "en_title": "America by the numbers: How voters feel about the economy, inflation, AI and Trump",
+        "en_summary": "With the U.S. midterm elections looming, Americans are nearly as gloomy about the economy as they were when the nation was emerging from the pandemic."
+      }
+    },
+    "8": {
+      "topic": "World News / Global",
+      "article": {
+        "title": "Israeli PM pledges massive military operation after West Bank checkpoint attack",
+        "description": "Israel's Prime Minister is vowing to launch a major military operation in the West Bank in response to an attack by two Palestinian gunmen on an Israeli military checkpoint that killed two soldiers.",
+        "url": "https://www.npr.org/2026/10/23/nx-s1-6013613/israeli-pm-pledges-massive-military-operation-after-west-bank-checkpoint-attack",
+        "source": "NPR",
+        "published": "2026-10-23T21:38:54+00:00",
+        "image": "assets/news/547cb428267e6ed051fd0c6e.webp",
+        "placeholder": false,
+        "topic": "World News / Global"
+      },
+      "summary": {
+        "id": 8,
+        "zh_title": "以色列总理承诺在西岸检查站袭击后进行大规模军事行动",
+        "zh_summary": "以色列总理誓言在两名巴勒斯坦枪手袭击以色列军事检查站后，发起一项重大军事行动。",
+        "en_title": "Israeli PM pledges massive military operation after West Bank checkpoint attack",
+        "en_summary": "Israel's Prime Minister is vowing to launch a major military operation in the West Bank in response to an attack by two Palestinian gunmen on an Israeli military checkpoint that killed two soldiers."
+      }
+    },
+    "9": {
       "topic": "World News / Global",
       "article": {
         "title": "Nvidia's role as AI financier faces first big test as neoclouds take market hit",
@@ -134,14 +174,14 @@
         "topic": "World News / Global"
       },
       "summary": {
-        "id": 7,
-        "zh_title": "英伟达作为人工智能融资者的角色面临首次重大考验",
-        "zh_summary": "随着英伟达从芯片制造商转变为行业融资者，一些投资者认为该公司承担了与人工智能建设相关的过大风险。",
+        "id": 9,
+        "zh_title": "英伟达作为AI融资者的角色面临首次重大考验",
+        "zh_summary": "随着英伟达从芯片制造商转变为行业融资者，一些投资者认为该公司承担了与AI建设相关的过大风险。",
         "en_title": "Nvidia's role as AI financier faces first big test as neoclouds take market hit",
         "en_summary": "As Nvidia has gone from chipmaker to industry financier, some investors see the company taking on outsized risk tied to the AI buildout."
       }
     },
-    "8": {
+    "10": {
       "topic": "World News / Global",
       "article": {
         "title": "U.S. birth rate drops to record low, but older women are having more babies",
@@ -154,14 +194,14 @@
         "topic": "World News / Global"
       },
       "summary": {
-        "id": 8,
+        "id": 10,
         "zh_title": "美国出生率降至历史低点，但年长女性生育更多",
-        "zh_summary": "根据疾病控制与预防中心的报告，美国出生率降至历史最低水平，但30岁以上女性的生育数量有所增加。",
+        "zh_summary": "根据疾病控制与预防中心的报告，美国出生率降至历史最低水平，但30岁以上女性的生育率有所上升。",
         "en_title": "U.S. birth rate drops to record low, but older women are having more babies",
         "en_summary": "The U.S. birth rate fell to its lowest level ever recorded, according to a report from the Centers for Disease Control and Prevention."
       }
     },
-    "9": {
+    "11": {
       "topic": "World News / Global",
       "article": {
         "title": "Russia steps up election influence efforts in final stretch of midterms",
@@ -174,51 +214,11 @@
         "topic": "World News / Global"
       },
       "summary": {
-        "id": 9,
-        "zh_title": "俄罗斯在中期选举最后阶段加大影响力",
-        "zh_summary": "研究在线影响操作的研究人员表示，克里姆林宫支持的团体正在恢复他们在美国和全球选举中播种不信任和分裂的策略。",
+        "id": 11,
+        "zh_title": "俄罗斯在中期选举最后阶段加大选举影响力",
+        "zh_summary": "研究人员表示，克里姆林宫支持的团体正在恢复他们在美国和全球选举中播种不信任和分裂的策略。",
         "en_title": "Russia steps up election influence efforts in final stretch of midterms",
         "en_summary": "Researchers who track online influence operations say Kremlin-backed groups are renewing tactics they've used to sow distrust and discord in previous elections in the U.S. and around the world."
-      }
-    },
-    "10": {
-      "topic": "World News / Global",
-      "article": {
-        "title": "Qatar deal to buy U.S. natural gas shows how Iran war has redrawn global energy markets",
-        "description": "The Iran war is transforming global energy markets and benefiting U.S. companies, especially liquefied natural gas exporters.",
-        "url": "https://www.cnbc.com/2026/10/23/cheniere-qatar-energy-lng-natural-gas-iran-war-strait-hormuz.html",
-        "source": "CNBC",
-        "published": "2026-10-23T19:19:08+00:00",
-        "image": "assets/news/2a2edcebbc762b48ad50d406.jpg",
-        "placeholder": false,
-        "topic": "World News / Global"
-      },
-      "summary": {
-        "id": 10,
-        "zh_title": "卡塔尔购买美国天然气的交易显示伊朗战争重塑全球能源市场",
-        "zh_summary": "伊朗战争正在改变全球能源市场，并使美国公司，特别是液化天然气出口商受益。",
-        "en_title": "Qatar deal to buy U.S. natural gas shows how Iran war has redrawn global energy markets",
-        "en_summary": "The Iran war is transforming global energy markets and benefiting U.S. companies, especially liquefied natural gas exporters."
-      }
-    },
-    "11": {
-      "topic": "World News / Global",
-      "article": {
-        "title": "This decade has been missing its big-impact midterm",
-        "description": "Every other decade over the past hundred years has produced at least one midterm that made a big difference in Congress and in national politics more broadly.",
-        "url": "https://www.npr.org/2026/10/24/nx-s1-6014811/midterm-election-history-house-senate",
-        "source": "NPR",
-        "published": "2026-10-24T09:00:00+00:00",
-        "image": "assets/news/43da0afb4bc9b77c97751a81.webp",
-        "placeholder": false,
-        "topic": "World News / Global"
-      },
-      "summary": {
-        "id": 11,
-        "zh_title": "这个十年缺少重大影响的中期选举",
-        "zh_summary": "过去一百年中的每个十年都至少产生了一次在国会和国家政治中产生重大影响的中期选举。",
-        "en_title": "This decade has been missing its big-impact midterm",
-        "en_summary": "Every other decade over the past hundred years has produced at least one midterm that made a big difference in Congress and in national politics more broadly."
       }
     },
     "12": {
@@ -236,7 +236,7 @@
       "summary": {
         "id": 12,
         "zh_title": "这款设计软件重新构想日常物品为自我意识设备",
-        "zh_summary": "“X-Hinges”帮助设计和3D打印带有互动元素的物品，如灯具和手套，自动嵌入传感器以感知和适应人类接触。",
+        "zh_summary": "“X-Hinges”帮助设计和3D打印带有互动功能的物品，如灯具和手套，自动嵌入传感器以感知和适应人类接触。",
         "en_title": "This design software reimagines everyday objects as self-aware devices",
         "en_summary": "“X-Hinges” helps design and 3D print items like lamps and gloves with an interactive twist: automatically embedded sensors that perceive and adaptively respond to human contact."
       }
@@ -259,26 +259,6 @@
         "zh_summary": "在康普顿讲座中，这位杰出的法律学者警告可能会“失去启蒙时代”，同时建议创新如何满足我们的公民和文化需求。",
         "en_title": "At MIT, Martha Minow speaks on sustaining democracy, both by using and overcoming AI",
         "en_summary": "In Compton Lecture, the distinguished legal scholar warns of potential “loss of the Enlightenment” while suggesting ways innovations can meet our civic and cultural needs."
-      }
-    },
-    "14": {
-      "topic": "World News / Global",
-      "article": {
-        "title": "Reinforcing the value of human understanding at MIT",
-        "description": "During the School of Humanities, Arts, and Social Sciences’ 75th Anniversary Symposium, President Sally Kornbluth said “MIT has never needed your particular insight and guidance more than we do now.”",
-        "url": "https://news.mit.edu/2026/reinforcing-value-of-human-understanding-at-mit-1023",
-        "source": "MIT News",
-        "published": "2026-10-23T19:35:00+00:00",
-        "image": "assets/news/644fd4bc25f21513650bdd56.jpg",
-        "placeholder": false,
-        "topic": "World News / Global"
-      },
-      "summary": {
-        "id": 14,
-        "zh_title": "在麻省理工学院强化人类理解的价值",
-        "zh_summary": "在人文学科、艺术与社会科学学院的75周年研讨会上，校长萨莉·科恩布斯表示“麻省理工学院比以往任何时候都更需要你们的独特见解和指导。”",
-        "en_title": "Reinforcing the value of human understanding at MIT",
-        "en_summary": "During the School of Humanities, Arts, and Social Sciences’ 75th Anniversary Symposium, President Sally Kornbluth said “MIT has never needed your particular insight and guidance more than we do now.”"
       }
     }
   }
