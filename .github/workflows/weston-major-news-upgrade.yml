@@ -1,0 +1,85 @@
+name: Weston Life - Major News Editorial Upgrade
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/weston-major-news-upgrade.yml'
+permissions:
+  contents: write
+concurrency:
+  group: weston-major-news-upgrade
+  cancel-in-progress: false
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout website
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Install breaking-news search and clear fake article cards
+        shell: bash
+        run: |
+          python - <<'PYCODE'
+          from pathlib import Path
+          import ast, base64, zlib, re
+          root=Path.cwd()
+          p=root/'scripts'/'generate_news.py'
+          assert p.exists(), 'scripts/generate_news.py missing'
+          s=p.read_text('utf-8')
+          marker='# WESTON-EDITORIAL-2026-V2:'
+          extra=zlib.decompress(base64.b64decode('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')).decode('utf-8')
+          if marker not in s:
+              pattern=r'if len\(rows\) != 15 or any\(not safe_photo\(a\.get\("image", ""\)\) for a in rows\):'
+              assert len(re.findall(pattern,s))==1, 'Rows validation changed: inspect manually'
+              s=re.sub(pattern,'if not rows or len(rows) > 15 or any(not safe_photo(a.get("image", "")) for a in rows):',s)
+              s=s.replace('Exactly 15 real downloaded photos required; no HTML files changed','Only verified pictured reports allowed; previous edition retained')
+              assert '"section": NEWS_SLOTS[i-1]["name"],' in s
+              s=s.replace('"section": NEWS_SLOTS[i-1]["name"],','"section": a.get("topic", "World News / Global"),',1)
+              assert '"topic": NEWS_SLOTS[i-1]["name"],' in s
+              s=s.replace('"topic": NEWS_SLOTS[i-1]["name"],','"topic": a.get("topic", "World News / Global"),',1)
+              orig='    local = "".join(all_items[:5])\n    world = "".join(all_items[5:])'
+              assert orig in s, 'Homepage split changed'
+              s=s.replace(orig,'    local_count = len(groups[0][1])\n    local = "".join(all_items[:local_count])\n    world = "".join(all_items[local_count:])',1)
+              anchor='\nif __name__ == "__main__":'
+              assert s.count(anchor)==1
+              s=s.replace(anchor,'\n\n'+extra+'\n'+anchor,1)
+              ast.parse(s)
+              p.write_text(s,'utf-8')
+              print('PUBLISHER UPGRADED: authentic news, major headlines first, top 3 cards')
+          else:
+              print('PUBLISHER ALREADY UPGRADED')
+          
+          # Remove existing source directory placeholders for 2026-10-24. Genuine reports are retained.
+          def remove_false_stories(text):
+              # All placeholders use Weston Life as the source; true Weston Life editorial is elsewhere.
+              before=text
+              text=re.sub(r'<a class="wl-story"\s+href="news-2026-10-24\.html#story-(?:3|6)".*?</a>', '', text, flags=re.S)
+              text=re.sub(r'<article class="item" id="story-(?:3|6)">.*?</article>', '', text, flags=re.S)
+              return text,before!=text
+          
+          for name in ('index.html','news-2026-10-24.html'):
+              f=root/name
+              if f.exists():
+                  original=f.read_text('utf-8')
+                  cleaned,changed=remove_false_stories(original)
+                  if changed:
+                      f.write_text(cleaned,'utf-8')
+                  print(name,'existing directory cards cleaned:',changed)
+          PYCODE
+      - name: Confirm publisher syntax and logic
+        run: |
+          python -m py_compile scripts/generate_news.py
+          python scripts/generate_news.py --check
+      - name: Save publisher and homepage corrections
+        shell: bash
+        run: |
+          git config user.name "Weston Life News Bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add scripts/generate_news.py index.html news-2026-10-24.html
+          if ! git diff --cached --quiet; then
+            git commit -m "Prioritize major genuine news and remove fake article entries"
+            git push origin HEAD:main
+          else
+            echo "Already updated"
+          fi
