@@ -4,12 +4,13 @@
     "1": {
       "topic": "Weston 本地新闻 / Weston Local",
       "article": {
-        "title": "Dismissal Notepad Fundraiser for METCO",
-        "description": "Dear Weston School K-5 Community, The Dismissal Notepad Fundraiser is back! Simplify your morning with our personalized notepads. Only your child’s name will be printed on each pad so you can use it year after year. Please click the link to order 2026 Notepad Fundraiser The fundraiser will benefit Weston METCO Family Friends programs. To […] \n The post  Dismissal Notepad Fundraiser for METCO  appeared first on  Weston Public Schools . \n (Official Weston, Massachusetts notice)",
-        "url": "https://www.westonschools.org/blog/2026/10/16/dismissal-notepad-fundraiser-for-metco/",
-        "source": "Weston Public Schools",
-        "published": "2026-10-16T15:24:38+00:00",
-        "image": "assets/news/d5813fa2993e0eb363695737.png",
+        "title": "Weston 本地暂无更新 / No New Weston Update",
+        "description": "Today this Weston local slot has no newly found pictured report. We are keeping the section active and will update it when a verified local report with a usable photo is available.",
+        "url": "https://www.westonma.gov/",
+        "source": "Weston Life",
+        "published": "2026-10-24T02:42:21.489907Z",
+        "image": "assets/news/slot-01-no-update.svg",
+        "placeholder": true,
         "topic": "Weston 本地新闻 / Weston Local"
       },
       "summary": {
@@ -23,12 +24,13 @@
     "2": {
       "topic": "Weston High School 校园动态 / WHS",
       "article": {
-        "title": "Picture Retake Day 10/27/2026",
-        "description": "The post  Picture Retake Day 10/27/2026  appeared first on  Weston High School . \n (Official Weston, Massachusetts notice)",
-        "url": "https://www.westonschools.org/high/blog/2026/10/22/picture-retake-day-10-27-2026/",
-        "source": "Weston High School",
-        "published": "2026-10-22T14:53:51+00:00",
-        "image": "assets/news/04eeb35590f7ca9dfa338fa3.png",
+        "title": "Weston High School 暂无更新 / No New WHS Update",
+        "description": "No newly found pictured Weston High School report is available right now. This position is reserved for school-specific updates only.",
+        "url": "https://www.westonschools.org/high",
+        "source": "Weston Life",
+        "published": "2026-10-24T02:42:13.410930Z",
+        "image": "assets/news/slot-02-no-update.svg",
+        "placeholder": true,
         "topic": "Weston High School 校园动态 / WHS"
       },
       "summary": {
@@ -46,8 +48,8 @@
         "description": "No newly found pictured Weston town-government report is available right now. This position remains reserved for Weston municipal news only.",
         "url": "https://www.westonma.gov/",
         "source": "Weston Life",
-        "published": "2026-10-23T01:37:22.333590Z",
-        "image": "assets/news/1609065c7729f16ec137afec.png",
+        "published": "2026-10-24T02:42:19.035290Z",
+        "image": "assets/news/slot-03-no-update.svg",
         "placeholder": true,
         "topic": "Weston 镇政府 / Town Government"
       },
@@ -104,7 +106,7 @@
         "description": "No newly found pictured report is available right now for 美国与伊朗 / U.S.–Iran.",
         "url": "https://www.google.com/",
         "source": "Weston Life",
-        "published": "2026-10-24T02:19:42.028793Z",
+        "published": "2026-10-24T02:42:24.164104Z",
         "image": "assets/news/slot-06-no-update.svg",
         "placeholder": true,
         "topic": "美国与伊朗 / U.S.–Iran"
@@ -120,12 +122,13 @@
     "7": {
       "topic": "俄乌战争 / Russia–Ukraine",
       "article": {
-        "title": "Support for sending military aid to Ukraine has fallen",
-        "description": "66% of registered voters say they sympathize more with Ukraine in the conflict between Russia and Ukraine, 3% say Russia, and 24% say neither.",
-        "url": "https://biztoc.com/x/0747895da82a67cb",
-        "source": "Biztoc.com",
-        "published": "2026-10-23T00:25:18Z",
-        "image": "assets/news/35aa10aebddcb2b48abe67ef.webp",
+        "title": "俄乌战争 / Russia–Ukraine 暂无更新 / No New Updates",
+        "description": "No newly found pictured report is available right now for 俄乌战争 / Russia–Ukraine.",
+        "url": "https://www.google.com/",
+        "source": "Weston Life",
+        "published": "2026-10-24T02:42:24.394546Z",
+        "image": "assets/news/slot-07-no-update.svg",
+        "placeholder": true,
         "topic": "俄乌战争 / Russia–Ukraine"
       },
       "summary": {
@@ -139,12 +142,13 @@
     "8": {
       "topic": "中国重要新闻 / China",
       "article": {
-        "title": "Hundreds of houses collapse as powerful earthquake hits China (VIDEOS)",
-        "description": "Hundreds of houses have collapsed after a powerful earthquake struck China’s Tibet region, killing at least 16 people and injuring dozens more, according to local authorities.",
-        "url": "https://rt-english.com/news/647549-earthquake-china-houses-collapse/",
-        "source": "Rt-english.com",
-        "published": "2026-10-23T01:26:20Z",
-        "image": "assets/news/f0640b142162aaa3e0ab05b1.png",
+        "title": "中国重要新闻 / China 暂无更新 / No New Updates",
+        "description": "No newly found pictured report is available right now for 中国重要新闻 / China.",
+        "url": "https://www.google.com/",
+        "source": "Weston Life",
+        "published": "2026-10-24T02:42:37.280961Z",
+        "image": "assets/news/slot-08-no-update.svg",
+        "placeholder": true,
         "topic": "中国重要新闻 / China"
       },
       "summary": {
@@ -158,12 +162,13 @@
     "9": {
       "topic": "美国股市及经济 / U.S. Markets",
       "article": {
-        "title": "Nasdaq dives more than 750 points as investors worry massive AI spending won't pay off",
-        "description": "Stocks slid sharply on Thursday amid mounting concerns over whether massive investments in artificial intelligence and high oil prices.\nShortly before the close of trading, the Nasdaq Composite Index, where many technology companies exposed to AI are listed, …",
-        "url": "https://biztoc.com/x/1fe385fe7613728d",
-        "source": "Biztoc.com",
-        "published": "2026-10-23T01:27:18Z",
-        "image": "assets/news/460dce6dcdd9deb8388b6757.webp",
+        "title": "美国股市及经济 / U.S. Markets 暂无更新 / No New Updates",
+        "description": "No newly found pictured report is available right now for 美国股市及经济 / U.S. Markets.",
+        "url": "https://www.google.com/",
+        "source": "Weston Life",
+        "published": "2026-10-24T02:42:37.612695Z",
+        "image": "assets/news/slot-09-no-update.svg",
+        "placeholder": true,
         "topic": "美国股市及经济 / U.S. Markets"
       },
       "summary": {
@@ -177,12 +182,13 @@
     "10": {
       "topic": "重点股票与公司 / Major Companies",
       "article": {
-        "title": "NVIDIA、サプライチェーン パートナーと生産能力を拡大し、AI インフラの構築を加速",
-        "description": "[NVIDIA]\n[画像: https://prcdn.freetls.fastly.net/release_image/12662/671/12662-671-aa0a6a4217e9ea711abdf8706230f4b7-1600x900.jpg?width=536&quality=85%2C75&format=jpeg&auto=webp&fit=bounds&am...",
-        "url": "https://prtimes.jp/main/html/rd/p/000000671.000012662.html",
-        "source": "Prtimes.jp",
-        "published": "2026-10-23T01:17:52Z",
-        "image": "assets/news/268238a2c0f3a0153c17b3c0.webp",
+        "title": "重点股票与公司 / Major Companies 暂无更新 / No New Updates",
+        "description": "No newly found pictured report is available right now for 重点股票与公司 / Major Companies.",
+        "url": "https://www.google.com/",
+        "source": "Weston Life",
+        "published": "2026-10-24T02:42:40.818730Z",
+        "image": "assets/news/slot-10-no-update.svg",
+        "placeholder": true,
         "topic": "重点股票与公司 / Major Companies"
       },
       "summary": {
@@ -196,12 +202,13 @@
     "11": {
       "topic": "AI技术突破 / AI Breakthroughs",
       "article": {
-        "title": "Mave raises $34M to pull existing security tools into one agentic system",
-        "description": "Israeli security operations startup Mave Security Ltd. today revealed it has raised $34 million in new funding to accelerate its frontier artificial intelligence research. Mave offers an agentic platform that pulls an enterprise’s existing security tools toge…",
-        "url": "https://siliconangle.com/2026/10/22/mave-raises-34m-to-pull-existing-security-tools-into-one-agentic-system/",
-        "source": "SiliconANGLE News",
-        "published": "2026-10-22T22:37:46Z",
-        "image": "assets/news/2b856ed104f0b96bf0ab6c3e.png",
+        "title": "AI技术突破 / AI Breakthroughs 暂无更新 / No New Updates",
+        "description": "No newly found pictured report is available right now for AI技术突破 / AI Breakthroughs.",
+        "url": "https://www.google.com/",
+        "source": "Weston Life",
+        "published": "2026-10-24T02:42:42.507939Z",
+        "image": "assets/news/slot-11-no-update.svg",
+        "placeholder": true,
         "topic": "AI技术突破 / AI Breakthroughs"
       },
       "summary": {
@@ -215,12 +222,13 @@
     "12": {
       "topic": "AI科技企业 / AI Companies",
       "article": {
-        "title": "OpenAI Aims to Lock In $30 Billion Funding Round by Next Week",
-        "description": "OpenAI is close to finalizing a funding round in which it could raise as much as $30 billion at a $1.25 trillion pre-money valuation, CNBC reported Thursday (Oct. 22), citing unnamed sources. OpenAI told investors Thursday that it aims to secure signatures by…",
-        "url": "https://www.pymnts.com/news/artificial-intelligence/2026/openai-aims-to-lock-in-30-billion-funding-round-by-next-week/",
-        "source": "pymnts.com",
-        "published": "2026-10-23T01:20:17Z",
-        "image": "assets/news/b1ca6d7a3060ab85154b34a0.webp",
+        "title": "AI科技企业 / AI Companies 暂无更新 / No New Updates",
+        "description": "No newly found pictured report is available right now for AI科技企业 / AI Companies.",
+        "url": "https://www.google.com/",
+        "source": "Weston Life",
+        "published": "2026-10-24T02:42:45.644786Z",
+        "image": "assets/news/slot-12-no-update.svg",
+        "placeholder": true,
         "topic": "AI科技企业 / AI Companies"
       },
       "summary": {
@@ -253,12 +261,13 @@
     "14": {
       "topic": "美国大学与升学 / Higher Education",
       "article": {
-        "title": "Author Correction: DYNLL1 binds to MRE11 to limit DNA end resection in BRCA1-deficient cells",
-        "description": "Nature - Author Correction: DYNLL1 binds to MRE11 to limit DNA end resection in BRCA1-deficient cells",
-        "url": "https://www.nature.com/articles/s41586-026-11303-y",
-        "source": "Nature.com",
-        "published": "2026-10-23T00:00:00Z",
-        "image": "assets/news/4a02c8386695a9f7aa4cec83.png",
+        "title": "美国大学与升学 / Higher Education 暂无更新 / No New Updates",
+        "description": "No newly found pictured report is available right now for 美国大学与升学 / Higher Education.",
+        "url": "https://www.google.com/",
+        "source": "Weston Life",
+        "published": "2026-10-24T02:42:47.849221Z",
+        "image": "assets/news/slot-14-no-update.svg",
+        "placeholder": true,
         "topic": "美国大学与升学 / Higher Education"
       },
       "summary": {
@@ -272,12 +281,13 @@
     "15": {
       "topic": "房地产市场 / Real Estate",
       "article": {
-        "title": "Bond traders are backing off Fed rate hike bets — here's what it means for mortgage rates",
-        "description": "If oil is about to spark an inflation wave, the bond market hasn't heard about it.\nBrent crude (BZ=F) is trading around $112 a barrel, more than 50% higher than before the Iran war began in late February. Normally, that kind of spike would have bond investors…",
-        "url": "https://biztoc.com/x/22f720d1dac58cde",
-        "source": "Biztoc.com",
-        "published": "2026-10-22T18:36:06Z",
-        "image": "assets/news/b85fd768b9fa868d1e3bfc9d.webp",
+        "title": "房地产市场 / Real Estate 暂无更新 / No New Updates",
+        "description": "No newly found pictured report is available right now for 房地产市场 / Real Estate.",
+        "url": "https://www.google.com/",
+        "source": "Weston Life",
+        "published": "2026-10-24T02:42:48.125068Z",
+        "image": "assets/news/slot-15-no-update.svg",
+        "placeholder": true,
         "topic": "房地产市场 / Real Estate"
       },
       "summary": {
