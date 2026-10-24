@@ -40,23 +40,22 @@
       }
     },
     "3": {
-      "topic": "Weston 镇政府 / Town Government",
+      "topic": "麻州房地产 / Massachusetts Housing",
       "article": {
-        "title": "Weston 镇政府 · 官方资讯入口",
-        "description": "Weston government sources and notices; not a new report.",
-        "url": "https://www.westonma.gov/",
-        "source": "Weston Life",
-        "published": "2026-10-23T01:37:22.333590Z",
-        "image": "assets/news/1609065c7729f16ec137afec.png",
-        "placeholder": true,
-        "topic": "Weston 镇政府 / Town Government"
+        "title": "Massachusetts home market diverges: house sales rise as condo sales fall",
+        "description": "Massachusetts Association of REALTORS September data show a 4.8% annual rise in single-family home sales and a 6.4% drop in condominium sales. Median sold prices were $670,000 and $525,000, respectively.",
+        "url": "https://bostonagentmagazine.com/2026/10/14/mar-september-data-2026/",
+        "source": "Boston Agent Magazine",
+        "published": "2026-10-14T00:00:00Z",
+        "image": "assets/news/ma-market-sept-2026.jpg",
+        "topic": "麻州房地产 / Massachusetts Housing"
       },
       "summary": {
         "id": 3,
-        "zh_title": "Weston 镇政府 · 官方资讯入口",
-        "zh_summary": "专题资料入口，非当日新报道。",
-        "en_title": "Official sources / Topic directory",
-        "en_summary": "Source directory, not a newly reported article."
+        "zh_title": "麻州房市分化：独栋住宅成交量上升4.8%，公寓下降6.4%",
+        "zh_summary": "马萨诸塞州房地产经纪人协会9月数据显示：独栋住宅销量同比增长4.8%，公寓销量下降6.4%；独栋住宅成交中位价为67万美元，公寓为52.5万美元。",
+        "en_title": "Massachusetts home market diverges: house sales rise as condo sales fall",
+        "en_summary": "Massachusetts Association of REALTORS September data show a 4.8% annual rise in single-family home sales and a 6.4% drop in condominium sales. Median sold prices were $670,000 and $525,000, respectively."
       }
     },
     "4": {

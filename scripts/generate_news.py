@@ -922,6 +922,50 @@ def _get_regional_fallback(used):
     return None
 
 
+
+# WESTON-MA-HOUSING-CARD-V1: priority search for genuine Massachusetts housing news in local slot 03.
+def _get_ma_housing_candidate(used):
+    """Find a real published article with a corresponding publisher image."""
+    searches = [
+        '"Massachusetts" AND ("housing" OR "real estate" OR "home sales")',
+        '"Boston" AND ("home prices" OR "housing market" OR "real estate")',
+    ]
+    cutoff = (datetime.now(timezone.utc) - timedelta(days=21)).isoformat(timespec="seconds").replace("+00:00", "Z")
+    options=[]
+    seen=set()
+    for query in searches:
+        for raw in _fetch_news(query,cutoff,os.environ["NEWS_API_KEY"],page_size=80):
+            rec=_article_record(raw,seen,local=True)
+            if not rec:
+                continue
+            art,weight=rec
+            blob=(art.get("title","")+" "+art.get("description","")).lower()
+            if not any(term in blob for term in ("massachusetts", "boston", "greater boston", "new england")):
+                continue
+            if not any(term in blob for term in ("housing", "home", "real estate", "property", "mortgage", "condo")):
+                continue
+            url=art.get("url","")
+            if url in used or not url.startswith("https://") or "google.com" in urlparse(url).netloc:
+                continue
+            options.append((art,weight))
+    options.sort(key=lambda pair:(pair[0]["published"],pair[1]),reverse=True)
+    for art,_ in options[:50]:
+        photo=_complete_photo(art)
+        if photo:
+            return dict(art,image=photo,stale=False)
+    # Keep the last real housing report if still appropriate; don't fabricate a source directory.
+    reference={"title":"Massachusetts residential real estate market moves in two directions",
+               "description":"Massachusetts September sales: single-family +4.8%; condominiums -6.4%.",
+               "url":"https://bostonagentmagazine.com/2026/10/14/mar-september-data-2026/",
+               "source":"Boston Agent Magazine","published":"2026-10-14T00:00:00Z",
+               "image":"assets/news/ma-market-sept-2026.jpg"}
+    if reference["url"] not in used and (datetime.now(timezone.utc)-datetime(2026,10,14,tzinfo=timezone.utc)).days<35:
+        photo=_complete_photo(reference)
+        if photo:
+            return dict(reference,image=photo,stale=True)
+    return None
+
+
 def discover():
     """Fill 15 fixed editorial positions. Reserve school and town sources first."""
     old_state = _load_previous()
@@ -934,6 +978,8 @@ def discover():
         prior = old_state.get(number) or {}
         old = prior.get("article") if prior.get("topic") == slot["name"] else None
         candidate = _get_slot_candidate(i, slot, old, used)
+        if i == 2 and not candidate:
+            candidate = _get_ma_housing_candidate(used)
         # Local fallback does not require a Weston-school article: real Boston/MA is fine.
         if i < 5 and not candidate:
             candidate = _get_regional_fallback(used)
