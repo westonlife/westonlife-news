@@ -1,0 +1,118 @@
+name: Install Weston Life original-article frame
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out Weston Life repository
+        uses: actions/checkout@v4
+      - name: Create reader and add navigation to news pages
+        shell: bash
+        run: |
+          python3 - <<'PYCODE'
+          import base64, io, zipfile
+          from pathlib import Path
+          package = base64.b64decode(
+          "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"
+          )
+          with zipfile.ZipFile(io.BytesIO(package)) as z:
+              for name in ("reader.html", "reader-links.js", "install_reader.py", "README-操作说明.txt"):
+                  Path(name).write_bytes(z.read(name))
+          PYCODE
+          python3 install_reader.py
+      - name: Commit installed reader
+        shell: bash
+        run: |
+          git config user.name "westonlife-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html reader.html reader-links.js install_reader.py README-操作说明.txt scripts/generate_news.py
+          git add -A -- 'news-*.html'
+          if git diff --cached --quiet; then
+            echo "Reader is already installed."
+          else
+            git commit -m "Add back-button reader frame for original news articles"
+            git push
+          fi
