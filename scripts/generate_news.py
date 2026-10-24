@@ -719,7 +719,7 @@ def _complete_photo(article):
     candidates = ([original] if original else []) + _image_from_article_page(article["url"])
     for u in dict.fromkeys(candidates):
         photo = _save_real_photo(u)
-        if photo:
+        if photo and Path(photo).name not in bad_images:
             return photo
     return ""
 
