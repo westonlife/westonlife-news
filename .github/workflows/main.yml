@@ -33,7 +33,7 @@ jobs:
 
       - name: Generate verified news
         if: github.event_name == 'workflow_dispatch' || steps.clock.outputs.hour == '18'
-        run: git fetch --depth=1 origin c8693f069a9c282f4536f7c0a9356d43521c02d6 && git show c8693f069a9c282f4536f7c0a9356d43521c02d6:news_state.json > news_state.json && python scripts/generate_news.py
+        run: python scripts/generate_news.py
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           NEWS_API_KEY: ${{ secrets.NEWS_API_KEY }}
