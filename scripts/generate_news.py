@@ -664,10 +664,12 @@ def _save_real_photo(url):
     if any(term in image_path for term in blocked):
         return ""
     digest = sha256(url.encode("utf-8")).hexdigest()[:24]
-    PHOTO_DIR.mkdir(parents=True, exist_ok=True)
-    for ext in (".jpg", ".png", ".webp", ".gif"):
+    PHOTO_DIR.mkdir(parents=True, exist_ok=
+        for ext in (".jpg", ".png", ".webp", ".gif"):
         saved = PHOTO_DIR / (digest + ext)
         if saved.exists() and saved.stat().st_size > 5000:
+            if any(word in urlparse(url).path.lower() for word in blocked):
+                return ""
             return saved.relative_to(ROOT).as_posix()
     try:
         req = Request(url, headers={"User-Agent": "Mozilla/5.0 WestonLifeNews/1.0",
