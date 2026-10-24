@@ -1329,6 +1329,374 @@ html[data-wl-lang="en"] #wl-auto .wl-feature-zh{display:none}
     return panel.replace('<div class="wl-columns">', section + '<div class="wl-columns">', 1)
 
 
+# WESTON-LIFE-SCHOOL-NEWS-V3: separated WHS desk, diversified local coverage, direct publishers.
+# Installed before the existing __main__ block; preserves the website layout and prior college data.
+from concurrent.futures import ThreadPoolExecutor, as_completed
+
+_WL_V3_BASE_SCHOOL = school_watch_html
+_WL_V3_BASE_EDITORIAL_SCORE = _editorial_score
+_WL_V3_BASE_RENDER = render
+
+_WL_V3_LOCAL_RSS = (
+    ('WBUR Boston', 'https://www.wbur.org/feeds/rss/news'),
+    ('NBC Boston', 'https://www.nbcboston.com/news/local/feed/'),
+    ('Boston.com', 'https://www.boston.com/feed/'),
+    ('Banker & Tradesman Massachusetts', 'https://bankerandtradesman.com/feed/'),
+    ('Boston Agent Magazine', 'https://bostonagentmagazine.com/feed/'),
+    ('Boston Real Estate Times', 'https://bostonrealestatetimes.com/feed/'),
+    ('MassLive Massachusetts', 'https://www.masslive.com/arc/outboundfeeds/rss/?outputType=xml'),
+    ('WCVB Boston', 'https://www.wcvb.com/topstories-rss'),
+    ('Town of Weston Massachusetts', 'https://www.westonma.gov/RSSFeed.aspx?CID=Latest-Town-News-1&ModID=1'),
+)
+_WL_V3_GLOBAL_RSS = (
+    ('BBC World', 'https://feeds.bbci.co.uk/news/world/rss.xml'),
+    ('BBC Business', 'https://feeds.bbci.co.uk/news/business/rss.xml'),
+    ('BBC Technology', 'https://feeds.bbci.co.uk/news/technology/rss.xml'),
+    ('NPR', 'https://feeds.npr.org/1001/rss.xml'),
+    ('New York Times', 'https://rss.nytimes.com/services/xml/rss/nyt/World.xml'),
+    ('CNBC', 'https://www.cnbc.com/id/100003114/device/rss/rss.html'),
+    ('MIT News', 'https://news.mit.edu/rss/feed'),
+    ('TechCrunch', 'https://techcrunch.com/feed/'),
+    ('Federal Reserve', 'https://www.federalreserve.gov/feeds/press_all.xml'),
+)
+_WL_V3_LOCAL_QUERY = (
+    '"Weston Massachusetts" OR "Weston MA"',
+    'Boston AND (mayor OR infrastructure OR housing OR city)',
+    'Massachusetts AND (governor OR legislature OR economy)',
+    'Massachusetts AND (housing OR "home sales" OR "real estate")',
+    '"Greater Boston" AND (mortgage OR property OR development)',
+    'Boston AND (business OR community OR public transit)',
+)
+_WL_V3_WORLD_QUERY = (
+    'Iran OR Tehran OR Hormuz',
+    'Ukraine OR Russia',
+    'China OR Beijing',
+    'Nasdaq OR "Wall Street" OR "Federal Reserve"',
+    'Nvidia OR Microsoft OR Tesla OR Broadcom',
+    'OpenAI OR Anthropic OR "artificial intelligence"',
+    'robotics OR "AI breakthrough"',
+    '"White House" OR Congress OR "Supreme Court"',
+    'Harvard OR MIT OR "college admissions"',
+    '"housing market" OR "mortgage rates"',
+)
+_WL_V3_BAD_HOSTS = ('news.google.com', 'google.com', 'biztoc.com', 'yahoo.com', 'msn.com')
+
+
+def _wl_v3_valid_source(article):
+    u = (article.get('url') or '').strip()
+    host = (urlparse(u).hostname or '').lower()
+    return (u.startswith('https://') and host and
+            not any(host == b or host.endswith('.' + b) for b in _WL_V3_BAD_HOSTS) and
+            _editorial_real_url(article))
+
+
+def _wl_v3_is_school(article):
+    u = (article.get('url') or '').lower()
+    host = (urlparse(u).hostname or '').lower()
+    blob = _editorial_text(article)
+    return (host.endswith('westonschools.org') or host.endswith('wildcattracks.weston.org') or
+            'weston high school' in blob or 'weston public schools' in blob or
+            ('whs' in blob and 'weston' in blob))
+
+
+def _wl_v3_read_rss(spec):
+    name, url, local = spec
+    output = []
+    try:
+        req = Request(url, headers={'User-Agent': 'Mozilla/5.0 (WestonLife/2.0; news links are attributed)'})
+        with urlopen(req, timeout=7) as resp:
+            doc = resp.read(750_000)
+        root = ElementTree.fromstring(doc)
+        items = list(root.findall('.//item'))
+        atom_ns = '{http://www.w3.org/2005/Atom}'
+        items.extend(root.findall('.//' + atom_ns + 'entry'))
+        for item in items[:30]:
+            def read_node(label):
+                return (item.findtext(label) or item.findtext(atom_ns + label) or '').strip()
+            title = html.unescape(re.sub(r'<[^>]+>', ' ', read_node('title'))).strip()
+            link = read_node('link')
+            if not link:
+                lnk = item.find(atom_ns + 'link')
+                link = (lnk.get('href') or '') if lnk is not None else ''
+            if not title or not link.startswith('https://'):
+                continue
+            date_str = read_node('pubDate') or read_node('published') or read_node('updated')
+            try:
+                stamp = parsedate_to_datetime(date_str)
+                stamp = stamp.replace(tzinfo=timezone.utc) if stamp.tzinfo is None else stamp
+            except (TypeError, ValueError, IndexError):
+                try:
+                    stamp = datetime.fromisoformat(date_str.replace('Z', '+00:00'))
+                    stamp = stamp.replace(tzinfo=timezone.utc) if stamp.tzinfo is None else stamp
+                except (ValueError, TypeError):
+                    continue
+            days = 35 if local else 10
+            if stamp.astimezone(timezone.utc) < datetime.now(timezone.utc) - timedelta(days=days):
+                continue
+            desc = read_node('description') or read_node('summary') or read_node('content')
+            desc = re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>', ' ', desc))).strip()[:500]
+            raw = {'title': title, 'description': desc, 'content': desc,
+                   'url': link, 'publishedAt': stamp.astimezone(timezone.utc).isoformat(),
+                   'urlToImage': '', 'source': {'name': name}}
+            result = _article_record(raw, set(), local=local)
+            if result and _wl_v3_valid_source(result[0]):
+                output.append(result[0])
+    except (OSError, ValueError, ElementTree.ParseError, UnicodeError) as exc:
+        print('Publisher feed unavailable ' + name + ': ' + str(exc)[:120], file=sys.stderr)
+    return output
+
+
+def _editorial_collect():
+    """Independent publishers + NewsAPI + official school/town, fetched concurrently.
+
+    Do not publish Google News search/redirect destinations. Original publisher URLs only.
+    """
+    now = datetime.now(timezone.utc)
+    pool = {'local': {}, 'world': {}}
+    tasks = []
+    for query in _WL_V3_LOCAL_QUERY:
+        tasks.append(('news', True, query))
+    for query in _WL_V3_WORLD_QUERY:
+        tasks.append(('news', False, query))
+    for source in _WL_V3_LOCAL_RSS:
+        tasks.append(('rss', True, source))
+    for source in _WL_V3_GLOBAL_RSS:
+        tasks.append(('rss', False, source))
+
+    def collect_one(task):
+        method, local, what = task
+        if method == 'rss':
+            return local, _wl_v3_read_rss((*what, local))
+        cutoff = (now - timedelta(days=21 if local else 8)).isoformat(timespec='seconds').replace('+00:00', 'Z')
+        rows = []
+        try:
+            for item in _fetch_news(what, cutoff, os.environ['NEWS_API_KEY'], page_size=80):
+                record = _article_record(item, set(), local=local)
+                if record and _wl_v3_valid_source(record[0]):
+                    rows.append(record[0])
+        except (OSError, KeyError, ValueError) as exc:
+            print('NewsAPI query unavailable: ' + str(exc)[:120], file=sys.stderr)
+        return local, rows
+
+    with ThreadPoolExecutor(max_workers=8) as executor:
+        for future in as_completed([executor.submit(collect_one, q) for q in tasks]):
+            try:
+                local, rows = future.result()
+            except Exception as exc:
+                print('One news source unavailable: ' + str(exc)[:120], file=sys.stderr)
+                continue
+            bucket = pool['local' if local else 'world']
+            for article in rows:
+                if local and _wl_v3_is_school(article):
+                    continue
+                if local and not any(t in _editorial_text(article) for t in _EDITORIAL_LOCAL):
+                    continue
+                bucket.setdefault(article['url'], article)
+
+    # Preserve legitimate source URLs already on the site when live feeds are thin.
+    for saved in _load_previous().values():
+        article = saved.get('article') or {}
+        if not _wl_v3_valid_source(article):
+            continue
+        age = (now - _editorial_date(article)).total_seconds() / 86400
+        if not (-1 <= age <= 28):
+            continue
+        local = any(t in _editorial_text(article) for t in _EDITORIAL_LOCAL)
+        if local and _wl_v3_is_school(article):
+            continue
+        pool['local' if local else 'world'].setdefault(article['url'], article)
+    return pool
+
+
+def _editorial_score(article, local=False):
+    score = _WL_V3_BASE_EDITORIAL_SCORE(article, local)
+    domain = (urlparse(article.get('url') or '').hostname or '').lower()
+    if any(domain == h or domain.endswith('.' + h) for h in _WL_V3_BAD_HOSTS):
+        return -10000
+    if local and _wl_v3_is_school(article):
+        return -10000
+    if domain.endswith(('wbur.org', 'nbcboston.com', 'boston.com', 'mass.gov',
+                        'westonma.gov', 'bankerandtradesman.com', 'bostonglobe.com',
+                        'bostonagentmagazine.com', 'bostonrealestatetimes.com')):
+        score += 10 if local else 4
+    if domain.endswith(('reuters.com', 'apnews.com', 'bbc.com', 'npr.org',
+                        'cnbc.com', 'ft.com', 'wsj.com', 'nytimes.com', 'mit.edu')):
+        score += 10
+    blob = _editorial_text(article)
+    if any(t in blob for t in ('fact check:', 'daily horoscope', 'shopping deals', 'coupon codes')):
+        score -= 15
+    return score
+
+
+def _wl_v3_has_housing(article):
+    text = _editorial_text(article)
+    return (any(x in text for x in ('housing', 'real estate', 'home sales', 'home price',
+                                    'mortgage', 'condominium', 'rent prices', 'property market',
+                                    'affordable homes', 'starter homes')) and
+            any(x in text for x in _EDITORIAL_LOCAL) and not _wl_v3_is_school(article))
+
+
+def _wl_v3_choose_one(candidates, selected):
+    opts = [a for a in candidates if a.get('url') not in selected and _wl_v3_valid_source(a)
+            and not _wl_v3_is_school(a)]
+    good = _editorial_choose(opts, 1, local=True, used=selected)
+    return good[0] if good else None
+
+
+def discover():
+    """Local slots: Weston civic, Boston, Massachusetts housing, MA state, metro.
+    No Weston High School announcement may enter a general news card.
+    """
+    pool = _editorial_collect()
+    used = set()
+    local_pool = list(pool['local'].values())
+    def blob(a):
+        return _editorial_text(a)
+    def gov(a):
+        t = blob(a)
+        return ('weston' in t and any(w in t for w in ('town', 'government', 'select board',
+                'planning', 'municipal', 'library', 'public safety', 'zoning')))
+    def boston(a):
+        return 'boston' in blob(a) and not _wl_v3_has_housing(a)
+    def state(a):
+        t = blob(a)
+        return ('massachusetts' in t and any(w in t for w in (
+            'governor', 'legislature', 'state', 'policy', 'economy', 'transit', 'transport')))
+    # Housing gets first pick to guarantee it is not crowded out by other stories.
+    housing = _wl_v3_choose_one([a for a in local_pool if _wl_v3_has_housing(a)], used)
+    if housing is None:
+        try:
+            old = _get_ma_housing_candidate(used)
+            if old and _wl_v3_valid_source(old):
+                housing = old
+                used.add(old['url'])
+        except (OSError, ValueError, KeyError) as exc:
+            print('Housing backup not available: ' + str(exc)[:120], file=sys.stderr)
+    weston = _wl_v3_choose_one([a for a in local_pool if gov(a)], used)
+    city = _wl_v3_choose_one([a for a in local_pool if boston(a)], used)
+    mass = _wl_v3_choose_one([a for a in local_pool if state(a)], used)
+    region = _wl_v3_choose_one([a for a in local_pool if not _wl_v3_has_housing(a)], used)
+    slots = [weston, city, housing, mass, region]
+    if any(a is None for a in slots):
+        extras = _editorial_choose([a for a in local_pool if not _wl_v3_is_school(a)],
+                                  5, local=True, used=used)
+        it = iter(extras)
+        slots = [a if a is not None else next(it, None) for a in slots]
+    local = [a for a in slots if a is not None]
+    world_candidates = [a for a in pool['world'].values() if _wl_v3_valid_source(a)]
+    world = _editorial_choose(world_candidates, 14, local=False, used=used)
+    # Deduplicate near-identical headlines (including syndicated articles).
+    def dedupe(items):
+        output, seen_titles, sources = [], set(), {}
+        for a in items:
+            key = re.sub('[^a-z0-9]+', '', a['title'].lower())[:65]
+            host = (urlparse(a.get('url') or '').hostname or '').lower()
+            if key in seen_titles or sources.get(host, 0) >= 3:
+                continue
+            seen_titles.add(key)
+            sources[host] = sources.get(host, 0) + 1
+            output.append(a)
+        return output
+    local = dedupe(local)
+    world = dedupe(world)[:10]
+    if not local and not world:
+        raise RuntimeError('No original-source articles verified; previous edition retained')
+    update_index._local_stories = local
+    update_index._school_stories = []
+    print('V3 editorial: %d local, %d world; school posts isolated, housing=%s' %
+          (len(local), len(world), 'yes' if housing else 'no'))
+    return [('Weston / Boston / Massachusetts', local), ('World News / Global', world)]
+
+
+def _wl_v3_school_articles():
+    # Official Weston High School RSS + school newspaper and verified old items.
+    sources = [
+        _feed_articles('https://www.westonschools.org/high/feed/'),
+        _feed_articles('https://www.westonschools.org/feed/'),
+    ]
+    try:
+        sources.append(_wl_v3_read_rss(('Wildcat Tracks — WHS student newspaper',
+                                        'https://wildcattracks.weston.org/feed/', True)))
+    except Exception:
+        pass
+    stories = []
+    for rows in sources:
+        for a in rows:
+            if 'publishedAt' in a and 'published' not in a:
+                a = dict(a, published=a['publishedAt'],
+                         source=(a.get('source') or {}).get('name') or 'Weston High School')
+            if not _wl_v3_valid_source(a):
+                continue
+            stories.append(a)
+    for saved in _load_previous().values():
+        a = saved.get('article') or {}
+        if _wl_v3_is_school(a) and _wl_v3_valid_source(a):
+            stories.append(a)
+    stories.sort(key=lambda a: _editorial_date(a), reverse=True)
+    seen, output = set(), []
+    for a in stories:
+        if a['url'] in seen:
+            continue
+        if _editorial_date(a) < datetime.now(timezone.utc) - timedelta(days=35):
+            continue
+        seen.add(a['url'])
+        output.append(a)
+        if len(output) == 5:
+            break
+    return output
+
+
+def school_watch_html(date, local_stories=None, school_stories=None):
+    """A dedicated TODAY WESTON SCHOOL desk, then unchanged historic destinations."""
+    old = _WL_V3_BASE_SCHOOL(date, [], [])
+    old = old.replace('🎓 Weston校园动态', '🎓 Weston 升学统计')
+    old = old.replace('🎓 Weston School Watch', '🎓 Weston College Destinations')
+    cards = []
+    for art in _wl_v3_school_articles():
+        url = safe(art['url'])
+        title = safe(art['title'])
+        source = safe(str(art.get('source') or 'Weston High School'))
+        day = safe(art.get('published', '')[:10])
+        cards.append('<a class="wl-school-post" href="%s" target="_blank" rel="noopener noreferrer">'
+                     '<strong>%s</strong><small>%s · %s · 原始公告 / Original report ↗</small></a>'
+                     % (url, title, source, day))
+    if not cards:
+        cards = ['<p>学校公告直接查阅官方来源：'
+                 '<a href="https://www.westonschools.org/high/" target="_blank" '
+                 'rel="noopener noreferrer">Weston High School</a>。'
+                 '历史升学数据见下方，不以旧消息冒充今日消息。</p>']
+    section = '''<!-- WESTON-SCHOOL-DAILY-START -->
+<style>
+#wl-school-today{max-width:1100px;margin:28px auto 18px;padding:24px 26px;border-radius:13px;background:#f4efe3;color:#2c4434;border:1px solid #ddd0b8;font-family:Georgia,serif}
+#wl-school-today h2{font-size:clamp(27px,4vw,39px);margin:5px 0 9px;color:#315d44}
+#wl-school-today .wl-school-lead{font-size:14px;color:#6a705c;margin:0 0 17px}
+html[data-wl-lang="zh"] #wl-school-today .school-en,html[data-wl-lang="en"] #wl-school-today .school-zh{display:none}
+#wl-school-today .wl-school-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+#wl-school-today .wl-school-post{display:block;padding:17px;border-radius:9px;background:#fffdf8;border:1px solid #e1d6c3;color:#244232;text-decoration:none}
+#wl-school-today .wl-school-post strong{display:block;font-size:18px;line-height:1.4}
+#wl-school-today .wl-school-post small{display:block;margin-top:10px;font:12px Arial,sans-serif;color:#6d7968;line-height:1.6}
+#wl-school-today .wl-school-post:hover{border-color:#5e876b;background:#fff}
+@media(max-width:650px){#wl-school-today{padding:18px}#wl-school-today .wl-school-grid{grid-template-columns:1fr}}
+</style>
+<section id="wl-school-today" aria-label="今日 Weston School">
+<div style="font:12px Arial,sans-serif;letter-spacing:.16em;color:#a07848">WESTON LIFE · CAMPUS</div>
+<h2><span class="school-zh">🎓 今日 Weston School</span><span class="school-en">🎓 Today at Weston School</span></h2>
+<p class="wl-school-lead school-zh">Weston High School 官方通知、校园新闻与学生活动 · 每条显示实际发布日期，点击打开原始报道。</p>
+<p class="wl-school-lead school-en">Official Weston High School updates and student news, with original publication dates and source links.</p>
+<div class="wl-school-grid">''' + ''.join(cards) + '''</div></section>
+<!-- WESTON-SCHOOL-DAILY-END -->'''
+    return section + '\n' + old
+
+
+def render(groups, summaries, date):
+    page = _WL_V3_BASE_RENDER(groups, summaries, date)
+    nav = ('''<div class="wl-back-nav" style="position:sticky;top:0;z-index:9;background:#f8f4e9;'''
+           '''border-bottom:2px solid #d1c5b1;padding:12px;text-align:center">'''
+           '''<a href="index.html" style="display:inline-block;font:bold 17px Arial,sans-serif;'''
+           '''color:#315d44">← 返回 Weston Life 首页 / Back to home</a></div>''')
+    return page.replace('<main>', nav + '<main>', 1)
+
+
 if __name__ == "__main__":
     try:
         if "--check" in sys.argv:
