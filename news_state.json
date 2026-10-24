@@ -35,8 +35,8 @@
       },
       "summary": {
         "id": 2,
-        "zh_title": "适合爱船雪鸟的3卧室牧场",
-        "zh_summary": "这座单层的佛罗里达海滨住宅拥有105英尺的海滨，配有两个码头和一个10,000磅的船升降机。",
+        "zh_title": "适合爱船的雪鸟的3卧室牧场",
+        "zh_summary": "这座单层的佛罗里达海滨住宅拥有105英尺的海滨和两个码头，以及一个10,000磅的船升降机。",
         "en_title": "A 3-BR ranch for boat-loving snowbirds in Fort Myers",
         "en_summary": "The single-story waterfront Florida home has 105 feet of waterfront with two docks and a 10,000-pound boat lift."
       }
@@ -135,8 +135,8 @@
       },
       "summary": {
         "id": 7,
-        "zh_title": "Nvidia作为AI融资者的角色面临首次重大考验",
-        "zh_summary": "随着Nvidia从芯片制造商转变为行业融资者，一些投资者认为该公司承担了与AI建设相关的过大风险。",
+        "zh_title": "英伟达作为AI融资者的角色面临首次重大考验",
+        "zh_summary": "随着英伟达从芯片制造商转变为行业融资者，一些投资者认为该公司承担了与AI建设相关的过大风险。",
         "en_title": "Nvidia's role as AI financier faces first big test as neoclouds take market hit",
         "en_summary": "As Nvidia has gone from chipmaker to industry financier, some investors see the company taking on outsized risk tied to the AI buildout."
       }
@@ -155,8 +155,8 @@
       },
       "summary": {
         "id": 8,
-        "zh_title": "美国出生率降至创纪录低点，年长女性生育增多",
-        "zh_summary": "根据疾病控制和预防中心的报告，美国出生率降至历史最低水平，但30岁以上女性的生育数量有所增加。",
+        "zh_title": "美国出生率降至创纪录低点，但年长女性生育更多",
+        "zh_summary": "根据疾病控制与预防中心的报告，美国出生率降至有记录以来的最低水平，但30岁以上的女性生育更多孩子。",
         "en_title": "U.S. birth rate drops to record low, but older women are having more babies",
         "en_summary": "The U.S. birth rate fell to its lowest level ever recorded, according to a report from the Centers for Disease Control and Prevention."
       }
@@ -176,7 +176,7 @@
       "summary": {
         "id": 9,
         "zh_title": "俄罗斯在中期选举最后阶段加大影响力",
-        "zh_summary": "研究在线影响力操作的研究人员表示，克里姆林宫支持的团体正在恢复他们在美国和全球选举中播种不信任和分裂的策略。",
+        "zh_summary": "研究在线影响操作的研究人员表示，克里姆林宫支持的团体正在恢复他们在美国及全球选举中播种不信任和分裂的策略。",
         "en_title": "Russia steps up election influence efforts in final stretch of midterms",
         "en_summary": "Researchers who track online influence operations say Kremlin-backed groups are renewing tactics they've used to sow distrust and discord in previous elections in the U.S. and around the world."
       }
@@ -196,7 +196,7 @@
       "summary": {
         "id": 10,
         "zh_title": "卡塔尔购买美国天然气的交易显示伊朗战争重塑全球能源市场",
-        "zh_summary": "伊朗战争正在改变全球能源市场，并使美国公司，特别是液化天然气出口商受益。",
+        "zh_summary": "伊朗战争正在改变全球能源市场，并使美国公司受益，尤其是液化天然气出口商。",
         "en_title": "Qatar deal to buy U.S. natural gas shows how Iran war has redrawn global energy markets",
         "en_summary": "The Iran war is transforming global energy markets and benefiting U.S. companies, especially liquefied natural gas exporters."
       }
@@ -216,7 +216,7 @@
       "summary": {
         "id": 11,
         "zh_title": "这个十年缺少重大影响的中期选举",
-        "zh_summary": "过去一百年中的每个十年都至少产生了一次对国会和国家政治产生重大影响的中期选举。",
+        "zh_summary": "过去一百年中的每个十年都至少产生了一次在国会和国家政治中产生重大影响的中期选举。",
         "en_title": "This decade has been missing its big-impact midterm",
         "en_summary": "Every other decade over the past hundred years has produced at least one midterm that made a big difference in Congress and in national politics more broadly."
       }
@@ -236,7 +236,7 @@
       "summary": {
         "id": 12,
         "zh_title": "这款设计软件重新构想日常物品为自我意识设备",
-        "zh_summary": "“X-Hinges”帮助设计和3D打印带有互动元素的物品，如灯具和手套，自动嵌入感应器以感知和适应人类接触。",
+        "zh_summary": "“X-Hinges”帮助设计和3D打印带有互动元素的物品，如灯具和手套，自动嵌入传感器以感知和适应人类接触。",
         "en_title": "This design software reimagines everyday objects as self-aware devices",
         "en_summary": "“X-Hinges” helps design and 3D print items like lamps and gloves with an interactive twist: automatically embedded sensors that perceive and adaptively respond to human contact."
       }
@@ -256,7 +256,7 @@
       "summary": {
         "id": 13,
         "zh_title": "在麻省理工学院，玛莎·米诺谈论如何通过使用和克服AI来维持民主",
-        "zh_summary": "在康普顿讲座中，这位杰出的法律学者警告可能会“失去启蒙时代”，同时建议创新可以满足我们的公民和文化需求。",
+        "zh_summary": "在康普顿讲座中，这位杰出的法律学者警告可能会“失去启蒙时代”，同时提出创新可以满足我们的公民和文化需求的方法。",
         "en_title": "At MIT, Martha Minow speaks on sustaining democracy, both by using and overcoming AI",
         "en_summary": "In Compton Lecture, the distinguished legal scholar warns of potential “loss of the Enlightenment” while suggesting ways innovations can meet our civic and cultural needs."
       }
