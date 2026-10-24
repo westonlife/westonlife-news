@@ -1,0 +1,189 @@
+name: Weston Life - Restore Massachusetts Housing 03
+on:
+  push:
+    paths:
+      - '.github/workflows/weston-ma-housing-03.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: weston-ma-housing-03
+  cancel-in-progress: false
+jobs:
+  restore-housing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Weston Life
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Restore local housing story and future regional fallback
+        shell: bash
+        run: |
+          python - <<'PYCODE'
+          """Weston Life: restore missing regional card 03 with a cited MA housing story.
+          Use inside a GitHub Actions job in the repository root.
+          """
+          from pathlib import Path
+          from urllib.request import Request, urlopen
+          from urllib.parse import urlparse
+          import json, re, ast, html, sys
+          
+          ROOT=Path.cwd()
+          assert (ROOT/'index.html').exists(), 'Run from repository root'
+          PAGE=ROOT/'index.html'
+          DETAIL=ROOT/'news-2026-10-24.html'
+          STATE=ROOT/'news_state.json'
+          GEN=ROOT/'scripts/generate_news.py'
+          
+          SOURCE='https://bostonagentmagazine.com/2026/10/14/mar-september-data-2026/'
+          PHOTO='https://press3-press3bucket-fw2ujypjowwh.s3.us-east-2.amazonaws.com/dom29980/wp-content/uploads/sites/8/2026/10/Boston-September-Data-1.jpg'
+          PHOTO_LOCAL='assets/news/ma-market-sept-2026.jpg'
+          TITLE_ZH='麻州房市分化：独栋住宅成交量上升4.8%，公寓下降6.4%'
+          TITLE_EN='Massachusetts home market diverges: house sales rise as condo sales fall'
+          SUMMARY_ZH='马萨诸塞州房地产经纪人协会9月数据显示：独栋住宅销量同比增长4.8%，公寓销量下降6.4%；独栋住宅成交中位价为67万美元，公寓为52.5万美元。'
+          SUMMARY_EN='Massachusetts Association of REALTORS September data show a 4.8% annual rise in single-family home sales and a 6.4% drop in condominium sales. Median sold prices were $670,000 and $525,000, respectively.'
+          
+          def save_photo():
+              dest=ROOT/PHOTO_LOCAL
+              dest.parent.mkdir(parents=True,exist_ok=True)
+              if dest.is_file() and dest.stat().st_size>6000:
+                  return PHOTO_LOCAL
+              try:
+                  req=Request(PHOTO,headers={'User-Agent':'Mozilla/5.0','Accept':'image/jpeg,image/*;q=0.8'})
+                  with urlopen(req, timeout=18) as response:
+                      data=response.read(2500000)
+                  if data.startswith(b'\xff\xd8\xff') and len(data)>6000:
+                      dest.write_bytes(data)
+                      print('Saved original publisher article photograph:',len(data),'bytes')
+                      return PHOTO_LOCAL
+              except Exception as exc:
+                  print('Original image not cached; will use publisher image URL directly:',str(exc)[:130],file=sys.stderr)
+              return PHOTO
+          
+          img=save_photo()
+          
+          # Today: insert one genuine published story, without touching the other articles.
+          index=PAGE.read_text('utf-8')
+          if 'href="news-2026-10-24.html#story-3"' not in index:
+              card=(f'<a class="wl-story" href="news-2026-10-24.html#story-3" aria-label="{html.escape(TITLE_ZH,quote=True)}">\n'
+                    f'<span class="wl-index">03</span><div class="wl-photo"><img src="{html.escape(img,quote=True)}" alt="波士顿房产市场报道配图 / Original publisher photograph" loading="lazy" decoding="async"></div>\n'
+                    f'<div class="wl-copy"><strong>{html.escape(TITLE_ZH)}</strong><span class="wl-en">{html.escape(TITLE_EN)}</span>\n'
+                    f'<span class="wl-source">Boston Agent Magazine · 2026-10-14</span></div></a>')
+              # Insert after story 02, before story 04, within generated panel.
+              m=re.search(r'(<a class="wl-story" href="news-2026-10-24\.html#story-2"[\s\S]*?</a>)(?=\s*<a class="wl-story" href="news-2026-10-24\.html#story-4")', index)
+              assert m, 'Could not find insertion point between local story 02 and 04: untouched'
+              index=index[:m.end()]+card+index[m.end():]
+              PAGE.write_text(index,'utf-8')
+              print('Inserted live homepage card 03')
+          else: print('Homepage already has card 03')
+          
+          if DETAIL.exists():
+              page=DETAIL.read_text('utf-8')
+              if 'id="story-3"' not in page:
+                  article=(f'<article class="item" id="story-3"><div class="num">03</div>\n'
+                           f'<img class="story-photo" src="{html.escape(img,quote=True)}" alt="波士顿房产报道原图 / Publisher photograph" loading="lazy">\n'
+                           f'<h3 class="zh-title">{html.escape(TITLE_ZH)}</h3><p class="en en-title">{html.escape(TITLE_EN)}</p>\n'
+                           f'<p class="zh-summary">{html.escape(SUMMARY_ZH)}</p><p class="en-summary">{html.escape(SUMMARY_EN)}</p>\n'
+                           f'<p class="meta">Boston Agent Magazine · 2026-10-14</p>\n'
+                           f'<a href="{SOURCE}" target="_blank" rel="noopener noreferrer">原始报道 / Original source ↗</a></article>')
+                  m=re.search(r'(<article class="item" id="story-2">[\s\S]*?</article>)(?=\s*<article class="item" id="story-4">)',page)
+                  assert m, 'Could not locate detailed article position 02–04: untouched'
+                  page=page[:m.end()]+article+page[m.end():]
+                  DETAIL.write_text(page,'utf-8')
+                  print('Inserted full story 03 in October 24 news edition')
+          
+          if STATE.exists():
+              state=json.loads(STATE.read_text('utf-8'))
+              state.setdefault('slots',{})['3']={
+                  'topic': '麻州房地产 / Massachusetts Housing',
+                  'article': {'title':TITLE_EN,'description':SUMMARY_EN,'url':SOURCE,'source':'Boston Agent Magazine',
+                              'published':'2026-10-14T00:00:00Z','image':img,'topic':'麻州房地产 / Massachusetts Housing'},
+                  'summary': {'id':3,'zh_title':TITLE_ZH,'zh_summary':SUMMARY_ZH,
+                              'en_title':TITLE_EN,'en_summary':SUMMARY_EN},
+              }
+              STATE.write_text(json.dumps(state,ensure_ascii=False,indent=2),'utf-8')
+          
+          # Tomorrow onward: let this position search real, fresh MA housing reports BEFORE general fallback.
+          source=GEN.read_text('utf-8')
+          marker='# WESTON-MA-HOUSING-CARD-V1'
+          if marker not in source:
+              extra='''
+          # WESTON-MA-HOUSING-CARD-V1: priority search for genuine Massachusetts housing news in local slot 03.
+          def _get_ma_housing_candidate(used):
+              """Find a real published article with a corresponding publisher image."""
+              searches = [
+                  '"Massachusetts" AND ("housing" OR "real estate" OR "home sales")',
+                  '"Boston" AND ("home prices" OR "housing market" OR "real estate")',
+              ]
+              cutoff = (datetime.now(timezone.utc) - timedelta(days=21)).isoformat(timespec="seconds").replace("+00:00", "Z")
+              options=[]
+              seen=set()
+              for query in searches:
+                  for raw in _fetch_news(query,cutoff,os.environ["NEWS_API_KEY"],page_size=80):
+                      rec=_article_record(raw,seen,local=True)
+                      if not rec:
+                          continue
+                      art,weight=rec
+                      blob=(art.get("title","")+" "+art.get("description","")).lower()
+                      if not any(term in blob for term in ("massachusetts", "boston", "greater boston", "new england")):
+                          continue
+                      if not any(term in blob for term in ("housing", "home", "real estate", "property", "mortgage", "condo")):
+                          continue
+                      url=art.get("url","")
+                      if url in used or not url.startswith("https://") or "google.com" in urlparse(url).netloc:
+                          continue
+                      options.append((art,weight))
+              options.sort(key=lambda pair:(pair[0]["published"],pair[1]),reverse=True)
+              for art,_ in options[:50]:
+                  photo=_complete_photo(art)
+                  if photo:
+                      return dict(art,image=photo,stale=False)
+              # Keep the last real housing report if still appropriate; don't fabricate a source directory.
+              reference={"title":"Massachusetts residential real estate market moves in two directions",
+                         "description":"Massachusetts September sales: single-family +4.8%; condominiums -6.4%.",
+                         "url":"https://bostonagentmagazine.com/2026/10/14/mar-september-data-2026/",
+                         "source":"Boston Agent Magazine","published":"2026-10-14T00:00:00Z",
+                         "image":"assets/news/ma-market-sept-2026.jpg"}
+              if reference["url"] not in used and (datetime.now(timezone.utc)-datetime(2026,10,14,tzinfo=timezone.utc)).days<35:
+                  photo=_complete_photo(reference)
+                  if photo:
+                      return dict(reference,image=photo,stale=True)
+              return None
+          
+          '''
+              anchor='\ndef discover():\n    """Fill 15 fixed editorial positions. Reserve school and town sources first."""'
+              assert anchor in source, 'Publisher structure changed: no future-rule edit'
+              source=source.replace(anchor,'\n'+extra+anchor,1)
+              needle='        candidate = _get_slot_candidate(i, slot, old, used)\n'
+              assert needle in source, 'Publisher selection not found'
+              source=source.replace(needle,needle+'''        if i == 2 and not candidate:\n            candidate = _get_ma_housing_candidate(used)\n''',1)
+              ast.parse(source)
+              GEN.write_text(source,'utf-8')
+              print('Future publisher searches genuine Massachusetts housing before local fallback')
+          else: print('Future rule already installed')
+          
+          # Verify numbering and real article link.
+          updated=PAGE.read_text('utf-8')
+          assert updated.count('href="news-2026-10-24.html#story-3"')==1
+          assert SOURCE in DETAIL.read_text('utf-8')
+          assert all(f'<span class="wl-index">{n:02d}</span>' in updated for n in range(1,6))
+          print('OK: local cards 01–05 contiguous and article 03 links to a real publisher')
+          PYCODE
+      - name: Validate scripts
+        run: |
+          python -m py_compile scripts/generate_news.py
+          python scripts/generate_news.py --check
+      - name: Publish to main branch
+        shell: bash
+        run: |
+          git config user.name 'Weston Life News Bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html news-2026-10-24.html news_state.json scripts/generate_news.py
+          if [ -f assets/news/ma-market-sept-2026.jpg ]; then git add assets/news/ma-market-sept-2026.jpg; fi
+          if ! git diff --cached --quiet; then
+            git commit -m 'Restore missing Massachusetts housing story 03 and future fallback'
+            git push origin HEAD:main
+          else
+            echo 'No updates needed'
+          fi
