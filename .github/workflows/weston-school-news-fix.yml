@@ -1,0 +1,62 @@
+name: Weston Life - School News and Real Estate Fix
+on:
+  push:
+    paths:
+      - '.github/workflows/weston-school-news-fix.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: weston-school-news-fix
+  cancel-in-progress: false
+jobs:
+  install-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Weston Life repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Install safer news and separate Weston school
+        shell: bash
+        run: |
+          python - <<'PYNEWSFIX'
+          from pathlib import Path
+          import base64, zlib, ast
+          path=Path('scripts/generate_news.py')
+          s=path.read_text(encoding='utf-8')
+          marker='# WESTON-LIFE-SCHOOL-NEWS-V3:'
+          append=zlib.decompress(base64.b64decode('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')).decode('utf-8')
+          if marker not in s:
+              anchor='if __name__ == "__main__":'
+              assert anchor in s, 'Could not locate end-of-file execution guard'
+              s=s.replace(anchor, append + '\n\n' + anchor, 1)
+              ast.parse(s)
+              path.write_text(s, encoding='utf-8')
+              print('Installed dedicated Today Weston School news and verified-source rules')
+          else:
+              print('News V3 is already present; no duplicate installation')
+          PYNEWSFIX
+      - name: Check Python script syntax
+        run: python -m py_compile scripts/generate_news.py
+      - name: Refresh website with new editorial rules
+        id: refresh
+        continue-on-error: true
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          NEWS_API_KEY: ${{ secrets.NEWS_API_KEY }}
+        run: python scripts/generate_news.py
+      - name: Restore commodity price links
+        if: steps.refresh.outcome == 'success'
+        continue-on-error: true
+        run: python scripts/add_oil_headline.py
+      - name: Commit updated news program and website
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "Separate Today Weston School, improve original news sources and housing coverage"
+            git push
+          fi
