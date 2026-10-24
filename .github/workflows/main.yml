@@ -38,6 +38,14 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           NEWS_API_KEY: ${{ secrets.NEWS_API_KEY }}
 
+      - name: Update daily oil price headline
+        if: github.event_name == 'workflow_dispatch' || steps.clock.outputs.hour == '18'
+        run: python scripts/add_oil_headline.py
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          NEWS_API_KEY: ${{ secrets.NEWS_API_KEY }}
+
+
       - name: Save updated website
         if: github.event_name == 'workflow_dispatch' || steps.clock.outputs.hour == '18'
         run: |
