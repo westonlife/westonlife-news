@@ -28,12 +28,12 @@ def find_news():
 
 def translate(a):
     if not a:
-        return ("暂无经过核实的最新油价报道，今天不显示未经证实的价格。",
+        return ("ææ ç»è¿æ ¸å®çææ°æ²¹ä»·æ¥éï¼ä»å¤©ä¸æ¾ç¤ºæªç»è¯å®çä»·æ ¼ã",
                 "No newly verified oil-price report; no unverified prices shown.")
     fallback = a.get("description") or a.get("title") or ""
     key = os.environ.get("OPENAI_API_KEY")
     if not key:
-        return ("最新油价报道，请查看原始来源。", fallback)
+        return ("ææ°æ²¹ä»·æ¥éï¼è¯·æ¥çåå§æ¥æºã", fallback)
     prompt = ("Write a faithful, brief Chinese and English summary based ONLY on the provided headline "
               "and description. Do not invent prices, percentages, causes or dates. Return JSON object "
               "with keys zh and en. "+json.dumps({"title":a.get("title"),"description":a.get("description")}))
@@ -46,7 +46,7 @@ def translate(a):
         result=json.loads(obj["choices"][0]["message"]["content"])
         return (str(result["zh"]),str(result["en"]))
     except Exception:
-        return ("最新油价报道，请查看原始来源。",fallback)
+        return ("ææ°æ²¹ä»·æ¥éï¼è¯·æ¥çåå§æ¥æºã",fallback)
 
 def replace_block(source):
     return re.sub(re.escape(START)+r".*?"+re.escape(END),"",source,flags=re.S)
@@ -62,17 +62,23 @@ def main():
     date=((a or {}).get("publishedAt") or DAY)[:10]
     url=(a or {}).get("url") or "https://www.eia.gov/petroleum/"
     e=lambda s:html.escape(str(s),quote=True)
-    card=(START+'<a class="wl-story" href="news-'+DAY+'.html#story-oil" '
+    quotes = ('<div style="display:flex;gap:10px;flex-wrap:wrap;margin:8px 0">'
+              '<a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank" rel="noopener noreferrer" '
+              'style="font-weight:bold;color:#b91c1c">WTI ç¾å½åæ²¹ Â· æ¥çææ°ä»·æ ¼ â</a>'
+              '<a href="https://tradingeconomics.com/commodity/brent-crude-oil" target="_blank" rel="noopener noreferrer" '
+              'style="font-weight:bold;color:#b91c1c">Brent å¸ä¼¦ç¹åæ²¹ Â· æ¥çææ°ä»·æ ¼ â</a></div>')
+    card=(START+'<a class="wl-story" href="https://tradingeconomics.com/commodity/crude-oil" target="_blank" rel="noopener noreferrer" '
           'style="border-left:5px solid #b91c1c;background:#fff6f3">'
-          '<div class="wl-photo" style="display:flex;align-items:center;justify-content:center;font-size:32px">🛢️</div>'
-          '<div class="wl-copy"><strong style="color:#b91c1c;font-size:24px">今日油价</strong>'
+          '<div class="wl-photo" style="display:flex;align-items:center;justify-content:center;font-size:32px">ð¢ï¸</div>'
+          '<div class="wl-copy"><strong style="color:#b91c1c;font-size:24px">ä»æ¥æ²¹ä»·</strong>'
           '<span class="wl-en" style="color:#b91c1c;font-weight:bold">Today\'s Oil Prices</span>'
-          '<span class="wl-source">'+e(source)+' · '+e(date)+'</span></div></a>'+END)
+          '<span class="wl-source">WTI / Brent ææ°è¡æå¥å£</span></div></a>'+END)
     detail=(START+'<article class="item" id="story-oil" style="border-top:5px solid #b91c1c">'
-            '<h3 style="color:#b91c1c;font-size:28px">今日油价</h3>'
+            '<h3 style="color:#b91c1c;font-size:28px">ä»æ¥æ²¹ä»·</h3>'
             '<p style="color:#b91c1c;font-weight:bold">Today\'s Oil Prices</p>'
-            '<p>'+e(zh)+'</p><p>'+e(en)+'</p><p>'+e(source)+' · '+e(date)+'</p>'
-            '<a href="'+e(url)+'" target="_blank" rel="noopener noreferrer">原始报道 / Original source ↗</a>'
+            '<p>'+e(zh)+'</p><p>'+e(en)+'</p><p>'+e(source)+' Â· '+e(date)+'</p>'
+            '<p><strong>æ²¹ä»·ç¸å³æ°é» / Oil Price News</strong></p>'
+            '<a href="'+e(url)+'" target="_blank" rel="noopener noreferrer">éè¯»ç¸å³æ°é» / Read related report â</a>'
             '</article>'+END)
     m=re.search(r'<h2 class="wl-column-title world">.*?</h2>',index,re.S)
     n=re.search(r'<h2>World News / Global</h2>\s*<div class="news">',daily)
@@ -86,3 +92,4 @@ def main():
 
 if __name__=="__main__":
     main()
+
