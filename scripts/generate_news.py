@@ -232,7 +232,7 @@ def render(groups, summaries, date):
             photo = safe_photo(article.get("image", ""))
             if not photo:
                 raise RuntimeError(f"Full article {counter} has no verified photo")
-            stale = f'<p class="stale">暂无更新 / No New Updates · 最后检查 / Checked: {safe(date)}</p>' if article.get("stale") else ''
+            stale = ''  # Published source date below remains accurate.
             cards.append(f'''<article class="item" id="story-{counter}"><div class="num">{counter:02d}</div>
 {stale}<img class="story-photo" src="{safe(photo)}" alt="新闻照片 / Source photo" loading="lazy">
 <h3 class="zh-title">{safe(summary['zh_title'])}</h3><p class="en en-title">{safe(summary['en_title'])}</p>
@@ -281,8 +281,7 @@ def homepage_panel(groups, summaries, date, filename):
                 raise RuntimeError(f"Story {number} has no valid downloaded photo")
             image_html = (f'<img src="{safe(photo)}" alt="新闻来源配图 / Source image" '
                           f'loading="lazy" decoding="async">')
-            stale = ('<span class="wl-stale">暂无更新 / No New Updates</span>'
-                     f'<small class="wl-checked">最后检查 / Checked: {safe(date)}</small>') if article.get("stale") else ''
+            stale = ''  # Retained news has no banner; source date stays visible.
             all_items.append(f'''<a class="wl-story" href="{filename}#story-{number}" aria-label="{safe(summary['zh_title'])}">
 <span class="wl-index">{number:02d}</span><div class="wl-photo">{image_html}</div>
 <div class="wl-copy">{stale}<strong>{safe(summary['zh_title'])}</strong><span class="wl-en">{safe(summary['en_title'])}</span>
@@ -797,17 +796,18 @@ def _newer(a, old):
 
 
 def _slot_placeholder_meta(slot_index, slot):
-    if slot_index == 0:
-        return ("Weston 本地暂无更新 / No New Weston Update", "Today this Weston local slot has no newly found pictured report. We are keeping the section active and will update it when a verified local report with a usable photo is available.", "https://www.westonma.gov/")
-    if slot_index == 1:
-        return ("Weston High School 暂无更新 / No New WHS Update", "No newly found pictured Weston High School report is available right now. This position is reserved for school-specific updates only.", "https://www.westonschools.org/high")
-    if slot_index == 2:
-        return ("Weston 镇政府暂无更新 / No New Town Update", "No newly found pictured Weston town-government report is available right now. This position remains reserved for Weston municipal news only.", "https://www.westonma.gov/")
-    if slot_index == 3:
-        return ("波士顿暂无更新 / No New Boston Update", "No newly found pictured Boston city report is available right now. This position is reserved for Boston city news only.", "https://www.boston.gov/")
-    if slot_index == 4:
-        return ("麻州活动暂无更新 / No New Massachusetts Events Update", "No newly found pictured Massachusetts event report is available right now. This position is reserved for Massachusetts activities and events only.", "https://www.mass.gov/")
-    return (f"{slot['name']} 暂无更新 / No New Updates", f"No newly found pictured report is available right now for {slot['name']}.", "https://www.google.com/")
+    """Source guides are explicitly not news articles; never fabricate reports."""
+    hubs = [
+        ("Weston 本地资讯 · 官方来源", "Weston local announcements and community resources. This is a source directory, not a new report.", "https://www.westonma.gov/"),
+        ("Weston High School · 校园公告入口", "Visit the official Weston High School for current school notices. This is a directory, not a new report.", "https://www.westonschools.org/high"),
+        ("Weston 镇政府 · 官方公告入口", "Visit Weston town government for meetings and announcements. This is a directory, not a new report.", "https://www.westonma.gov/"),
+        ("波士顿 · 市政资讯入口", "Browse official Boston news and events. This is a directory, not a new report.", "https://www.boston.gov/"),
+        ("马萨诸塞州 · 本地资讯入口", "Browse Massachusetts announcements and events. This is a directory, not a new report.", "https://www.mass.gov/"),
+        ("美国与伊朗 · 国际报道专题入口", "A topic directory for U.S. and Iran coverage. Check source and publication dates; this is not a newly reported article.", "https://news.google.com/search?q=Iran%20United%20States"),
+    ]
+    if slot_index < len(hubs):
+        return hubs[slot_index]
+    return (slot["name"] + " · 专题来源入口", "Browse original reports for this topic, and check the original publication dates. This is a topic directory, not an article.", "https://news.google.com/")
 
 def _placeholder_svg(slot_index, slot):
     title, body, _ = _slot_placeholder_meta(slot_index, slot)
@@ -829,8 +829,8 @@ def _placeholder_svg(slot_index, slot):
 <foreignObject x="80" y="320" width="1040" height="210">
   <div xmlns="http://www.w3.org/1999/xhtml" style="font-family:Arial,sans-serif;font-size:28px;line-height:1.45;color:#4f5b4f;">{html.escape(body)}</div>
 </foreignObject>
-<text x="80" y="590" font-family="Arial, sans-serif" font-size="24" fill="#9d4d28">暂无更新 / No New Updates</text>
-<text x="80" y="625" font-family="Arial, sans-serif" font-size="20" fill="#7a7a7a">This is a safe fallback card so the website never shows a blank item.</text>
+<text x="80" y="590" font-family="Arial, sans-serif" font-size="24" fill="#9d4d28">专题来源入口 / SOURCE DIRECTORY</text>
+<text x="80" y="625" font-family="Arial, sans-serif" font-size="20" fill="#7a7a7a">This links to sources; it is not a new article.</text>
 {extra}
 </svg>"""
     path.write_text(svg, encoding="utf-8")
@@ -884,6 +884,43 @@ def _get_slot_candidate(slot_index, slot, old, used):
     return None
 
 
+
+# Regional flex policy: Weston school / government absence -> Boston or MA report.
+_REGIONAL_POOL = None
+
+def _get_regional_fallback(used):
+    global _REGIONAL_POOL
+    if _REGIONAL_POOL is None:
+        cutoff = (datetime.now(timezone.utc) - timedelta(days=10)).isoformat(timespec="seconds").replace("+00:00", "Z")
+        queries = [
+            '("Boston" AND "Massachusetts" AND ("school" OR "community" OR "local"))',
+            '("Massachusetts" AND ("education" OR "festival" OR "housing" OR "government"))',
+            '("Boston" AND ("mayor" OR "city" OR "museum" OR "events"))',
+        ]
+        seen, pool = set(), []
+        for query in queries:
+            for raw in _fetch_news(query, cutoff, os.environ["NEWS_API_KEY"], page_size=45):
+                record = _article_record(raw, seen, local=True)
+                if not record:
+                    continue
+                article, score = record
+                blob = (article["title"] + " " + article["description"] + " " + article["source"]).lower()
+                if not any(term in blob for term in (
+                        "massachusetts", "boston", "waltham", "newton", "cambridge",
+                        "wellesley", "lexington", "brookline", "framingham", "weston")):
+                    continue
+                pool.append((article, score))
+        pool.sort(key=lambda item: (item[0]["published"], item[1]), reverse=True)
+        _REGIONAL_POOL = [record for record, _ in pool]
+    for article in _REGIONAL_POOL:
+        if article["url"] in used:
+            continue
+        photo = _complete_photo(article)
+        if photo:
+            return dict(article, image=photo, stale=False)
+    return None
+
+
 def discover():
     """Fill 15 fixed editorial positions. Reserve school and town sources first."""
     old_state = _load_previous()
@@ -896,7 +933,10 @@ def discover():
         prior = old_state.get(number) or {}
         old = prior.get("article") if prior.get("topic") == slot["name"] else None
         candidate = _get_slot_candidate(i, slot, old, used)
-        if not candidate and old and old.get("url") not in used and _matching(slot, old):
+        # Local fallback does not require a Weston-school article: real Boston/MA is fine.
+        if i < 5 and not candidate:
+            candidate = _get_regional_fallback(used)
+        if not candidate and old and not old.get("placeholder") and old.get("url") not in used and (i < 5 or _matching(slot, old)):
             photo = _complete_photo(old)
             if photo:
                 candidate = dict(old, image=photo, stale=True)
@@ -923,8 +963,18 @@ def summarize(articles):
     for article in articles:
         number = article["id"]
         prior = saved.get(str(number)) or {}
+        # A source directory is NOT a new report and must not inherit an old banner.
+        if article.get("placeholder"):
+            label = _slot_placeholder_meta(number-1, NEWS_SLOTS[number-1])[0]
+            result[number] = {
+                "id": number,
+                "zh_title": label,
+                "en_title": "Topic sources / Official source directory",
+                "zh_summary": "专题资料入口：点击查看原始来源与发布日期。本条不是当日新报道。",
+                "en_summary": "Source directory only, not a new report. Check original publication dates.",
+            }
         # The summary of an unchanged article must remain unchanged too.
-        if article.get("stale") and prior.get("summary"):
+        elif article.get("stale") and prior.get("summary"):
             result[number] = prior["summary"]
         else:
             fresh.append(article)
@@ -958,7 +1008,7 @@ def main():
     if len(rows) != 15 or any(not safe_photo(a.get("image", "")) for a in rows):
         raise RuntimeError("Exactly 15 real downloaded photos required; no HTML files changed")
     articles = [{"id": i, "section": NEWS_SLOTS[i-1]["name"],
-                 "title": a["title"], "description": a["description"], "stale": a.get("stale")}
+                 "title": a["title"], "description": a["description"], "stale": a.get("stale"), "placeholder": a.get("placeholder")}
                 for i, a in enumerate(rows, 1)]
     summaries = summarize(articles)
     page = render(groups, summaries, today)
@@ -974,7 +1024,7 @@ def main():
     STATE_PATH.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"Published exactly 15 pictured stories to {filename}; "
           f"{sum(not a.get('stale') for a in rows)} new, "
-          f"{sum(bool(a.get('stale')) for a in rows)} preserved with no-update labels")
+          f"{sum(bool(a.get('stale')) for a in rows)} retained without extra update banners")
 
 
 def offline_self_check():

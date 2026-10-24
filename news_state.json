@@ -42,8 +42,8 @@
     "3": {
       "topic": "Weston 镇政府 / Town Government",
       "article": {
-        "title": "Weston 镇政府暂无更新 / No New Town Update",
-        "description": "No newly found pictured Weston town-government report is available right now. This position remains reserved for Weston municipal news only.",
+        "title": "Weston 镇政府 · 官方资讯入口",
+        "description": "Weston government sources and notices; not a new report.",
         "url": "https://www.westonma.gov/",
         "source": "Weston Life",
         "published": "2026-10-23T01:37:22.333590Z",
@@ -53,10 +53,10 @@
       },
       "summary": {
         "id": 3,
-        "zh_title": "西顿镇政府暂无更新",
-        "zh_summary": "目前没有新的西顿镇政府报告可用。",
-        "en_title": "No New Town Update",
-        "en_summary": "No newly found pictured Weston town-government report is available right now."
+        "zh_title": "Weston 镇政府 · 官方资讯入口",
+        "zh_summary": "专题资料入口，非当日新报道。",
+        "en_title": "Official sources / Topic directory",
+        "en_summary": "Source directory, not a newly reported article."
       }
     },
     "4": {
@@ -100,9 +100,9 @@
     "6": {
       "topic": "美国与伊朗 / U.S.–Iran",
       "article": {
-        "title": "美国与伊朗 / U.S.–Iran 暂无更新 / No New Updates",
-        "description": "No newly found pictured report is available right now for 美国与伊朗 / U.S.–Iran.",
-        "url": "https://www.google.com/",
+        "title": "美国与伊朗 · 国际报道专题入口",
+        "description": "News topic directory only, not a new article.",
+        "url": "https://news.google.com/search?q=Iran%20United%20States",
         "source": "Weston Life",
         "published": "2026-10-24T05:55:41.301671Z",
         "image": "assets/news/slot-06-no-update.svg",
@@ -111,10 +111,10 @@
       },
       "summary": {
         "id": 6,
-        "zh_title": "伊朗威胁扩大对经济和民用目标的打击",
-        "zh_summary": "德黑兰威胁如果美国发动攻击，将扩大对经济和民用目标的打击。",
-        "en_title": "Iran Threatens Wider Strikes on Economic and Civilian Targets if U.S. Attacks",
-        "en_summary": "Tehran threatens to expand strikes on economic and civilian targets if the U.S. attacks."
+        "zh_title": "美国与伊朗 · 国际报道专题入口",
+        "zh_summary": "专题资料入口，非当日新报道。",
+        "en_title": "Official sources / Topic directory",
+        "en_summary": "Source directory, not a newly reported article."
       }
     },
     "7": {
