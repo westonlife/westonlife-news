@@ -1,95 +1,60 @@
-import json, os, re, html
-from datetime import datetime, timedelta, timezone
+"""Weston Life oil market card: Brent first, WTI second; no invented quotes."""
+import html
+import re
+from datetime import datetime
 from pathlib import Path
-from urllib.parse import urlencode
-from urllib.request import Request, urlopen
 from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parent.parent
-DAY = datetime.now(ZoneInfo("America/New_York")).strftime("%Y-%m-%d")
-START, END = "<!-- OIL-HEADLINE-START -->", "<!-- OIL-HEADLINE-END -->"
+DAY = datetime.now(ZoneInfo('America/New_York')).strftime('%Y-%m-%d')
+START = '<!-- OIL-HEADLINE-START -->'
+END = '<!-- OIL-HEADLINE-END -->'
+BRENT = 'https://tradingeconomics.com/commodity/brent-crude-oil'
+WTI = 'https://tradingeconomics.com/commodity/crude-oil'
 
-def request(url, headers=None, body=None):
-    with urlopen(Request(url, headers=headers or {"User-Agent":"WestonLife/1.0"}, data=body), timeout=30) as r:
-        return json.load(r)
 
-def find_news():
-    key = os.environ["NEWS_API_KEY"]
-    query = '("oil prices" OR "Brent crude" OR "WTI crude" OR "crude oil")'
-    params = urlencode({"q":query, "language":"en", "sortBy":"publishedAt",
-        "pageSize":50, "from":(datetime.now(timezone.utc)-timedelta(days=3)).strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "apiKey":key})
-    for a in request("https://newsapi.org/v2/everything?"+params).get("articles", []):
-        blob = ((a.get("title") or "")+" "+(a.get("description") or "")).lower()
-        if a.get("url","").startswith("https://") and any(x in blob for x in
-             ("oil prices","oil price","crude oil","brent","wti")) and "[removed]" not in blob:
-            return a
-    return None
+def strip_old(text):
+    return re.sub(re.escape(START) + r'.*?' + re.escape(END), '', text, flags=re.S)
 
-def translate(a):
-    if not a:
-        return ("ææ ç»è¿æ ¸å®çææ°æ²¹ä»·æ¥éï¼ä»å¤©ä¸æ¾ç¤ºæªç»è¯å®çä»·æ ¼ã",
-                "No newly verified oil-price report; no unverified prices shown.")
-    fallback = a.get("description") or a.get("title") or ""
-    key = os.environ.get("OPENAI_API_KEY")
-    if not key:
-        return ("ææ°æ²¹ä»·æ¥éï¼è¯·æ¥çåå§æ¥æºã", fallback)
-    prompt = ("Write a faithful, brief Chinese and English summary based ONLY on the provided headline "
-              "and description. Do not invent prices, percentages, causes or dates. Return JSON object "
-              "with keys zh and en. "+json.dumps({"title":a.get("title"),"description":a.get("description")}))
-    try:
-        payload=json.dumps({"model":os.environ.get("OPENAI_MODEL","gpt-4o-mini"),
-            "response_format":{"type":"json_object"},
-            "messages":[{"role":"user","content":prompt}],"temperature":0}).encode()
-        obj=request("https://api.openai.com/v1/chat/completions",
-                    {"Authorization":"Bearer "+key,"Content-Type":"application/json"},payload)
-        result=json.loads(obj["choices"][0]["message"]["content"])
-        return (str(result["zh"]),str(result["en"]))
-    except Exception:
-        return ("ææ°æ²¹ä»·æ¥éï¼è¯·æ¥çåå§æ¥æºã",fallback)
-
-def replace_block(source):
-    return re.sub(re.escape(START)+r".*?"+re.escape(END),"",source,flags=re.S)
 
 def main():
-    index_path=ROOT/"index.html"
-    daily_path=ROOT/("news-"+DAY+".html")
-    index=replace_block(index_path.read_text(encoding="utf-8"))
-    daily=replace_block(daily_path.read_text(encoding="utf-8"))
-    a=find_news()
-    zh,en=translate(a)
-    source=((a or {}).get("source") or {}).get("name") or "U.S. EIA"
-    date=((a or {}).get("publishedAt") or DAY)[:10]
-    url=(a or {}).get("url") or "https://www.eia.gov/petroleum/"
-    e=lambda s:html.escape(str(s),quote=True)
-    quotes = ('<div style="display:flex;gap:10px;flex-wrap:wrap;margin:8px 0">'
-              '<a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank" rel="noopener noreferrer" '
-              'style="font-weight:bold;color:#b91c1c">WTI ç¾å½åæ²¹ Â· æ¥çææ°ä»·æ ¼ â</a>'
-              '<a href="https://tradingeconomics.com/commodity/brent-crude-oil" target="_blank" rel="noopener noreferrer" '
-              'style="font-weight:bold;color:#b91c1c">Brent å¸ä¼¦ç¹åæ²¹ Â· æ¥çææ°ä»·æ ¼ â</a></div>')
-    card=(START+'<a class="wl-story" href="https://tradingeconomics.com/commodity/crude-oil" target="_blank" rel="noopener noreferrer" '
-          'style="border-left:5px solid #b91c1c;background:#fff6f3">'
-          '<div class="wl-photo" style="display:flex;align-items:center;justify-content:center;font-size:32px">ð¢ï¸</div>'
-          '<div class="wl-copy"><strong style="color:#b91c1c;font-size:24px">ä»æ¥æ²¹ä»·</strong>'
-          '<span class="wl-en" style="color:#b91c1c;font-weight:bold">Today\'s Oil Prices</span>'
-          '<span class="wl-source">WTI / Brent ææ°è¡æå¥å£</span></div></a>'+END)
-    detail=(START+'<article class="item" id="story-oil" style="border-top:5px solid #b91c1c">'
-            '<h3 style="color:#b91c1c;font-size:28px">ä»æ¥æ²¹ä»·</h3>'
-            '<p style="color:#b91c1c;font-weight:bold">Today\'s Oil Prices</p>'
-            '<p>'+e(zh)+'</p><p>'+e(en)+'</p><p>'+e(source)+' Â· '+e(date)+'</p>'
-            '<p><strong>æ²¹ä»·ç¸å³æ°é» / Oil Price News</strong></p>'
-            '<a href="'+e(url)+'" target="_blank" rel="noopener noreferrer">éè¯»ç¸å³æ°é» / Read related report â</a>'
-            '</article>'+END)
-    m=re.search(r'<h2 class="wl-column-title world">.*?</h2>',index,re.S)
-    n=re.search(r'<h2>World News / Global</h2>\s*<div class="news">',daily)
+    index_file = ROOT / 'index.html'
+    daily_file = ROOT / ('news-' + DAY + '.html')
+    index = strip_old(index_file.read_text(encoding='utf-8'))
+    daily = strip_old(daily_file.read_text(encoding='utf-8'))
+    # Quote providers show live prices; do not pretend static figures are live.
+    card = f'''{START}
+<div class="wl-story wl-oil" style="border-left:5px solid #b91c1c;background:#fff9f4;display:block;padding:15px 18px;min-height:0">
+  <div style="font:700 23px Georgia,serif;color:#a52c24;margin-bottom:4px">å½éåæ²¹ä»·æ ¼</div>
+  <div style="font:700 12px Arial,sans-serif;letter-spacing:.12em;color:#785c4d;margin-bottom:12px">GLOBAL OIL PRICES</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:9px">
+    <a href="{BRENT}" target="_blank" rel="noopener noreferrer" style="display:block;padding:12px 10px;border:1px solid #e7cbbd;border-radius:8px;background:white;text-decoration:none;color:#263c36">
+      <strong style="display:block;font:700 17px Arial,sans-serif">Brent</strong><span style="font:12px Arial,sans-serif">å¸ä¼¦ç¹åæ²¹</span><span style="display:block;margin-top:9px;color:#b91c1c;font:700 13px Arial,sans-serif">æ¥çææ°æ¥ä»· â</span>
+    </a>
+    <a href="{WTI}" target="_blank" rel="noopener noreferrer" style="display:block;padding:12px 10px;border:1px solid #e7cbbd;border-radius:8px;background:white;text-decoration:none;color:#263c36">
+      <strong style="display:block;font:700 17px Arial,sans-serif">WTI</strong><span style="font:12px Arial,sans-serif">ç¾å½åæ²¹</span><span style="display:block;margin-top:9px;color:#b91c1c;font:700 13px Arial,sans-serif">æ¥çææ°æ¥ä»· â</span>
+    </a>
+  </div>
+  <div style="font:11px Arial,sans-serif;color:#766b64;margin-top:10px">ç¾åï¼æ¡¶ Â· å®æ¶ä»·æ ¼ä¸æ¶¨è·å¹è¯·ç¹å»è¡æé¾æ¥ / USD per barrel Â· Tap for live quotes</div>
+</div>{END}'''
+    detail = f'''{START}
+<article class="item" id="story-oil" style="border-top:5px solid #b91c1c">
+<h3 style="color:#a52c24">å½éåæ²¹ä»·æ ¼ / Global Oil Prices</h3>
+<p>å½éæ²¹ä»·åºåï¼Brent å¸ä¼¦ç¹åæ²¹ä¸ WTI ç¾å½åæ²¹ãç¹å»ä»¥ä¸é¾æ¥æ¥çææ°æ¥ä»·ãæ¶¨è·å¹åæ¥ä»·æ¶é´ã</p>
+<p>International crude benchmarks: Brent and WTI. Open the quote pages for the latest price, daily change and timestamp.</p>
+<p><a href="{BRENT}" target="_blank" rel="noopener noreferrer">Brent å¸ä¼¦ç¹åæ²¹ Â· å®æ¶è¡æ â</a></p>
+<p><a href="{WTI}" target="_blank" rel="noopener noreferrer">WTI ç¾å½åæ²¹ Â· å®æ¶è¡æ â</a></p>
+<p style="font-size:12px;color:#666">Weston Life does not independently provide a live market-data feed. Quotes are displayed by the linked providers.</p>
+</article>{END}'''
+    m = re.search(r'<h2 class="wl-column-title world">.*?</h2>', index, re.S)
+    n = re.search(r'<h2>World News / Global</h2>\s*<div class="news">', daily)
     if not m or not n:
-        raise RuntimeError("News headings not found; no files were changed")
-    index=index[:m.end()]+card+index[m.end():]
-    daily=daily[:n.end()]+detail+daily[n.end():]
-    index_path.write_text(index,encoding="utf-8")
-    daily_path.write_text(daily,encoding="utf-8")
-    print("Oil headline added; all 15 existing news stories unchanged.")
+        raise RuntimeError('News headings not found; files not changed')
+    index = index[:m.end()] + card + index[m.end():]
+    daily = daily[:n.end()] + detail + daily[n.end():]
+    index_file.write_text(index, encoding='utf-8')
+    daily_file.write_text(daily, encoding='utf-8')
+    print('Oil price card updated: Brent first, WTI second; existing 15 stories preserved.')
 
-if __name__=="__main__":
+if __name__ == '__main__':
     main()
-
