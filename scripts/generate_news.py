@@ -286,8 +286,9 @@ def homepage_panel(groups, summaries, date, filename):
 <span class="wl-index">{number:02d}</span><div class="wl-photo">{image_html}</div>
 <div class="wl-copy">{stale}<strong>{safe(summary['zh_title'])}</strong><span class="wl-en">{safe(summary['en_title'])}</span>
 <span class="wl-source">{safe(article['source'])} · {safe(article['published'][:10])}</span></div></a>''')
-    local = "".join(all_items[:5])
-    world = "".join(all_items[5:])
+    local_count = len(groups[0][1])
+    local = "".join(all_items[:local_count])
+    world = "".join(all_items[local_count:])
     display_date = safe(date)
     return f'''<!-- WESTON-LIFE-AUTO-START -->
 <style>
@@ -1005,9 +1006,9 @@ def main():
     index = index_path.read_text(encoding="utf-8")
     groups = discover()
     rows = [x for _, a in groups for x in a]
-    if len(rows) != 15 or any(not safe_photo(a.get("image", "")) for a in rows):
-        raise RuntimeError("Exactly 15 real downloaded photos required; no HTML files changed")
-    articles = [{"id": i, "section": NEWS_SLOTS[i-1]["name"],
+    if not rows or len(rows) > 15 or any(not safe_photo(a.get("image", "")) for a in rows):
+        raise RuntimeError("Only verified pictured reports allowed; previous edition retained")
+    articles = [{"id": i, "section": a.get("topic", "World News / Global"),
                  "title": a["title"], "description": a["description"], "stale": a.get("stale"), "placeholder": a.get("placeholder")}
                 for i, a in enumerate(rows, 1)]
     summaries = summarize(articles)
@@ -1015,7 +1016,7 @@ def main():
     panel = homepage_panel(groups, summaries, today, filename)
     index_updated = update_index(index, today, filename, panel)
     # Compute all content before changing any pages.
-    state = {"checked_at": today, "slots": {str(i): {"topic": NEWS_SLOTS[i-1]["name"],
+    state = {"checked_at": today, "slots": {str(i): {"topic": a.get("topic", "World News / Global"),
                 "article": {k: v for k,v in a.items() if k != "stale"},
                 "summary": summaries[i]} for i, a in enumerate(rows, 1)}}
     (ROOT / filename).write_text(page, encoding="utf-8")
@@ -1039,6 +1040,247 @@ def offline_self_check():
     assert not _newer({"url":"https://a.com", "published":"2026-10-22T11:00:00Z"},
                       {"url":"https://b.com", "published":"2026-10-22T12:00:00+00:00"})
     print("PASS: 15 fixed slots, local first, topic screening, chronological updates")
+
+
+
+# WESTON-EDITORIAL-2026-V2: important news, real source URLs, no search-hub placeholders
+# Loaded near the end of scripts/generate_news.py, before the __main__ guard.
+
+_EDITORIAL_IMPORTANT = (
+    'attack', 'war', 'missile', 'ceasefire', 'peace talks', 'invasion', 'strike',
+    'election', 'president', 'white house', 'congress', 'supreme court', 'federal reserve',
+    'interest rate', 'rate cut', 'rate hike', 'inflation', 'jobs report', 'unemployment',
+    'market plunge', 'stock market', 'nasdaq', 'dow jones', 's&p 500', 'oil prices',
+    'major', 'breakthrough', 'record', 'new law', 'earthquake', 'hurricane',
+    'approval', 'investigation', 'earnings', 'nvidia', 'openai', 'anthropic',
+)
+_EDITORIAL_SOURCES = (
+    'reuters.com', 'apnews.com', 'bbc.com', 'npr.org', 'bloomberg.com',
+    'ft.com', 'wsj.com', 'nytimes.com', 'cnbc.com', 'nbcnews.com', 'cnn.com',
+    'boston.com', 'bostonglobe.com', 'wbur.org', 'wcvb.com', 'nbcboston.com',
+    'mass.gov', 'boston.gov', 'westonma.gov', 'westonschools.org',
+    'mit.edu', 'harvard.edu', 'cbsnews.com', 'pbs.org',
+)
+_EDITORIAL_LOCAL = (
+    'massachusetts', 'boston', 'weston', 'waltham', 'cambridge',
+    'newton', 'wellesley', 'lexington', 'brookline', 'metrowest',
+    'framingham', 'natick', 'needham', 'middlesex', 'worcester',
+)
+_EDITORIAL_TAGS = {
+    'iran': ('iran', 'tehran', 'iranian', 'hormuz', 'persian gulf'),
+    'ukraine': ('ukraine', 'ukrainian', 'russia', 'russian', 'kyiv', 'putin'),
+    'china': ('china', 'chinese', 'beijing', 'shanghai'),
+    'markets': ('nasdaq', 'wall street', 's&p 500', 'treasury', 'fed ', 'federal reserve', 'stock market', 'qqq'),
+    'stocks': ('nvidia', 'microsoft', 'tesla', 'alphabet', 'apple ', 'amd ', 'broadcom', 'amazon', 'meta platforms'),
+    'ai': ('openai', 'anthropic', 'artificial intelligence', 'deepmind', 'robotics', 'chatgpt', 'gemini'),
+    'us': ('congress', 'white house', 'supreme court', 'president', 'senate', 'election'),
+    'education': ('harvard', 'mit ', 'university', 'college', 'campus', 'admissions', 'students'),
+    'housing': ('housing', 'mortgage', 'home prices', 'real estate', 'home sales'),
+}
+
+def _editorial_real_url(article):
+    from urllib.parse import urlparse
+    url = (article.get('url') or '').strip()
+    parsed = urlparse(url)
+    if parsed.scheme != 'https' or not parsed.netloc:
+        return False
+    domain = (parsed.hostname or '').lower()
+    if any(domain == x or domain.endswith('.' + x) for x in
+           ('google.com', 'news.google.com', 'bing.com', 'yahoo.com', 'westonlife.org')):
+        return False
+    if not parsed.path or parsed.path == '/' or parsed.path.lower().startswith(('/search', '/topics', '/tag/')):
+        return False
+    if article.get('placeholder') or article.get('source') == 'Weston Life':
+        return False
+    return True
+
+def _editorial_text(article):
+    return ' '.join(str(article.get(k) or '') for k in ('title', 'description', 'source')).lower()
+
+def _editorial_date(article):
+    try:
+        when = datetime.fromisoformat(article['published'].replace('Z', '+00:00'))
+        return when if when.tzinfo else when.replace(tzinfo=timezone.utc)
+    except (ValueError, KeyError, TypeError):
+        return datetime(2000, 1, 1, tzinfo=timezone.utc)
+
+def _editorial_score(article, local=False):
+    domain = (urlparse(article.get('url') or '').hostname or '').lower()
+    blob = _editorial_text(article)
+    headline = (article.get('title') or '').lower()
+    age = max(0, (datetime.now(timezone.utc) - _editorial_date(article)).total_seconds() / 86400)
+    score = 15 - min(age, 15) * 1.15
+    score += min(11, sum(3.2 if w in headline else 1.5 for w in _EDITORIAL_IMPORTANT if w in blob))
+    score += 7 if any(domain == d or domain.endswith('.' + d) for d in _EDITORIAL_SOURCES) else 0
+    if local:
+        score += 7 if 'weston' in blob and ('massachusetts' in blob or domain.endswith(('westonma.gov','westonschools.org'))) else 0
+        score += 3 if 'boston' in blob else 0
+    if any(x in blob for x in ('sponsored', 'advertisement', 'press release', 'coupon', 'daily horoscope')):
+        score -= 8
+    if any(x in blob for x in ('author correction:', 'retraction:', 'opinion:', 'editorial:', 'trending on tiktok')):
+        score -= 6
+    if domain in ('biztoc.com', 'prnewswire.com'):
+        score -= 5
+    return score
+
+def _editorial_collect():
+    """Broad but bounded NewsAPI collection: 5 regional + 10 global targets."""
+    collected = {'local': {}, 'world': {}}
+    local_queries = [
+        '"Weston" AND "Massachusetts"',
+        '"Boston" AND (schools OR mayor OR city OR housing OR events)',
+        '"Massachusetts" AND (education OR economy OR government OR events)',
+        '"Waltham" OR "Newton Massachusetts" OR "Cambridge Massachusetts"',
+    ]
+    global_queries = [
+        'Iran OR Tehran OR Hormuz',
+        'Ukraine OR Russia',
+        'China OR Beijing',
+        'Nasdaq OR "Wall Street" OR "Federal Reserve"',
+        'Nvidia OR Microsoft OR Tesla OR Apple OR Alphabet',
+        'OpenAI OR Anthropic OR "artificial intelligence"',
+        '"White House" OR Congress OR "Supreme Court"',
+        'Harvard OR MIT OR "college admissions"',
+        '"housing market" OR "mortgage rates"',
+        '"world news" OR "breaking news"',
+    ]
+    now = datetime.now(timezone.utc)
+    for local, queries in ((True, local_queries), (False, global_queries)):
+        bucket = collected['local' if local else 'world']
+        cutoff = (now - timedelta(days=10 if local else 7)).isoformat(timespec='seconds').replace('+00:00', 'Z')
+        for query in queries:
+            try:
+                raws = _fetch_news(query, cutoff, os.environ['NEWS_API_KEY'], page_size=80)
+            except Exception as exc:
+                print('Editorial search partial failure:', str(exc)[:150], file=sys.stderr)
+                continue
+            for raw in raws:
+                # _article_record also guards invalid URL, duplicate names, and wrong-state Weston.
+                record = _article_record(raw, set(), local=local)
+                if not record:
+                    continue
+                article = record[0]
+                if not _editorial_real_url(article):
+                    continue
+                blob = _editorial_text(article)
+                if local and not any(word in blob for word in _EDITORIAL_LOCAL):
+                    continue
+                if not local and ('massachusetts' in blob or 'boston' in blob) and not any(t in blob for t in ('usa','united states','national')):
+                    continue
+                bucket.setdefault(article['url'], article)
+    # Official Weston school / town RSS feeds remain in scope.
+    for idx in (0, 1, 2):
+        try:
+            for article in _official_slot_entries(idx):
+                if _editorial_real_url(article):
+                    collected['local'].setdefault(article['url'], article)
+        except Exception as exc:
+            print('Official local source unavailable:', str(exc)[:140], file=sys.stderr)
+    # Retain actual previous articles as a last resort, never placeholder/source hubs.
+    for raw_slot in _load_previous().values():
+        article = raw_slot.get('article') or {}
+        if not _editorial_real_url(article):
+            continue
+        age = (now - _editorial_date(article)).total_seconds() / 86400
+        if age > 21 or age < -1:
+            continue
+        kind = 'local' if any(word in _editorial_text(article) for word in _EDITORIAL_LOCAL) else 'world'
+        collected[kind].setdefault(article['url'], article)
+    return collected
+
+def _editorial_choose(articles, target, local=False, used=None):
+    used = used if used is not None else set()
+    chosen = []
+    # Real article image from publisher/preview is required. No generated replacement.
+    # Limit network image checks to contain runtime and API load.
+    candidates = sorted(articles, key=lambda a: _editorial_score(a, local), reverse=True)
+    category_counts = {}
+    checks = 0
+    for article in candidates:
+        if len(chosen) >= target or checks >= (55 if local else 95):
+            break
+        url = article['url']
+        if url in used:
+            continue
+        blob = _editorial_text(article)
+        tags = [k for k, words in _EDITORIAL_TAGS.items() if any(w in blob for w in words)]
+        # Before exhausting the pool, diversify global breaking news.
+        primary = tags[0] if tags else 'general'
+        if not local and category_counts.get(primary, 0) >= 2 and len(chosen) < 7:
+            continue
+        checks += 1
+        photo = _complete_photo(article)
+        if not photo:
+            continue
+        item = dict(article, image=photo, stale=False, placeholder=False)
+        item['topic'] = ('Weston / Boston / Massachusetts' if local else 'World News / Global')
+        chosen.append(item)
+        used.add(url)
+        category_counts[primary] = category_counts.get(primary, 0) + 1
+    # Second pass: fill available positions with verified real photos, even from a repeated topic.
+    if len(chosen) < target:
+        for article in candidates:
+            if len(chosen) >= target or checks >= (85 if local else 140):
+                break
+            if article['url'] in used:
+                continue
+            checks += 1
+            photo = _complete_photo(article)
+            if not photo:
+                continue
+            item = dict(article, image=photo, stale=False, placeholder=False)
+            item['topic'] = ('Weston / Boston / Massachusetts' if local else 'World News / Global')
+            chosen.append(item)
+            used.add(article['url'])
+    return sorted(chosen, key=lambda a: _editorial_score(a, local), reverse=True)
+
+def discover():
+    pool = _editorial_collect()
+    selected_urls = set()
+    local = _editorial_choose(pool['local'].values(), 5, local=True, used=selected_urls)
+    world = _editorial_choose(pool['world'].values(), 10, local=False, used=selected_urls)
+    if not local and not world:
+        raise RuntimeError('No authentic article could be verified; previous edition retained')
+    update_index._local_stories = local
+    update_index._school_stories = [a for a in local if (
+        'weston' in _editorial_text(a) and any(t in _editorial_text(a) for t in ('school', 'student', 'education'))
+    )]
+    print('Editorial selection: %d local and %d world, 0 fabricated placeholders' % (len(local), len(world)))
+    return [('Weston / Boston / Massachusetts', local), ('World News / Global', world)]
+
+_original_homepage_panel_editorial = homepage_panel
+
+def homepage_panel(groups, summaries, date, filename):
+    panel = _original_homepage_panel_editorial(groups, summaries, date, filename)
+    local_count = len(groups[0][1])
+    world = groups[1][1]
+    featured = sorted(enumerate(world), key=lambda p: _editorial_score(p[1]), reverse=True)[:3]
+    if not featured:
+        return panel
+    cards = []
+    for rank, (offset, article) in enumerate(featured, 1):
+        summ = summaries[local_count + offset + 1]
+        cards.append('''<a class="wl-feature" href="%s#story-%d"><img src="%s" alt="原报道配图 / Publisher photo" loading="lazy"><span class="wl-feature-rank">%02d · TOP STORY</span><strong class="wl-feature-zh">%s</strong><strong class="wl-feature-en">%s</strong><small>%s · %s</small></a>''' % (
+            safe(filename), local_count + offset + 1,
+            safe(article['image']), rank, safe(summ['zh_title']),
+            safe(summ['en_title']), safe(article['source']), safe(article['published'][:10])
+        ))
+    style = '''<style>
+#wl-auto .wl-breaking{margin:20px 0 8px}
+#wl-auto .wl-breaking h2{font:700 18px Arial,sans-serif;color:#863e29;letter-spacing:.035em;margin:0 0 12px}
+#wl-auto .wl-features{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+#wl-auto .wl-feature{display:block;background:#fff;border:1px solid #e2d9c9;border-radius:11px;padding:10px;color:#283b30;text-decoration:none}
+#wl-auto .wl-feature img{width:100%;height:172px;object-fit:cover;border-radius:8px}
+#wl-auto .wl-feature-rank{display:block;color:#a14e2e;font:700 12px Arial,sans-serif;margin:11px 0 7px}
+#wl-auto .wl-feature strong{display:block;font:700 22px/1.3 Georgia,serif}
+#wl-auto .wl-feature small{display:block;color:#6b746b;font:12px Arial,sans-serif;margin-top:10px}
+html[data-wl-lang="zh"] #wl-auto .wl-feature-en{display:none}
+html[data-wl-lang="en"] #wl-auto .wl-feature-zh{display:none}
+@media(max-width:720px){#wl-auto .wl-features{grid-template-columns:1fr}#wl-auto .wl-feature img{height:210px}}
+</style>'''
+    section = (style + '<div class="wl-breaking"><h2>🔥 重大新闻 / TOP STORIES</h2>'
+               + '<div class="wl-features">' + ''.join(cards) + '</div></div>')
+    return panel.replace('<div class="wl-columns">', section + '<div class="wl-columns">', 1)
 
 
 if __name__ == "__main__":
