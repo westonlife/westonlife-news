@@ -18,7 +18,7 @@
         "zh_title": "多切斯特发现一名男子死于枪击",
         "zh_summary": "波士顿警方正在调查此案。",
         "en_title": "Man found shot to death in vehicle in Dorchester",
-        "en_summary": "Boston police are investigating this case."
+        "en_summary": "Boston police are investigating the case."
       }
     },
     "2": {
@@ -35,7 +35,7 @@
       },
       "summary": {
         "id": 2,
-        "zh_title": "昆西停止使用Flock摄像头，转向不同的车牌识别系统",
+        "zh_title": "昆西停止使用Flock摄像头，切换到不同的车牌识别系统",
         "zh_summary": "该市曾有50个Flock摄像头，数量在马萨诸塞州其他社区中较多。",
         "en_title": "Quincy to stop using Flock cameras, switches to different license plate reader system",
         "en_summary": "The city had 50 Flock cameras, a large deployment compared with many other Massachusetts communities."
@@ -76,7 +76,7 @@
       "summary": {
         "id": 4,
         "zh_title": "马萨诸塞州和爱达荷州将枪支问题列入投票议程",
-        "zh_summary": "马萨诸塞州第9号提案寻求继续实施一系列枪支限制。",
+        "zh_summary": "马萨诸塞州第9号提案旨在继续实施一系列枪支限制。",
         "en_title": "Massachusetts and Idaho put guns on the ballot. One seeks to restrict them, the other to honor them.",
         "en_summary": "Should voters approve it, Massachusetts Question 9 will continue an array of gun restrictions."
       }
@@ -115,7 +115,7 @@
       },
       "summary": {
         "id": 6,
-        "zh_title": "美国大使馆加强安全措施以应对伊朗威胁",
+        "zh_title": "美国驻外大使馆加强安全措施以应对伊朗威胁",
         "zh_summary": "DNI主任杰伊·克莱顿的备忘录称，伊朗正在计划针对美国人的攻击。",
         "en_title": "American embassies tighten security as Iran threat warnings intensify ahead of U.S. midterm elections",
         "en_summary": "A memo from DNI director Jay Clayton said Iran is in the 'advanced stages' of planning attacks against Americans."
@@ -156,7 +156,7 @@
       "summary": {
         "id": 8,
         "zh_title": "布兰奇为特朗普下令的阿拉斯加参议院选举诉讼辩护",
-        "zh_summary": "民主党人坚持认为他们与丹尼尔·J·沙利文没有联系。",
+        "zh_summary": "民主党人坚持认为他们与丹尼尔·J·沙利文没有关系。",
         "en_title": "Blanche defends Trump-ordered lawsuit over Alaska Senate election certification",
         "en_summary": "Democrats have maintained they have no connection to Daniel J. Sullivan."
       }
@@ -175,8 +175,8 @@
       },
       "summary": {
         "id": 9,
-        "zh_title": "以色列总理承诺在约旦河西岸进行大规模军事行动",
-        "zh_summary": "以色列总理誓言对一起袭击以色列军事检查站的事件采取重大军事行动。",
+        "zh_title": "以色列总理承诺在西岸检查站袭击后进行大规模军事行动",
+        "zh_summary": "以色列总理誓言在两名巴勒斯坦枪手袭击以军检查站后展开重大军事行动。",
         "en_title": "Israeli PM pledges massive military operation after West Bank checkpoint attack",
         "en_summary": "Israel's Prime Minister is vowing to launch a major military operation in the West Bank in response to an attack."
       }
@@ -196,7 +196,7 @@
       "summary": {
         "id": 10,
         "zh_title": "英伟达作为AI融资者的角色面临首次重大考验",
-        "zh_summary": "英伟达从芯片制造商转变为行业融资者，部分投资者认为公司承担了过大的风险。",
+        "zh_summary": "随着英伟达从芯片制造商转变为行业融资者，部分投资者认为公司承担了与AI建设相关的过大风险。",
         "en_title": "Nvidia's role as AI financier faces first big test as neoclouds take market hit",
         "en_summary": "As Nvidia has gone from chipmaker to industry financier, some investors see the company taking on outsized risk."
       }
