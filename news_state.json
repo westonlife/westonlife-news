@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-28",
+  "checked_at": "2026-10-29",
   "slots": {
     "1": {
       "topic": "Weston / Boston / Massachusetts",
@@ -15,10 +15,10 @@
       },
       "summary": {
         "id": 1,
-        "zh_title": "街头传教士争论导致萨勒姆的惊悚雕像遭电击攻击",
-        "zh_summary": "受害者描述在被电击枪击中两次后感到“被电击”。",
+        "zh_title": "街头传教士争论导致萨勒姆的电击枪袭击",
+        "zh_summary": "警方称，受害者在被电击枪击中两次后感到“被电击”。",
         "en_title": "Street preacher argument leads to stun gun attack at Bewitched statue in Salem, police say",
-        "en_summary": "The victim described feeling \"zapped\" after being struck twice with the stun gun."
+        "en_summary": "Police say the victim described feeling 'zapped' after being struck twice with the stun gun."
       }
     },
     "2": {
@@ -35,10 +35,10 @@
       },
       "summary": {
         "id": 2,
-        "zh_title": "联邦储备在高通胀下维持利率不变",
-        "zh_summary": "联邦储备在努力将通胀恢复到2%目标的过程中，决定维持基准利率不变。",
+        "zh_title": "美联储在高通胀下维持利率不变",
+        "zh_summary": "美联储决定维持基准利率不变，尽管通胀水平依然较高。",
         "en_title": "Federal Reserve keeps rates unchanged despite elevated inflation",
-        "en_summary": "The Fed raised its benchmark rate last month for the first time in three years, defying President Donald Trump’s demands for rate cuts."
+        "en_summary": "The Fed decided to keep its benchmark rate unchanged despite elevated inflation."
       }
     },
     "3": {
@@ -56,9 +56,9 @@
       "summary": {
         "id": 3,
         "zh_title": "伊朗战争如何提高美国购房者的抵押贷款成本",
-        "zh_summary": "联邦储备决定维持利率不变，导致抵押贷款利率超过7%。",
+        "zh_summary": "美联储决定维持利率不变，导致抵押贷款利率超过7%。",
         "en_title": "How the Iran war is raising mortgage costs for US homebuyers",
-        "en_summary": "The Federal Reserve decided Wednesday to keep interest rates unchanged, leaving mortgage rates above 7%."
+        "en_summary": "The Federal Reserve decided to keep interest rates unchanged, leaving mortgage rates above 7%."
       }
     },
     "4": {
@@ -76,19 +76,19 @@
       "summary": {
         "id": 4,
         "zh_title": "马萨诸塞州和爱达荷州将枪支问题列入投票",
-        "zh_summary": "马萨诸塞州问题9如果获得选民批准，将继续实施一系列枪支限制。",
+        "zh_summary": "马萨诸塞州的问题9将继续实施一系列枪支限制。",
         "en_title": "Massachusetts and Idaho put guns on the ballot. One seeks to restrict them, the other to honor them.",
-        "en_summary": "Should voters approve it, Massachusetts Question 9 will continue an array of gun restrictions."
+        "en_summary": "If approved, Massachusetts Question 9 will continue an array of gun restrictions."
       }
     },
     "5": {
       "topic": "World News / Global",
       "article": {
         "title": "Fed holds interest rates steady even as inflation remains stubborn",
-        "description": "The Federal Reserve opted to leave its benchmark interest rate unchanged — but investors widely expect the central bank to raise rates at its next meeting in December to combat stubborn inflation.",
+        "description": "The Federal Reserve opted to leave its benchmark interest rate unchanged  — but investors widely expect the central bank to raise rates at its next meeting in December to combat stubborn inflation.",
         "url": "https://www.npr.org/2026/10/28/nx-s1-6020425/federal-reserve-interest-rates-inflation",
         "source": "NPR",
-        "published": "2026-10-28T18:04:42+00:00",
+        "published": "2026-10-28T18:04:42Z",
         "image": "assets/news/56954906dc5117ab94a5e8e0.webp",
         "placeholder": false,
         "topic": "World News / Global"
@@ -96,12 +96,32 @@
       "summary": {
         "id": 5,
         "zh_title": "美联储在通胀顽固的情况下保持利率稳定",
-        "zh_summary": "美联储选择维持基准利率不变，但投资者普遍预计将在下次会议上加息。",
+        "zh_summary": "美联储选择维持基准利率不变，投资者预计将在下次会议上加息。",
         "en_title": "Fed holds interest rates steady even as inflation remains stubborn",
-        "en_summary": "The Federal Reserve opted to leave its benchmark interest rate unchanged."
+        "en_summary": "The Federal Reserve opted to leave its benchmark interest rate unchanged amid stubborn inflation."
       }
     },
     "6": {
+      "topic": "World News / Global",
+      "article": {
+        "title": "Rivian third-quarter earnings beat estimates as software revenue, R2 deliveries rise",
+        "description": "Rivian also revised its 2026 guidance to mark expected improvements in its vehicle deliveries, pre-tax adjusted earnings and capital expenditures.",
+        "url": "https://www.cnbc.com/2026/10/29/rivian-rivn-earnings-q3-2026.html",
+        "source": "CNBC",
+        "published": "2026-10-29T21:52:27+00:00",
+        "image": "assets/news/1743bec2eb86570c61ca2778.jpg",
+        "placeholder": false,
+        "topic": "World News / Global"
+      },
+      "summary": {
+        "id": 6,
+        "zh_title": "Rivian第三季度收益超出预期",
+        "zh_summary": "Rivian修订了2026年的指导，预计车辆交付和软件收入将改善。",
+        "en_title": "Rivian third-quarter earnings beat estimates as software revenue, R2 deliveries rise",
+        "en_summary": "Rivian revised its 2026 guidance to mark expected improvements in vehicle deliveries."
+      }
+    },
+    "7": {
       "topic": "World News / Global",
       "article": {
         "title": "Rivals in Israel Election Strike Tone of Triumph, but Outcome Is Far From Clear",
@@ -114,14 +134,14 @@
         "topic": "World News / Global"
       },
       "summary": {
-        "id": 6,
-        "zh_title": "以色列选举中的对手们发出胜利的语调，但结果尚不明朗",
-        "zh_summary": "内塔尼亚胡和反对派领袖加迪·艾森科特在午夜后向支持者表达了信心。",
+        "id": 7,
+        "zh_title": "以色列选举中的对手们表达胜利的语气",
+        "zh_summary": "内塔尼亚胡和反对派领导人都对领导以色列下届政府表示信心。",
         "en_title": "Rivals in Israel Election Strike Tone of Triumph, but Outcome Is Far From Clear",
-        "en_summary": "Addressing supporters after midnight, both expressed confidence that they will lead Israel’s next government."
+        "en_summary": "Both Netanyahu and opposition leader Gadi Eisenkot expressed confidence in leading Israel's next government."
       }
     },
-    "7": {
+    "8": {
       "topic": "World News / Global",
       "article": {
         "title": "Trump is using tariffs as a 'tool for grift,' Raskin says in demand for donor records",
@@ -134,34 +154,34 @@
         "topic": "World News / Global"
       },
       "summary": {
-        "id": 7,
+        "id": 8,
         "zh_title": "拉斯金称特朗普利用关税作为“敛财工具”",
-        "zh_summary": "拉斯金在中期选举周期的最后几天向特朗普写信，政府腐败成为选民关注的焦点。",
+        "zh_summary": "拉斯金在中期选举周期的最后几天向特朗普发出要求捐赠者记录的信件。",
         "en_title": "Trump is using tariffs as a 'tool for grift,' Raskin says in demand for donor records",
-        "en_summary": "Rep. Jamie Raskin wrote to President Trump in the final days of a midterm election cycle."
+        "en_summary": "Rep. Jamie Raskin wrote to President Trump regarding government corruption as a top voter issue."
       }
     },
-    "8": {
+    "9": {
       "topic": "World News / Global",
       "article": {
-        "title": "Margin debt growth slows sharply as stock market warning signs build",
-        "description": "Slowing margin-debt growth could signal growing risks for stocks.",
-        "url": "https://www.cnbc.com/2026/10/27/margin-debt-growth-cools-after-2026-surge-may-signal-market-top.html",
+        "title": "ServiceNow shares plunge 27% to worst day ever after earnings revive AI disruption fears",
+        "description": "ServiceNow's stock recorded its worst day ever on underwhelming third-quarter results.",
+        "url": "https://www.cnbc.com/2026/10/29/servicenow-now-earnings-q3-2026.html",
         "source": "CNBC",
-        "published": "2026-10-27T18:53:18+00:00",
-        "image": "assets/news/691ad33395c49811fedb868b.jpg",
+        "published": "2026-10-29T20:02:32+00:00",
+        "image": "assets/news/deafd7e619a8e6fc5853fee9.jpg",
         "placeholder": false,
         "topic": "World News / Global"
       },
       "summary": {
-        "id": 8,
-        "zh_title": "随着股市警告信号增多，保证金债务增长急剧放缓",
-        "zh_summary": "保证金债务增长放缓可能预示着股票风险增加。",
-        "en_title": "Margin debt growth slows sharply as stock market warning signs build",
-        "en_summary": "Slowing margin-debt growth could signal growing risks for stocks."
+        "id": 9,
+        "zh_title": "ServiceNow股价暴跌27%，创下历史最低",
+        "zh_summary": "ServiceNow的股票因第三季度业绩不佳而创下历史最低。",
+        "en_title": "ServiceNow shares plunge 27% to worst day ever after earnings revive AI disruption fears",
+        "en_summary": "ServiceNow's stock recorded its worst day ever on underwhelming third-quarter results."
       }
     },
-    "9": {
+    "10": {
       "topic": "World News / Global",
       "article": {
         "title": "New memorial to the 1991 Gulf War opens",
@@ -174,51 +194,31 @@
         "topic": "World News / Global"
       },
       "summary": {
-        "id": 9,
+        "id": 10,
         "zh_title": "1991年海湾战争的新纪念碑揭幕",
         "zh_summary": "军事退伍军人在白宫附近为1991年海湾战争建立了纪念碑。",
         "en_title": "New memorial to the 1991 Gulf War opens",
-        "en_summary": "Military veterans dedicated a memorial to an earlier Middle East conflict: the 1991 Gulf War."
-      }
-    },
-    "10": {
-      "topic": "World News / Global",
-      "article": {
-        "title": "AI giant Anthropic files for an IPO that could break records",
-        "description": "The AI company, which makes the popular Claude chatbot, has filed for an initial public offering that could be one of the biggest ever.",
-        "url": "https://www.npr.org/2026/10/26/nx-s1-6014772/anthropic-ai-ipo-could-break-records",
-        "source": "NPR",
-        "published": "2026-10-26T14:16:23+00:00",
-        "image": "assets/news/e6b548145e8122ebb39b3605.webp",
-        "placeholder": false,
-        "topic": "World News / Global"
-      },
-      "summary": {
-        "id": 10,
-        "zh_title": "人工智能巨头Anthropic申请创纪录的IPO",
-        "zh_summary": "这家人工智能公司申请的首次公开募股可能成为有史以来最大的之一。",
-        "en_title": "AI giant Anthropic files for an IPO that could break records",
-        "en_summary": "The AI company has filed for an initial public offering that could be one of the biggest ever."
+        "en_summary": "Military veterans dedicated a memorial to the 1991 Gulf War near the White House."
       }
     },
     "11": {
       "topic": "World News / Global",
       "article": {
-        "title": "Microsoft stock jumps 4% as cloud growth drives earnings and revenue beat",
-        "description": "Microsoft reported better-than-expected results driven by 48% growth in Azure revenue.",
-        "url": "https://www.cnbc.com/2026/10/28/microsoft-msft-q1-earnings-report-2027.html",
-        "source": "CNBC",
-        "published": "2026-10-28T22:29:23+00:00",
-        "image": "assets/news/abc6ad5c78c5b61bda496ba1.jpg",
+        "title": "Patrick Stewart, a perceptive patriarch in 'Star Trek' and 'X-Men,' dies at 86",
+        "description": "Stewart was raised by an abusive father but became best known for playing kind, paternal leaders who united families of misfits.",
+        "url": "https://www.npr.org/2026/10/29/1230906945/patrick-stewart-dead",
+        "source": "NPR",
+        "published": "2026-10-29T20:29:13+00:00",
+        "image": "assets/news/0d702e553c41f9d370f49246.webp",
         "placeholder": false,
         "topic": "World News / Global"
       },
       "summary": {
         "id": 11,
-        "zh_title": "微软股票因云计算增长而上涨4%",
-        "zh_summary": "微软报告的业绩超出预期，Azure收入增长48%。",
-        "en_title": "Microsoft stock jumps 4% as cloud growth drives earnings and revenue beat",
-        "en_summary": "Microsoft reported better-than-expected results driven by 48% growth in Azure revenue."
+        "zh_title": "帕特里克·斯图尔特去世，享年86岁",
+        "zh_summary": "斯图尔特因在《星际迷航》和《X战警》中扮演父亲角色而闻名。",
+        "en_title": "Patrick Stewart, a perceptive patriarch in 'Star Trek' and 'X-Men,' dies at 86",
+        "en_summary": "Stewart was best known for playing kind, paternal leaders in popular franchises."
       }
     }
   }
