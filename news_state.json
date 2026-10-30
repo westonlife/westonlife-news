@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-29",
+  "checked_at": "2026-10-30",
   "slots": {
     "1": {
       "topic": "Weston / Boston / Massachusetts",
@@ -35,10 +35,10 @@
       },
       "summary": {
         "id": 2,
-        "zh_title": "美联储在高通胀下维持利率不变",
-        "zh_summary": "美联储决定维持基准利率不变，尽管通胀水平依然较高。",
+        "zh_title": "美联储维持利率不变，尽管通胀高企",
+        "zh_summary": "美联储在努力将通胀恢复到2%目标的过程中，决定维持基准利率不变。",
         "en_title": "Federal Reserve keeps rates unchanged despite elevated inflation",
-        "en_summary": "The Fed decided to keep its benchmark rate unchanged despite elevated inflation."
+        "en_summary": "The Fed raised its benchmark rate last month for the first time in three years, defying President Donald Trump’s demands for rate cuts."
       }
     },
     "3": {
@@ -58,30 +58,110 @@
         "zh_title": "伊朗战争如何提高美国购房者的抵押贷款成本",
         "zh_summary": "美联储决定维持利率不变，导致抵押贷款利率超过7%。",
         "en_title": "How the Iran war is raising mortgage costs for US homebuyers",
-        "en_summary": "The Federal Reserve decided to keep interest rates unchanged, leaving mortgage rates above 7%."
+        "en_summary": "The Federal Reserve decided Wednesday to keep interest rates unchanged, leaving mortgage rates above 7%."
       }
     },
     "4": {
       "topic": "Weston / Boston / Massachusetts",
       "article": {
-        "title": "Massachusetts and Idaho put guns on the ballot. One seeks to restrict them, the other to honor them.",
-        "description": "Should voters approve it, Massachusetts Question 9 will continue an array of gun restrictions passed overwhelmingly by the Democratic-led Legislature in a state with one of the nation's lowest gun ownership rates. The post Massachusetts and Idaho put guns on the ballot. One seeks to restrict them, the other to honor them. appeared first on Boston.com .",
-        "url": "https://www.boston.com/news/politics/2026/10/25/massachusetts-and-idaho-put-guns-on-the-ballot-one-seeks-to-restrict-them-the-other-to-honor-them/",
-        "source": "Boston.com",
-        "published": "2026-10-25T20:31:31+00:00",
-        "image": "assets/news/e172dfa57574e74dd405a8c9.webp",
+        "title": "Mass. election guide: Races, ballot questions and voting info",
+        "description": "From a record-tying nine ballot questions to contests for governor and U.S. Senate, Massachusetts voters have a lot to decide Tuesday. Here’s a guide to the key races, questions and voting details.",
+        "url": "https://www.wcvb.com/article/massachusetts-midterm-election-candidates-ballot-primer-2026/74299123",
+        "source": "WCVB Boston",
+        "published": "2026-10-30T22:24:00+00:00",
+        "image": "assets/news/ca8f8c5d4647f583e2cb9853.jpg",
         "placeholder": false,
         "topic": "Weston / Boston / Massachusetts"
       },
       "summary": {
         "id": 4,
-        "zh_title": "马萨诸塞州和爱达荷州将枪支问题列入投票",
-        "zh_summary": "马萨诸塞州的问题9将继续实施一系列枪支限制。",
-        "en_title": "Massachusetts and Idaho put guns on the ballot. One seeks to restrict them, the other to honor them.",
-        "en_summary": "If approved, Massachusetts Question 9 will continue an array of gun restrictions."
+        "zh_title": "马萨诸塞州选举指南：竞选、投票问题和投票信息",
+        "zh_summary": "马萨诸塞州选民将在周二面临多项投票选择，包括九个投票问题和州长及美国参议院的竞选。",
+        "en_title": "Mass. election guide: Races, ballot questions and voting info",
+        "en_summary": "From a record-tying nine ballot questions to contests for governor and U.S. Senate, Massachusetts voters have a lot to decide Tuesday."
       }
     },
     "5": {
+      "topic": "Weston / Boston / Massachusetts",
+      "article": {
+        "title": "Florida woman charged with wiretapping Lindsay Clancy’s former father-in-law",
+        "description": "Authorities allege the true crime content creator posted a secret recording of Christopher Clancy, whose son Patrick was previously married to Lindsay Clancy. The post Florida woman charged with wiretapping Lindsay Clancy’s former father-in-law appeared first on Boston.com .",
+        "url": "https://www.boston.com/news/crime/2026/10/30/woman-charged-wiretap-lindsay-clancy-former-father-in-law/",
+        "source": "Boston.com",
+        "published": "2026-10-30T20:25:00+00:00",
+        "image": "assets/news/77a4c53e4ade8d609e84f24b.webp",
+        "placeholder": false,
+        "topic": "Weston / Boston / Massachusetts"
+      },
+      "summary": {
+        "id": 5,
+        "zh_title": "佛罗里达女子因窃听林赛·克兰西的前公公被控",
+        "zh_summary": "当局指控这位真实犯罪内容创作者发布了克里斯托弗·克兰西的秘密录音。",
+        "en_title": "Florida woman charged with wiretapping Lindsay Clancy’s former father-in-law",
+        "en_summary": "Authorities allege the true crime content creator posted a secret recording of Christopher Clancy."
+      }
+    },
+    "6": {
+      "topic": "World News / Global",
+      "article": {
+        "title": "Russian strikes plunge Ukrainian city into blackout as Zelenskyy warns of more missile attacks",
+        "description": "Russian strikes caused major power outages in Dnipro as a reported Ukrainian drone attack sparked a fire at a Russian oil refinery.",
+        "url": "https://www.cnbc.com/2026/10/30/russia-ukraine-putin-zelenskyy-energy-strikes.html",
+        "source": "CNBC",
+        "published": "2026-10-30T11:29:59+00:00",
+        "image": "assets/news/bee88995b67aba169f8d948f.jpg",
+        "placeholder": false,
+        "topic": "World News / Global"
+      },
+      "summary": {
+        "id": 6,
+        "zh_title": "俄罗斯袭击使乌克兰城市陷入停电，泽连斯基警告更多导弹袭击",
+        "zh_summary": "俄罗斯的袭击导致第聂伯市大规模停电。",
+        "en_title": "Russian strikes plunge Ukrainian city into blackout as Zelenskyy warns of more missile attacks",
+        "en_summary": "Russian strikes caused major power outages in Dnipro as a reported Ukrainian drone attack sparked a fire at a Russian oil refinery."
+      }
+    },
+    "7": {
+      "topic": "World News / Global",
+      "article": {
+        "title": "Cramer’s week ahead: Expect more volatility as tech earnings, midterms loom",
+        "description": "Investors await earnings from Apple, AMD, and other major companies, as well as the midterm elections and the monthly jobs report.",
+        "url": "https://www.cnbc.com/2026/10/30/jim-cramer-week-ahead-apple-amd-jobs-report.html",
+        "source": "CNBC",
+        "published": "2026-10-30T22:17:13+00:00",
+        "image": "assets/news/4a4ab52ee7808a7132f3996b.jpg",
+        "placeholder": false,
+        "topic": "World News / Global"
+      },
+      "summary": {
+        "id": 7,
+        "zh_title": "克雷默的下周展望：预计科技财报和中期选举将带来更多波动",
+        "zh_summary": "投资者期待苹果、AMD等公司的财报，以及中期选举和每月就业报告。",
+        "en_title": "Cramer’s week ahead: Expect more volatility as tech earnings, midterms loom",
+        "en_summary": "Investors await earnings from Apple, AMD, and other major companies, as well as the midterm elections and the monthly jobs report."
+      }
+    },
+    "8": {
+      "topic": "World News / Global",
+      "article": {
+        "title": "Criminal investigation of Alaska Senate race is 'ongoing,' U.S. Attorney says",
+        "description": "The winner of the Alaska election could determine whether Republicans retain their majority in the U.S. Senate or if Democrats take control of the chamber.",
+        "url": "https://www.cnbc.com/2026/10/30/alaska-senate-election-doj-lawsuit-sullivan-peltola.html",
+        "source": "CNBC",
+        "published": "2026-10-30T20:46:04+00:00",
+        "image": "assets/news/4c249395c0a77d172a591123.jpg",
+        "placeholder": false,
+        "topic": "World News / Global"
+      },
+      "summary": {
+        "id": 8,
+        "zh_title": "阿拉斯加参议院选举的刑事调查仍在进行中",
+        "zh_summary": "阿拉斯加选举的赢家可能决定共和党是否保住美国参议院的多数席位。",
+        "en_title": "Criminal investigation of Alaska Senate race is 'ongoing,' U.S. Attorney says",
+        "en_summary": "The winner of the Alaska election could determine whether Republicans retain their majority in the U.S. Senate."
+      }
+    },
+    "9": {
       "topic": "World News / Global",
       "article": {
         "title": "Fed holds interest rates steady even as inflation remains stubborn",
@@ -94,34 +174,14 @@
         "topic": "World News / Global"
       },
       "summary": {
-        "id": 5,
-        "zh_title": "美联储在通胀顽固的情况下保持利率稳定",
-        "zh_summary": "美联储选择维持基准利率不变，投资者预计将在下次会议上加息。",
+        "id": 9,
+        "zh_title": "美联储在通胀顽固的情况下维持利率稳定",
+        "zh_summary": "美联储选择维持基准利率不变，但投资者普遍预计将在下次会议上加息。",
         "en_title": "Fed holds interest rates steady even as inflation remains stubborn",
-        "en_summary": "The Federal Reserve opted to leave its benchmark interest rate unchanged amid stubborn inflation."
+        "en_summary": "The Federal Reserve opted to leave its benchmark interest rate unchanged — but investors widely expect the central bank to raise rates at its next meeting."
       }
     },
-    "6": {
-      "topic": "World News / Global",
-      "article": {
-        "title": "Rivian third-quarter earnings beat estimates as software revenue, R2 deliveries rise",
-        "description": "Rivian also revised its 2026 guidance to mark expected improvements in its vehicle deliveries, pre-tax adjusted earnings and capital expenditures.",
-        "url": "https://www.cnbc.com/2026/10/29/rivian-rivn-earnings-q3-2026.html",
-        "source": "CNBC",
-        "published": "2026-10-29T21:52:27+00:00",
-        "image": "assets/news/1743bec2eb86570c61ca2778.jpg",
-        "placeholder": false,
-        "topic": "World News / Global"
-      },
-      "summary": {
-        "id": 6,
-        "zh_title": "Rivian第三季度收益超出预期",
-        "zh_summary": "Rivian修订了2026年的指导，预计车辆交付和软件收入将改善。",
-        "en_title": "Rivian third-quarter earnings beat estimates as software revenue, R2 deliveries rise",
-        "en_summary": "Rivian revised its 2026 guidance to mark expected improvements in vehicle deliveries."
-      }
-    },
-    "7": {
+    "10": {
       "topic": "World News / Global",
       "article": {
         "title": "Rivals in Israel Election Strike Tone of Triumph, but Outcome Is Far From Clear",
@@ -134,91 +194,51 @@
         "topic": "World News / Global"
       },
       "summary": {
-        "id": 7,
-        "zh_title": "以色列选举中的对手们表达胜利的语气",
-        "zh_summary": "内塔尼亚胡和反对派领导人都对领导以色列下届政府表示信心。",
-        "en_title": "Rivals in Israel Election Strike Tone of Triumph, but Outcome Is Far From Clear",
-        "en_summary": "Both Netanyahu and opposition leader Gadi Eisenkot expressed confidence in leading Israel's next government."
-      }
-    },
-    "8": {
-      "topic": "World News / Global",
-      "article": {
-        "title": "Trump is using tariffs as a 'tool for grift,' Raskin says in demand for donor records",
-        "description": "Rep. Jamie Raskin wrote to President Trump in the final days of a midterm election cycle where government corruption has emerged as a top issue for voters.",
-        "url": "https://www.cnbc.com/2026/10/28/trump-tariffs-corruption-raskin.html",
-        "source": "CNBC",
-        "published": "2026-10-28T17:39:43+00:00",
-        "image": "assets/news/99208b00c55117e258b124ed.jpg",
-        "placeholder": false,
-        "topic": "World News / Global"
-      },
-      "summary": {
-        "id": 8,
-        "zh_title": "拉斯金称特朗普利用关税作为“敛财工具”",
-        "zh_summary": "拉斯金在中期选举周期的最后几天向特朗普发出要求捐赠者记录的信件。",
-        "en_title": "Trump is using tariffs as a 'tool for grift,' Raskin says in demand for donor records",
-        "en_summary": "Rep. Jamie Raskin wrote to President Trump regarding government corruption as a top voter issue."
-      }
-    },
-    "9": {
-      "topic": "World News / Global",
-      "article": {
-        "title": "ServiceNow shares plunge 27% to worst day ever after earnings revive AI disruption fears",
-        "description": "ServiceNow's stock recorded its worst day ever on underwhelming third-quarter results.",
-        "url": "https://www.cnbc.com/2026/10/29/servicenow-now-earnings-q3-2026.html",
-        "source": "CNBC",
-        "published": "2026-10-29T20:02:32+00:00",
-        "image": "assets/news/deafd7e619a8e6fc5853fee9.jpg",
-        "placeholder": false,
-        "topic": "World News / Global"
-      },
-      "summary": {
-        "id": 9,
-        "zh_title": "ServiceNow股价暴跌27%，创下历史最低",
-        "zh_summary": "ServiceNow的股票因第三季度业绩不佳而创下历史最低。",
-        "en_title": "ServiceNow shares plunge 27% to worst day ever after earnings revive AI disruption fears",
-        "en_summary": "ServiceNow's stock recorded its worst day ever on underwhelming third-quarter results."
-      }
-    },
-    "10": {
-      "topic": "World News / Global",
-      "article": {
-        "title": "New memorial to the 1991 Gulf War opens",
-        "description": "President Trump is weighing the possibility of another major attack on Iran. Today, just a few blocks from the White House, military veterans dedicated a memorial to an earlier Middle East conflict: the 1991 Gulf War, which was a military success, but is ofte…",
-        "url": "https://www.npr.org/2026/10/24/nx-s1-6012361/new-memorial-to-the-1991-gulf-war-opens",
-        "source": "NPR",
-        "published": "2026-10-24T21:20:59Z",
-        "image": "assets/news/fd469057e03db00e45979793.jpg",
-        "placeholder": false,
-        "topic": "World News / Global"
-      },
-      "summary": {
         "id": 10,
-        "zh_title": "1991年海湾战争的新纪念碑揭幕",
-        "zh_summary": "军事退伍军人在白宫附近为1991年海湾战争建立了纪念碑。",
-        "en_title": "New memorial to the 1991 Gulf War opens",
-        "en_summary": "Military veterans dedicated a memorial to the 1991 Gulf War near the White House."
+        "zh_title": "以色列选举中的对手们发出胜利的语气，但结果尚不明朗",
+        "zh_summary": "内塔尼亚胡和反对派领袖加迪·艾森科特在午夜后向支持者发表讲话，均表示对领导以色列下届政府充满信心。",
+        "en_title": "Rivals in Israel Election Strike Tone of Triumph, but Outcome Is Far From Clear",
+        "en_summary": "Addressing supporters after midnight, Prime Minister Benjamin Netanyahu and Gadi Eisenkot expressed confidence that they will lead Israel’s next government."
       }
     },
     "11": {
       "topic": "World News / Global",
       "article": {
-        "title": "Patrick Stewart, a perceptive patriarch in 'Star Trek' and 'X-Men,' dies at 86",
-        "description": "Stewart was raised by an abusive father but became best known for playing kind, paternal leaders who united families of misfits.",
-        "url": "https://www.npr.org/2026/10/29/1230906945/patrick-stewart-dead",
+        "title": "U.S. Supreme Court faces consequential term on immigration law",
+        "description": "Cases and controversies from President Trump's aggressive immigration are making their way to the Supreme Court this term, with several more disputes percolating on the emergency docket.",
+        "url": "https://www.npr.org/2026/10/29/nx-s1-6013611/u-s-supreme-court-faces-consequential-term-on-immigration-law",
         "source": "NPR",
-        "published": "2026-10-29T20:29:13+00:00",
-        "image": "assets/news/0d702e553c41f9d370f49246.webp",
+        "published": "2026-10-29T22:29:58Z",
+        "image": "assets/news/fd469057e03db00e45979793.jpg",
         "placeholder": false,
         "topic": "World News / Global"
       },
       "summary": {
         "id": 11,
-        "zh_title": "帕特里克·斯图尔特去世，享年86岁",
-        "zh_summary": "斯图尔特因在《星际迷航》和《X战警》中扮演父亲角色而闻名。",
-        "en_title": "Patrick Stewart, a perceptive patriarch in 'Star Trek' and 'X-Men,' dies at 86",
-        "en_summary": "Stewart was best known for playing kind, paternal leaders in popular franchises."
+        "zh_title": "美国最高法院面临关于移民法的重要任期",
+        "zh_summary": "特朗普总统的移民政策引发的案件和争议正在进入最高法院。",
+        "en_title": "U.S. Supreme Court faces consequential term on immigration law",
+        "en_summary": "Cases and controversies from President Trump's aggressive immigration are making their way to the Supreme Court this term."
+      }
+    },
+    "12": {
+      "topic": "World News / Global",
+      "article": {
+        "title": "Study pinpoints states with steepest warming trends since 1980",
+        "description": "The findings indicate where adaptive measures are needed most around the United States.",
+        "url": "https://news.mit.edu/2026/study-pinpoints-states-with-steepest-warming-trends-1030",
+        "source": "MIT News",
+        "published": "2026-10-30T19:15:00+00:00",
+        "image": "assets/news/a24d8baf7f52f9544919be71.jpg",
+        "placeholder": false,
+        "topic": "World News / Global"
+      },
+      "summary": {
+        "id": 12,
+        "zh_title": "研究指出自1980年以来气温上升最明显的州",
+        "zh_summary": "研究结果表明美国各州最需要适应措施的地方。",
+        "en_title": "Study pinpoints states with steepest warming trends since 1980",
+        "en_summary": "The findings indicate where adaptive measures are needed most around the United States."
       }
     }
   }
