@@ -1,24 +1,24 @@
 {
-  "checked_at": "2026-10-30",
+  "checked_at": "2026-10-31",
   "slots": {
     "1": {
       "topic": "Weston / Boston / Massachusetts",
       "article": {
-        "title": "Street preacher argument leads to stun gun attack at Bewitched statue in Salem, police say",
-        "description": "The victim described feeling \"zapped\" after being struck twice with the stun gun. The post Street preacher argument leads to stun gun attack at Bewitched statue in Salem, police say appeared first on Boston.com .",
-        "url": "https://www.boston.com/news/local-news/2026/10/28/street-preacher-argument-leads-to-stun-gun-attack-at-bewitched-statue-in-salem-police-say/",
+        "title": "We Halloweened so you don’t have to",
+        "description": "This week we have the view from Salem, a world record jack-o'-lantern, and a \"clown-ter\" protest. The post We Halloweened so you don’t have to appeared first on Boston.com .",
+        "url": "https://www.boston.com/community/off-beat/2026/10/31/we-halloweened-so-you-dont-have-to/",
         "source": "Boston.com",
-        "published": "2026-10-28T21:35:58+00:00",
-        "image": "assets/news/4c47cd3c1b86d25d47b602ac.webp",
+        "published": "2026-10-31T16:58:38+00:00",
+        "image": "assets/news/329712c8e19a80ef0a671375.webp",
         "placeholder": false,
         "topic": "Weston / Boston / Massachusetts"
       },
       "summary": {
         "id": 1,
-        "zh_title": "街头传教士争论导致萨勒姆的电击枪袭击",
-        "zh_summary": "警方称，受害者在被电击枪击中两次后感到“被电击”。",
-        "en_title": "Street preacher argument leads to stun gun attack at Bewitched statue in Salem, police say",
-        "en_summary": "Police say the victim described feeling 'zapped' after being struck twice with the stun gun."
+        "zh_title": "我们为你们庆祝万圣节",
+        "zh_summary": "本周我们从塞勒姆带来视角，展示了世界纪录的南瓜灯和“小丑抗议”事件。",
+        "en_title": "We Halloweened so you don’t have to",
+        "en_summary": "This week we have the view from Salem, a world record jack-o'-lantern, and a 'clown-ter' protest."
       }
     },
     "2": {
@@ -36,7 +36,7 @@
       "summary": {
         "id": 2,
         "zh_title": "美联储维持利率不变，尽管通胀高企",
-        "zh_summary": "美联储在努力将通胀恢复到2%目标的过程中，决定维持基准利率不变。",
+        "zh_summary": "美联储上个月首次在三年内提高基准利率，尽管特朗普总统要求降息。",
         "en_title": "Federal Reserve keeps rates unchanged despite elevated inflation",
         "en_summary": "The Fed raised its benchmark rate last month for the first time in three years, defying President Donald Trump’s demands for rate cuts."
       }
@@ -56,52 +56,32 @@
       "summary": {
         "id": 3,
         "zh_title": "伊朗战争如何提高美国购房者的抵押贷款成本",
-        "zh_summary": "美联储决定维持利率不变，导致抵押贷款利率超过7%。",
+        "zh_summary": "美联储决定维持利率不变，导致抵押贷款利率超过7%，购房者面临更高的月供。",
         "en_title": "How the Iran war is raising mortgage costs for US homebuyers",
-        "en_summary": "The Federal Reserve decided Wednesday to keep interest rates unchanged, leaving mortgage rates above 7%."
+        "en_summary": "The Federal Reserve decided Wednesday to keep interest rates unchanged, leaving mortgage rates above 7% and homebuyers facing higher monthly costs."
       }
     },
     "4": {
       "topic": "Weston / Boston / Massachusetts",
       "article": {
-        "title": "Mass. election guide: Races, ballot questions and voting info",
-        "description": "From a record-tying nine ballot questions to contests for governor and U.S. Senate, Massachusetts voters have a lot to decide Tuesday. Here’s a guide to the key races, questions and voting details.",
-        "url": "https://www.wcvb.com/article/massachusetts-midterm-election-candidates-ballot-primer-2026/74299123",
-        "source": "WCVB Boston",
-        "published": "2026-10-30T22:24:00+00:00",
-        "image": "assets/news/ca8f8c5d4647f583e2cb9853.jpg",
+        "title": "The youth vote in Massachusetts is struggling. Here’s why.",
+        "description": "Massachusetts is among the states furthest behind its 2022 voter registration numbers. The post The youth vote in Massachusetts is struggling. Here’s why. appeared first on Boston.com .",
+        "url": "https://www.boston.com/news/politics/2026/10/31/the-youth-vote-in-massachusetts-is-struggling-heres-why/",
+        "source": "Boston.com",
+        "published": "2026-10-31T12:00:00+00:00",
+        "image": "assets/news/f6a0b7790a9b29f49c0c11c2.webp",
         "placeholder": false,
         "topic": "Weston / Boston / Massachusetts"
       },
       "summary": {
         "id": 4,
-        "zh_title": "马萨诸塞州选举指南：竞选、投票问题和投票信息",
-        "zh_summary": "马萨诸塞州选民将在周二面临多项投票选择，包括九个投票问题和州长及美国参议院的竞选。",
-        "en_title": "Mass. election guide: Races, ballot questions and voting info",
-        "en_summary": "From a record-tying nine ballot questions to contests for governor and U.S. Senate, Massachusetts voters have a lot to decide Tuesday."
+        "zh_title": "马萨诸塞州的青年投票面临困境，原因在这里",
+        "zh_summary": "马萨诸塞州在2022年选民注册数字上落后于其他州。",
+        "en_title": "The youth vote in Massachusetts is struggling. Here’s why.",
+        "en_summary": "Massachusetts is among the states furthest behind its 2022 voter registration numbers."
       }
     },
     "5": {
-      "topic": "Weston / Boston / Massachusetts",
-      "article": {
-        "title": "Florida woman charged with wiretapping Lindsay Clancy’s former father-in-law",
-        "description": "Authorities allege the true crime content creator posted a secret recording of Christopher Clancy, whose son Patrick was previously married to Lindsay Clancy. The post Florida woman charged with wiretapping Lindsay Clancy’s former father-in-law appeared first on Boston.com .",
-        "url": "https://www.boston.com/news/crime/2026/10/30/woman-charged-wiretap-lindsay-clancy-former-father-in-law/",
-        "source": "Boston.com",
-        "published": "2026-10-30T20:25:00+00:00",
-        "image": "assets/news/77a4c53e4ade8d609e84f24b.webp",
-        "placeholder": false,
-        "topic": "Weston / Boston / Massachusetts"
-      },
-      "summary": {
-        "id": 5,
-        "zh_title": "佛罗里达女子因窃听林赛·克兰西的前公公被控",
-        "zh_summary": "当局指控这位真实犯罪内容创作者发布了克里斯托弗·克兰西的秘密录音。",
-        "en_title": "Florida woman charged with wiretapping Lindsay Clancy’s former father-in-law",
-        "en_summary": "Authorities allege the true crime content creator posted a secret recording of Christopher Clancy."
-      }
-    },
-    "6": {
       "topic": "World News / Global",
       "article": {
         "title": "Russian strikes plunge Ukrainian city into blackout as Zelenskyy warns of more missile attacks",
@@ -114,54 +94,54 @@
         "topic": "World News / Global"
       },
       "summary": {
-        "id": 6,
-        "zh_title": "俄罗斯袭击使乌克兰城市陷入停电，泽连斯基警告更多导弹袭击",
-        "zh_summary": "俄罗斯的袭击导致第聂伯市大规模停电。",
+        "id": 5,
+        "zh_title": "俄罗斯袭击使乌克兰城市陷入停电，泽连斯基警告更多导弹攻击",
+        "zh_summary": "俄罗斯的袭击导致第聂伯市大规模停电，同时乌克兰无人机攻击引发俄罗斯石油精炼厂火灾。",
         "en_title": "Russian strikes plunge Ukrainian city into blackout as Zelenskyy warns of more missile attacks",
         "en_summary": "Russian strikes caused major power outages in Dnipro as a reported Ukrainian drone attack sparked a fire at a Russian oil refinery."
       }
     },
-    "7": {
+    "6": {
       "topic": "World News / Global",
       "article": {
         "title": "Cramer’s week ahead: Expect more volatility as tech earnings, midterms loom",
         "description": "Investors await earnings from Apple, AMD, and other major companies, as well as the midterm elections and the monthly jobs report.",
         "url": "https://www.cnbc.com/2026/10/30/jim-cramer-week-ahead-apple-amd-jobs-report.html",
         "source": "CNBC",
-        "published": "2026-10-30T22:17:13+00:00",
+        "published": "2026-10-30T22:17:13Z",
         "image": "assets/news/4a4ab52ee7808a7132f3996b.jpg",
         "placeholder": false,
         "topic": "World News / Global"
       },
       "summary": {
-        "id": 7,
-        "zh_title": "克雷默的下周展望：预计科技财报和中期选举将带来更多波动",
-        "zh_summary": "投资者期待苹果、AMD等公司的财报，以及中期选举和每月就业报告。",
+        "id": 6,
+        "zh_title": "克莱默的下周展望：预计科技财报和中期选举将带来更多波动",
+        "zh_summary": "投资者期待苹果、AMD等主要公司的财报，以及中期选举和每月就业报告。",
         "en_title": "Cramer’s week ahead: Expect more volatility as tech earnings, midterms loom",
         "en_summary": "Investors await earnings from Apple, AMD, and other major companies, as well as the midterm elections and the monthly jobs report."
       }
     },
-    "8": {
+    "7": {
       "topic": "World News / Global",
       "article": {
-        "title": "Criminal investigation of Alaska Senate race is 'ongoing,' U.S. Attorney says",
-        "description": "The winner of the Alaska election could determine whether Republicans retain their majority in the U.S. Senate or if Democrats take control of the chamber.",
-        "url": "https://www.cnbc.com/2026/10/30/alaska-senate-election-doj-lawsuit-sullivan-peltola.html",
+        "title": "Anthropic's path to the Nasdaq just got a lot bumpier",
+        "description": "Concerning projections from hyperscalers this week punished tech stocks and pushed the Nasdaq to its first three-week losing streak since March.",
+        "url": "https://www.cnbc.com/2026/10/31/anthropic-ipo-ai-spending.html",
         "source": "CNBC",
-        "published": "2026-10-30T20:46:04+00:00",
-        "image": "assets/news/4c249395c0a77d172a591123.jpg",
+        "published": "2026-10-31T11:00:01+00:00",
+        "image": "assets/news/b4ea8c5a16d151ab83fac408.jpg",
         "placeholder": false,
         "topic": "World News / Global"
       },
       "summary": {
-        "id": 8,
-        "zh_title": "阿拉斯加参议院选举的刑事调查仍在进行中",
-        "zh_summary": "阿拉斯加选举的赢家可能决定共和党是否保住美国参议院的多数席位。",
-        "en_title": "Criminal investigation of Alaska Senate race is 'ongoing,' U.S. Attorney says",
-        "en_summary": "The winner of the Alaska election could determine whether Republicans retain their majority in the U.S. Senate."
+        "id": 7,
+        "zh_title": "Anthropic通往纳斯达克的道路变得更加坎坷",
+        "zh_summary": "本周来自超大规模公司的令人担忧的预测打击了科技股，使纳斯达克出现自三月以来的首次三周连跌。",
+        "en_title": "Anthropic's path to the Nasdaq just got a lot bumpier",
+        "en_summary": "Concerning projections from hyperscalers this week punished tech stocks and pushed the Nasdaq to its first three-week losing streak since March."
       }
     },
-    "9": {
+    "8": {
       "topic": "World News / Global",
       "article": {
         "title": "Fed holds interest rates steady even as inflation remains stubborn",
@@ -174,11 +154,31 @@
         "topic": "World News / Global"
       },
       "summary": {
-        "id": 9,
+        "id": 8,
         "zh_title": "美联储在通胀顽固的情况下维持利率稳定",
-        "zh_summary": "美联储选择维持基准利率不变，但投资者普遍预计将在下次会议上加息。",
+        "zh_summary": "美联储选择维持基准利率不变，但投资者普遍预计中央银行将在12月的下一次会议上提高利率以应对顽固的通胀。",
         "en_title": "Fed holds interest rates steady even as inflation remains stubborn",
-        "en_summary": "The Federal Reserve opted to leave its benchmark interest rate unchanged — but investors widely expect the central bank to raise rates at its next meeting."
+        "en_summary": "The Federal Reserve opted to leave its benchmark interest rate unchanged — but investors widely expect the central bank to raise rates at its next meeting in December."
+      }
+    },
+    "9": {
+      "topic": "World News / Global",
+      "article": {
+        "title": "Mixed economic forecast weighs heavy ahead of midterms",
+        "description": "There was a mixed Halloween bag of economic news this week. GDP growth is up, but so are prices. For now at least, interest rates are staying the same. What does that mean for the midterm elections?",
+        "url": "https://www.npr.org/2026/10/31/nx-s1-6022285/mixed-economic-forecast-weighs-heavy-ahead-of-midterms",
+        "source": "NPR",
+        "published": "2026-10-31T21:14:35+00:00",
+        "image": "assets/news/fd469057e03db00e45979793.jpg",
+        "placeholder": false,
+        "topic": "World News / Global"
+      },
+      "summary": {
+        "id": 9,
+        "zh_title": "中期选举前经济预测混合，压力沉重",
+        "zh_summary": "本周的经济新闻喜忧参半，GDP增长上升，但价格也在上涨，目前利率保持不变，这对中期选举意味着什么？",
+        "en_title": "Mixed economic forecast weighs heavy ahead of midterms",
+        "en_summary": "There was a mixed Halloween bag of economic news this week. GDP growth is up, but so are prices."
       }
     },
     "10": {
@@ -196,49 +196,29 @@
       "summary": {
         "id": 10,
         "zh_title": "以色列选举中的对手们发出胜利的语气，但结果尚不明朗",
-        "zh_summary": "内塔尼亚胡和反对派领袖加迪·艾森科特在午夜后向支持者发表讲话，均表示对领导以色列下届政府充满信心。",
+        "zh_summary": "内塔尼亚胡总理和反对派领袖加迪·艾森科特在午夜后向支持者发表讲话，均表示有信心将领导以色列下届政府。",
         "en_title": "Rivals in Israel Election Strike Tone of Triumph, but Outcome Is Far From Clear",
-        "en_summary": "Addressing supporters after midnight, Prime Minister Benjamin Netanyahu and Gadi Eisenkot expressed confidence that they will lead Israel’s next government."
+        "en_summary": "Addressing supporters after midnight, Prime Minister Benjamin Netanyahu and Gadi Eisenkot, who leads a bloc of opposition parties, both expressed confidence that they will lead Israel’s next government."
       }
     },
     "11": {
       "topic": "World News / Global",
       "article": {
-        "title": "U.S. Supreme Court faces consequential term on immigration law",
-        "description": "Cases and controversies from President Trump's aggressive immigration are making their way to the Supreme Court this term, with several more disputes percolating on the emergency docket.",
-        "url": "https://www.npr.org/2026/10/29/nx-s1-6013611/u-s-supreme-court-faces-consequential-term-on-immigration-law",
+        "title": "Drone photo award winners: Far-out landscapes. Ship recycling. Rugs, rugs rugs!",
+        "description": "The Siena Drone Photo Awards for 2026 offer breathtaking bird's-eye views of our planet, revealing landscapes, livelihoods and human stories often invisible from the ground.",
+        "url": "https://www.npr.org/2026/10/31/g-s1-150698/drone-photo-award-winners",
         "source": "NPR",
-        "published": "2026-10-29T22:29:58Z",
-        "image": "assets/news/fd469057e03db00e45979793.jpg",
+        "published": "2026-10-31T11:56:10+00:00",
+        "image": "assets/news/9327fd3cb3c000e2831a7d6f.webp",
         "placeholder": false,
         "topic": "World News / Global"
       },
       "summary": {
         "id": 11,
-        "zh_title": "美国最高法院面临关于移民法的重要任期",
-        "zh_summary": "特朗普总统的移民政策引发的案件和争议正在进入最高法院。",
-        "en_title": "U.S. Supreme Court faces consequential term on immigration law",
-        "en_summary": "Cases and controversies from President Trump's aggressive immigration are making their way to the Supreme Court this term."
-      }
-    },
-    "12": {
-      "topic": "World News / Global",
-      "article": {
-        "title": "Study pinpoints states with steepest warming trends since 1980",
-        "description": "The findings indicate where adaptive measures are needed most around the United States.",
-        "url": "https://news.mit.edu/2026/study-pinpoints-states-with-steepest-warming-trends-1030",
-        "source": "MIT News",
-        "published": "2026-10-30T19:15:00+00:00",
-        "image": "assets/news/a24d8baf7f52f9544919be71.jpg",
-        "placeholder": false,
-        "topic": "World News / Global"
-      },
-      "summary": {
-        "id": 12,
-        "zh_title": "研究指出自1980年以来气温上升最明显的州",
-        "zh_summary": "研究结果表明美国各州最需要适应措施的地方。",
-        "en_title": "Study pinpoints states with steepest warming trends since 1980",
-        "en_summary": "The findings indicate where adaptive measures are needed most around the United States."
+        "zh_title": "无人机摄影奖获奖作品：奇异的风景、船舶回收、地毯等！",
+        "zh_summary": "2026年锡耶纳无人机摄影奖展示了我们星球的惊人鸟瞰图，揭示了从地面上常常看不见的风景、生活和人类故事。",
+        "en_title": "Drone photo award winners: Far-out landscapes. Ship recycling. Rugs, rugs rugs!",
+        "en_summary": "The Siena Drone Photo Awards for 2026 offer breathtaking bird's-eye views of our planet, revealing landscapes, livelihoods and human stories often invisible from the ground."
       }
     }
   }
