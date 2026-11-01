@@ -1,0 +1,136 @@
+name: Weston Life - Coco front page and strategic analysis
+
+on:
+  push:
+    paths:
+      - '.github/workflows/westonlife-coco-frontpage.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-home-and-article:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Weston Life repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Expand Coco article and show full article on homepage
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          article_path = Path('coco-iran-2026.html')
+          js_path = Path('coco-opinion.js')
+          if not article_path.is_file() or not js_path.is_file():
+              raise RuntimeError('Expected Weston Life article and homepage script not found; stopped without changes.')
+
+          article = article_path.read_text(encoding='utf-8')
+          js = js_path.read_text(encoding='utf-8')
+
+          # 1. Enrich the signed opinion article without changing its other four sections.
+          q1 = r'''<section class="point" id="question-1">
+          <div class="num">01 / FIVE QUESTIONS</div><h2>一、不能低估伊朗：复杂权力结构与全球关键通道</h2>
+          <p class="sub">认识伊朗，不仅要看到其军事实力，还要理解国内政治、地理位置与它影响国际经济的能力。</p>
+          <p>首先，<strong>伊朗不是一个可以用“一个党派”概括的国家。</strong>其政治体系同时存在由最高领袖主导的宗教与安全权力体系、伊斯兰革命卫队（IRGC）、宪法监护委员会，以及民选总统、议会与保守派和改革派等政治力量。尤其是革命卫队，在军事、安全、经济和地区武装联系中拥有深厚影响力。即使部分军事设施被摧毁，这套政治与安全网络也不会自动消失。<a href="https://www.cfr.org/articles/islamic-republics-power-centers" target="_blank" rel="noopener">〔参考：美国外交关系协会 CFR〕</a></p>
+          <p><strong>第一道关口：霍尔木兹海峡，关系全球石油和天然气。</strong>海峡位于伊朗与阿曼之间，是波斯湾能源输往亚洲和其他市场的主要出口。美国能源信息署（EIA）统计，2025年上半年每天平均有约<strong>2,090万桶</strong>原油及石油产品通过这里，约相当于全球石油液体消费量的<strong>20%</strong>；同期超过<strong>五分之一</strong>的全球液化天然气贸易亦经此运输。2026年第二季度，EIA估计海峡石油流量降至日均约<strong>490万桶</strong>，表明战争和航运风险可造成多大冲击。沙特、伊拉克、阿联酋、科威特及卡塔尔的出口和亚洲能源安全都受到影响。即使没有全面封锁，只要航运保险、油轮安全与绕航成本上升，油价、通胀和工业成本也会承压。<strong>伊朗有能力威胁或干扰海峡通行，但不等于它拥有永久、排他的合法控制权。</strong><a href="https://www.eia.gov/international/content/analysis/special_topics/World_Oil_Transit_Chokepoints/" target="_blank" rel="noopener">〔EIA海峡资料〕</a> <a href="https://www.eia.gov/outlooks/steo/report/energysecurity/article.php" target="_blank" rel="noopener">〔EIA 2026年数据〕</a></p>
+          <p><strong>第二道关口：红海—曼德海峡—苏伊士运河，关系亚洲与欧洲的货物运输。</strong>红海南端的曼德海峡通往亚丁湾，北端的苏伊士运河连接地中海。联合国贸易和发展会议（UNCTAD）估计，2023年全球约<strong>22%</strong>的海运集装箱贸易经过苏伊士运河。也门胡塞武装能够通过导弹、无人机和海上袭击威胁红海航运；伊朗对胡塞武装提供武器、技术和其他支持，从而对这一通道形成<strong>间接影响</strong>。但胡塞武装有自己的利益与决策，不能等同于伊朗军队。如果商船不得不绕非洲好望角，运输时间、燃油、保费和供应链成本都会上升，影响从亚洲出口商品到欧洲进口能源的价格。<a href="https://unctad.org/publication/navigating-troubled-waters-impact-global-trade-disruption-shipping-routes-red-sea-black" target="_blank" rel="noopener">〔UNCTAD〕</a> <a href="https://www.cfr.org/articles/irans-support-houthis-what-know" target="_blank" rel="noopener">〔CFR胡塞武装研究〕</a></p>
+          <p><strong>第三个脆弱环节：红海海底通信电缆，关系全球信息和金融网络。</strong>红海海床也是连接欧洲、中东、非洲和亚洲的重要国际光缆走廊。国际电信联盟（ITU）指出，海底光缆承载全球<strong>99%以上的国际数据流量</strong>。它们不运石油，却传输金融交易、云计算和跨国企业的关键数据。一旦一批电缆损坏，流量可能改道，造成部分地区网络延迟、容量下降和修复成本上升，影响银行、物流、医院与通信服务。但必须注意，<strong>位于风险地区不等于海缆已被伊朗控制，也不能在证据不足时断言任何断缆都是人为攻击</strong>。渔业活动、船锚等意外因素是电缆故障的重要原因。<a href="https://www.itu.int/itu-d/reports/statistics/global-connectivity-report-2025/" target="_blank" rel="noopener">〔ITU全球互联报告〕</a></p>
+          <p>从战略角度看，<strong>霍尔木兹关乎能源，红海与苏伊士关乎贸易，海底光缆关乎数据。</strong>它们并不是伊朗能够随意控制的三个开关，却是伊朗所处地区一旦爆发长期冲突就可能受波及的三类全球命脉。真正的评估，不能只数对方有多少架飞机和多少枚导弹，更必须计算地理、政治韧性、地区合作关系和国际经济的连锁代价。</p>
+          </section>'''
+
+          map_block = r'''<figure id="coco-regional-strategic-map" style="max-width:950px;margin:35px auto;padding:18px;background:#f1f0eb;border:1px solid #d5d3cb;border-radius:10px;box-sizing:border-box">
+          <h2 style="font:500 clamp(22px,4.3vw,36px)/1.35 Georgia,serif;color:#883d3d;text-align:center;margin:5px 0 14px">战略地图｜伊朗、霍尔木兹、红海、曼德海峡与苏伊士</h2>
+          <img src="https://www.eia.gov/international/content/analysis/special_topics/World_Oil_Transit_Chokepoints/images/fig6.png" alt="美国能源信息署地图，涵盖伊朗、伊拉克、波斯湾、霍尔木兹海峡、阿曼湾、红海、曼德海峡、苏伊士运河及埃及" loading="lazy" style="width:100%;max-width:800px;height:auto;object-fit:contain;background:#fff;display:block;margin:auto">
+          <figcaption style="font:13px/1.8 Arial,sans-serif;color:#62635e;margin:12px auto 0;max-width:800px">图源：<a href="https://www.eia.gov/international/content/analysis/special_topics/World_Oil_Transit_Chokepoints/" target="_blank" rel="noopener">美国能源信息署 EIA，Figure 6</a>。图中标示波斯湾—霍尔木兹海峡，以及红海—曼德海峡—苏伊士运河的地理联系。<strong>红海也是重要海底通信电缆通道，但本图不是海缆实际铺设路线图。</strong></figcaption>
+          </figure>'''
+
+          if 'coco-regional-strategic-map' not in article:
+              old = re.search(r'<section class="point" id="question-1">.*?</section>', article, flags=re.S)
+              if not old:
+                  raise RuntimeError('Original question 1 section was not found; article left intact.')
+              article = article[:old.start()] + map_block + '\n' + q1 + article[old.end():]
+              sources_start = '<div class="sources"><h2>资料来源、数据口径与说明</h2><ol>'
+              if sources_start not in article:
+                  raise RuntimeError('Article source section missing; stopped before writing.')
+              expanded_sources = sources_start + '''
+          <li><a href="https://www.cfr.org/articles/islamic-republics-power-centers" target="_blank" rel="noopener">CFR</a>：伊朗政权权力中心与政治机构。</li>
+          <li><a href="https://www.eia.gov/international/content/analysis/special_topics/World_Oil_Transit_Chokepoints/" target="_blank" rel="noopener">美国能源信息署 EIA</a>：霍尔木兹、曼德海峡、苏伊士运河的地理位置及历史能源流量；区域地图 Figure 6。</li>
+          <li><a href="https://www.eia.gov/outlooks/steo/report/energysecurity/article.php" target="_blank" rel="noopener">EIA《Short-Term Energy Outlook》2026年8月</a>：2026年第二季度霍尔木兹石油流量。</li>
+          <li><a href="https://unctad.org/publication/navigating-troubled-waters-impact-global-trade-disruption-shipping-routes-red-sea-black" target="_blank" rel="noopener">UNCTAD</a>：2023年苏伊士运河占全球海运集装箱贸易约22%的估计。</li>
+          <li><a href="https://www.cfr.org/articles/irans-support-houthis-what-know" target="_blank" rel="noopener">CFR</a>：伊朗与也门胡塞武装的联系及其独立性。</li>
+          <li><a href="https://www.itu.int/itu-d/reports/statistics/global-connectivity-report-2025/" target="_blank" rel="noopener">ITU《Global Connectivity Report 2025》</a>：国际海底光缆及数据流量。</li>'''
+              article = article.replace(sources_start, expanded_sources, 1)
+              article_path.write_text(article, encoding='utf-8')
+              print('Article updated: strategic analysis, map, and source citations added.')
+          else:
+              print('Article already contains regional strategic map; no duplicate made.')
+
+          # 2. Put the FULL article directly on the homepage, BEFORE the news,
+          # while leaving the news feed and its scheduler untouched.
+          # It appears as an embedded same-origin article with full-width cover;
+          # resize to content and allow readers to collapse it to get to news.
+          insert_after = '`);document.head.append(style);'
+          frontpage_code = r'''
+           // Weston Life 2026-11-01: make Coco's full article the large first-page feature.
+           if(!document.getElementById('coco-frontpage-2026')){
+             const fc=el('style',`
+               #wl-auto .coco-frontpage-2026{margin:22px auto 35px;max-width:1100px;background:#fffdfa;border-top:6px solid #984446;border-bottom:1px solid #e0d6ce;box-shadow:0 9px 30px rgba(43,29,23,.06);padding:18px 16px 16px}
+               #wl-auto .coco-frontpage-bar{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;color:#864043;font:700 13px/1.6 Arial,sans-serif;letter-spacing:.075em}
+               #wl-auto .coco-frontpage-bar a{font:12px Arial,sans-serif;text-decoration:underline;color:#305743}
+               #wl-auto .coco-frontpage-2026 details{margin-top:10px}
+               #wl-auto .coco-frontpage-2026 summary{cursor:pointer;text-align:right;color:#7f423d;font:13px Arial,sans-serif;list-style:none;padding:6px 0}
+               #wl-auto .coco-frontpage-2026 summary::-webkit-details-marker{display:none}
+               #wl-auto .coco-frontpage-2026 iframe{width:100%;display:block;border:0;background:#faf8f4;min-height:950px;overflow:hidden}
+               #wl-auto .wl-editorial.coco-upgraded{display:none!important}
+               @media(max-width:720px){#wl-auto .coco-frontpage-2026{padding:10px 3px;margin:12px -10px 25px;border-radius:0;box-shadow:none}#wl-auto .coco-frontpage-bar{padding:0 12px}}
+             `);document.head.append(fc);
+             const feature=el('section',`<div class="coco-frontpage-bar"><span>☕ 可可豆子实时评论 · COCO'S COFFEE · 今日头版</span><a href="#coco-news-start">直接看今日新闻 ↓</a></div><details open><summary>点击收起 / 展开《五个不能》完整文章</summary><iframe src="/coco-iran-2026.html" title="五个不能 · 可可豆子完整文章与水彩封面" loading="eager" scrolling="no"></iframe></details>`,'coco-frontpage-2026');
+             feature.id='coco-frontpage-2026';
+             const masthead=panel.querySelector('.wl-masthead');
+             if(masthead)masthead.insertAdjacentElement('afterend',feature);else panel.prepend(feature);
+             const news=panel.querySelector('.wl-breaking')||panel.querySelector('.wl-columns');
+             if(news&&!news.id)news.id='coco-news-start';
+             const frame=feature.querySelector('iframe');
+             const fitFrame=function(){
+               try{
+                 const doc=frame.contentDocument;
+                 if(!doc)return;
+                 const h=Math.max(doc.body?doc.body.scrollHeight:0,doc.documentElement.scrollHeight);
+                 if(h>500&&Math.abs(frame.offsetHeight-h)>12)frame.style.height=h+'px';
+               }catch(err){console.warn('Embedded article height could not be measured:',err);}
+             };
+             frame.addEventListener('load',function(){
+               fitFrame();
+               try{const doc=frame.contentDocument;if(doc&&doc.body&&'ResizeObserver' in window)new ResizeObserver(fitFrame).observe(doc.body);}catch(err){}
+             });
+             window.addEventListener('resize',fitFrame);
+           }
+          '''
+
+          if 'coco-frontpage-2026' not in js:
+              if insert_after not in js:
+                  raise RuntimeError('Expected existing Coco script style marker not found; stopped before writing JS.')
+              js = js.replace(insert_after, insert_after + frontpage_code, 1)
+              js_path.write_text(js, encoding='utf-8')
+              print('Homepage updated: article and large cover appear first; daily news remains below.')
+          else:
+              print('Homepage front-page feature is already present.')
+
+          PY
+      - name: Publish article and homepage changes
+        shell: bash
+        run: |
+          git config user.name 'Weston Life Update Bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add coco-iran-2026.html coco-opinion.js
+          if git diff --cached --quiet; then
+            echo 'Content already up to date.'
+          else
+            git commit -m 'Feature Coco article prominently on homepage; explain Hormuz Red Sea submarine cables'
+            git push origin HEAD:main || (git fetch origin main && git rebase origin/main && git push origin HEAD:main)
+          fi
