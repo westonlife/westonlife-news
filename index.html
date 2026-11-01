@@ -2568,8 +2568,8 @@ html[data-wl-lang="zh"] #wl-school-today .school-en,html[data-wl-lang="en"] #wl-
 <script src="/guandan-jianghu.js" defer></script>
 <!-- Weston Life 浏览计数器 -->
 <div id="wl-counter" style="padding:12px 18px;background:#f5efdf;color:#315c41;font-size:14px;text-align:left;">
-  浏览量：<span id="busuanzi_value_site_pv">加载中…</span> 次
-  ｜人气值：<span id="wl-popularity">加载中…</span>
+<span id="busuanzi_value_site_pv" style="display:none">加载中…</span>
+人气值：<span id="wl-popularity">加载中…</span>
 </div>
 
 <script>
@@ -2584,7 +2584,7 @@ html[data-wl-lang="zh"] #wl-school-today .school-en,html[data-wl-lang="en"] #wl-
     var value = views.textContent.trim();
     if (!/^\d+$/.test(value)) return;
     var count = Number(value);
-    popularity.textContent = (545 + count * 10).toLocaleString();
+popularity.textContent = (545 + 11 * count * (count + 1) / 2).toLocaleString();
   }
 
   new MutationObserver(update).observe(views, {
