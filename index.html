@@ -2918,6 +2918,36 @@ popularity.textContent = (545 + 11 * count * (count + 1) / 2).toLocaleString();
 </script>
 <script>document.getElementById("busuanzi_value_site_pv").id="busuanzi_site_pv";</script>
 <script defer src="https://cdn.busuanzi.cc/busuanzi/3.6.9/busuanzi.min.js"></script>
+<!-- WESTON-HALLOWEEN-2026-START -->
+<style>
+#wl-auto #wl-halloween-pin{border-left:5px solid #d4753c; background:#fff0e3; border-radius:8px;box-shadow:0 3px 14px rgba(89,46,17,.08)}
+#wl-auto #wl-halloween-pin:hover{background:#ffe8d4}
+#wl-auto #wl-halloween-pin .wl-index{color:#a2512b;font-weight:900}
+#wl-auto #wl-halloween-pin .wl-source{color:#a35b2f}
+</style>
+<script>
+(function(){
+  if(Date.now()>=Date.parse('2026-11-08T05:00:00Z')) return;
+  function insertHalloween(){
+    var col=document.querySelector('#wl-auto .wl-columns > div:first-child');
+    if(!col || document.getElementById('wl-halloween-pin'))return;
+    var heading=col.querySelector('.wl-column-title');
+    if(!heading)return;
+    var item=document.createElement('a');
+    item.id='wl-halloween-pin';item.className='wl-story';item.href='halloween-2026.html';
+    item.setAttribute('aria-label','Weston 糖王一家 点亮社区万圣节之夜');
+    item.innerHTML='<span class="wl-index">01</span><div class="wl-photo"><img src="assets/halloween-2026/house.jpg" loading="lazy" alt="万圣节现场真实摄影"></div><div class="wl-copy"><strong>Weston“糖王一家”点亮了整个社区的万圣节之夜</strong><span class="wl-en">The “Candy King” Family Lights Up Halloween for the Weston-Area Community</span><span class="wl-source">Weston Life · 2026-11-01 · Wellesley Hills</span></div>';
+    heading.insertAdjacentElement('afterend',item);
+    var stories=Array.prototype.filter.call(col.children,function(el){return el.classList.contains('wl-story')});
+    stories.forEach(function(story,i){
+      if(i>=5){story.style.display='none';return;}
+      var badge=story.querySelector('.wl-index');if(badge)badge.textContent=String(i+1).padStart(2,'0');
+    });
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',insertHalloween)}else{insertHalloween()}
+})();
+</script>
+<!-- WESTON-HALLOWEEN-2026-END -->
 </body>
 </html>
 
