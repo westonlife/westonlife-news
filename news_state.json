@@ -36,9 +36,9 @@
       "summary": {
         "id": 2,
         "zh_title": "美联储在高通胀下维持利率不变",
-        "zh_summary": "美联储在高通胀的情况下选择维持基准利率不变。",
+        "zh_summary": "美联储在高通胀的情况下决定维持利率不变。",
         "en_title": "Federal Reserve keeps rates unchanged despite elevated inflation",
-        "en_summary": "The Fed opted to leave its benchmark interest rate unchanged despite elevated inflation."
+        "en_summary": "The Fed decided to keep rates unchanged despite elevated inflation."
       }
     },
     "3": {
@@ -75,8 +75,8 @@
       },
       "summary": {
         "id": 4,
-        "zh_title": "马萨诸塞州的年轻选民投票情况不佳，原因在这里",
-        "zh_summary": "马萨诸塞州在2022年选民注册人数方面落后于其他州。",
+        "zh_title": "马萨诸塞州的年轻选民投票面临困境",
+        "zh_summary": "马萨诸塞州在2022年选民登记数字方面落后于其他州。",
         "en_title": "The youth vote in Massachusetts is struggling. Here’s why.",
         "en_summary": "Massachusetts is among the states furthest behind its 2022 voter registration numbers."
       }
@@ -104,6 +104,26 @@
     "6": {
       "topic": "World News / Global",
       "article": {
+        "title": "Here are 3 big things we're watching in the stock market in the week ahead",
+        "description": "The market could use a few victories in the days ahead, which will be filled with more earnings, an election, and jobs data.",
+        "url": "https://www.cnbc.com/investingclub/2026/11/01/3-big-things-were-watching-in-the-stock-market-this-week.html",
+        "source": "CNBC",
+        "published": "2026-11-01T18:12:05+00:00",
+        "image": "assets/news/50703bdba2e8c0be39b1ffa7.jpg",
+        "placeholder": false,
+        "topic": "World News / Global"
+      },
+      "summary": {
+        "id": 6,
+        "zh_title": "我们关注的下周股市三大重要事项",
+        "zh_summary": "市场在接下来的日子里需要一些胜利，届时将有更多的财报、选举和就业数据发布。",
+        "en_title": "Here are 3 big things we're watching in the stock market in the week ahead",
+        "en_summary": "The market could use a few victories in the days ahead, which will be filled with more earnings, an election, and jobs data."
+      }
+    },
+    "7": {
+      "topic": "World News / Global",
+      "article": {
         "title": "Cramer’s week ahead: Expect more volatility as tech earnings, midterms loom",
         "description": "Investors await earnings from Apple, AMD, and other major companies, as well as the midterm elections and the monthly jobs report.",
         "url": "https://www.cnbc.com/2026/10/30/jim-cramer-week-ahead-apple-amd-jobs-report.html",
@@ -114,54 +134,14 @@
         "topic": "World News / Global"
       },
       "summary": {
-        "id": 6,
+        "id": 7,
         "zh_title": "克拉默的下周展望：预计科技财报和中期选举将带来更多波动",
-        "zh_summary": "投资者期待苹果、AMD等主要公司的财报，以及中期选举和每月就业报告。",
+        "zh_summary": "投资者在等待苹果、AMD等主要公司的财报，以及中期选举和每月就业报告。",
         "en_title": "Cramer’s week ahead: Expect more volatility as tech earnings, midterms loom",
         "en_summary": "Investors await earnings from Apple, AMD, and other major companies, as well as the midterm elections and the monthly jobs report."
       }
     },
-    "7": {
-      "topic": "World News / Global",
-      "article": {
-        "title": "Anthropic's path to the Nasdaq just got a lot bumpier",
-        "description": "Concerning projections from hyperscalers this week punished tech stocks and pushed the Nasdaq to its first three-week losing streak since March.",
-        "url": "https://www.cnbc.com/2026/10/31/anthropic-ipo-ai-spending.html",
-        "source": "CNBC",
-        "published": "2026-10-31T11:00:01+00:00",
-        "image": "assets/news/b4ea8c5a16d151ab83fac408.jpg",
-        "placeholder": false,
-        "topic": "World News / Global"
-      },
-      "summary": {
-        "id": 7,
-        "zh_title": "Anthropic通往纳斯达克的道路变得更加坎坷",
-        "zh_summary": "本周来自超大规模公司的不利预测打击了科技股，使纳斯达克出现自三月以来的首次三周连跌。",
-        "en_title": "Anthropic's path to the Nasdaq just got a lot bumpier",
-        "en_summary": "Concerning projections from hyperscalers this week punished tech stocks and pushed the Nasdaq to its first three-week losing streak since March."
-      }
-    },
     "8": {
-      "topic": "World News / Global",
-      "article": {
-        "title": "Fed holds interest rates steady even as inflation remains stubborn",
-        "description": "The Federal Reserve opted to leave its benchmark interest rate unchanged  — but investors widely expect the central bank to raise rates at its next meeting in December to combat stubborn inflation.",
-        "url": "https://www.npr.org/2026/10/28/nx-s1-6020425/federal-reserve-interest-rates-inflation",
-        "source": "NPR",
-        "published": "2026-10-28T18:04:42Z",
-        "image": "assets/news/56954906dc5117ab94a5e8e0.webp",
-        "placeholder": false,
-        "topic": "World News / Global"
-      },
-      "summary": {
-        "id": 8,
-        "zh_title": "美联储在通胀顽固的情况下保持利率稳定",
-        "zh_summary": "美联储选择维持基准利率不变，但投资者普遍预计中央银行将在12月的下一次会议上提高利率以应对顽固的通胀。",
-        "en_title": "Fed holds interest rates steady even as inflation remains stubborn",
-        "en_summary": "The Federal Reserve opted to leave its benchmark interest rate unchanged — but investors widely expect the central bank to raise rates at its next meeting in December to combat stubborn inflation."
-      }
-    },
-    "9": {
       "topic": "World News / Global",
       "article": {
         "title": "Supreme Court hears religious freedom case centered on universal pre-K program",
@@ -174,14 +154,14 @@
         "topic": "World News / Global"
       },
       "summary": {
-        "id": 9,
-        "zh_title": "最高法院审理以普及学前教育项目为中心的宗教自由案件",
-        "zh_summary": "丹佛大主教区希望能够拒绝接受州资金的天主教幼儿园中的LGBTQ家庭。",
+        "id": 8,
+        "zh_title": "最高法院审理以宗教自由为中心的普遍学前教育项目案件",
+        "zh_summary": "丹佛大主教区希望能够拒绝接受州资助的天主教幼儿园中的LGBTQ家庭。",
         "en_title": "Supreme Court hears religious freedom case centered on universal pre-K program",
         "en_summary": "The Archdiocese of Denver wants to be able to turn away LGBTQ families from Catholic preschools that receive state funding."
       }
     },
-    "10": {
+    "9": {
       "topic": "World News / Global",
       "article": {
         "title": "Trump thanks supporters for the memories in final campaign stops for 2026 midterms",
@@ -194,14 +174,14 @@
         "topic": "World News / Global"
       },
       "summary": {
-        "id": 10,
+        "id": 9,
         "zh_title": "特朗普在2026年中期选举的最后竞选活动中感谢支持者",
-        "zh_summary": "特朗普总统在选举日临近之际保持近乎每日的集会日程，为忠实的红州人群演奏他的经典曲目，算是一种告别竞选。",
+        "zh_summary": "特朗普总统在选举日临近时保持近乎每日的集会日程，为忠实的红州人群演绎他的经典曲目，算是一种告别竞选。",
         "en_title": "Trump thanks supporters for the memories in final campaign stops for 2026 midterms",
         "en_summary": "President Trump has maintained a near-daily rally schedule as Election Day draws closer, playing his greatest hits for loyal crowds in red states in what is a sort-of goodbye to campaigning."
       }
     },
-    "11": {
+    "10": {
       "topic": "World News / Global",
       "article": {
         "title": "Rivals in Israel Election Strike Tone of Triumph, but Outcome Is Far From Clear",
@@ -214,9 +194,9 @@
         "topic": "World News / Global"
       },
       "summary": {
-        "id": 11,
-        "zh_title": "以色列选举中的对手们发出胜利的语气，但结果仍不明朗",
-        "zh_summary": "内塔尼亚胡总理和反对党领袖加迪·艾森科特在午夜后向支持者发表讲话，均表示对领导以色列下届政府充满信心，计票可能需要几天。",
+        "id": 10,
+        "zh_title": "以色列选举中的对手们发出胜利的语气，但结果尚不明朗",
+        "zh_summary": "内塔尼亚胡总理和反对派领袖加迪·艾森科特在午夜后向支持者发表讲话，均表示对领导以色列下届政府充满信心，计票可能需要几天。",
         "en_title": "Rivals in Israel Election Strike Tone of Triumph, but Outcome Is Far From Clear",
         "en_summary": "Addressing supporters after midnight, Prime Minister Benjamin Netanyahu and Gadi Eisenkot, who leads a bloc of opposition parties, both expressed confidence that they will lead Israel’s next government."
       }
