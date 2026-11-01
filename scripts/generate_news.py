@@ -1300,7 +1300,7 @@ def homepage_panel(groups, summaries, date, filename):
     panel = _original_homepage_panel_editorial(groups, summaries, date, filename)
     local_count = len(groups[0][1])
     world = groups[1][1]
-    featured = sorted(enumerate(world), key=lambda p: _editorial_score(p[1]), reverse=True)[:3]
+    featured = sorted(enumerate(world), key=lambda p: (str(p[1].get('published', ''))[:10], _editorial_score(p[1])), reverse=True)[:3]
     if not featured:
         return panel
     cards = []
