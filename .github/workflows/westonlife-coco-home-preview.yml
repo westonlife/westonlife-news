@@ -1,0 +1,85 @@
+name: Weston Life - restore Coco homepage preview
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/westonlife-coco-home-preview.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  restore-homepage-preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out website
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Remove full-page embed and enlarge cover
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          path = Path('coco-opinion.js')
+          if not path.exists():
+              raise RuntimeError('Missing coco-opinion.js in repository root.')
+
+          source = path.read_text(encoding='utf-8')
+          result = source
+
+          # The Nov 1 addition embeds the entire Iran article in an iframe.
+          # Remove only this block, not the separate article or the news feed.
+          start_marker = "// Weston Life 2026-11-01: make Coco's full article the large first-page feature."
+          end_marker = '// 1. Replace out-of-date notice on the 2026-10-24 edition only.'
+          if start_marker in result:
+              start = result.rfind('\n', 0, result.index(start_marker)) + 1
+              end = result.rfind('\n', 0, result.index(end_marker)) + 1
+              if not (0 <= start < end):
+                  raise RuntimeError('Cannot safely identify the full-article embed block.')
+              result = (result[:start]
+                        + ' // Homepage displays the article preview; click to read the full piece.\n'
+                        + result[end:])
+          elif 'coco-frontpage-2026' in result:
+              raise RuntimeError('Unexpected homepage embed syntax; no changes made.')
+
+          # The older generic image selector overrides the small-screen cover.
+          # Use a more specific selector, full width, and uncropped proportions.
+          old_style = ('#wl-auto .coco-cover{display:block;width:100%;height:auto;'
+                       'max-height:none;aspect-ratio:16/9;object-fit:cover;border-radius:8px}')
+          new_style = ('#wl-auto .wl-editorial.coco-upgraded img.coco-cover{display:block;'
+                       'width:100%;height:auto;max-height:none;aspect-ratio:auto;'
+                       'object-fit:contain;border-radius:8px}')
+          if old_style in result:
+              result = result.replace(old_style, new_style, 1)
+          elif new_style not in result:
+              raise RuntimeError('Cannot find the cover image CSS selector; no changes made.')
+
+          if 'href="/coco-iran-2026.html"' not in result:
+              raise RuntimeError('Full-article link missing, refusing to modify site.')
+          if '<iframe src="/coco-iran-2026.html"' in result:
+              raise RuntimeError('Full-page iframe still exists, refusing to modify site.')
+          if 'const editorial=panel.querySelector' not in result:
+              raise RuntimeError('Homepage article preview missing, refusing to modify site.')
+
+          if result != source:
+              path.write_text(result, encoding='utf-8')
+              print('Fixed: homepage shows large clickable cover, title, and teaser.')
+          else:
+              print('Homepage preview already fixed. Nothing to change.')
+          PY
+      - name: Commit website fix
+        shell: bash
+        run: |
+          git config user.name 'Weston Life Update Bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add coco-opinion.js
+          if git diff --cached --quiet; then
+            echo 'No source change needed.'
+          else
+            git commit -m 'Show Coco cover and summary on homepage, not full embedded article'
+            git push origin HEAD:main
+          fi
