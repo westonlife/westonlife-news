@@ -36,7 +36,7 @@
       "summary": {
         "id": 2,
         "zh_title": "美联储在高通胀下维持利率不变",
-        "zh_summary": "美联储决定在高通胀的情况下维持利率不变。",
+        "zh_summary": "美联储在高通胀的情况下决定维持利率不变。",
         "en_title": "Federal Reserve keeps rates unchanged despite elevated inflation",
         "en_summary": "The Federal Reserve decided to keep interest rates unchanged despite elevated inflation."
       }
@@ -78,7 +78,7 @@
         "zh_title": "马萨诸塞州的年轻选民投票情况不佳，原因何在？",
         "zh_summary": "马萨诸塞州的选民登记人数远低于2022年的水平。",
         "en_title": "The youth vote in Massachusetts is struggling. Here’s why.",
-        "en_summary": "Massachusetts is lagging behind its 2022 voter registration numbers."
+        "en_summary": "Massachusetts is lagging behind its 2022 voter registration numbers among young voters."
       }
     },
     "5": {
@@ -98,7 +98,7 @@
         "zh_title": "俄罗斯袭击使乌克兰城市陷入停电，泽连斯基警告更多导弹攻击",
         "zh_summary": "俄罗斯的袭击导致第聂伯市大规模停电，同时乌克兰的无人机攻击引发了俄罗斯石油精炼厂的火灾。",
         "en_title": "Russian strikes plunge Ukrainian city into blackout as Zelenskyy warns of more missile attacks",
-        "en_summary": "Russian strikes caused major power outages in Dnipro as a reported Ukrainian drone attack sparked a fire at a Russian oil refinery."
+        "en_summary": "Russian strikes caused major power outages in Dnipro, while a reported Ukrainian drone attack sparked a fire at a Russian oil refinery."
       }
     },
     "6": {
@@ -135,8 +135,8 @@
       },
       "summary": {
         "id": 7,
-        "zh_title": "安索菲克通往纳斯达克的道路变得更加坎坷",
-        "zh_summary": "本周来自超大规模云计算公司的不利预测打击了科技股，使纳斯达克出现自三月以来的首次三周连跌。",
+        "zh_title": "Anthropic通往纳斯达克的道路变得更加坎坷",
+        "zh_summary": "本周来自超大规模公司的不利预测打击了科技股，使纳斯达克出现自三月以来的首次三周连跌。",
         "en_title": "Anthropic's path to the Nasdaq just got a lot bumpier",
         "en_summary": "Concerning projections from hyperscalers this week punished tech stocks and pushed the Nasdaq to its first three-week losing streak since March."
       }
@@ -178,7 +178,7 @@
         "zh_title": "混合经济预测在中期选举前施加压力",
         "zh_summary": "本周的经济新闻喜忧参半，GDP增长上升，但价格也在上涨，利率暂时保持不变，这对中期选举意味着什么？",
         "en_title": "Mixed economic forecast weighs heavy ahead of midterms",
-        "en_summary": "There was a mixed bag of economic news this week, with GDP growth up but prices rising, leaving uncertainty ahead of the midterm elections."
+        "en_summary": "This week's economic news was mixed, with GDP growth up but prices rising, leaving questions about implications for the midterm elections."
       }
     },
     "10": {
@@ -195,7 +195,7 @@
       },
       "summary": {
         "id": 10,
-        "zh_title": "以色列选举中的对手们发出胜利的语调，但结果尚不明朗",
+        "zh_title": "以色列选举中的对手们发出胜利的语气，但结果尚不明朗",
         "zh_summary": "内塔尼亚胡总理和反对派领袖加迪·艾森科特在午夜后向支持者发表讲话，均表示对领导以色列下届政府充满信心，计票可能需要几天。",
         "en_title": "Rivals in Israel Election Strike Tone of Triumph, but Outcome Is Far From Clear",
         "en_summary": "Prime Minister Benjamin Netanyahu and opposition leader Gadi Eisenkot expressed confidence in leading Israel's next government, but vote counting could take days."
@@ -216,7 +216,7 @@
       "summary": {
         "id": 11,
         "zh_title": "无人机摄影奖获奖作品：奇妙的风景、船舶回收、地毯等！",
-        "zh_summary": "2026年锡耶纳无人机摄影奖展示了我们星球的壮丽鸟瞰图，揭示了从地面上常常看不见的风景、生活和人类故事。",
+        "zh_summary": "2026年锡耶纳无人机摄影奖展示了我们星球的壮丽鸟瞰图，揭示了从地面上往往看不见的风景、生活和人类故事。",
         "en_title": "Drone photo award winners: Far-out landscapes. Ship recycling. Rugs, rugs rugs!",
         "en_summary": "The Siena Drone Photo Awards for 2026 offer breathtaking bird's-eye views of our planet, revealing landscapes, livelihoods, and human stories often invisible from the ground."
       }
@@ -236,7 +236,7 @@
       "summary": {
         "id": 12,
         "zh_title": "奥列什基：俄罗斯占领城市的停火情况如何？",
-        "zh_summary": "乌克兰记者丹·约翰逊解释了在被摧毁的奥列什基镇的临时停火情况。",
+        "zh_summary": "乌克兰记者丹·约翰逊解释了在被毁坏的奥列什基镇的临时停火情况。",
         "en_title": "Oleshky: How is the ceasefire in the Russian-occupied city going?",
         "en_summary": "Ukraine correspondent Dan Johnson explains the temporary ceasefire in the devastated town of Oleshky."
       }
