@@ -38,7 +38,7 @@
         "zh_title": "美联储在高通胀下维持利率不变",
         "zh_summary": "美联储决定在高通胀的情况下保持利率不变。",
         "en_title": "Federal Reserve keeps rates unchanged despite elevated inflation",
-        "en_summary": "The Federal Reserve has decided to keep interest rates unchanged despite elevated inflation."
+        "en_summary": "The Federal Reserve has decided to keep interest rates unchanged despite high inflation."
       }
     },
     "3": {
@@ -56,9 +56,9 @@
       "summary": {
         "id": 3,
         "zh_title": "伊朗战争如何提高美国购房者的抵押贷款成本",
-        "zh_summary": "由于美联储决定维持利率不变，抵押贷款利率仍高于7%。",
+        "zh_summary": "美国购房者面临更高的月供，因为抵押贷款利率仍高于7%。",
         "en_title": "How the Iran war is raising mortgage costs for US homebuyers",
-        "en_summary": "The Federal Reserve's decision to keep interest rates unchanged has left mortgage rates above 7%."
+        "en_summary": "The Iran war is contributing to higher mortgage costs for US homebuyers, with rates above 7%."
       }
     },
     "4": {
@@ -75,10 +75,10 @@
       },
       "summary": {
         "id": 4,
-        "zh_title": "马萨诸塞州的年轻选民投票情况不佳，原因何在",
-        "zh_summary": "马萨诸塞州的选民登记人数远低于2022年的水平。",
+        "zh_title": "马萨诸塞州的年轻选民投票情况不佳，原因何在？",
+        "zh_summary": "马萨诸塞州的年轻选民登记人数远低于2022年的水平。",
         "en_title": "The youth vote in Massachusetts is struggling. Here’s why.",
-        "en_summary": "Massachusetts is lagging behind its 2022 voter registration numbers."
+        "en_summary": "The youth vote in Massachusetts is struggling, with registration numbers lagging behind 2022."
       }
     },
     "5": {
@@ -98,7 +98,7 @@
         "zh_title": "俄罗斯袭击使乌克兰城市陷入停电，泽连斯基警告更多导弹攻击",
         "zh_summary": "俄罗斯的袭击导致第聂伯市大规模停电。",
         "en_title": "Russian strikes plunge Ukrainian city into blackout as Zelenskyy warns of more missile attacks",
-        "en_summary": "Russian strikes have caused major power outages in Dnipro."
+        "en_summary": "Russian strikes have caused major power outages in Dnipro, with warnings of more missile attacks."
       }
     },
     "6": {
@@ -116,9 +116,9 @@
       "summary": {
         "id": 6,
         "zh_title": "克莱默的下周展望：预计科技财报和中期选举将带来更多波动",
-        "zh_summary": "投资者期待苹果、AMD等公司的财报，以及中期选举和每月就业报告。",
+        "zh_summary": "投资者期待苹果、AMD等公司的财报以及中期选举和月度就业报告。",
         "en_title": "Cramer’s week ahead: Expect more volatility as tech earnings, midterms loom",
-        "en_summary": "Investors are awaiting earnings reports from major companies and the midterm elections."
+        "en_summary": "Investors are anticipating earnings reports from major tech companies and the upcoming midterm elections."
       }
     },
     "7": {
@@ -136,9 +136,9 @@
       "summary": {
         "id": 7,
         "zh_title": "Anthropic通往纳斯达克的道路变得更加坎坷",
-        "zh_summary": "来自超大规模公司的不利预测打击了科技股。",
+        "zh_summary": "来自超大规模公司的不利预测打击了科技股，导致纳斯达克出现三周以来的首次下跌。",
         "en_title": "Anthropic's path to the Nasdaq just got a lot bumpier",
-        "en_summary": "Concerning projections from hyperscalers have negatively impacted tech stocks."
+        "en_summary": "Negative projections from hyperscalers have impacted tech stocks, leading to a losing streak for the Nasdaq."
       }
     },
     "8": {
@@ -155,10 +155,10 @@
       },
       "summary": {
         "id": 8,
-        "zh_title": "美联储在通胀顽固的情况下保持利率稳定",
-        "zh_summary": "美联储选择维持基准利率不变，但投资者预计将在下次会议上加息。",
+        "zh_title": "美联储在通胀顽固的情况下维持利率稳定",
+        "zh_summary": "美联储选择保持基准利率不变，但投资者普遍预计将在下次会议上加息。",
         "en_title": "Fed holds interest rates steady even as inflation remains stubborn",
-        "en_summary": "The Federal Reserve has opted to keep interest rates steady despite persistent inflation."
+        "en_summary": "The Federal Reserve has kept interest rates steady, but investors expect a rate hike in December."
       }
     },
     "9": {
@@ -176,9 +176,9 @@
       "summary": {
         "id": 9,
         "zh_title": "混合经济预测在中期选举前施加压力",
-        "zh_summary": "本周的经济新闻喜忧参半，GDP增长上升，但价格也在上涨。",
+        "zh_summary": "本周经济新闻喜忧参半，GDP增长上升，但价格也在上涨。",
         "en_title": "Mixed economic forecast weighs heavy ahead of midterms",
-        "en_summary": "This week's economic news presents a mixed bag ahead of the midterm elections."
+        "en_summary": "The mixed economic news this week presents challenges ahead of the midterm elections."
       }
     },
     "10": {
@@ -195,10 +195,10 @@
       },
       "summary": {
         "id": 10,
-        "zh_title": "以色列选举中的对手们表达胜利的语气，但结果尚不明朗",
-        "zh_summary": "内塔尼亚胡和反对派领导人都对领导以色列下届政府表示信心。",
+        "zh_title": "以色列选举中的对手们发出胜利的语气，但结果尚不明朗",
+        "zh_summary": "内塔尼亚胡和反对派领袖加迪·艾森科特在午夜后对支持者表示信心。",
         "en_title": "Rivals in Israel Election Strike Tone of Triumph, but Outcome Is Far From Clear",
-        "en_summary": "Both Prime Minister Netanyahu and opposition leader Gadi Eisenkot express confidence in leading the next government."
+        "en_summary": "Both Prime Minister Netanyahu and opposition leader Gadi Eisenkot express confidence in leading Israel's next government."
       }
     },
     "11": {
@@ -218,7 +218,7 @@
         "zh_title": "无人机摄影奖获奖作品：奇妙的风景、船舶回收、地毯等！",
         "zh_summary": "2026年锡耶纳无人机摄影奖展示了地球的壮丽鸟瞰图。",
         "en_title": "Drone photo award winners: Far-out landscapes. Ship recycling. Rugs, rugs rugs!",
-        "en_summary": "The Siena Drone Photo Awards for 2026 feature breathtaking aerial views of our planet."
+        "en_summary": "The Siena Drone Photo Awards for 2026 feature stunning aerial views of landscapes and human stories."
       }
     },
     "12": {
@@ -235,8 +235,8 @@
       },
       "summary": {
         "id": 12,
-        "zh_title": "奥列什基：俄罗斯占领城市的停火情况如何？",
-        "zh_summary": "乌克兰记者丹·约翰逊解释了奥列什基的临时停火情况。",
+        "zh_title": "俄占城市的停火情况如何？",
+        "zh_summary": "乌克兰记者丹·约翰逊解释了在被毁坏的奥列什基镇的临时停火情况。",
         "en_title": "Oleshky: How is the ceasefire in the Russian-occupied city going?",
         "en_summary": "Dan Johnson discusses the temporary ceasefire in the devastated town of Oleshky."
       }
