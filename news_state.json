@@ -4,21 +4,21 @@
     "1": {
       "topic": "Weston / Boston / Massachusetts",
       "article": {
-        "title": "We Halloweened so you don’t have to",
-        "description": "This week we have the view from Salem, a world record jack-o'-lantern, and a \"clown-ter\" protest. The post We Halloweened so you don’t have to appeared first on Boston.com .",
-        "url": "https://www.boston.com/community/off-beat/2026/10/31/we-halloweened-so-you-dont-have-to/",
+        "title": "The best costumes we saw at Salem Halloween",
+        "description": "From Disney references to historical characters, Halloween revelers brought their best costumes to Witch City. The post The best costumes we saw at Salem Halloween appeared first on Boston.com .",
+        "url": "https://www.boston.com/community/local-news/2026/10/31/the-best-costumes-we-saw-at-salem-halloween/",
         "source": "Boston.com",
-        "published": "2026-10-31T16:58:38+00:00",
-        "image": "assets/news/329712c8e19a80ef0a671375.webp",
+        "published": "2026-11-01T00:16:24+00:00",
+        "image": "assets/news/94e0d4d9765bd620b0912de1.webp",
         "placeholder": false,
         "topic": "Weston / Boston / Massachusetts"
       },
       "summary": {
         "id": 1,
-        "zh_title": "我们为你们庆祝万圣节",
-        "zh_summary": "本周我们从塞勒姆带来视角，展示了世界纪录的南瓜灯和“小丑抗议”事件。",
-        "en_title": "We Halloweened so you don’t have to",
-        "en_summary": "This week we have the view from Salem, a world record jack-o'-lantern, and a 'clown-ter' protest."
+        "zh_title": "我们在塞勒姆万圣节看到的最佳服装",
+        "zh_summary": "万圣节庆祝者在女巫城展示了他们最好的服装，从迪士尼角色到历史人物。",
+        "en_title": "The best costumes we saw at Salem Halloween",
+        "en_summary": "Halloween revelers brought their best costumes to Witch City, from Disney references to historical characters."
       }
     },
     "2": {
@@ -35,10 +35,10 @@
       },
       "summary": {
         "id": 2,
-        "zh_title": "美联储维持利率不变，尽管通胀高企",
-        "zh_summary": "美联储上个月首次在三年内提高基准利率，尽管特朗普总统要求降息。",
+        "zh_title": "美联储在高通胀下维持利率不变",
+        "zh_summary": "美联储在努力将通胀率恢复到2%目标的过程中，决定维持基准利率不变。",
         "en_title": "Federal Reserve keeps rates unchanged despite elevated inflation",
-        "en_summary": "The Fed raised its benchmark rate last month for the first time in three years, defying President Donald Trump’s demands for rate cuts."
+        "en_summary": "The Fed decided to keep its benchmark rate unchanged in an effort to get inflation back to its 2% target."
       }
     },
     "3": {
@@ -56,9 +56,9 @@
       "summary": {
         "id": 3,
         "zh_title": "伊朗战争如何提高美国购房者的抵押贷款成本",
-        "zh_summary": "美联储决定维持利率不变，导致抵押贷款利率超过7%，购房者面临更高的月供。",
+        "zh_summary": "美联储决定维持利率不变，导致抵押贷款利率超过7%，购房者面临更高的月供成本。",
         "en_title": "How the Iran war is raising mortgage costs for US homebuyers",
-        "en_summary": "The Federal Reserve decided Wednesday to keep interest rates unchanged, leaving mortgage rates above 7% and homebuyers facing higher monthly costs."
+        "en_summary": "The Federal Reserve's decision to keep interest rates unchanged has left mortgage rates above 7%, increasing costs for homebuyers."
       }
     },
     "4": {
@@ -75,8 +75,8 @@
       },
       "summary": {
         "id": 4,
-        "zh_title": "马萨诸塞州的青年投票面临困境，原因在这里",
-        "zh_summary": "马萨诸塞州在2022年选民注册数字上落后于其他州。",
+        "zh_title": "马萨诸塞州的青年投票面临困境",
+        "zh_summary": "马萨诸塞州在2022年的选民登记数字上落后，青年投票情况不容乐观。",
         "en_title": "The youth vote in Massachusetts is struggling. Here’s why.",
         "en_summary": "Massachusetts is among the states furthest behind its 2022 voter registration numbers."
       }
@@ -96,7 +96,7 @@
       "summary": {
         "id": 5,
         "zh_title": "俄罗斯袭击使乌克兰城市陷入停电，泽连斯基警告更多导弹攻击",
-        "zh_summary": "俄罗斯的袭击导致第聂伯市大规模停电，同时乌克兰无人机攻击引发俄罗斯石油精炼厂火灾。",
+        "zh_summary": "俄罗斯的袭击导致第聂伯市大规模停电，同时乌克兰的无人机攻击引发了俄罗斯石油精炼厂的火灾。",
         "en_title": "Russian strikes plunge Ukrainian city into blackout as Zelenskyy warns of more missile attacks",
         "en_summary": "Russian strikes caused major power outages in Dnipro as a reported Ukrainian drone attack sparked a fire at a Russian oil refinery."
       }
@@ -136,7 +136,7 @@
       "summary": {
         "id": 7,
         "zh_title": "Anthropic通往纳斯达克的道路变得更加坎坷",
-        "zh_summary": "本周来自超大规模公司的令人担忧的预测打击了科技股，使纳斯达克出现自三月以来的首次三周连跌。",
+        "zh_summary": "本周来自超大规模公司的不利预测打击了科技股，使纳斯达克出现自三月以来的首次三周连跌。",
         "en_title": "Anthropic's path to the Nasdaq just got a lot bumpier",
         "en_summary": "Concerning projections from hyperscalers this week punished tech stocks and pushed the Nasdaq to its first three-week losing streak since March."
       }
@@ -158,7 +158,7 @@
         "zh_title": "美联储在通胀顽固的情况下维持利率稳定",
         "zh_summary": "美联储选择维持基准利率不变，但投资者普遍预计中央银行将在12月的下一次会议上提高利率以应对顽固的通胀。",
         "en_title": "Fed holds interest rates steady even as inflation remains stubborn",
-        "en_summary": "The Federal Reserve opted to leave its benchmark interest rate unchanged — but investors widely expect the central bank to raise rates at its next meeting in December."
+        "en_summary": "The Federal Reserve opted to leave its benchmark interest rate unchanged, but investors widely expect a rate hike at the next meeting in December."
       }
     },
     "9": {
@@ -175,10 +175,10 @@
       },
       "summary": {
         "id": 9,
-        "zh_title": "中期选举前经济预测混合，压力沉重",
-        "zh_summary": "本周的经济新闻喜忧参半，GDP增长上升，但价格也在上涨，目前利率保持不变，这对中期选举意味着什么？",
+        "zh_title": "混合经济预测在中期选举前施加压力",
+        "zh_summary": "本周的经济新闻喜忧参半，GDP增长上升，但价格也在上涨，利率暂时保持不变。",
         "en_title": "Mixed economic forecast weighs heavy ahead of midterms",
-        "en_summary": "There was a mixed Halloween bag of economic news this week. GDP growth is up, but so are prices."
+        "en_summary": "There was a mixed Halloween bag of economic news this week, with GDP growth up but prices also rising."
       }
     },
     "10": {
@@ -196,9 +196,9 @@
       "summary": {
         "id": 10,
         "zh_title": "以色列选举中的对手们发出胜利的语气，但结果尚不明朗",
-        "zh_summary": "内塔尼亚胡总理和反对派领袖加迪·艾森科特在午夜后向支持者发表讲话，均表示有信心将领导以色列下届政府。",
+        "zh_summary": "内塔尼亚胡总理和反对派领袖加迪·艾森科特在午夜后向支持者发表讲话，均表示对领导以色列下届政府充满信心。",
         "en_title": "Rivals in Israel Election Strike Tone of Triumph, but Outcome Is Far From Clear",
-        "en_summary": "Addressing supporters after midnight, Prime Minister Benjamin Netanyahu and Gadi Eisenkot, who leads a bloc of opposition parties, both expressed confidence that they will lead Israel’s next government."
+        "en_summary": "Prime Minister Benjamin Netanyahu and opposition leader Gadi Eisenkot expressed confidence in leading Israel’s next government."
       }
     },
     "11": {
@@ -215,10 +215,30 @@
       },
       "summary": {
         "id": 11,
-        "zh_title": "无人机摄影奖获奖作品：奇异的风景、船舶回收、地毯等！",
-        "zh_summary": "2026年锡耶纳无人机摄影奖展示了我们星球的惊人鸟瞰图，揭示了从地面上常常看不见的风景、生活和人类故事。",
+        "zh_title": "无人机摄影奖获奖作品：奇特的风景、船舶回收、地毯等！",
+        "zh_summary": "2026年锡耶纳无人机摄影奖展示了我们星球的壮丽鸟瞰图，揭示了从地面上常常看不见的风景和人类故事。",
         "en_title": "Drone photo award winners: Far-out landscapes. Ship recycling. Rugs, rugs rugs!",
-        "en_summary": "The Siena Drone Photo Awards for 2026 offer breathtaking bird's-eye views of our planet, revealing landscapes, livelihoods and human stories often invisible from the ground."
+        "en_summary": "The Siena Drone Photo Awards for 2026 offer breathtaking bird's-eye views of our planet, revealing often invisible landscapes and human stories."
+      }
+    },
+    "12": {
+      "topic": "World News / Global",
+      "article": {
+        "title": "Oleshky: How is the ceasefire in the Russian-occupied city going?",
+        "description": "Ukraine correspondent Dan Johnson explains the temporary ceasefire in the devastated town of Oleshky.",
+        "url": "https://www.bbc.com/news/videos/cmp3gp2vg078o",
+        "source": "BBC News",
+        "published": "2026-10-30T23:22:11Z",
+        "image": "assets/news/ec8b64029b2c1656e227763a.jpg",
+        "placeholder": false,
+        "topic": "World News / Global"
+      },
+      "summary": {
+        "id": 12,
+        "zh_title": "奥列什基：俄罗斯占领城市的停火情况如何？",
+        "zh_summary": "乌克兰记者丹·约翰逊解释了在被毁坏的奥列什基镇的临时停火情况。",
+        "en_title": "Oleshky: How is the ceasefire in the Russian-occupied city going?",
+        "en_summary": "Ukraine correspondent Dan Johnson explains the temporary ceasefire in the devastated town of Oleshky."
       }
     }
   }
