@@ -1,0 +1,87 @@
+name: Weston Life - 修复五个不能水彩封面
+
+on:
+  push:
+    paths:
+      - '.github/workflows/repair-coco-watercolor.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Weston Life
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Install cover from existing oversized workflow
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import textwrap
+
+          original = Path('.github/workflows/coco-five-cannot-watercolor.yml')
+          repairer = Path('.github/workflows/repair-coco-watercolor.yml')
+          if not original.is_file():
+              raise RuntimeError('Original watercolor workflow is missing; no changes made.')
+
+          lines = original.read_text(encoding='utf-8').splitlines()
+          try:
+              start = next(i for i, line in enumerate(lines) if "python3 - <<'PY'" in line)
+              stop = next(i for i in range(start + 1, len(lines)) if lines[i].strip() == 'PY')
+          except StopIteration:
+              raise RuntimeError('Original image installer was not found; no changes made.')
+
+          code = textwrap.dedent('\n'.join(lines[start + 1:stop]))
+          compile(code, str(original), 'exec')
+          exec(compile(code, str(original), 'exec'), {'__name__': '__main__'})
+
+          # Only replace the oversized workflow after the original installer worked.
+          photo = Path('assets/coco-five-cannot-cover.jpg')
+          if not photo.is_file() or photo.stat().st_size < 1000:
+              raise RuntimeError('The cover image was not created; workflow left untouched.')
+          article = Path('coco-iran-2026.html').read_text(encoding='utf-8')
+          module = Path('coco-opinion.js').read_text(encoding='utf-8')
+          if 'coco-cover-hero' not in article or '/assets/coco-five-cannot-cover.jpg' not in module:
+              raise RuntimeError('Site updates are incomplete; workflow left untouched.')
+
+          original.write_text('''name: Weston Life - 五个不能水彩封面安装检查
+          on:
+            workflow_dispatch:
+          jobs:
+            check-cover:
+              runs-on: ubuntu-latest
+              steps:
+                - uses: actions/checkout@v4
+                - name: Verify watercolor cover
+                  run: |
+                    test -s assets/coco-five-cannot-cover.jpg
+                    grep -q 'coco-cover-hero' coco-iran-2026.html
+                    grep -q 'coco-five-cannot-cover.jpg' coco-opinion.js
+          ''', encoding='utf-8')
+
+          # The one-time repair workflow is no longer necessary after success.
+          repairer.unlink()
+          print('Watercolor image installed, homepage and article updated; oversized workflow repaired.')
+          PY
+
+      - name: Commit repaired workflow and cover
+        shell: bash
+        run: |
+          git config user.name 'Weston Life Update Bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A .github/workflows/repair-coco-watercolor.yml \
+            .github/workflows/coco-five-cannot-watercolor.yml \
+            assets/coco-five-cannot-cover.jpg \
+            coco-iran-2026.html coco-opinion.js
+          if ! git diff --cached --quiet; then
+            git commit -m 'Fix oversized watercolor workflow and install cover'
+            git push origin HEAD:main
+          else
+            echo 'No changes needed.'
+          fi
