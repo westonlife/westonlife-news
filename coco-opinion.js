@@ -40,6 +40,41 @@ function draw(){
  #wl-auto .wl-extra-note{display:block;font:10px Arial,sans-serif;color:#827d75;margin-top:4px}
  @media(max-width:720px){#wl-auto .coco-new-grid{display:flex;flex-direction:column;gap:20px}#wl-auto .coco-new-grid>*{width:100%;position:static}#wl-auto .coco-new-grid .coco-portrait{width:105px;height:130px;float:left;margin:0 14px 10px 0}#wl-ma-realestate .wl-property-visual{display:block}#wl-ma-realestate .wl-property-visual img{height:160px;margin-bottom:12px}#wl-school .wl-school-cover img{height:160px}}
  `);document.head.append(style);
+ // Weston Life 2026-11-01: make Coco's full article the large first-page feature.
+ if(!document.getElementById('coco-frontpage-2026')){
+   const fc=el('style',`
+     #wl-auto .coco-frontpage-2026{margin:22px auto 35px;max-width:1100px;background:#fffdfa;border-top:6px solid #984446;border-bottom:1px solid #e0d6ce;box-shadow:0 9px 30px rgba(43,29,23,.06);padding:18px 16px 16px}
+     #wl-auto .coco-frontpage-bar{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;color:#864043;font:700 13px/1.6 Arial,sans-serif;letter-spacing:.075em}
+     #wl-auto .coco-frontpage-bar a{font:12px Arial,sans-serif;text-decoration:underline;color:#305743}
+     #wl-auto .coco-frontpage-2026 details{margin-top:10px}
+     #wl-auto .coco-frontpage-2026 summary{cursor:pointer;text-align:right;color:#7f423d;font:13px Arial,sans-serif;list-style:none;padding:6px 0}
+     #wl-auto .coco-frontpage-2026 summary::-webkit-details-marker{display:none}
+     #wl-auto .coco-frontpage-2026 iframe{width:100%;display:block;border:0;background:#faf8f4;min-height:950px;overflow:hidden}
+     #wl-auto .wl-editorial.coco-upgraded{display:none!important}
+     @media(max-width:720px){#wl-auto .coco-frontpage-2026{padding:10px 3px;margin:12px -10px 25px;border-radius:0;box-shadow:none}#wl-auto .coco-frontpage-bar{padding:0 12px}}
+   `);document.head.append(fc);
+   const feature=el('section',`<div class="coco-frontpage-bar"><span>☕ 可可豆子实时评论 · COCO'S COFFEE · 今日头版</span><a href="#coco-news-start">直接看今日新闻 ↓</a></div><details open><summary>点击收起 / 展开《五个不能》完整文章</summary><iframe src="/coco-iran-2026.html" title="五个不能 · 可可豆子完整文章与水彩封面" loading="eager" scrolling="no"></iframe></details>`,'coco-frontpage-2026');
+   feature.id='coco-frontpage-2026';
+   const masthead=panel.querySelector('.wl-masthead');
+   if(masthead)masthead.insertAdjacentElement('afterend',feature);else panel.prepend(feature);
+   const news=panel.querySelector('.wl-breaking')||panel.querySelector('.wl-columns');
+   if(news&&!news.id)news.id='coco-news-start';
+   const frame=feature.querySelector('iframe');
+   const fitFrame=function(){
+     try{
+       const doc=frame.contentDocument;
+       if(!doc)return;
+       const h=Math.max(doc.body?doc.body.scrollHeight:0,doc.documentElement.scrollHeight);
+       if(h>500&&Math.abs(frame.offsetHeight-h)>12)frame.style.height=h+'px';
+     }catch(err){console.warn('Embedded article height could not be measured:',err);}
+   };
+   frame.addEventListener('load',function(){
+     fitFrame();
+     try{const doc=frame.contentDocument;if(doc&&doc.body&&'ResizeObserver' in window)new ResizeObserver(fitFrame).observe(doc.body);}catch(err){}
+   });
+   window.addEventListener('resize',fitFrame);
+ }
+
  // 1. Replace out-of-date notice on the 2026-10-24 edition only.
  const date=panel.querySelector('.wl-date')?.textContent||'';
  const local=panel.querySelector('.wl-columns>div:first-child');
