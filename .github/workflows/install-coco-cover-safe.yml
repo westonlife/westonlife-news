@@ -1,0 +1,63 @@
+name: Weston Life - Install watercolor cover safely
+
+on:
+  push:
+    paths:
+      - '.github/workflows/install-coco-cover-safe.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  install-cover:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Weston Life
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Install cover using original embedded image
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import textwrap
+
+          original = Path('.github/workflows/coco-five-cannot-watercolor.yml')
+          if not original.is_file():
+              raise RuntimeError('The original workflow with the embedded image is missing.')
+
+          lines = original.read_text(encoding='utf-8').splitlines()
+          try:
+              start = next(i for i, line in enumerate(lines) if "python3 - <<'PY'" in line)
+              stop = next(i for i in range(start + 1, len(lines)) if lines[i].strip() == 'PY')
+          except StopIteration:
+              raise RuntimeError('Could not find the embedded original installer.')
+
+          code = textwrap.dedent('\n'.join(lines[start + 1:stop]))
+          exec(compile(code, str(original), 'exec'), {'__name__': '__main__'})
+
+          photo = Path('assets/coco-five-cannot-cover.jpg')
+          article = Path('coco-iran-2026.html').read_text(encoding='utf-8')
+          module = Path('coco-opinion.js').read_text(encoding='utf-8')
+          if not photo.is_file() or photo.stat().st_size < 1000:
+              raise RuntimeError('Watercolor cover image was not created.')
+          if 'coco-cover-hero' not in article or '/assets/coco-five-cannot-cover.jpg' not in module:
+              raise RuntimeError('Cover references were not added to the article and homepage.')
+          print('Watercolor cover installed and verified.')
+          PY
+
+      - name: Commit website files only (no workflow permission needed)
+        shell: bash
+        run: |
+          git config user.name 'Weston Life Update Bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- assets/coco-five-cannot-cover.jpg coco-iran-2026.html coco-opinion.js
+          if ! git diff --cached --quiet; then
+            git commit -m 'Install Five Cannot watercolor cover without changing workflows'
+            git push origin HEAD:main
+          else
+            echo 'Website files are already up to date.'
+          fi
