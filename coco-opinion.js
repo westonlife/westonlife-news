@@ -55,8 +55,8 @@ function draw(){
    `);document.head.append(fc);
    const feature=el('section',`<div class="coco-frontpage-bar"><span>☕ 可可豆子实时评论 · COCO'S COFFEE · 今日头版</span><a href="#coco-news-start">直接看今日新闻 ↓</a></div><details open><summary>点击收起 / 展开《五个不能》完整文章</summary><iframe src="/coco-iran-2026.html" title="五个不能 · 可可豆子完整文章与水彩封面" loading="eager" scrolling="no"></iframe></details>`,'coco-frontpage-2026');
    feature.id='coco-frontpage-2026';
-   const masthead=panel.querySelector('.wl-masthead');
-   if(masthead)masthead.insertAdjacentElement('afterend',feature);else panel.prepend(feature);
+   const cocoNewsEnd=panel.querySelector('.wl-cta')||panel.querySelector('.wl-features')||panel.querySelector('.wl-columns')||panel.querySelector('.wl-breaking');
+              if(cocoNewsEnd)cocoNewsEnd.insertAdjacentElement('afterend',feature);else panel.append(feature);
    const news=panel.querySelector('.wl-breaking')||panel.querySelector('.wl-columns');
    if(news&&!news.id)news.id='coco-news-start';
    const frame=feature.querySelector('iframe');
