@@ -36,9 +36,9 @@
       "summary": {
         "id": 2,
         "zh_title": "美联储在高通胀下维持利率不变",
-        "zh_summary": "美联储在高通胀的情况下决定维持利率不变。",
+        "zh_summary": "美联储决定在高通胀的情况下维持利率不变。",
         "en_title": "Federal Reserve keeps rates unchanged despite elevated inflation",
-        "en_summary": "The Federal Reserve decided to keep interest rates unchanged despite elevated inflation."
+        "en_summary": "The Federal Reserve has decided to keep interest rates unchanged despite elevated inflation."
       }
     },
     "3": {
@@ -75,10 +75,10 @@
       },
       "summary": {
         "id": 4,
-        "zh_title": "马萨诸塞州的年轻选民投票情况不佳，原因何在？",
-        "zh_summary": "马萨诸塞州的选民登记人数远低于2022年的水平。",
+        "zh_title": "马萨诸塞州的青年选票面临困境，原因何在？",
+        "zh_summary": "马萨诸塞州在2022年的选民注册数字上落后，青年选票面临困境。",
         "en_title": "The youth vote in Massachusetts is struggling. Here’s why.",
-        "en_summary": "Massachusetts is lagging behind its 2022 voter registration numbers among young voters."
+        "en_summary": "Massachusetts is lagging behind in its 2022 voter registration numbers, impacting the youth vote."
       }
     },
     "5": {
@@ -95,8 +95,8 @@
       },
       "summary": {
         "id": 5,
-        "zh_title": "俄罗斯袭击使乌克兰城市陷入停电，泽连斯基警告更多导弹攻击",
-        "zh_summary": "俄罗斯的袭击导致第聂伯市大规模停电，同时乌克兰的无人机攻击引发了俄罗斯石油精炼厂的火灾。",
+        "zh_title": "俄罗斯袭击使乌克兰城市陷入停电，泽连斯基警告更多导弹袭击",
+        "zh_summary": "俄罗斯的袭击导致第聂伯市大规模停电，乌克兰无人机攻击引发俄罗斯石油炼油厂火灾。",
         "en_title": "Russian strikes plunge Ukrainian city into blackout as Zelenskyy warns of more missile attacks",
         "en_summary": "Russian strikes caused major power outages in Dnipro, while a reported Ukrainian drone attack sparked a fire at a Russian oil refinery."
       }
@@ -115,10 +115,10 @@
       },
       "summary": {
         "id": 6,
-        "zh_title": "克莱默的下周展望：预计科技财报和中期选举将带来更多波动",
+        "zh_title": "克拉默的下周展望：预计科技财报和中期选举将带来更多波动",
         "zh_summary": "投资者期待苹果、AMD等主要公司的财报，以及中期选举和每月就业报告。",
         "en_title": "Cramer’s week ahead: Expect more volatility as tech earnings, midterms loom",
-        "en_summary": "Investors are awaiting earnings from major companies like Apple and AMD, along with the midterm elections and the monthly jobs report."
+        "en_summary": "Investors are awaiting earnings reports from major companies like Apple and AMD, along with the midterm elections and the monthly jobs report."
       }
     },
     "7": {
@@ -156,7 +156,7 @@
       "summary": {
         "id": 8,
         "zh_title": "美联储在通胀顽固的情况下维持利率稳定",
-        "zh_summary": "美联储选择维持基准利率不变，但投资者普遍预计中央银行将在12月的下一次会议上提高利率以应对顽固的通胀。",
+        "zh_summary": "美联储选择维持基准利率不变，但投资者普遍预计中央银行将在12月的下次会议上提高利率以应对顽固的通胀。",
         "en_title": "Fed holds interest rates steady even as inflation remains stubborn",
         "en_summary": "The Federal Reserve opted to leave its benchmark interest rate unchanged, but investors widely expect a rate hike at the next meeting in December."
       }
@@ -176,9 +176,9 @@
       "summary": {
         "id": 9,
         "zh_title": "混合经济预测在中期选举前施加压力",
-        "zh_summary": "本周的经济新闻喜忧参半，GDP增长上升，但价格也在上涨，利率暂时保持不变，这对中期选举意味着什么？",
+        "zh_summary": "本周的经济新闻喜忧参半，GDP增长上升，但价格也在上涨，目前利率保持不变，这对中期选举意味着什么？",
         "en_title": "Mixed economic forecast weighs heavy ahead of midterms",
-        "en_summary": "This week's economic news was mixed, with GDP growth up but prices rising, leaving questions about implications for the midterm elections."
+        "en_summary": "This week's economic news was mixed, with GDP growth up but prices also rising, leaving questions about implications for the midterm elections."
       }
     },
     "10": {
@@ -215,8 +215,8 @@
       },
       "summary": {
         "id": 11,
-        "zh_title": "无人机摄影奖获奖作品：奇妙的风景、船舶回收、地毯等！",
-        "zh_summary": "2026年锡耶纳无人机摄影奖展示了我们星球的壮丽鸟瞰图，揭示了从地面上往往看不见的风景、生活和人类故事。",
+        "zh_title": "无人机摄影奖获奖作品：奇特的风景、船舶回收、地毯等！",
+        "zh_summary": "2026年锡耶纳无人机摄影奖展示了我们星球的壮丽鸟瞰图，揭示了从地面上常常看不见的风景、生活和人类故事。",
         "en_title": "Drone photo award winners: Far-out landscapes. Ship recycling. Rugs, rugs rugs!",
         "en_summary": "The Siena Drone Photo Awards for 2026 offer breathtaking bird's-eye views of our planet, revealing landscapes, livelihoods, and human stories often invisible from the ground."
       }
