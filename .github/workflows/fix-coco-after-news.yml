@@ -1,0 +1,73 @@
+name: Weston Life - Move Coco commentary below daily news
+
+on:
+  push:
+    paths:
+      - '.github/workflows/fix-coco-after-news.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix-commentary-position:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out website
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Move Coco feature below the full daily news section
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          path = Path('coco-opinion.js')
+          if not path.is_file():
+              raise SystemExit('coco-opinion.js was not found. No website files changed.')
+          code = path.read_text(encoding='utf-8')
+          if 'coco-frontpage-2026' not in code:
+              raise SystemExit('Coco front-page block not found. No website files changed.')
+
+          # Find the prior placement: directly AFTER the homepage masthead,
+          # hence BEFORE the news. This is the only placement we change.
+          old = re.compile(
+              r'''const\s+masthead\s*=\s*panel\.querySelector\(\s*['"]\.wl-masthead['"]\s*\)\s*;\s*'''
+              r'''if\s*\(\s*masthead\s*\)\s*masthead\.insertAdjacentElement\(\s*['"]afterend['"]\s*,\s*feature\s*\)\s*;\s*'''
+              r'''else\s+panel\.prepend\(\s*feature\s*\)\s*;'''
+          )
+          replacement = (
+              "const cocoNewsEnd=panel.querySelector('.wl-cta')||"
+              "panel.querySelector('.wl-features')||"
+              "panel.querySelector('.wl-columns')||"
+              "panel.querySelector('.wl-breaking');\n"
+              "              if(cocoNewsEnd)cocoNewsEnd.insertAdjacentElement('afterend',feature);"
+              "else panel.append(feature);"
+          )
+          updated, count = old.subn(lambda m: replacement, code, count=1)
+          if count == 0:
+              if "const cocoNewsEnd=panel.querySelector('.wl-cta')" in code:
+                  print('Already positioned after daily news; no duplicate change.')
+              else:
+                  raise SystemExit('Expected old positioning code not found. No website files changed.')
+          else:
+              # Preserve every other part: poster, article, history links, news and school.
+              path.write_text(updated, encoding='utf-8')
+              print('Moved Coco feature after news section; all content kept unchanged.')
+          PY
+
+      - name: Commit the minimal position fix
+        shell: bash
+        run: |
+          git config user.name 'Weston Life Publisher'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add coco-opinion.js
+          if git diff --cached --quiet; then
+            echo 'Nothing to commit.'
+          else
+            git commit -m 'Place Coco commentary after Weston Life daily news'
+            git push
+          fi
