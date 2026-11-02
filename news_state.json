@@ -35,10 +35,10 @@
       },
       "summary": {
         "id": 2,
-        "zh_title": "美联储在高通胀下维持利率不变",
-        "zh_summary": "美联储在高通胀的情况下决定维持利率不变。",
+        "zh_title": "尽管通胀高企，美联储维持利率不变",
+        "zh_summary": "美联储在通胀高企的情况下决定维持利率不变。",
         "en_title": "Federal Reserve keeps rates unchanged despite elevated inflation",
-        "en_summary": "The Federal Reserve has decided to keep interest rates unchanged despite elevated inflation."
+        "en_summary": "The Federal Reserve has decided to keep rates unchanged despite elevated inflation."
       }
     },
     "3": {
@@ -56,52 +56,72 @@
       "summary": {
         "id": 3,
         "zh_title": "城市计划在杰克逊曼建设社区中心和住房",
-        "zh_summary": "城市计划在杰克逊曼建设社区中心和住房，市长预计将在年底前做出最终决定。",
+        "zh_summary": "市长米歇尔·吴预计将在年底前做出最终决定。",
         "en_title": "City plans community center, housing at Jackson Mann",
-        "en_summary": "The city plans to build a community center and housing at Jackson Mann, with the mayor expected to make a final decision by the end of the year."
+        "en_summary": "Mayor Michelle Wu is expected to make a final decision by the end of the year."
       }
     },
     "4": {
       "topic": "Weston / Boston / Massachusetts",
       "article": {
-        "title": "Hot Property: Shepley Bulfinch Boston Studio",
-        "description": "Shepley Bulfinch recently relocated to 200 State St., designing a new workspace for itself, including archival materials dating back to its 1874 founding.",
-        "url": "https://bankerandtradesman.com/hot-property-shepley-bulfinch-boston-studio/",
-        "source": "Banker & Tradesman Massachusetts",
-        "published": "2026-11-01T10:00:42+00:00",
-        "image": "assets/news/46a377b23cc68bac3cac9a82.jpg",
+        "title": "Mass. election guide: Races, ballot questions and voting info",
+        "description": "From a record-tying nine ballot questions to contests for governor and U.S. Senate, Massachusetts voters have a lot to decide Tuesday. Here’s a guide to the key races, questions and voting details.",
+        "url": "https://www.wcvb.com/article/massachusetts-midterm-election-candidates-ballot-primer-2026/74299123",
+        "source": "WCVB Boston",
+        "published": "2026-11-02T21:30:00+00:00",
+        "image": "assets/news/da270c273f97633f27bf855d.jpg",
         "placeholder": false,
         "topic": "Weston / Boston / Massachusetts"
       },
       "summary": {
         "id": 4,
-        "zh_title": "热物业：Shepley Bulfinch波士顿工作室",
-        "zh_summary": "Shepley Bulfinch最近迁至200 State St.，为自己设计了一个新的工作空间。",
-        "en_title": "Hot Property: Shepley Bulfinch Boston Studio",
-        "en_summary": "Shepley Bulfinch has recently relocated to 200 State St., designing a new workspace for itself."
+        "zh_title": "马萨诸塞州选举指南：竞选、投票问题和投票信息",
+        "zh_summary": "马萨诸塞州选民在周二有许多决定，包括九个投票问题和州长及美国参议院的竞选。",
+        "en_title": "Mass. election guide: Races, ballot questions and voting info",
+        "en_summary": "Massachusetts voters have a lot to decide on Tuesday, including nine ballot questions and contests for governor and U.S. Senate."
       }
     },
     "5": {
+      "topic": "World News / Global",
+      "article": {
+        "title": "Stock market after midterm elections: What S&P 500 history shows",
+        "description": "Midterms historically precede a strong year for the S&P 500. What to know if Democrats win back Congress",
+        "url": "https://www.cnbc.com/2026/11/02/stock-market-after-midterm-elections-sp-500-history.html",
+        "source": "CNBC",
+        "published": "2026-11-02T23:13:34+00:00",
+        "image": "assets/news/31f566e55a9955bf14f2e252.jpg",
+        "placeholder": false,
+        "topic": "World News / Global"
+      },
+      "summary": {
+        "id": 5,
+        "zh_title": "中期选举后股市：标准普尔500历史显示的情况",
+        "zh_summary": "中期选举历史上通常预示着标准普尔500指数的强劲表现。",
+        "en_title": "Stock market after midterm elections: What S&P 500 history shows",
+        "en_summary": "Historically, midterms precede a strong year for the S&P 500."
+      }
+    },
+    "6": {
       "topic": "World News / Global",
       "article": {
         "title": "Fake nuclear warnings in Ukraine as Moscow, Kyiv report separate cyberattacks on emergency apps",
         "description": "Russia and Ukraine both report cyberattacks on their alerting systems, as strikes continue across the countries.",
         "url": "https://www.cnbc.com/2026/11/02/russia-ukraine-cyberattack-zelenskyy-putin.html",
         "source": "CNBC",
-        "published": "2026-11-02T13:57:39+00:00",
+        "published": "2026-11-02T15:28:46+00:00",
         "image": "assets/news/71e61259d17d5414a1bc2a2a.jpg",
         "placeholder": false,
         "topic": "World News / Global"
       },
       "summary": {
-        "id": 5,
+        "id": 6,
         "zh_title": "乌克兰假核警报，莫斯科和基辅报告各自的网络攻击",
         "zh_summary": "俄罗斯和乌克兰均报告了对其警报系统的网络攻击。",
         "en_title": "Fake nuclear warnings in Ukraine as Moscow, Kyiv report separate cyberattacks on emergency apps",
         "en_summary": "Russia and Ukraine both report cyberattacks on their alerting systems."
       }
     },
-    "6": {
+    "7": {
       "topic": "World News / Global",
       "article": {
         "title": "Russian strikes plunge Ukrainian city into blackout as Zelenskyy warns of more missile attacks",
@@ -114,34 +134,34 @@
         "topic": "World News / Global"
       },
       "summary": {
-        "id": 6,
+        "id": 7,
         "zh_title": "俄罗斯袭击使乌克兰城市陷入停电，泽连斯基警告更多导弹攻击",
         "zh_summary": "俄罗斯的袭击导致第聂伯市大规模停电。",
         "en_title": "Russian strikes plunge Ukrainian city into blackout as Zelenskyy warns of more missile attacks",
-        "en_summary": "Russian strikes caused major power outages in Dnipro as Zelenskyy warns of more missile attacks."
+        "en_summary": "Russian strikes caused major power outages in Dnipro as Zelenskyy warned of more missile attacks."
       }
     },
-    "7": {
+    "8": {
       "topic": "World News / Global",
       "article": {
-        "title": "Rubio says Trump wants to end Iran war 'peacefully' even as both sides prepare for strikes",
-        "description": "The remarks come as reports suggest that both sides are gearing up for additional military strikes after the U.S. midterm elections.",
-        "url": "https://www.cnbc.com/2026/11/02/us-iran-war-trump-hormuz-rubio.html",
-        "source": "CNBC",
-        "published": "2026-11-02T02:39:35+00:00",
-        "image": "assets/news/1dc8cd939fa10055e602b57a.jpg",
+        "title": "Gulf leaders meet in Qatar in effort to stave off new escalation in U.S and Iran war",
+        "description": "Qatar has been leading intense mediation efforts over the past 72 hours to prevent a new round of possible U.S. attacks on Iran after Tuesday's midterm elections. The uncertainty has the entire Gulf region on edge.",
+        "url": "https://www.npr.org/2026/11/01/nx-s1-6023237/gulf-leaders-meet-in-qatar-in-effort-to-stave-off-new-escalation-in-u-s-and-iran-war",
+        "source": "NPR",
+        "published": "2026-11-01T22:19:13Z",
+        "image": "assets/news/fd469057e03db00e45979793.jpg",
         "placeholder": false,
         "topic": "World News / Global"
       },
       "summary": {
-        "id": 7,
-        "zh_title": "鲁比奥表示特朗普希望“和平”结束伊朗战争，尽管双方准备发动攻击",
-        "zh_summary": "鲁比奥的言论表明，尽管双方准备进行额外的军事打击，特朗普仍希望和平解决伊朗战争。",
-        "en_title": "Rubio says Trump wants to end Iran war 'peacefully' even as both sides prepare for strikes",
-        "en_summary": "Rubio's remarks suggest that Trump wants to end the Iran war 'peacefully' even as both sides prepare for additional military strikes."
+        "id": 8,
+        "zh_title": "海湾领导人在卡塔尔会晤，努力防止美国与伊朗战争升级",
+        "zh_summary": "卡塔尔在过去72小时内进行密集调解，以防止美国对伊朗的新一轮攻击。",
+        "en_title": "Gulf leaders meet in Qatar in effort to stave off new escalation in U.S and Iran war",
+        "en_summary": "Qatar has been leading intense mediation efforts to prevent a new round of possible U.S. attacks on Iran."
       }
     },
-    "8": {
+    "9": {
       "topic": "World News / Global",
       "article": {
         "title": "6 things to watch for on election night",
@@ -154,31 +174,11 @@
         "topic": "World News / Global"
       },
       "summary": {
-        "id": 8,
-        "zh_title": "选举之夜需关注的6件事",
-        "zh_summary": "选举之夜将关注一些对特朗普失望的选民群体。",
-        "en_title": "6 things to watch for on election night",
-        "en_summary": "Key storylines to watch on election night will center around various voter groups that have soured on President Trump."
-      }
-    },
-    "9": {
-      "topic": "World News / Global",
-      "article": {
-        "title": "Gulf region on edge as Qatar leads talks with Iran to stave off new U.S. attacks",
-        "description": "Qatar has been leading intense mediation efforts over the past 72 hours to prevent a new round of possible U.S. attacks on Iran after Tuesday's midterm elections. The uncertainty has the entire Gulf region on edge.",
-        "url": "https://www.npr.org/2026/11/01/nx-s1-6023237/gulf-leaders-meet-in-qatar-in-effort-to-stave-off-new-escalation-in-u-s-and-iran-war",
-        "source": "NPR",
-        "published": "2026-11-01T22:19:13+00:00",
-        "image": "assets/news/fd469057e03db00e45979793.jpg",
-        "placeholder": false,
-        "topic": "World News / Global"
-      },
-      "summary": {
         "id": 9,
-        "zh_title": "海湾地区紧张，卡塔尔主导与伊朗的谈判以避免新的美国攻击",
-        "zh_summary": "卡塔尔在过去72小时内主导了与伊朗的密集调解努力，以防止美国对伊朗的新一轮攻击。",
-        "en_title": "Gulf region on edge as Qatar leads talks with Iran to stave off new U.S. attacks",
-        "en_summary": "Qatar has been leading intense mediation efforts to prevent a new round of possible U.S. attacks on Iran."
+        "zh_title": "选举之夜需关注的6件事",
+        "zh_summary": "一些关键故事线将围绕对特朗普失望的选民群体展开。",
+        "en_title": "6 things to watch for on election night",
+        "en_summary": "Key storylines to watch will center around various voter groups that have soured on President Trump."
       }
     },
     "10": {
@@ -195,10 +195,10 @@
       },
       "summary": {
         "id": 10,
-        "zh_title": "竞选国会的Z世代共和党人对党的未来的思考",
-        "zh_summary": "年轻的保守派希望在国会中塑造共和党的下一个篇章。",
+        "zh_title": "竞选国会议员的Z世代共和党人如何看待党的未来",
+        "zh_summary": "年轻的保守派希望在国会中塑造共和党的下一章。",
         "en_title": "How Gen Z Republicans running for Congress are thinking about the future of the party",
-        "en_summary": "Young conservatives running for Congress want a role in shaping the next chapter of the Republican Party."
+        "en_summary": "Young conservatives vying to be part of the first class of Gen Z Republicans in Congress want a role shaping the party's next chapter."
       }
     }
   }
