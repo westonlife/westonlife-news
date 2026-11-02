@@ -3478,6 +3478,94 @@ html[data-wl-lang="zh"] #wl-school-today .school-en,html[data-wl-lang="en"] #wl-
 </script>
 <!-- WESTON-HALLOWEEN-2026-END -->
 <script defer src="/learjet-headline-2026.js"></script>
+
+<script id="wl-global-popularity-v2">
+/* Weston Life: global popularity counter, 27,110 + 11 per recorded visit.
+   Data is kept by counterapi.com, not in the visitor's browser.
+   There is no simulated local increment if the shared service is down.
+*/
+(function () {
+  'use strict';
+  if (window.__wlPopularityGlobalV2) return;
+  window.__wlPopularityGlobalV2 = true;
+  var BASE = 27110, STEP = 11;
+  var ENDPOINT = 'https://counterapi.com/api/westonlife.org/view/westonlife-popularity-global-20261102-v2';
+  var label, latest = -1, seq = 0;
+  function numberFormat(n) { return Math.floor(n).toLocaleString('en-US'); }
+  function findOldCounter() {
+    var walk = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+    var node;
+    while ((node = walk.nextNode())) {
+      if (!node.nodeValue.includes('人气值')) continue;
+      var el = node.parentElement;
+      if (!el || el.closest('script,style,noscript,template,[data-wl-global-display]')) continue;
+      for (var depth = 0; depth < 4 && el; depth++, el = el.parentElement) {
+        var txt = (el.textContent || '').replace(/\s+/g, ' ').trim();
+        if (txt.includes('人气值') && txt.length <= 100 && /\b\d[\d,]*\b/.test(txt)) return el;
+      }
+    }
+    return null;
+  }
+  function mount() {
+    if (label) return true;
+    var old = findOldCounter();
+    if (!old) return false;
+    var clone = old.cloneNode(false);
+    clone.removeAttribute('id');
+    clone.removeAttribute('onclick');
+    clone.setAttribute('data-wl-global-display', 'true');
+    clone.setAttribute('aria-live', 'polite');
+    clone.textContent = '人气值：正在更新…';
+    old.insertAdjacentElement('afterend', clone);
+    old.style.display = 'none';
+    label = clone;
+    return true;
+  }
+  function showCount(n) {
+    if (!Number.isSafeInteger(n) || n < 0) return;
+    latest = Math.max(latest, n);
+    if (mount()) label.textContent = '人气值： ' + numberFormat(BASE + STEP * latest);
+  }
+  function request(readOnly) {
+    var callback = '__wl_counter_v2_' + (++seq) + '_' + Date.now();
+    var scriptTag = document.createElement('script');
+    var done = false;
+    var timer = setTimeout(function () { finish(null); }, 12000);
+    function finish(response) {
+      if (done) return;
+      done = true;
+      clearTimeout(timer);
+      scriptTag.remove();
+      try { delete window[callback]; } catch (e) { window[callback] = undefined; }
+      var value = response && Number(response.value);
+      if (response && Number.isSafeInteger(value) && value >= 0) {
+        showCount(value);
+      } else if (latest < 0 && mount()) {
+        label.textContent = '人气值：暂时无法更新';
+      }
+    }
+    window[callback] = finish;
+    scriptTag.onerror = function () { finish(null); };
+    scriptTag.src = ENDPOINT + '?callback=' + encodeURIComponent(callback) +
+      '&readOnly=' + (readOnly ? 'true' : 'false') +
+      '&_=' + Date.now() + '-' + seq;
+    document.head.appendChild(scriptTag);
+  }
+  function start() {
+    if (!mount()) {
+      console.warn('Weston Life: popularity label not found; preserving page.');
+      return;
+    }
+    // One shared increment per homepage load (including reload).
+    request(false);
+    // Refresh any open tabs without adding more visits.
+    setInterval(function () { request(true); }, 45000);
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', start, {once: true});
+  } else { start(); }
+})();
+</script>
 </body>
 </html>
 
