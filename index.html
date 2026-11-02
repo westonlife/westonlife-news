@@ -3396,26 +3396,53 @@ html[data-wl-lang="zh"] #wl-school-today .school-en,html[data-wl-lang="en"] #wl-
 <script src="/guandan-jianghu.js" defer></script>
 <!-- WL-COUNTER-PLUS11-FROZEN -->
 <div id="wl-counter" style="padding:12px 18px;background:#f5efdf;color:#315c41;font-size:14px;text-align:left;">
-<span id="busuanzi_site_pv" style="display:none">加载中…</span>
-人气值：<span id="wl-popularity">27,110</span>
+  <span id="busuanzi_site_pv" style="display:none">加载中…</span>
+  人气值：<span id="wl-popularity">27,110</span>
 </div>
 <script>
-(function(){
+(function () {
   var baselinePV = 69;
   var baselinePopularity = 27110;
   var box = document.getElementById('wl-counter');
   var pvNode = document.getElementById('busuanzi_site_pv');
   var label = document.getElementById('wl-popularity');
+  if (!box || !pvNode || !label) return;
   document.body.prepend(box);
-  function update(){
-    var value = pvNode.textContent.replace(/[,，\s]/g, '');
-    if(!/^\d+$/.test(value)) return;
-    var pv = Number(value);
-    if(!Number.isSafeInteger(pv)) return;
-    label.textContent = (baselinePopularity + 11 * Math.max(0, pv - baselinePV)).toLocaleString();
+
+  // Keep a browser-local fallback when the shared service cannot respond.
+  // This fallback is NOT a global visit counter.
+  var storageKey = 'westonlife-popularity-plus11-v1';
+  var displayed = baselinePopularity;
+  try {
+    var saved = Number(localStorage.getItem(storageKey));
+    if (Number.isSafeInteger(saved) && saved >= baselinePopularity) {
+      displayed = saved;
+    }
+  } catch (e) {}
+  displayed += 11;
+  render();
+
+  function render() {
+    label.textContent = displayed.toLocaleString('en-US');
+    try { localStorage.setItem(storageKey, String(displayed)); } catch (e) {}
   }
-  new MutationObserver(update).observe(pvNode,{childList:true,characterData:true,subtree:true});
-  update();
+
+  // If Busuanzi reports a higher shared count, sync upward.
+  function syncSharedCount() {
+    var value = (pvNode.textContent || '').replace(/[,，\s]/g, '');
+    if (!/^\d+$/.test(value)) return;
+    var pv = Number(value);
+    if (!Number.isSafeInteger(pv)) return;
+    var shared = baselinePopularity + 11 * Math.max(0, pv - baselinePV);
+    if (shared > displayed) {
+      displayed = shared;
+      render();
+    }
+  }
+  new MutationObserver(syncSharedCount).observe(
+    pvNode, {childList:true, characterData:true, subtree:true}
+  );
+  syncSharedCount();
 })();
 </script>
 <script defer src="https://cdn.busuanzi.cc/busuanzi/3.6.9/busuanzi.min.js"></script>
