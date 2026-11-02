@@ -1,0 +1,122 @@
+name: Weston Life - Keep Popularity and Add 11 Per View
+
+on:
+  push:
+    paths:
+      - '.github/workflows/westonlife-plus11.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  keep-existing-number:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out website
+        uses: actions/checkout@v4
+
+      - name: Install browser for reading the CURRENT displayed number
+        run: |
+          python3 -m pip install --quiet playwright==1.55.0
+          python3 -m playwright install --with-deps chromium
+
+      - name: Freeze CURRENT displayed value and switch increment to 11
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import re
+          from pathlib import Path
+          from playwright.sync_api import sync_playwright
+
+          path = Path('index.html')
+          original = path.read_text(encoding='utf-8')
+          magic = 'WL-COUNTER-PLUS11-FROZEN'
+          if magic in original:
+              print('Already installed; leaving the original anchor unchanged.')
+              raise SystemExit(0)
+
+          # No reset, no guessing, no browser-local-only counter.
+          # Read the old displayed popularity and the matching shared site PV.
+          with sync_playwright() as playwright:
+              browser = playwright.chromium.launch(headless=True)
+              page = browser.new_page(locale='zh-CN', viewport={'width': 1200, 'height': 800})
+              page.goto('https://westonlife.org/', wait_until='domcontentloaded', timeout=75000)
+              page.wait_for_function('''() => {
+                  const p = document.querySelector('#wl-popularity');
+                  const v = document.querySelector('#busuanzi_site_pv');
+                  const isNum = s => /^\\d+$/.test((s || '').replace(/[,，\\s]/g, ''));
+                  return !!p && !!v && isNum(p.textContent) && isNum(v.textContent);
+              }''', timeout=45000)
+              text = page.locator('#wl-popularity').text_content()
+              pv_text = page.locator('#busuanzi_site_pv').text_content()
+              browser.close()
+
+          def number(raw):
+              clean = re.sub(r'[,，\s]', '', raw)
+              if not re.fullmatch(r'\d+', clean):
+                  raise ValueError('Counter not yet available. No edits made.')
+              return int(clean)
+
+          old_display = number(text)
+          starting_pv = number(pv_text)
+          # Confirm snapshot is consistent with the existing published formula.
+          expected = 545 + 11 * starting_pv * (starting_pv + 1) // 2
+          if old_display != expected:
+              raise RuntimeError(
+                  f'Mismatch in old displayed count (display {old_display}, PV {starting_pv}, expected {expected}). '
+                  'No changes were made, to avoid losing the existing number.'
+              )
+          print(f'Keeping current displayed popularity {old_display}; shared PV at migration {starting_pv}.')
+
+          start = '<!-- Weston Life 浏览计数器 -->'
+          end = '<!-- WESTON-HALLOWEEN-2026-START -->'
+          if original.count(start) != 1 or original.count(end) != 1:
+              raise RuntimeError('Website markup changed: cannot safely locate counter. No changes made.')
+          before, rest = original.split(start, 1)
+          _, after = rest.split(end, 1)
+
+          counter = '''<!-- WL-COUNTER-PLUS11-FROZEN -->
+          <div id="wl-counter" style="padding:12px 18px;background:#f5efdf;color:#315c41;font-size:14px;text-align:left;">
+          <span id="busuanzi_site_pv" style="display:none">加载中…</span>
+          人气值：<span id="wl-popularity">__ANCHOR_DISPLAY__</span>
+          </div>
+          <script>
+          (function(){
+            var baselinePV = __ANCHOR_PV__;
+            var baselinePopularity = __ANCHOR_NUMBER__;
+            var box = document.getElementById('wl-counter');
+            var pvNode = document.getElementById('busuanzi_site_pv');
+            var label = document.getElementById('wl-popularity');
+            document.body.prepend(box);
+            function update(){
+              var value = pvNode.textContent.replace(/[,，\\s]/g, '');
+              if(!/^\\d+$/.test(value)) return;
+              var pv = Number(value);
+              if(!Number.isSafeInteger(pv)) return;
+              label.textContent = (baselinePopularity + 11 * Math.max(0, pv - baselinePV)).toLocaleString();
+            }
+            new MutationObserver(update).observe(pvNode,{childList:true,characterData:true,subtree:true});
+            update();
+          })();
+          </script>
+          <script defer src="https://cdn.busuanzi.cc/busuanzi/3.6.9/busuanzi.min.js"></script>
+          <!-- WL-COUNTER-PLUS11-FROZEN-END -->
+          '''
+          counter = (counter.replace('__ANCHOR_DISPLAY__', f'{old_display:,}')
+                            .replace('__ANCHOR_PV__', str(starting_pv))
+                            .replace('__ANCHOR_NUMBER__', str(old_display)))
+          path.write_text(before + counter + end + after, encoding='utf-8')
+          print('Only the homepage counter block was replaced. All other content untouched.')
+          PY
+
+      - name: Save site counter change
+        run: |
+          if ! git diff --quiet -- index.html; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git add index.html
+            git commit -m 'Keep current popularity and add 11 per new counted page view'
+            git push
+          fi
