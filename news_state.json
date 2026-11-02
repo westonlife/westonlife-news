@@ -62,6 +62,26 @@
       }
     },
     "4": {
+      "topic": "Weston / Boston / Massachusetts",
+      "article": {
+        "title": "Hot Property: Shepley Bulfinch Boston Studio",
+        "description": "Shepley Bulfinch recently relocated to 200 State St., designing a new workspace for itself, including archival materials dating back to its 1874 founding.",
+        "url": "https://bankerandtradesman.com/hot-property-shepley-bulfinch-boston-studio/",
+        "source": "Banker & Tradesman Massachusetts",
+        "published": "2026-11-01T10:00:42+00:00",
+        "image": "assets/news/46a377b23cc68bac3cac9a82.jpg",
+        "placeholder": false,
+        "topic": "Weston / Boston / Massachusetts"
+      },
+      "summary": {
+        "id": 4,
+        "zh_title": "热门物业：Shepley Bulfinch波士顿工作室",
+        "zh_summary": "Shepley Bulfinch最近迁至200 State St.，为自己设计了一个新的工作空间。",
+        "en_title": "Hot Property: Shepley Bulfinch Boston Studio",
+        "en_summary": "Shepley Bulfinch recently relocated to 200 State St., designing a new workspace for itself."
+      }
+    },
+    "5": {
       "topic": "World News / Global",
       "article": {
         "title": "Russian strikes plunge Ukrainian city into blackout as Zelenskyy warns of more missile attacks",
@@ -74,14 +94,34 @@
         "topic": "World News / Global"
       },
       "summary": {
-        "id": 4,
+        "id": 5,
         "zh_title": "俄罗斯袭击使乌克兰城市陷入停电，泽连斯基警告更多导弹攻击",
         "zh_summary": "俄罗斯的袭击导致第聂伯市大规模停电，乌克兰无人机攻击引发俄罗斯石油精炼厂火灾。",
         "en_title": "Russian strikes plunge Ukrainian city into blackout as Zelenskyy warns of more missile attacks",
         "en_summary": "Russian strikes caused major power outages in Dnipro as a reported Ukrainian drone attack sparked a fire at a Russian oil refinery."
       }
     },
-    "5": {
+    "6": {
+      "topic": "World News / Global",
+      "article": {
+        "title": "Rubio says Trump wants to end Iran war 'peacefully' even as both sides prepare for strikes",
+        "description": "The remarks come as reports suggest that both sides are gearing up for additional military strikes after the U.S. midterm elections.",
+        "url": "https://www.cnbc.com/2026/11/02/us-iran-war-trump-hormuz-rubio.html",
+        "source": "CNBC",
+        "published": "2026-11-02T02:39:35+00:00",
+        "image": "assets/news/1dc8cd939fa10055e602b57a.jpg",
+        "placeholder": false,
+        "topic": "World News / Global"
+      },
+      "summary": {
+        "id": 6,
+        "zh_title": "鲁比奥表示特朗普希望“和平”结束伊朗战争，尽管双方准备发动攻击",
+        "zh_summary": "鲁比奥的言论出现在双方准备在美国中期选举后进行更多军事打击的背景下。",
+        "en_title": "Rubio says Trump wants to end Iran war 'peacefully' even as both sides prepare for strikes",
+        "en_summary": "The remarks come as reports suggest that both sides are gearing up for additional military strikes after the U.S. midterm elections."
+      }
+    },
+    "7": {
       "topic": "World News / Global",
       "article": {
         "title": "Here are 3 big things we're watching in the stock market in the week ahead",
@@ -94,111 +134,51 @@
         "topic": "World News / Global"
       },
       "summary": {
-        "id": 5,
+        "id": 7,
         "zh_title": "我们关注的下周股市三大重要事项",
         "zh_summary": "未来几天股市可能需要一些胜利，届时将有更多财报、选举和就业数据发布。",
         "en_title": "Here are 3 big things we're watching in the stock market in the week ahead",
         "en_summary": "The market could use a few victories in the days ahead, which will be filled with more earnings, an election, and jobs data."
       }
     },
-    "6": {
-      "topic": "World News / Global",
-      "article": {
-        "title": "Cramer’s week ahead: Expect more volatility as tech earnings, midterms loom",
-        "description": "Investors await earnings from Apple, AMD, and other major companies, as well as the midterm elections and the monthly jobs report.",
-        "url": "https://www.cnbc.com/2026/10/30/jim-cramer-week-ahead-apple-amd-jobs-report.html",
-        "source": "CNBC",
-        "published": "2026-10-30T22:17:13Z",
-        "image": "assets/news/4a4ab52ee7808a7132f3996b.jpg",
-        "placeholder": false,
-        "topic": "World News / Global"
-      },
-      "summary": {
-        "id": 6,
-        "zh_title": "克莱默的下周展望：预计科技财报和中期选举将带来更多波动",
-        "zh_summary": "投资者在等待苹果、AMD等主要公司的财报，以及中期选举和每月就业报告。",
-        "en_title": "Cramer’s week ahead: Expect more volatility as tech earnings, midterms loom",
-        "en_summary": "Investors await earnings from Apple, AMD, and other major companies, as well as the midterm elections and the monthly jobs report."
-      }
-    },
-    "7": {
-      "topic": "World News / Global",
-      "article": {
-        "title": "Supreme Court hears religious freedom case centered on universal pre-K program",
-        "description": "The Archdiocese of Denver wants to be able to turn away LGBTQ families from Catholic preschools that receive state funding.",
-        "url": "https://www.npr.org/2026/11/01/nx-s1-6000367/supreme-court-colorado-catholic-preschool-religious-freedom-lgbtq",
-        "source": "NPR",
-        "published": "2026-11-01T09:00:00+00:00",
-        "image": "assets/news/27f969acbae1c6dae2034d85.webp",
-        "placeholder": false,
-        "topic": "World News / Global"
-      },
-      "summary": {
-        "id": 7,
-        "zh_title": "最高法院审理以宗教自由为中心的普遍学前教育项目案件",
-        "zh_summary": "丹佛大主教区希望能够拒绝接受州资助的天主教幼儿园中的LGBTQ家庭。",
-        "en_title": "Supreme Court hears religious freedom case centered on universal pre-K program",
-        "en_summary": "The Archdiocese of Denver wants to be able to turn away LGBTQ families from Catholic preschools that receive state funding."
-      }
-    },
     "8": {
       "topic": "World News / Global",
       "article": {
-        "title": "Trump thanks supporters for the memories in final campaign stops for 2026 midterms",
-        "description": "President Trump has maintained a near-daily rally schedule as Election Day draws closer, playing his greatest hits for loyal crowds in red states in what is a sort-of goodbye to campaigning.",
-        "url": "https://www.npr.org/2026/11/01/nx-s1-6022128/trump-rally-2026-midterms-republicans",
+        "title": "Gulf region on edge as Qatar leads talks with Iran to stave off new U.S. attacks",
+        "description": "Qatar has been leading intense mediation efforts over the past 72 hours to prevent a new round of possible U.S. attacks on Iran after Tuesday's midterm elections. The uncertainty has the entire Gulf region on edge.",
+        "url": "https://www.npr.org/2026/11/01/nx-s1-6023237/gulf-leaders-meet-in-qatar-in-effort-to-stave-off-new-escalation-in-u-s-and-iran-war",
         "source": "NPR",
-        "published": "2026-11-01T09:00:00+00:00",
-        "image": "assets/news/46e1b6a6fb8fac89a0562592.webp",
+        "published": "2026-11-01T22:19:13+00:00",
+        "image": "assets/news/fd469057e03db00e45979793.jpg",
         "placeholder": false,
         "topic": "World News / Global"
       },
       "summary": {
         "id": 8,
-        "zh_title": "特朗普在2026年中期选举的最后竞选活动中感谢支持者",
-        "zh_summary": "特朗普总统在选举日临近时保持几乎每日的集会日程，向忠实的红州人群播放他的经典曲目，算是一种告别竞选活动。",
-        "en_title": "Trump thanks supporters for the memories in final campaign stops for 2026 midterms",
-        "en_summary": "President Trump has maintained a near-daily rally schedule as Election Day draws closer, playing his greatest hits for loyal crowds in red states in what is a sort-of goodbye to campaigning."
+        "zh_title": "海湾地区紧张，卡塔尔主导与伊朗的谈判以避免新的美国攻击",
+        "zh_summary": "卡塔尔在过去72小时内进行密集调解，以防止美国在周二中期选举后对伊朗的新一轮攻击。",
+        "en_title": "Gulf region on edge as Qatar leads talks with Iran to stave off new U.S. attacks",
+        "en_summary": "Qatar has been leading intense mediation efforts over the past 72 hours to prevent a new round of possible U.S. attacks on Iran after Tuesday's midterm elections."
       }
     },
     "9": {
       "topic": "World News / Global",
       "article": {
-        "title": "Rivals in Israel Election Strike Tone of Triumph, but Outcome Is Far From Clear",
-        "description": "Addressing supporters after midnight, Prime Minister Benjamin Netanyahu and Gadi Eisenkot, who leads a bloc of opposition parties, both expressed confidence that they will lead Israel’s next government. Vote counting could take days.",
-        "url": "https://www.nytimes.com/live/2026/10/27/world/israel-elections",
-        "source": "New York Times",
-        "published": "2026-10-28T18:17:50+00:00",
-        "image": "assets/news/d8f2b8d2bc58fb8f754bb813.webp",
+        "title": "Living with high prices in Virginia's 1st Congressional District",
+        "description": "High prices are straining budgets for both a small business owner and a single mom in a rural part of Va.'s 1st Congressional district. They explain how they're handling the economic stress of these times.",
+        "url": "https://www.npr.org/2026/11/01/nx-s1-5945628/living-with-high-prices-in-virginias-1st-congressional-district",
+        "source": "NPR",
+        "published": "2026-11-01T13:00:00+00:00",
+        "image": "assets/news/b53e99ea460211480d815481.webp",
         "placeholder": false,
         "topic": "World News / Global"
       },
       "summary": {
         "id": 9,
-        "zh_title": "以色列选举中的对手们发出胜利的语气，但结果尚不明朗",
-        "zh_summary": "内塔尼亚胡总理和反对派领袖加迪·艾森科特在午夜后向支持者发表讲话，均表示对领导以色列下届政府充满信心，计票可能需要几天。",
-        "en_title": "Rivals in Israel Election Strike Tone of Triumph, but Outcome Is Far From Clear",
-        "en_summary": "Addressing supporters after midnight, Prime Minister Benjamin Netanyahu and Gadi Eisenkot, who leads a bloc of opposition parties, both expressed confidence that they will lead Israel’s next government. Vote counting could take days."
-      }
-    },
-    "10": {
-      "topic": "World News / Global",
-      "article": {
-        "title": "How to think about the midterms — and the political moment the country is in",
-        "description": "Polls show Democrats with an advantage in the midterm election but there are potential limitations and results may take a while to roll in.",
-        "url": "https://www.npr.org/2026/11/01/g-s1-151146/how-to-think-about-the-midterms-and-the-political-moment-the-country-is-in",
-        "source": "NPR",
-        "published": "2026-11-01T18:27:06+00:00",
-        "image": "assets/news/d6042002159046edd2b735b1.webp",
-        "placeholder": false,
-        "topic": "World News / Global"
-      },
-      "summary": {
-        "id": 10,
-        "zh_title": "如何看待中期选举及国家当前的政治时刻",
-        "zh_summary": "民调显示民主党在中期选举中占优势，但存在潜在限制，结果可能需要一段时间才能揭晓。",
-        "en_title": "How to think about the midterms — and the political moment the country is in",
-        "en_summary": "Polls show Democrats with an advantage in the midterm election but there are potential limitations and results may take a while to roll in."
+        "zh_title": "在弗吉尼亚州第一国会选区应对高物价",
+        "zh_summary": "高物价给弗吉尼亚州第一国会选区的一个小企业主和单身母亲的预算带来了压力。",
+        "en_title": "Living with high prices in Virginia's 1st Congressional District",
+        "en_summary": "High prices are straining budgets for both a small business owner and a single mom in a rural part of Va.'s 1st Congressional district."
       }
     }
   }
