@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-01",
+  "checked_at": "2026-11-02",
   "slots": {
     "1": {
       "topic": "Weston / Boston / Massachusetts",
@@ -35,10 +35,10 @@
       },
       "summary": {
         "id": 2,
-        "zh_title": "联邦储备委员会在高通胀下维持利率不变",
-        "zh_summary": "尽管通胀高企，联邦储备委员会决定维持利率不变。",
+        "zh_title": "美联储在高通胀下维持利率不变",
+        "zh_summary": "美联储在高通胀的情况下决定维持利率不变。",
         "en_title": "Federal Reserve keeps rates unchanged despite elevated inflation",
-        "en_summary": "The Federal Reserve decided to keep rates unchanged despite elevated inflation."
+        "en_summary": "The Federal Reserve has decided to keep interest rates unchanged despite elevated inflation."
       }
     },
     "3": {
@@ -56,9 +56,9 @@
       "summary": {
         "id": 3,
         "zh_title": "城市计划在杰克逊曼建设社区中心和住房",
-        "zh_summary": "市长米歇尔·吴预计将在年底前做出最终决定。",
+        "zh_summary": "城市计划在杰克逊曼建设社区中心和住房，市长预计将在年底前做出最终决定。",
         "en_title": "City plans community center, housing at Jackson Mann",
-        "en_summary": "Mayor Michelle Wu is expected to make a final decision by the end of the year."
+        "en_summary": "The city plans to build a community center and housing at Jackson Mann, with the mayor expected to make a final decision by the end of the year."
       }
     },
     "4": {
@@ -75,13 +75,33 @@
       },
       "summary": {
         "id": 4,
-        "zh_title": "热门物业：Shepley Bulfinch波士顿工作室",
+        "zh_title": "热物业：Shepley Bulfinch波士顿工作室",
         "zh_summary": "Shepley Bulfinch最近迁至200 State St.，为自己设计了一个新的工作空间。",
         "en_title": "Hot Property: Shepley Bulfinch Boston Studio",
-        "en_summary": "Shepley Bulfinch recently relocated to 200 State St., designing a new workspace for itself."
+        "en_summary": "Shepley Bulfinch has recently relocated to 200 State St., designing a new workspace for itself."
       }
     },
     "5": {
+      "topic": "World News / Global",
+      "article": {
+        "title": "Fake nuclear warnings in Ukraine as Moscow, Kyiv report separate cyberattacks on emergency apps",
+        "description": "Russia and Ukraine both report cyberattacks on their alerting systems, as strikes continue across the countries.",
+        "url": "https://www.cnbc.com/2026/11/02/russia-ukraine-cyberattack-zelenskyy-putin.html",
+        "source": "CNBC",
+        "published": "2026-11-02T13:57:39+00:00",
+        "image": "assets/news/71e61259d17d5414a1bc2a2a.jpg",
+        "placeholder": false,
+        "topic": "World News / Global"
+      },
+      "summary": {
+        "id": 5,
+        "zh_title": "乌克兰假核警报，莫斯科和基辅报告各自的网络攻击",
+        "zh_summary": "俄罗斯和乌克兰均报告了对其警报系统的网络攻击。",
+        "en_title": "Fake nuclear warnings in Ukraine as Moscow, Kyiv report separate cyberattacks on emergency apps",
+        "en_summary": "Russia and Ukraine both report cyberattacks on their alerting systems."
+      }
+    },
+    "6": {
       "topic": "World News / Global",
       "article": {
         "title": "Russian strikes plunge Ukrainian city into blackout as Zelenskyy warns of more missile attacks",
@@ -94,14 +114,14 @@
         "topic": "World News / Global"
       },
       "summary": {
-        "id": 5,
+        "id": 6,
         "zh_title": "俄罗斯袭击使乌克兰城市陷入停电，泽连斯基警告更多导弹攻击",
-        "zh_summary": "俄罗斯的袭击导致第聂伯市大规模停电，乌克兰无人机攻击引发俄罗斯石油精炼厂火灾。",
+        "zh_summary": "俄罗斯的袭击导致第聂伯市大规模停电。",
         "en_title": "Russian strikes plunge Ukrainian city into blackout as Zelenskyy warns of more missile attacks",
-        "en_summary": "Russian strikes caused major power outages in Dnipro as a reported Ukrainian drone attack sparked a fire at a Russian oil refinery."
+        "en_summary": "Russian strikes caused major power outages in Dnipro as Zelenskyy warns of more missile attacks."
       }
     },
-    "6": {
+    "7": {
       "topic": "World News / Global",
       "article": {
         "title": "Rubio says Trump wants to end Iran war 'peacefully' even as both sides prepare for strikes",
@@ -114,34 +134,34 @@
         "topic": "World News / Global"
       },
       "summary": {
-        "id": 6,
+        "id": 7,
         "zh_title": "鲁比奥表示特朗普希望“和平”结束伊朗战争，尽管双方准备发动攻击",
-        "zh_summary": "鲁比奥的言论出现在双方准备在美国中期选举后进行更多军事打击的背景下。",
+        "zh_summary": "鲁比奥的言论表明，尽管双方准备进行额外的军事打击，特朗普仍希望和平解决伊朗战争。",
         "en_title": "Rubio says Trump wants to end Iran war 'peacefully' even as both sides prepare for strikes",
-        "en_summary": "The remarks come as reports suggest that both sides are gearing up for additional military strikes after the U.S. midterm elections."
+        "en_summary": "Rubio's remarks suggest that Trump wants to end the Iran war 'peacefully' even as both sides prepare for additional military strikes."
       }
     },
-    "7": {
+    "8": {
       "topic": "World News / Global",
       "article": {
-        "title": "Here are 3 big things we're watching in the stock market in the week ahead",
-        "description": "The market could use a few victories in the days ahead, which will be filled with more earnings, an election, and jobs data.",
-        "url": "https://www.cnbc.com/investingclub/2026/11/01/3-big-things-were-watching-in-the-stock-market-this-week.html",
-        "source": "CNBC",
-        "published": "2026-11-01T18:12:05+00:00",
-        "image": "assets/news/50703bdba2e8c0be39b1ffa7.jpg",
+        "title": "6 things to watch for on election night",
+        "description": "Some of the key storylines to watch will center around various voters groups that have soured on President Trump during his second turn out.",
+        "url": "https://www.npr.org/2026/11/02/nx-s1-6025451/midterms-what-to-watch-election-night",
+        "source": "NPR",
+        "published": "2026-11-02T10:00:00+00:00",
+        "image": "assets/news/edcb5e77cd124c279f5c3c4f.webp",
         "placeholder": false,
         "topic": "World News / Global"
       },
       "summary": {
-        "id": 7,
-        "zh_title": "我们关注的下周股市三大重要事项",
-        "zh_summary": "未来几天股市可能需要一些胜利，届时将有更多财报、选举和就业数据发布。",
-        "en_title": "Here are 3 big things we're watching in the stock market in the week ahead",
-        "en_summary": "The market could use a few victories in the days ahead, which will be filled with more earnings, an election, and jobs data."
+        "id": 8,
+        "zh_title": "选举之夜需关注的6件事",
+        "zh_summary": "选举之夜将关注一些对特朗普失望的选民群体。",
+        "en_title": "6 things to watch for on election night",
+        "en_summary": "Key storylines to watch on election night will center around various voter groups that have soured on President Trump."
       }
     },
-    "8": {
+    "9": {
       "topic": "World News / Global",
       "article": {
         "title": "Gulf region on edge as Qatar leads talks with Iran to stave off new U.S. attacks",
@@ -154,31 +174,31 @@
         "topic": "World News / Global"
       },
       "summary": {
-        "id": 8,
+        "id": 9,
         "zh_title": "海湾地区紧张，卡塔尔主导与伊朗的谈判以避免新的美国攻击",
-        "zh_summary": "卡塔尔在过去72小时内进行密集调解，以防止美国在周二中期选举后对伊朗的新一轮攻击。",
+        "zh_summary": "卡塔尔在过去72小时内主导了与伊朗的密集调解努力，以防止美国对伊朗的新一轮攻击。",
         "en_title": "Gulf region on edge as Qatar leads talks with Iran to stave off new U.S. attacks",
-        "en_summary": "Qatar has been leading intense mediation efforts over the past 72 hours to prevent a new round of possible U.S. attacks on Iran after Tuesday's midterm elections."
+        "en_summary": "Qatar has been leading intense mediation efforts to prevent a new round of possible U.S. attacks on Iran."
       }
     },
-    "9": {
+    "10": {
       "topic": "World News / Global",
       "article": {
-        "title": "Living with high prices in Virginia's 1st Congressional District",
-        "description": "High prices are straining budgets for both a small business owner and a single mom in a rural part of Va.'s 1st Congressional district. They explain how they're handling the economic stress of these times.",
-        "url": "https://www.npr.org/2026/11/01/nx-s1-5945628/living-with-high-prices-in-virginias-1st-congressional-district",
+        "title": "How Gen Z Republicans running for Congress are thinking about the future of the party",
+        "description": "On the eve of what may prove to be a tough election for the GOP, young conservatives vying to be part of the first class of Gen Z Republicans in Congress want a role shaping the party's next chapter.",
+        "url": "https://www.npr.org/2026/11/01/nx-s1-5946869/midterm-elections-gen-z-republicans",
         "source": "NPR",
-        "published": "2026-11-01T13:00:00+00:00",
-        "image": "assets/news/b53e99ea460211480d815481.webp",
+        "published": "2026-11-01T11:00:00Z",
+        "image": "assets/news/0e8d9cbb45c7b2c711c731c9.webp",
         "placeholder": false,
         "topic": "World News / Global"
       },
       "summary": {
-        "id": 9,
-        "zh_title": "在弗吉尼亚州第一国会选区应对高物价",
-        "zh_summary": "高物价给弗吉尼亚州第一国会选区的一个小企业主和单身母亲的预算带来了压力。",
-        "en_title": "Living with high prices in Virginia's 1st Congressional District",
-        "en_summary": "High prices are straining budgets for both a small business owner and a single mom in a rural part of Va.'s 1st Congressional district."
+        "id": 10,
+        "zh_title": "竞选国会的Z世代共和党人对党的未来的思考",
+        "zh_summary": "年轻的保守派希望在国会中塑造共和党的下一个篇章。",
+        "en_title": "How Gen Z Republicans running for Congress are thinking about the future of the party",
+        "en_summary": "Young conservatives running for Congress want a role in shaping the next chapter of the Republican Party."
       }
     }
   }
