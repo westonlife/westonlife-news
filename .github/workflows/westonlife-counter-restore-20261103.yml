@@ -1,0 +1,123 @@
+name: Weston Life - recover counter without touching news
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/westonlife-counter-restore-20261103.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+jobs:
+  recover:
+    if: github.repository == 'westonlife/westonlife-news'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+      - name: Recover existing +11 popularity counter and preserve all content
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          page = Path('index.html')
+          if not page.is_file():
+              raise SystemExit('STOP: index.html missing')
+          original = page.read_text(encoding='utf-8')
+          first = '<!-- WL-COUNTER-PLUS11-FROZEN -->'
+          last = '<!-- WL-COUNTER-PLUS11-FROZEN-END -->'
+          if original.count(first) != 1 or original.count(last) != 1:
+              raise SystemExit('STOP: expected exactly one existing counter block')
+          if 'westonlife-special-20261103.js' not in original:
+              raise SystemExit('STOP: Nov 3 news marker missing; avoid changing unknown homepage')
+          replacement = r'''<!-- WL-COUNTER-PLUS11-FROZEN -->
+          <div id="wl-counter" style="padding:12px 18px;background:#f5efdf;color:#315c41;font-size:14px;text-align:left;">
+            <span id="busuanzi_site_pv" style="display:none">加载中…</span>
+            人气值：<span id="wl-popularity" aria-live="polite">27,110</span>
+          </div>
+          <script id="wl-restore-11-20261103">
+          (function () {
+            'use strict';
+            if (window.__wlRecovered11) return;
+            window.__wlRecovered11 = true;
+            var BASE = 27110, BASE_PV = 69, STEP = 11;
+            // Same key as yesterday's counter. Do not erase the saved high-water mark.
+            var KEY = 'westonlife-popularity-plus11-v1';
+            var box = document.getElementById('wl-counter');
+            var pvNode = document.getElementById('busuanzi_site_pv');
+            var label = document.getElementById('wl-popularity');
+            if (!box || !pvNode || !label) return;
+            document.body.prepend(box);
+            function readSaved() {
+              try {
+                var x = Number(localStorage.getItem(KEY));
+                return Number.isSafeInteger(x) && x >= BASE ? x : BASE;
+              } catch (e) { return BASE; }
+            }
+            var displayed = readSaved() + STEP;
+            function render(n) {
+              if (!Number.isSafeInteger(n) || n < BASE) return;
+              displayed = Math.max(displayed, n, readSaved());
+              label.textContent = displayed.toLocaleString('en-US');
+              try { localStorage.setItem(KEY, String(displayed)); } catch (e) {}
+            }
+            render(displayed);
+            function syncShared() {
+              var raw = (pvNode.textContent || '').replace(/[,，\s]/g, '');
+              if (!/^\d+$/.test(raw)) return;
+              var pv = Number(raw);
+              if (!Number.isSafeInteger(pv)) return;
+              render(BASE + STEP * Math.max(0, pv - BASE_PV));
+            }
+            new MutationObserver(syncShared).observe(pvNode, {
+              childList: true, characterData: true, subtree: true
+            });
+            window.addEventListener('storage', function (e) {
+              if (e.key === KEY) render(readSaved());
+            });
+            syncShared();
+          })();
+          </script>
+          <script defer src="https://cdn.busuanzi.cc/busuanzi/3.6.9/busuanzi.min.js"></script>
+          <!-- WL-COUNTER-PLUS11-FROZEN-END -->'''
+          pat = re.compile(re.escape(first)+r'[\s\S]*?'+re.escape(last))
+          updated, count = pat.subn(lambda m: replacement, original)
+          if count != 1 or updated.replace(replacement, pat.search(original).group()) != original:
+              raise SystemExit('STOP: counter-only check failed')
+          if updated != original:
+              page.write_text(updated, encoding='utf-8')
+              print('Restored local +11 high-water counter; retained all news and all other homepage code.')
+          else:
+              print('Counter already restored.')
+          PY
+      - name: Commit counter-only homepage change
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- index.html
+          if ! git diff --cached --quiet; then
+            git commit -m 'Recover saved popularity +11 without resetting count or news'
+            git push origin HEAD:main
+          else
+            echo 'No changes necessary'
+          fi
+      - name: Request GitHub Pages rebuild (if required by bot commit)
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          code=$(curl -sS -o /tmp/wl-pages-build.txt -w '%{http_code}' -X POST \
+            -H 'Accept: application/vnd.github+json' \
+            -H "Authorization: Bearer ${GH_TOKEN}" \
+            -H 'X-GitHub-Api-Version: 2022-11-28' \
+            "https://api.github.com/repos/${GITHUB_REPOSITORY}/pages/builds")
+          echo "GitHub Pages build request: ${code} (201=accepted)"
