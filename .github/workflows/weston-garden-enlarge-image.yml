@@ -1,0 +1,43 @@
+name: Enlarge Weston Garden Homepage Image
+on:
+  push:
+    paths:
+      - '.github/workflows/weston-garden-enlarge-image.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  enlarge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Enlarge ONLY the garden homepage image
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('index.html')
+          s=p.read_text(encoding='utf-8')
+          start='<!-- WESTON-YANGHUA-HOMEPAGE-START -->'
+          end='<!-- WESTON-YANGHUA-HOMEPAGE-END -->'
+          if s.count(start)!=1 or s.count(end)!=1: raise SystemExit('Garden block not found exactly once; no changes made')
+          a,b=s.split(start,1)
+          mid,c=b.split(end,1)
+          old='#wyh-home .garden-main img{width:37%;height:auto;max-height:188px;object-fit:cover}'
+          new='#wyh-home .garden-main img{width:45%;height:220px;max-height:none;object-fit:cover;object-position:center}'
+          old_mobile='#wyh-home .garden-main img{width:35%}'
+          new_mobile='#wyh-home .garden-main img{width:45%;height:210px;object-fit:cover;object-position:center}'
+          if old not in mid or old_mobile not in mid: raise SystemExit('Expected garden styles not found; no changes made')
+          mid=mid.replace(old,new,1).replace(old_mobile,new_mobile,1)
+          updated=a+start+mid+end+c
+          assert updated[:len(a)]==a and updated.endswith(c)
+          p.write_text(updated,encoding='utf-8')
+          PY
+      - name: Commit only index.html if changed
+        run: |
+          git add -- index.html
+          if git diff --cached --quiet; then echo 'Already updated'; exit 0; fi
+          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Enlarge garden homepage image only'
+          git push
