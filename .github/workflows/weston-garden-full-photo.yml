@@ -1,0 +1,41 @@
+name: Weston Garden Full Width Photo
+on:
+  push:
+    paths:
+      - '.github/workflows/weston-garden-full-photo.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Update only garden card
+        run: |
+          python3 - <<'PYCODE'
+          from pathlib import Path
+          import base64
+          f=Path('index.html')
+          s=f.read_text(encoding='utf-8')
+          start='<!-- WESTON-YANGHUA-HOMEPAGE-START -->'
+          end='<!-- WESTON-YANGHUA-HOMEPAGE-END -->'
+          assert s.count(start)==1 and s.count(end)==1, 'Markers not found uniquely'
+          assert Path('weston-garden-cover.jpg').is_file(), 'Upload cover JPG to root first'
+          a=s.index(start)+len(start)
+          b=s.index(end,a)
+          assert 'weston-garden.html' in s[a:b], 'Unexpected garden card'
+          new=base64.b64decode('PHN0eWxlPgojd3loLWhvbWV7bWF4LXdpZHRoOjExMDBweDttYXJnaW46MjJweCBhdXRvIDI4cHg7cGFkZGluZzoxMHB4O2JhY2tncm91bmQ6I2Y3ZjhmMztib3JkZXI6MXB4IHNvbGlkICNkY2UzZDg7Ym9yZGVyLXJhZGl1czoxNHB4O2NvbG9yOiMyYzQ2MzQ7Ym94LXNpemluZzpib3JkZXItYm94fQojd3loLWhvbWUgKntib3gtc2l6aW5nOmJvcmRlci1ib3h9I3d5aC1ob21lIGF7dGV4dC1kZWNvcmF0aW9uOm5vbmU7Y29sb3I6aW5oZXJpdH0KI3d5aC1ob21lIC5nYXJkZW4tbWFpbntkaXNwbGF5OmJsb2NrO292ZXJmbG93OmhpZGRlbjtib3JkZXItcmFkaXVzOjEwcHg7YmFja2dyb3VuZDojZmZmfQojd3loLWhvbWUgLmdhcmRlbi1tYWluIGltZ3tkaXNwbGF5OmJsb2NrO3dpZHRoOjEwMCU7aGVpZ2h0OmF1dG87YXNwZWN0LXJhdGlvOjE2Lzk7b2JqZWN0LWZpdDpjb3ZlcjtvYmplY3QtcG9zaXRpb246Y2VudGVyfQojd3loLWhvbWUgLmdhcmRlbi1kZXRhaWx7cGFkZGluZzoxNnB4IDIwcHh9I3d5aC1ob21lIC5nYXJkZW4ta2lja2Vye2ZvbnQ6NzAwIDExcHggQXJpYWwsc2Fucy1zZXJpZjtsZXR0ZXItc3BhY2luZzouMTJlbTtjb2xvcjojOWM4MTVmfQojd3loLWhvbWUgaDJ7Zm9udDo1MDAgY2xhbXAoMjNweCwzdncsMzJweCkvMS4zNSBHZW9yZ2lhLHNlcmlmO21hcmdpbjo4cHggMDtjb2xvcjojMmM0NjM0fQojd3loLWhvbWUgcHtmb250OjE0cHgvMS42IEFyaWFsLHNhbnMtc2VyaWY7Y29sb3I6IzY2NzU2NzttYXJnaW46MH0jd3loLWhvbWUgLmdhcmRlbi1jdGF7ZGlzcGxheTppbmxpbmUtYmxvY2s7Y29sb3I6IzMyNWY0Mztmb250OmJvbGQgMTNweCBBcmlhbCxzYW5zLXNlcmlmO21hcmdpbi10b3A6MTBweH0KI3d5aC1ob21lIC5nYXJkZW4tYXJjaGl2ZXtmb250OjEycHggQXJpYWwsc2Fucy1zZXJpZjt0ZXh0LWFsaWduOnJpZ2h0O3BhZGRpbmc6MTBweCA1cHggMDtjb2xvcjojNjY3NjZhO21hcmdpbjowfSN3eWgtaG9tZSAuZ2FyZGVuLWFyY2hpdmUgYXt0ZXh0LWRlY29yYXRpb246dW5kZXJsaW5lfQpAbWVkaWEobWF4LXdpZHRoOjYyMHB4KXsjd3loLWhvbWV7bWFyZ2luOjE4cHggMTBweDtwYWRkaW5nOjhweH0jd3loLWhvbWUgLmdhcmRlbi1kZXRhaWx7cGFkZGluZzoxMnB4IDE0cHh9I3d5aC1ob21lIGgye2ZvbnQtc2l6ZToyM3B4fSN3eWgtaG9tZSBwe2ZvbnQtc2l6ZToxM3B4fX0KPC9zdHlsZT4KPHNlY3Rpb24gaWQ9Ind5aC1ob21lIiBhcmlhLWxhYmVsPSJXZXN0b27lm5vlraPluoTlm63lhbvmiqTmiYvlhowiPgo8YSBjbGFzcz0iZ2FyZGVuLW1haW4iIGhyZWY9Indlc3Rvbi1nYXJkZW4uaHRtbCI+PGltZyBzcmM9Indlc3Rvbi1nYXJkZW4tY292ZXIuanBnIiBhbHQ9Iueni+aXpeW6hOWbreW6remZouOAgee6ouWPtuOAgeiNieWdquS4juS9j+WuhSIgbG9hZGluZz0ibGF6eSI+CjxkaXYgY2xhc3M9ImdhcmRlbi1kZXRhaWwiPjxzcGFuIGNsYXNzPSJnYXJkZW4ta2lja2VyIj5XRVNUT04gTElGRSDCtyBZRUFSLVJPVU5EIEdBUkRFTiBDQVJFPC9zcGFuPjxoMj5XZXN0b24g5Zub5a2j5bqE5Zut5YW75oqk5omL5YaMPC9oMj48cD7np4vlraPlhaXlhqzlh4blpIfjgIHmmKXlpI/lhbvmiqTjgIHljbHpmanmpI3nianjgIHmiavpm6rmoIfmnYbjgIHono3pm6rliYLkuI7mnKzlnLDmnI3liqHllYblj4LogIPku7fmoLzjgII8L3A+PHNwYW4gY2xhc3M9ImdhcmRlbi1jdGEiPumYheivu+WujOaVtOWbvuaWh+aJi+WGjCDihpI8L3NwYW4+PC9kaXY+PC9hPgo8cCBjbGFzcz0iZ2FyZGVuLWFyY2hpdmUiPuWOhuWPsuaWh+eroO+8mjxhIGhyZWY9Indlc3Rvbi15YW5naHVhLmh0bWwiPldlc3RvbuWFu+iKseWFu+S6ujwvYT48L3A+PC9zZWN0aW9uPgo=').decode('utf-8')
+          f.write_text(s[:a]+new+s[b:],encoding='utf-8')
+          PYCODE
+      - name: Commit only index.html
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          if ! git diff --cached --quiet; then
+            git commit -m "Use full width autumn garden photo"
+            git push
+          fi
