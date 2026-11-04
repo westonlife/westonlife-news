@@ -24,21 +24,21 @@
     "2": {
       "topic": "Weston / Boston / Massachusetts",
       "article": {
-        "title": "Democrat Dan Koh to succeed Seth Moulton in Mass. 6th Congressional District",
-        "description": "Democrat Dan Koh is set to replace Rep. Seth Moulton, who served in the seat for six terms before launching a senate campaign. The post Democrat Dan Koh to succeed Seth Moulton in Mass. 6th Congressional District appeared first on Boston.com .",
-        "url": "https://www.boston.com/news/politics/2026/11/03/democrat-dan-koh-to-succeed-seth-moulton-in-mass-6th-congressional-district/",
+        "title": "2026 live midterm election results: U.S. Senate in Alaska",
+        "description": "Incumbent Sen. Dan S. Sullivan, a Republican, is being challenged by Democrat Mary Peltola. Follow along below as votes are counted. The post 2026 live midterm election results: U.S. Senate in Alaska appeared first on Boston.com .",
+        "url": "https://www.boston.com/news/politics/2026/11/04/2026-live-midterm-election-results-u-s-senate-in-alaska/",
         "source": "Boston.com",
-        "published": "2026-11-04T03:56:20+00:00",
-        "image": "assets/news/4a160382990a9c603de4a4c7.webp",
+        "published": "2026-11-04T15:17:11+00:00",
+        "image": "assets/news/d6ec41e5adb041bc9aa412f7.webp",
         "placeholder": false,
         "topic": "Weston / Boston / Massachusetts"
       },
       "summary": {
         "id": 2,
-        "zh_title": "民主党丹·科赫将接替塞斯·莫尔顿",
-        "zh_summary": "民主党丹·科赫将接替曾任六届的众议员塞斯·莫尔顿。",
-        "en_title": "Democrat Dan Koh to succeed Seth Moulton in Mass. 6th Congressional District",
-        "en_summary": "Democrat Dan Koh is set to replace Rep. Seth Moulton, who served in the seat for six terms."
+        "zh_title": "2026年阿拉斯加州美国参议院中期选举实时结果",
+        "zh_summary": "现任参议员丹·苏利文面临民主党玛丽·佩尔托拉的挑战。",
+        "en_title": "2026 live midterm election results: U.S. Senate in Alaska",
+        "en_summary": "Incumbent Sen. Dan S. Sullivan, a Republican, is being challenged by Democrat Mary Peltola."
       }
     },
     "3": {
@@ -55,8 +55,8 @@
       },
       "summary": {
         "id": 3,
-        "zh_title": "2026年实时选举结果：马萨诸塞州第7号投票问题",
-        "zh_summary": "在选举之夜，投票结果将被实时统计。",
+        "zh_title": "2026年马萨诸塞州投票问题7的实时选举结果",
+        "zh_summary": "选举之夜的投票结果正在统计中。",
         "en_title": "2026 live election results: Mass. Ballot Question 7, the ‘starter homes’ measure",
         "en_summary": "Follow along below as votes are counted on election night."
       }
@@ -75,13 +75,33 @@
       },
       "summary": {
         "id": 4,
-        "zh_title": "马萨诸塞州房地产经纪人慈善基金会向18个地方非营利组织颁发27000美元的赠款",
+        "zh_title": "马萨诸塞州房地产经纪人慈善基金会向18个地方非营利组织颁发27,000美元的赠款",
         "zh_summary": "波士顿的女性午餐地点是获得资助的组织之一，支持解决住房、饥饿和无家可归问题。",
         "en_title": "Massachusetts REALTORS Charitable Foundation Awards $27,000 in Grants to 18 Local Nonprofits",
-        "en_summary": "Boston’s Women’s Lunch Place among the recipients of funding supporting organizations addressing housing, hunger and homelessness."
+        "en_summary": "Boston’s Women’s Lunch Place among the recipients of funding supporting organizations addressing housing, hunger and homelessness across Massachusetts."
       }
     },
     "5": {
+      "topic": "World News / Global",
+      "article": {
+        "title": "Back in the majority, Democrats have plans for a long list of Trump investigations",
+        "description": "Democrats will have the ability to subpoena records and compel individuals to testify. The Epstein files, Elon Musk, the Iran war and Trump's business interests may all come under the microscope.",
+        "url": "https://www.npr.org/2026/11/04/g-s1-150276/2026-midterms-democrats-investigations",
+        "source": "NPR",
+        "published": "2026-11-04T17:38:36+00:00",
+        "image": "assets/news/5d7890552604bde6ca629584.webp",
+        "placeholder": false,
+        "topic": "World News / Global"
+      },
+      "summary": {
+        "id": 5,
+        "zh_title": "民主党重新掌握多数，计划对特朗普进行一系列调查",
+        "zh_summary": "民主党将有能力传唤记录并强迫个人作证。",
+        "en_title": "Back in the majority, Democrats have plans for a long list of Trump investigations",
+        "en_summary": "Democrats will have the ability to subpoena records and compel individuals to testify."
+      }
+    },
+    "6": {
       "topic": "World News / Global",
       "article": {
         "title": "Euro zone inflation hits 4% for first time in three years as interest rate hike looms",
@@ -94,14 +114,14 @@
         "topic": "World News / Global"
       },
       "summary": {
-        "id": 5,
-        "zh_title": "欧元区通胀率首次达到4%",
+        "id": 6,
+        "zh_title": "欧元区通胀首次达到4%，利率上调迫在眉睫",
         "zh_summary": "这主要是由于能源通胀在十月份飙升超过20%。",
         "en_title": "Euro zone inflation hits 4% for first time in three years as interest rate hike looms",
         "en_summary": "It was driven by energy inflation, which surged above 20% in October."
       }
     },
-    "6": {
+    "7": {
       "topic": "World News / Global",
       "article": {
         "title": "Stock market after midterm elections: What S&P 500 history shows",
@@ -114,14 +134,14 @@
         "topic": "World News / Global"
       },
       "summary": {
-        "id": 6,
-        "zh_title": "中期选举后股市：标准普尔500历史显示",
-        "zh_summary": "历史上，中期选举通常预示着标准普尔500指数的强劲表现。",
+        "id": 7,
+        "zh_title": "中期选举后股市：标准普尔500历史显示的情况",
+        "zh_summary": "历史上，中期选举通常预示着标准普尔500强劲的一年。",
         "en_title": "Stock market after midterm elections: What S&P 500 history shows",
         "en_summary": "Midterms historically precede a strong year for the S&P 500."
       }
     },
-    "7": {
+    "8": {
       "topic": "World News / Global",
       "article": {
         "title": "Death toll hits 29 after Russian strike on Ukrainian aid site, with 48 still missing",
@@ -134,14 +154,14 @@
         "topic": "World News / Global"
       },
       "summary": {
-        "id": 7,
-        "zh_title": "俄罗斯对乌克兰援助地点的袭击造成29人遇难",
-        "zh_summary": "俄罗斯发射了289架攻击无人机和多枚导弹，造成48人失踪。",
+        "id": 8,
+        "zh_title": "俄罗斯对乌克兰援助地点的袭击造成29人死亡，48人失踪",
+        "zh_summary": "俄罗斯发射了289架攻击无人机、17枚弹道导弹和59枚巡航导弹。",
         "en_title": "Death toll hits 29 after Russian strike on Ukrainian aid site, with 48 still missing",
         "en_summary": "Russia launched 289 attack drones, 17 ballistic missiles and 59 cruise missiles across nine regions."
       }
     },
-    "8": {
+    "9": {
       "topic": "World News / Global",
       "article": {
         "title": "Crude oil prices fall for second day as market hopes for diplomatic resolution to Iran war",
@@ -154,14 +174,34 @@
         "topic": "World News / Global"
       },
       "summary": {
-        "id": 8,
-        "zh_title": "原油价格连续第二天下跌",
-        "zh_summary": "市场希望伊朗战争能通过外交手段解决，油价出现反弹。",
+        "id": 9,
+        "zh_title": "原油价格连续第二天下跌，市场期待伊朗战争的外交解决",
+        "zh_summary": "在美国和伊朗总统表示愿意寻求外交解决方案后，油价反弹。",
         "en_title": "Crude oil prices fall for second day as market hopes for diplomatic resolution to Iran war",
-        "en_summary": "The rebound in oil prices come a day after the U.S. and Iranian presidents signalled they are open to a diplomatic solution."
+        "en_summary": "The rebound in oil prices come a day after the U.S. and Iranian presidents signalled they are open to a diplomatic solution to Iran war."
       }
     },
-    "9": {
+    "10": {
+      "topic": "World News / Global",
+      "article": {
+        "title": "Israel’s President Could Play Key Role in Breaking Post-Election Deadlock",
+        "description": "President Isaac Herzog has tried to avoid controversy and heal rifts in his largely ceremonial role. But his skills as a savvy mediator could be instrumental after an inconclusive election.",
+        "url": "https://www.nytimes.com/2026/11/04/world/middleeast/israel-president-herzog-election-government.html",
+        "source": "New York Times",
+        "published": "2026-11-04T13:18:58+00:00",
+        "image": "assets/news/146962572b36fc517e8abc01.webp",
+        "placeholder": false,
+        "topic": "World News / Global"
+      },
+      "summary": {
+        "id": 10,
+        "zh_title": "以色列总统在打破选后僵局中可能发挥关键作用",
+        "zh_summary": "以色列总统艾萨克·赫尔佐格在其主要是礼仪性的角色中努力避免争议。",
+        "en_title": "Israel’s President Could Play Key Role in Breaking Post-Election Deadlock",
+        "en_summary": "President Isaac Herzog has tried to avoid controversy and heal rifts in his largely ceremonial role."
+      }
+    },
+    "11": {
       "topic": "World News / Global",
       "article": {
         "title": "Supreme Court leans toward LGBTQ exclusion for publicly funded Catholic preschools",
@@ -174,34 +214,14 @@
         "topic": "World News / Global"
       },
       "summary": {
-        "id": 9,
-        "zh_title": "最高法院倾向于排除LGBTQ家庭的公立资助天主教幼儿园",
+        "id": 11,
+        "zh_title": "最高法院倾向于排除公立资助的天主教幼儿园的LGBTQ家庭",
         "zh_summary": "最高法院听取了关于科罗拉多州普及学前教育计划的辩论。",
         "en_title": "Supreme Court leans toward LGBTQ exclusion for publicly funded Catholic preschools",
-        "en_summary": "The Supreme Court heard arguments about Colorado's universal pre-K program and whether religious schools can bar certain families."
+        "en_summary": "The Supreme Court heard arguments Tuesday about Colorado's universal pre-K program."
       }
     },
-    "10": {
-      "topic": "World News / Global",
-      "article": {
-        "title": "It's Election Day. Control of Congress is on the line, and what else you need to know",
-        "description": "There are a lot of variables for how things will go today. Results will start to come in at 6 p.m. ET in Kentucky and Indiana, and then it will be off to the races.",
-        "url": "https://www.npr.org/2026/11/03/nx-s1-5992757/election-day-live-updates-key-races",
-        "source": "NPR",
-        "published": "2026-11-03T10:00:00+00:00",
-        "image": "assets/news/e748aed749e511a9f42270ba.webp",
-        "placeholder": false,
-        "topic": "World News / Global"
-      },
-      "summary": {
-        "id": 10,
-        "zh_title": "今天是选举日，国会控制权悬而未决",
-        "zh_summary": "今天的选举结果将于东部时间下午6点开始公布。",
-        "en_title": "It's Election Day. Control of Congress is on the line, and what else you need to know",
-        "en_summary": "Results will start to come in at 6 p.m. ET in Kentucky and Indiana."
-      }
-    },
-    "11": {
+    "12": {
       "topic": "World News / Global",
       "article": {
         "title": "Midterm elections are coming to a close as voters pass judgment on Trump's second term",
@@ -214,8 +234,8 @@
         "topic": "World News / Global"
       },
       "summary": {
-        "id": 11,
-        "zh_title": "中期选举即将结束，选民对特朗普的第二任期进行评判",
+        "id": 12,
+        "zh_title": "中期选举即将结束，选民对特朗普第二任期进行评判",
         "zh_summary": "中期选举将作为对特朗普第二任期的公投即将结束。",
         "en_title": "Midterm elections are coming to a close as voters pass judgment on Trump's second term",
         "en_summary": "Midterm elections that will serve as a referendum on President Donald Trump’s second term are coming to a close."
