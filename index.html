@@ -3911,55 +3911,7 @@ html[data-wl-lang="zh"] #wl-school-today .school-en,html[data-wl-lang="en"] #wl-
 <script src="/WestonLife_Coco_Fix_1104.js" defer></script>
 <script src="/westonlife-unified-language-home.js" defer></script>
 <script src="/guandan-jianghu.js" defer></script>
-<!-- WL-COUNTER-PLUS11-FROZEN -->
-  <span id="busuanzi_site_pv" style="display:none">加载中…</span>
-  人气值：<span id="wl-popularity" aria-live="polite">27,110</span>
-</div>
-<script id="wl-restore-11-20261103">
-(function () {
-  'use strict';
-  if (window.__wlRecovered11) return;
-  window.__wlRecovered11 = true;
-  var BASE = 27110, BASE_PV = 69, STEP = 11;
-  // Same key as yesterday's counter. Do not erase the saved high-water mark.
-  var KEY = 'westonlife-popularity-plus11-v1';
-  var box = document.getElementById('wl-counter');
-  var pvNode = document.getElementById('busuanzi_site_pv');
-  var label = document.getElementById('wl-popularity');
-  if (!box || !pvNode || !label) return;
-  document.body.prepend(box);
-  function readSaved() {
-    try {
-      var x = Number(localStorage.getItem(KEY));
-      return Number.isSafeInteger(x) && x >= BASE ? x : BASE;
-    } catch (e) { return BASE; }
-  }
-  var displayed = readSaved() + STEP;
-  function render(n) {
-    if (!Number.isSafeInteger(n) || n < BASE) return;
-    displayed = Math.max(displayed, n, readSaved());
-    label.textContent = displayed.toLocaleString('en-US');
-    try { localStorage.setItem(KEY, String(displayed)); } catch (e) {}
-  }
-  render(displayed);
-  function syncShared() {
-    var raw = (pvNode.textContent || '').replace(/[,，\s]/g, '');
-    if (!/^\d+$/.test(raw)) return;
-    var pv = Number(raw);
-    if (!Number.isSafeInteger(pv)) return;
-    render(BASE + STEP * Math.max(0, pv - BASE_PV));
-  }
-  new MutationObserver(syncShared).observe(pvNode, {
-    childList: true, characterData: true, subtree: true
-  });
-  window.addEventListener('storage', function (e) {
-    if (e.key === KEY) render(readSaved());
-  });
-  syncShared();
-})();
-</script>
-<script defer src="https://cdn.busuanzi.cc/busuanzi/3.6.9/busuanzi.min.js"></script>
-<!-- WL-COUNTER-PLUS11-FROZEN-END -->
+<script defer src="/westonlife-counter-28885.js"></script>
 
 <script defer src="/westonlife-special-20261103.js?v=3"></script>
 <script defer src="/westonlife-headline-20261104.js"></script>
