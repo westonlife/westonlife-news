@@ -22,3 +22,31 @@
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',mount);else mount();
 })();
+
+/* Weston Life language-only repair, 2026-11-04. Counter untouched. */
+(function(){
+  function sync(lang){
+    lang=lang==='en'?'en':'zh';
+    document.documentElement.setAttribute('data-wl-lang',lang);
+    document.documentElement.lang=lang==='en'?'en':'zh-CN';
+    document.querySelectorAll('[data-wl-choice]').forEach(function(b){
+      b.classList.toggle('active',b.getAttribute('data-wl-choice')===lang);
+      b.setAttribute('aria-pressed',String(b.getAttribute('data-wl-choice')===lang));
+    });
+    try{localStorage.setItem('westonlife-lang',lang)}catch(e){}
+  }
+  function init(){
+    var css=document.createElement('style');
+    css.textContent='html[data-wl-lang="en"] #wl-election-headline-20261104 .wl-election-zh{display:none!important}html[data-wl-lang="en"] #wl-election-headline-20261104 .wl-election-en{display:block!important}html[data-wl-lang="zh"] #wl-election-headline-20261104 .wl-election-en{display:none!important}html[data-wl-lang="zh"] #wl-election-headline-20261104 .wl-election-zh{display:block!important}';
+    document.head.appendChild(css);
+    document.addEventListener('click',function(e){
+      var b=e.target.closest&&e.target.closest('[data-wl-choice]');
+      if(!b)return;
+      var lang=b.getAttribute('data-wl-choice');
+      setTimeout(function(){sync(lang)},0);
+    });
+    var lang='zh';try{lang=localStorage.getItem('westonlife-lang')||'zh'}catch(e){}
+    sync(lang);
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
