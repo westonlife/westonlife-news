@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-05",
+  "checked_at": "2026-11-07",
   "slots": {
     "1": {
       "topic": "Weston / Boston / Massachusetts",
@@ -116,7 +116,7 @@
       "summary": {
         "id": 6,
         "zh_title": "原油价格跌破每桶90美元，Vance将共和党选举失败归咎于伊朗战争",
-        "zh_summary": "在副总统JD Vance将共和党中期选举的惨败归咎于伊朗战争后，原油价格大幅下跌。",
+        "zh_summary": "在副总统JD Vance将共和党在中期选举中的惨败归咎于伊朗战争后，原油价格大幅下跌。",
         "en_title": "Crude oil prices fall below $90 a barrel as Vance blames GOP election defeat on Iran war",
         "en_summary": "Crude oil prices tumbled Wednesday after Vice President JD Vance blamed the Republicans' steep midterm election losses on the Iran war."
       }
@@ -124,121 +124,101 @@
     "7": {
       "topic": "World News / Global",
       "article": {
-        "title": "Back in the majority, Democrats have plans for a long list of Trump investigations",
-        "description": "Democrats will have the ability to subpoena records and compel individuals to testify. The Epstein files, Elon Musk, the Iran war and Trump's business interests may all come under the microscope.",
-        "url": "https://www.npr.org/2026/11/04/g-s1-150276/2026-midterms-democrats-investigations",
-        "source": "NPR",
-        "published": "2026-11-04T17:38:36+00:00",
-        "image": "assets/news/5d7890552604bde6ca629584.webp",
+        "title": "Risk of Iran war escalation remains high despite Democratic sweep in U.S. midterm elections",
+        "description": "The U.S. and Iran are on a collision course as tensions in the Middle East simmer.",
+        "url": "https://www.cnbc.com/2026/11/07/iran-war-midterm-election-oil-price-trump.html",
+        "source": "CNBC",
+        "published": "2026-11-07T22:17:52+00:00",
+        "image": "assets/news/effee41244ff5e8619ed4493.jpg",
         "placeholder": false,
         "topic": "World News / Global"
       },
       "summary": {
         "id": 7,
-        "zh_title": "民主党重新掌握多数，计划对特朗普进行一系列调查",
-        "zh_summary": "民主党将有能力传唤记录并强迫个人作证，可能会对爱泼斯坦档案、埃隆·马斯克、伊朗战争和特朗普的商业利益进行审查。",
-        "en_title": "Back in the majority, Democrats have plans for a long list of Trump investigations",
-        "en_summary": "Democrats will have the ability to subpoena records and compel individuals to testify."
+        "zh_title": "尽管美国中期选举民主党获胜，伊朗战争升级的风险依然很高",
+        "zh_summary": "美国和伊朗的关系正处于碰撞的边缘，中东地区的紧张局势持续升温。",
+        "en_title": "Risk of Iran war escalation remains high despite Democratic sweep in U.S. midterm elections",
+        "en_summary": "The U.S. and Iran are on a collision course as tensions in the Middle East simmer."
       }
     },
     "8": {
       "topic": "World News / Global",
       "article": {
-        "title": "Nvidia's Huang is asked to brief Congress on reported Chinese spy relationship",
-        "description": "President Donald Trump was briefed about a year ago about those intelligence findings, The New York Times reported.",
-        "url": "https://www.cnbc.com/2026/11/05/nvidia-jensen-huang-china-spy-congress.html",
+        "title": "Will this week's blue wave election usher in a Democratic president in 2028?",
+        "description": "A CNBC analysis of historical election data finds wave elections don't necessarily spell trouble for the party in power during the next presidential year.",
+        "url": "https://www.cnbc.com/2026/11/07/2026-midterm-election-blue-wave-2028-president.html",
         "source": "CNBC",
-        "published": "2026-11-05T22:21:29+00:00",
-        "image": "assets/news/09816717266949b01ae7ce2c.jpg",
+        "published": "2026-11-07T14:00:01+00:00",
+        "image": "assets/news/ddf7ce37bed1c129252dae75.jpg",
         "placeholder": false,
         "topic": "World News / Global"
       },
       "summary": {
         "id": 8,
-        "zh_title": "Nvidia的黄仁勋被要求向国会简报关于中国间谍关系的报道",
-        "zh_summary": "据《纽约时报》报道，特朗普总统大约一年前已被简报有关这些情报发现。",
-        "en_title": "Nvidia's Huang is asked to brief Congress on reported Chinese spy relationship",
-        "en_summary": "President Donald Trump was briefed about a year ago about those intelligence findings."
+        "zh_title": "本周的蓝色浪潮选举会为2028年带来民主党总统吗？",
+        "zh_summary": "CNBC对历史选举数据的分析发现，浪潮选举并不一定意味着执政党在下一个总统年会遇到麻烦。",
+        "en_title": "Will this week's blue wave election usher in a Democratic president in 2028?",
+        "en_summary": "A CNBC analysis of historical election data finds wave elections don't necessarily spell trouble for the party in power during the next presidential year."
       }
     },
     "9": {
       "topic": "World News / Global",
       "article": {
-        "title": "Euro zone inflation hits 4% for first time in three years as interest rate hike looms",
-        "description": "It was driven by energy inflation, which surged above 20% in October.",
-        "url": "https://www.cnbc.com/2026/11/04/euro-zone-cpi-inflation-october-ecb-rate-hike.html",
-        "source": "CNBC",
-        "published": "2026-11-04T10:47:30+00:00",
-        "image": "assets/news/07fc5cfd532f3a035606d8c6.jpg",
+        "title": "Health intel-sharing group warns industry in wake of cyberattack on French blood bank",
+        "description": "A healthcare intelligence-sharing organization is warning its members to lock down systems following cyberattacks on cold storage systems, including a French blood bank.",
+        "url": "https://www.npr.org/2026/11/06/nx-s1-6032602/cyberattack-blood-bank-healthcare",
+        "source": "NPR",
+        "published": "2026-11-06T19:00:21Z",
+        "image": "assets/news/cc160d54890cc23ff106608f.webp",
         "placeholder": false,
         "topic": "World News / Global"
       },
       "summary": {
         "id": 9,
-        "zh_title": "欧元区通胀率首次达到4%，利率上调迫在眉睫",
-        "zh_summary": "这主要是由于能源通胀在十月份飙升超过20%。",
-        "en_title": "Euro zone inflation hits 4% for first time in three years as interest rate hike looms",
-        "en_summary": "It was driven by energy inflation, which surged above 20% in October."
+        "zh_title": "健康情报共享组织在法国血库网络攻击后警告行业",
+        "zh_summary": "一家医疗健康情报共享组织警告其成员在冷藏系统遭受网络攻击后要加强系统安全。",
+        "en_title": "Health intel-sharing group warns industry in wake of cyberattack on French blood bank",
+        "en_summary": "A healthcare intelligence-sharing organization is warning its members to lock down systems following cyberattacks on cold storage systems, including a French blood bank."
       }
     },
     "10": {
       "topic": "World News / Global",
       "article": {
-        "title": "Death toll hits 29 after Russian strike on Ukrainian aid site, with 48 still missing",
-        "description": "Russia launched 289 attack drones, 17 ballistic missiles and 59 cruise missiles across nine regions, President Zelenskyy said in an online post that noted the barrage coincided with U.S. elections.",
-        "url": "https://www.npr.org/2026/11/03/g-s1-151439/russia-ukraine-war",
+        "title": "Stephen Miller replaces Susie Wiles as White House chief of staff",
+        "description": "White House chief of staff Susie Wiles is being replaced by Stephen Miller, President Trump said Friday. The change comes after Republicans were swept out of power in the midterm elections.",
+        "url": "https://www.npr.org/2026/11/06/nx-s1-6032810/stephen-miller-replaces-susie-wiles-as-white-house-chief-of-staff",
         "source": "NPR",
-        "published": "2026-11-03T11:01:14Z",
-        "image": "assets/news/e9db34b5de34888b4e17b855.webp",
+        "published": "2026-11-06T22:21:35Z",
+        "image": "assets/news/fd469057e03db00e45979793.jpg",
         "placeholder": false,
         "topic": "World News / Global"
       },
       "summary": {
         "id": 10,
-        "zh_title": "俄罗斯对乌克兰援助地点的袭击造成29人死亡，48人仍失踪",
-        "zh_summary": "泽连斯基总统表示，俄罗斯发射了289架攻击无人机、17枚弹道导弹和59枚巡航导弹，袭击与美国选举同时发生。",
-        "en_title": "Death toll hits 29 after Russian strike on Ukrainian aid site, with 48 still missing",
-        "en_summary": "Russia launched 289 attack drones, 17 ballistic missiles and 59 cruise missiles across nine regions, President Zelenskyy said."
+        "zh_title": "斯蒂芬·米勒取代苏茜·怀尔斯担任白宫幕僚长",
+        "zh_summary": "特朗普总统周五表示，白宫幕僚长苏茜·怀尔斯将被斯蒂芬·米勒取代，此次更换发生在共和党在中期选举中失去权力之后。",
+        "en_title": "Stephen Miller replaces Susie Wiles as White House chief of staff",
+        "en_summary": "White House chief of staff Susie Wiles is being replaced by Stephen Miller, President Trump said Friday."
       }
     },
     "11": {
       "topic": "World News / Global",
       "article": {
-        "title": "Supreme Court leans toward LGBTQ exclusion for publicly funded Catholic preschools",
-        "description": "The Supreme Court heard arguments Tuesday about Colorado's universal pre-K program and whether religious schools can bar certain families despite the state's anti-discrimination law.",
-        "url": "https://www.npr.org/2026/11/03/nx-s1-6026566/scotus-religious-freedom-case",
+        "title": "Israel's president taps opposition candidate, not Netanyahu, to form a government",
+        "description": "Gadi Eisenkot ran as the main rival to Prime Minister Benjamin Netanyahu, but neither won enough support to command a majority. Israel's main parties have recommended Eisenkot form a new government.",
+        "url": "https://www.npr.org/2026/11/07/g-s1-152536/netanyahu-israel-government-eisenkot-herzog",
         "source": "NPR",
-        "published": "2026-11-03T22:14:29Z",
-        "image": "assets/news/faa0771b88ec349122bec3ce.webp",
+        "published": "2026-11-07T20:18:18+00:00",
+        "image": "assets/news/50e0d360811f3d65d2d92f47.webp",
         "placeholder": false,
         "topic": "World News / Global"
       },
       "summary": {
         "id": 11,
-        "zh_title": "最高法院倾向于排除公立资助的天主教幼儿园的LGBTQ家庭",
-        "zh_summary": "最高法院周二听取了关于科罗拉多州普及学前教育计划的辩论，以及宗教学校是否可以在州反歧视法下排除某些家庭。",
-        "en_title": "Supreme Court leans toward LGBTQ exclusion for publicly funded Catholic preschools",
-        "en_summary": "The Supreme Court heard arguments Tuesday about Colorado's universal pre-K program and whether religious schools can bar certain families despite the state's anti-discrimination law."
-      }
-    },
-    "12": {
-      "topic": "World News / Global",
-      "article": {
-        "title": "Midterm elections are coming to a close as voters pass judgment on Trump's second term",
-        "description": "Midterm elections that will serve as a referendum on President Donald Trump’s second term are coming to a close. Americans angry over high prices and an unpopular war with Iran decide on Tuesday whether to drastically shift power in Washington.…",
-        "url": "https://apnews.com/article/midterm-election-house-senate-democrats-republicans-trump-f126e12e05b579a327b98481c0ae2226",
-        "source": "Associated Press",
-        "published": "2026-11-03T12:49:00Z",
-        "image": "assets/news/1de58ed22b0a9ac3700eaac4.webp",
-        "placeholder": false,
-        "topic": "World News / Global"
-      },
-      "summary": {
-        "id": 12,
-        "zh_title": "中期选举即将结束，选民对特朗普第二任期进行评判",
-        "zh_summary": "中期选举即将结束，这将作为对特朗普第二任期的公投。",
-        "en_title": "Midterm elections are coming to a close as voters pass judgment on Trump's second term",
-        "en_summary": "Midterm elections that will serve as a referendum on President Donald Trump’s second term are coming to a close."
+        "zh_title": "以色列总统选择反对派候选人而非内塔尼亚胡组建政府",
+        "zh_summary": "加迪·艾森科特作为内塔尼亚胡的主要对手参选，但两者都未获得足够支持以掌控多数席位。",
+        "en_title": "Israel's president taps opposition candidate, not Netanyahu, to form a government",
+        "en_summary": "Gadi Eisenkot ran as the main rival to Prime Minister Benjamin Netanyahu, but neither won enough support to command a majority."
       }
     }
   }
