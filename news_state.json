@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-07",
+  "checked_at": "2026-11-08",
   "slots": {
     "1": {
       "topic": "Weston / Boston / Massachusetts",
@@ -15,30 +15,30 @@
       },
       "summary": {
         "id": 1,
-        "zh_title": "公众信息会议：景观噪音条例",
-        "zh_summary": "了解在特别市镇会议之前提议的燃气动力吹叶机条例。",
+        "zh_title": "公众信息会议：园艺噪音条例",
+        "zh_summary": "了解有关提议的燃气动力吹叶机条例的信息。",
         "en_title": "Public Information Session: Landscaping Noise Bylaw",
-        "en_summary": "Learn more about the proposed gas-powered leaf blower bylaw before Special Town Meeting."
+        "en_summary": "Learn more about the proposed gas-powered leaf blower bylaw."
       }
     },
     "2": {
       "topic": "Weston / Boston / Massachusetts",
       "article": {
-        "title": "Stocks surge, and the Dow soars 1,500 points as oil prices tumble following the US midterm elections",
-        "description": "The Dow Jones Industrial Average surged more than 1,500 points, and the Nasdaq composite rose 1.4%. The post Stocks surge, and the Dow soars 1,500 points as oil prices tumble following the US midterm elections appeared first on Boston.com .",
-        "url": "https://www.boston.com/news/business/2026/11/04/us-stocks-surge-and-the-dow-soars-more-than-1500-points-as-oil-prices-tumble-following-us-midterms/",
+        "title": "UFC’s Dana White says he will meet with Trump Monday over offer to be White House press secretary",
+        "description": "Trump's post came as his White House is in a period of major transition and struggling with his party's deep losses in Tuesday's midterm elections. The post UFC’s Dana White says he will meet with Trump Monday over offer to be White House press secretary appeared first on Boston.com .",
+        "url": "https://www.boston.com/news/politics/2026/11/08/ufcs-dana-white-says-he-will-meet-with-trump-monday-over-offer-to-be-white-house-press-secretary/",
         "source": "Boston.com",
-        "published": "2026-11-04T21:17:15+00:00",
-        "image": "assets/news/3736fa6cb16ca021489b8561.webp",
+        "published": "2026-11-08T13:58:17+00:00",
+        "image": "assets/news/11a01939f64f74e309840dad.webp",
         "placeholder": false,
         "topic": "Weston / Boston / Massachusetts"
       },
       "summary": {
         "id": 2,
-        "zh_title": "股市飙升，道琼斯指数上涨1500点，油价在美国中期选举后暴跌",
-        "zh_summary": "道琼斯工业平均指数上涨超过1500点，纳斯达克综合指数上涨1.4%。",
-        "en_title": "Stocks surge, and the Dow soars 1,500 points as oil prices tumble following the US midterm elections",
-        "en_summary": "The Dow Jones Industrial Average surged more than 1,500 points, and the Nasdaq composite rose 1.4%."
+        "zh_title": "UFC的Dana White表示他将于周一与特朗普会面讨论白宫新闻秘书的提议",
+        "zh_summary": "特朗普的帖子发布时，他的白宫正处于重大过渡期，并在周二的中期选举中遭遇党内重大损失。",
+        "en_title": "UFC’s Dana White says he will meet with Trump Monday over offer to be White House press secretary",
+        "en_summary": "Trump's post came as his White House is in a period of major transition and struggling with his party's deep losses in Tuesday's midterm elections."
       }
     },
     "3": {
@@ -64,41 +64,41 @@
     "4": {
       "topic": "Weston / Boston / Massachusetts",
       "article": {
-        "title": "Massachusetts REALTORS Charitable Foundation Awards $27,000 in Grants to 18 Local Nonprofits",
-        "description": "Boston’s Women’s Lunch Place among the recipients of funding supporting organizations addressing housing, hunger and homelessness across Massachusetts. FOXBOROUGH, Mass.— The Massachusetts Association of REALTORS® (MAR) Charitable Foundation has awarded […] The post Massachusetts REALTORS Charitable Foundation Awards $27,000 in Grants to 18 Local Nonprofits appeared first on Boston Real Estate Times .",
-        "url": "https://bostonrealestatetimes.com/massachusetts-realtors-charitable-foundation-awards-27000-in-grants-to-18-local-nonprofits/",
-        "source": "Boston Real Estate Times",
-        "published": "2026-11-03T20:27:42+00:00",
-        "image": "assets/news/4cadc4f72791b405c38563de.png",
+        "title": "Secretary Galvin goes 'On the Record' about voter turnout, ballot questions",
+        "description": "Massachusetts Secretary of State Bill Galvin joined WCVB's \"On the Record\" to discuss Election Day, voter turnout and the record-tying slate of ballot questions.",
+        "url": "https://www.wcvb.com/article/secretary-galvin-goes-on-the-record-about-voter-turnout-ballot-questions/74360006",
+        "source": "WCVB Boston",
+        "published": "2026-11-08T16:30:00+00:00",
+        "image": "assets/news/925536e06d075b71946d25e2.jpg",
         "placeholder": false,
         "topic": "Weston / Boston / Massachusetts"
       },
       "summary": {
         "id": 4,
-        "zh_title": "马萨诸塞州房地产经纪人慈善基金会向18个地方非营利组织颁发27000美元的赠款",
-        "zh_summary": "波士顿的女性午餐处是获得资助的组织之一，支持解决马萨诸塞州的住房、饥饿和无家可归问题。",
-        "en_title": "Massachusetts REALTORS Charitable Foundation Awards $27,000 in Grants to 18 Local Nonprofits",
-        "en_summary": "Boston’s Women’s Lunch Place among the recipients of funding supporting organizations addressing housing, hunger and homelessness across Massachusetts."
+        "zh_title": "加尔文秘书在‘记录上’谈选民投票率和投票问题",
+        "zh_summary": "马萨诸塞州国务卿比尔·加尔文参加WCVB的‘记录上’节目，讨论选举日、选民投票率和创纪录的投票问题。",
+        "en_title": "Secretary Galvin goes 'On the Record' about voter turnout, ballot questions",
+        "en_summary": "Massachusetts Secretary of State Bill Galvin joined WCVB's 'On the Record' to discuss Election Day, voter turnout and the record-tying slate of ballot questions."
       }
     },
     "5": {
       "topic": "Weston / Boston / Massachusetts",
       "article": {
-        "title": "JD Vance tries to distance himself from Iran war after GOP’s deep losses in midterm elections",
-        "description": "Vance, who has said he would decide after the election whether to run for president in 2028, issued a lengthy social media post blaming the unpopular conflict with Iran for the GOP's drubbing. The post JD Vance tries to distance himself from Iran war after GOP’s deep losses in midterm elections appeared first on Boston.com .",
-        "url": "https://www.boston.com/news/politics/2026/11/04/jd-vance-tries-to-distance-himself-from-iran-war-after-gops-deep-losses-in-midterm-elections/",
+        "title": "Stocks surge, and the Dow soars 1,500 points as oil prices tumble following the US midterm elections",
+        "description": "The Dow Jones Industrial Average surged more than 1,500 points, and the Nasdaq composite rose 1.4%. The post Stocks surge, and the Dow soars 1,500 points as oil prices tumble following the US midterm elections appeared first on Boston.com .",
+        "url": "https://www.boston.com/news/business/2026/11/04/us-stocks-surge-and-the-dow-soars-more-than-1500-points-as-oil-prices-tumble-following-us-midterms/",
         "source": "Boston.com",
-        "published": "2026-11-04T18:37:37+00:00",
-        "image": "assets/news/ce083b62e2202d7657db8029.webp",
+        "published": "2026-11-04T21:17:15+00:00",
+        "image": "assets/news/3736fa6cb16ca021489b8561.webp",
         "placeholder": false,
         "topic": "Weston / Boston / Massachusetts"
       },
       "summary": {
         "id": 5,
-        "zh_title": "JD Vance试图在共和党中期选举惨败后与伊朗战争保持距离",
-        "zh_summary": "Vance表示将在选举后决定是否竞选2028年总统，并在社交媒体上发布长文，指责不受欢迎的伊朗冲突导致共和党的惨败。",
-        "en_title": "JD Vance tries to distance himself from Iran war after GOP’s deep losses in midterm elections",
-        "en_summary": "Vance, who has said he would decide after the election whether to run for president in 2028, issued a lengthy social media post blaming the unpopular conflict with Iran for the GOP's drubbing."
+        "zh_title": "股市飙升，道琼斯指数上涨1500点，油价在美国中期选举后暴跌",
+        "zh_summary": "道琼斯工业平均指数上涨超过1500点，纳斯达克综合指数上涨1.4%。",
+        "en_title": "Stocks surge, and the Dow soars 1,500 points as oil prices tumble following the US midterm elections",
+        "en_summary": "The Dow Jones Industrial Average surged more than 1,500 points, and the Nasdaq composite rose 1.4%."
       }
     },
     "6": {
@@ -115,8 +115,8 @@
       },
       "summary": {
         "id": 6,
-        "zh_title": "原油价格跌破每桶90美元，Vance将共和党选举失败归咎于伊朗战争",
-        "zh_summary": "在副总统JD Vance将共和党在中期选举中的惨败归咎于伊朗战争后，原油价格大幅下跌。",
+        "zh_title": "原油价格跌破每桶90美元，范斯将共和党选举失败归咎于伊朗战争",
+        "zh_summary": "在副总统JD范斯将共和党在中期选举中的惨败归咎于伊朗战争后，原油价格大幅下跌。",
         "en_title": "Crude oil prices fall below $90 a barrel as Vance blames GOP election defeat on Iran war",
         "en_summary": "Crude oil prices tumbled Wednesday after Vice President JD Vance blamed the Republicans' steep midterm election losses on the Iran war."
       }
@@ -124,41 +124,41 @@
     "7": {
       "topic": "World News / Global",
       "article": {
-        "title": "Risk of Iran war escalation remains high despite Democratic sweep in U.S. midterm elections",
-        "description": "The U.S. and Iran are on a collision course as tensions in the Middle East simmer.",
-        "url": "https://www.cnbc.com/2026/11/07/iran-war-midterm-election-oil-price-trump.html",
+        "title": "Nvidia CEO Jensen Huang faces bipartisan congressional scrutiny over reported China spy link",
+        "description": "Lawmakers want to question Nvidia CEO Jensen Huang following reports about his relationship with an alleged Chinese intelligence asset.",
+        "url": "https://www.cnbc.com/2026/11/08/jensen-huang-nvidia-china-spy-congress.html",
         "source": "CNBC",
-        "published": "2026-11-07T22:17:52+00:00",
-        "image": "assets/news/effee41244ff5e8619ed4493.jpg",
+        "published": "2026-11-08T18:18:30+00:00",
+        "image": "assets/news/58c57668b7c82ba463cc55cb.jpg",
         "placeholder": false,
         "topic": "World News / Global"
       },
       "summary": {
         "id": 7,
-        "zh_title": "尽管美国中期选举民主党获胜，伊朗战争升级的风险依然很高",
-        "zh_summary": "美国和伊朗的关系正处于碰撞的边缘，中东地区的紧张局势持续升温。",
-        "en_title": "Risk of Iran war escalation remains high despite Democratic sweep in U.S. midterm elections",
-        "en_summary": "The U.S. and Iran are on a collision course as tensions in the Middle East simmer."
+        "zh_title": "Nvidia首席执行官黄仁勋因与中国间谍的关系面临两党国会审查",
+        "zh_summary": "立法者希望质询Nvidia首席执行官黄仁勋，因其与一名涉嫌中国情报资产的关系。",
+        "en_title": "Nvidia CEO Jensen Huang faces bipartisan congressional scrutiny over reported China spy link",
+        "en_summary": "Lawmakers want to question Nvidia CEO Jensen Huang following reports about his relationship with an alleged Chinese intelligence asset."
       }
     },
     "8": {
       "topic": "World News / Global",
       "article": {
-        "title": "Will this week's blue wave election usher in a Democratic president in 2028?",
-        "description": "A CNBC analysis of historical election data finds wave elections don't necessarily spell trouble for the party in power during the next presidential year.",
-        "url": "https://www.cnbc.com/2026/11/07/2026-midterm-election-blue-wave-2028-president.html",
+        "title": "Here are the 2 big things we're watching in the stock market in the week ahead",
+        "description": "CoreWeave earnings and inflation data will take center stage.",
+        "url": "https://www.cnbc.com/investingclub/2026/11/08/here-are-the-2-big-things-were-watching-in-the-stock-market-in-the-week-ahead.html",
         "source": "CNBC",
-        "published": "2026-11-07T14:00:01+00:00",
-        "image": "assets/news/ddf7ce37bed1c129252dae75.jpg",
+        "published": "2026-11-08T17:40:15+00:00",
+        "image": "assets/news/c2d6d0a7d05dc8bb4ab538ff.jpg",
         "placeholder": false,
         "topic": "World News / Global"
       },
       "summary": {
         "id": 8,
-        "zh_title": "本周的蓝色浪潮选举会为2028年带来民主党总统吗？",
-        "zh_summary": "CNBC对历史选举数据的分析发现，浪潮选举并不一定意味着执政党在下一个总统年会遇到麻烦。",
-        "en_title": "Will this week's blue wave election usher in a Democratic president in 2028?",
-        "en_summary": "A CNBC analysis of historical election data finds wave elections don't necessarily spell trouble for the party in power during the next presidential year."
+        "zh_title": "我们在未来一周关注股市的两大重要事项",
+        "zh_summary": "CoreWeave的收益和通胀数据将成为焦点。",
+        "en_title": "Here are the 2 big things we're watching in the stock market in the week ahead",
+        "en_summary": "CoreWeave earnings and inflation data will take center stage."
       }
     },
     "9": {
@@ -176,7 +176,7 @@
       "summary": {
         "id": 9,
         "zh_title": "健康情报共享组织在法国血库网络攻击后警告行业",
-        "zh_summary": "一家医疗健康情报共享组织警告其成员在冷藏系统遭受网络攻击后要加强系统安全。",
+        "zh_summary": "一家医疗保健情报共享组织警告其成员在冷藏系统遭受网络攻击后锁定系统。",
         "en_title": "Health intel-sharing group warns industry in wake of cyberattack on French blood bank",
         "en_summary": "A healthcare intelligence-sharing organization is warning its members to lock down systems following cyberattacks on cold storage systems, including a French blood bank."
       }
@@ -196,7 +196,7 @@
       "summary": {
         "id": 10,
         "zh_title": "斯蒂芬·米勒取代苏茜·怀尔斯担任白宫幕僚长",
-        "zh_summary": "特朗普总统周五表示，白宫幕僚长苏茜·怀尔斯将被斯蒂芬·米勒取代，此次更换发生在共和党在中期选举中失去权力之后。",
+        "zh_summary": "特朗普总统周五表示，白宫幕僚长苏茜·怀尔斯将被斯蒂芬·米勒取代。",
         "en_title": "Stephen Miller replaces Susie Wiles as White House chief of staff",
         "en_summary": "White House chief of staff Susie Wiles is being replaced by Stephen Miller, President Trump said Friday."
       }
@@ -216,9 +216,29 @@
       "summary": {
         "id": 11,
         "zh_title": "以色列总统选择反对派候选人而非内塔尼亚胡组建政府",
-        "zh_summary": "加迪·艾森科特作为内塔尼亚胡的主要对手参选，但两者都未获得足够支持以掌控多数席位。",
+        "zh_summary": "加迪·艾森科特作为内塔尼亚胡的主要对手参选，但两者都未获得足够支持以掌控多数。",
         "en_title": "Israel's president taps opposition candidate, not Netanyahu, to form a government",
         "en_summary": "Gadi Eisenkot ran as the main rival to Prime Minister Benjamin Netanyahu, but neither won enough support to command a majority."
+      }
+    },
+    "12": {
+      "topic": "World News / Global",
+      "article": {
+        "title": "US offers $20m reward for information about Iran's nuclear programme",
+        "description": "Donald Trump has repeatedly raised the prospecting of renewing strikes against Iran's nuclear facilities.",
+        "url": "https://www.bbc.com/news/articles/c6d091ev3p0jo",
+        "source": "BBC News",
+        "published": "2026-11-07T18:16:52Z",
+        "image": "assets/news/794172aac9516a3e55f5246e.jpg",
+        "placeholder": false,
+        "topic": "World News / Global"
+      },
+      "summary": {
+        "id": 12,
+        "zh_title": "美国提供2000万美元奖励以获取有关伊朗核计划的信息",
+        "zh_summary": "特朗普多次提出恢复对伊朗核设施的打击的可能性。",
+        "en_title": "US offers $20m reward for information about Iran's nuclear programme",
+        "en_summary": "Donald Trump has repeatedly raised the prospecting of renewing strikes against Iran's nuclear facilities."
       }
     }
   }
