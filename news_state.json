@@ -16,7 +16,7 @@
       "summary": {
         "id": 1,
         "zh_title": "公众信息会议：园艺噪音条例",
-        "zh_summary": "了解有关提议的燃气动力吹叶机条例的信息。",
+        "zh_summary": "了解关于提议的燃气动力吹叶机条例的信息。",
         "en_title": "Public Information Session: Landscaping Noise Bylaw",
         "en_summary": "Learn more about the proposed gas-powered leaf blower bylaw."
       }
@@ -35,7 +35,7 @@
       },
       "summary": {
         "id": 2,
-        "zh_title": "Nvidia对黄仁勋与中国间谍的关系展开调查",
+        "zh_title": "Nvidia对黄仁勋与中国间谍关系展开调查",
         "zh_summary": "黄仁勋承认与一名被美国官员认定为中国情报人员的商业高管有亲密关系。",
         "en_title": "Nvidia opens investigation into Jensen Huang’s relationship with Chinese spy",
         "en_summary": "Huang acknowledged being intimate with a business executive determined by U.S. officials to be working for Chinese intelligence."
@@ -75,10 +75,10 @@
       },
       "summary": {
         "id": 4,
-        "zh_title": "加尔文秘书在‘记录上’谈选民投票率和投票问题",
-        "zh_summary": "马萨诸塞州国务卿比尔·加尔文在WCVB的‘记录上’讨论选举日、选民投票率和创纪录的投票问题。",
+        "zh_title": "加尔文秘书在‘记录中’谈选民投票率和投票问题",
+        "zh_summary": "马萨诸塞州国务卿比尔·加尔文讨论了选举日、选民投票率和创纪录的投票问题。",
         "en_title": "Secretary Galvin goes 'On the Record' about voter turnout, ballot questions",
-        "en_summary": "Massachusetts Secretary of State Bill Galvin discussed Election Day, voter turnout, and ballot questions."
+        "en_summary": "Massachusetts Secretary of State Bill Galvin discussed Election Day, voter turnout, and the record-tying slate of ballot questions."
       }
     },
     "5": {
@@ -115,7 +115,7 @@
       },
       "summary": {
         "id": 6,
-        "zh_title": "特朗普表示如果谈判进展，伊朗重新打击‘极不可能’但警告仍可能打击",
+        "zh_title": "特朗普称如果谈判进展，伊朗重新打击‘极不可能’但警告仍可能打击",
         "zh_summary": "特朗普将避免美国重新打击与伊朗核计划和霍尔木兹海的谈判进展联系在一起。",
         "en_title": "Trump says renewed Iran strikes ‘highly unlikely’ if talks progress but warns he could still strike",
         "en_summary": "Trump tied avoiding renewed U.S. strikes to progress in talks over Iran’s nuclear program."
@@ -136,7 +136,7 @@
       "summary": {
         "id": 7,
         "zh_title": "原油价格跌破每桶90美元，范斯将共和党选举失败归咎于伊朗战争",
-        "zh_summary": "在副总统JD范斯将共和党在中期选举中的重大损失归咎于伊朗战争后，原油价格大幅下跌。",
+        "zh_summary": "原油价格在副总统JD范斯将共和党在中期选举中的重大损失归咎于伊朗战争后暴跌。",
         "en_title": "Crude oil prices fall below $90 a barrel as Vance blames GOP election defeat on Iran war",
         "en_summary": "Crude oil prices tumbled after Vice President JD Vance blamed the Republicans' steep midterm election losses on the Iran war."
       }
@@ -156,7 +156,7 @@
       "summary": {
         "id": 8,
         "zh_title": "Nvidia首席执行官黄仁勋因与中国间谍的关系面临两党国会审查",
-        "zh_summary": "立法者希望对Nvidia首席执行官黄仁勋进行质询，因其与一名被指控的中国情报人员的关系。",
+        "zh_summary": "立法者希望对Nvidia首席执行官黄仁勋与一名被指控为中国情报资产的关系进行质询。",
         "en_title": "Nvidia CEO Jensen Huang faces bipartisan congressional scrutiny over reported China spy link",
         "en_summary": "Lawmakers want to question Nvidia CEO Jensen Huang following reports about his relationship with an alleged Chinese intelligence asset."
       }
@@ -176,7 +176,7 @@
       "summary": {
         "id": 9,
         "zh_title": "UFC的达纳·怀特表示将于周一与特朗普会面，讨论白宫新闻秘书职位",
-        "zh_summary": "特朗普表示已向他的朋友和UFC老板达纳·怀特提供白宫新闻秘书的职位。",
+        "zh_summary": "特朗普表示已向怀特提供白宫新闻秘书的职位。",
         "en_title": "UFC's Dana White says he will meet with Trump Monday over offer to be White House press secretary",
         "en_summary": "President Trump said he has offered the job of White House press secretary to Dana White."
       }
@@ -196,7 +196,7 @@
       "summary": {
         "id": 10,
         "zh_title": "健康情报共享组织在法国血库网络攻击后警告行业",
-        "zh_summary": "一家医疗保健情报共享组织在冷藏系统遭受网络攻击后，警告其成员加强系统安全。",
+        "zh_summary": "一家医疗保健情报共享组织警告其成员在网络攻击后锁定系统。",
         "en_title": "Health intel-sharing group warns industry in wake of cyberattack on French blood bank",
         "en_summary": "A healthcare intelligence-sharing organization is warning its members to lock down systems following cyberattacks."
       }
@@ -216,7 +216,7 @@
       "summary": {
         "id": 11,
         "zh_title": "斯蒂芬·米勒取代苏茜·怀尔斯担任白宫幕僚长",
-        "zh_summary": "特朗普表示，白宫幕僚长苏茜·怀尔斯将被斯蒂芬·米勒取代。",
+        "zh_summary": "特朗普表示，苏茜·怀尔斯将被斯蒂芬·米勒取代，因共和党在中期选举中失去权力。",
         "en_title": "Stephen Miller replaces Susie Wiles as White House chief of staff",
         "en_summary": "White House chief of staff Susie Wiles is being replaced by Stephen Miller."
       }
@@ -236,7 +236,7 @@
       "summary": {
         "id": 12,
         "zh_title": "美国提供2000万美元奖励以获取伊朗核计划信息",
-        "zh_summary": "特朗普多次提到可能会重新对伊朗核设施进行打击。",
+        "zh_summary": "特朗普多次提到可能会重新打击伊朗的核设施。",
         "en_title": "US offers $20m reward for information about Iran's nuclear programme",
         "en_summary": "Donald Trump has repeatedly raised the prospect of renewing strikes against Iran's nuclear facilities."
       }
