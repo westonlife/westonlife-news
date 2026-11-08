@@ -15,8 +15,8 @@
       },
       "summary": {
         "id": 1,
-        "zh_title": "公众信息会议：园艺噪音条例",
-        "zh_summary": "了解有关拟议的燃气动力吹叶机条例的信息。",
+        "zh_title": "公众信息会议：景观噪音条例",
+        "zh_summary": "了解关于提议的燃气动力吹叶机条例的信息。",
         "en_title": "Public Information Session: Landscaping Noise Bylaw",
         "en_summary": "Learn more about the proposed gas-powered leaf blower bylaw."
       }
@@ -35,10 +35,10 @@
       },
       "summary": {
         "id": 2,
-        "zh_title": "UFC的Dana White表示他将于周一与特朗普会面，讨论担任白宫新闻秘书的提议",
-        "zh_summary": "特朗普的帖子出现在他的白宫经历重大转型之际。",
+        "zh_title": "UFC的Dana White表示他将于周一与特朗普会面",
+        "zh_summary": "Dana White将与特朗普会面，讨论担任白宫新闻秘书的提议。",
         "en_title": "UFC’s Dana White says he will meet with Trump Monday over offer to be White House press secretary",
-        "en_summary": "Trump's post came as his White House is in a period of major transition."
+        "en_summary": "Dana White will meet with Trump to discuss the offer to be White House press secretary."
       }
     },
     "3": {
@@ -55,8 +55,8 @@
       },
       "summary": {
         "id": 3,
-        "zh_title": "2026年实时选举结果：马萨诸塞州投票问题7，‘入门住房’措施",
-        "zh_summary": "在选举之夜，关注投票计数的进展。",
+        "zh_title": "2026年实时选举结果：马萨诸塞州投票问题7",
+        "zh_summary": "在选举之夜，关注投票计数的实时更新。",
         "en_title": "2026 live election results: Mass. Ballot Question 7, the ‘starter homes’ measure",
         "en_summary": "Follow along below as votes are counted on election night."
       }
@@ -75,10 +75,10 @@
       },
       "summary": {
         "id": 4,
-        "zh_title": "加尔文秘书在‘记录上’谈选民投票率和投票问题",
-        "zh_summary": "马萨诸塞州国务卿比尔·加尔文在WCVB的‘记录上’讨论选举日和投票率。",
+        "zh_title": "加尔文秘书谈选民投票率和投票问题",
+        "zh_summary": "马萨诸塞州国务卿比尔·加尔文在节目中讨论选举日和投票率。",
         "en_title": "Secretary Galvin goes 'On the Record' about voter turnout, ballot questions",
-        "en_summary": "Massachusetts Secretary of State Bill Galvin joined WCVB's 'On the Record' to discuss Election Day."
+        "en_summary": "Massachusetts Secretary of State Bill Galvin discussed Election Day and voter turnout."
       }
     },
     "5": {
@@ -95,13 +95,33 @@
       },
       "summary": {
         "id": 5,
-        "zh_title": "股市飙升，道琼斯指数上涨1500点，油价在美国中期选举后暴跌",
+        "zh_title": "股市飙升，道琼斯指数上涨1500点",
         "zh_summary": "道琼斯工业平均指数上涨超过1500点，纳斯达克综合指数上涨1.4%。",
         "en_title": "Stocks surge, and the Dow soars 1,500 points as oil prices tumble following the US midterm elections",
-        "en_summary": "The Dow Jones Industrial Average surged more than 1,500 points."
+        "en_summary": "The Dow Jones Industrial Average surged more than 1,500 points following the US midterm elections."
       }
     },
     "6": {
+      "topic": "World News / Global",
+      "article": {
+        "title": "Trump says renewed Iran strikes ‘highly unlikely’ if talks progress but warns he could still strike",
+        "description": "Trump tied avoiding renewed U.S. strikes to progress in talks over Iran’s nuclear program and the Strait of Hormuz.",
+        "url": "https://www.cnbc.com/2026/11/08/trump-iran-strikes-unlikely-talks-hormuz.html",
+        "source": "CNBC",
+        "published": "2026-11-08T21:53:02+00:00",
+        "image": "assets/news/08fa032469133b4032e9b692.jpg",
+        "placeholder": false,
+        "topic": "World News / Global"
+      },
+      "summary": {
+        "id": 6,
+        "zh_title": "特朗普称如果谈判进展，伊朗重新打击‘极不可能’",
+        "zh_summary": "特朗普将避免重新打击与伊朗核计划的谈判进展联系在一起。",
+        "en_title": "Trump says renewed Iran strikes ‘highly unlikely’ if talks progress but warns he could still strike",
+        "en_summary": "Trump tied avoiding renewed U.S. strikes to progress in talks over Iran’s nuclear program."
+      }
+    },
+    "7": {
       "topic": "World News / Global",
       "article": {
         "title": "Crude oil prices fall below $90 a barrel as Vance blames GOP election defeat on Iran war",
@@ -114,14 +134,14 @@
         "topic": "World News / Global"
       },
       "summary": {
-        "id": 6,
-        "zh_title": "原油价格跌破每桶90美元，范斯将共和党选举失败归咎于伊朗战争",
-        "zh_summary": "原油价格在副总统JD范斯将共和党中期选举的重大损失归咎于伊朗战争后暴跌。",
+        "id": 7,
+        "zh_title": "原油价格跌破每桶90美元",
+        "zh_summary": "原油价格在副总统JD Vance指责共和党选举失败与伊朗战争有关后大幅下跌。",
         "en_title": "Crude oil prices fall below $90 a barrel as Vance blames GOP election defeat on Iran war",
-        "en_summary": "Crude oil prices tumbled Wednesday after Vice President JD Vance blamed the Republicans' steep midterm election losses."
+        "en_summary": "Crude oil prices tumbled after Vice President JD Vance blamed the Republicans' election losses on the Iran war."
       }
     },
-    "7": {
+    "8": {
       "topic": "World News / Global",
       "article": {
         "title": "Nvidia CEO Jensen Huang faces bipartisan congressional scrutiny over reported China spy link",
@@ -134,34 +154,34 @@
         "topic": "World News / Global"
       },
       "summary": {
-        "id": 7,
-        "zh_title": "英伟达首席执行官黄仁勋面临两党国会审查，因与中国间谍的关系",
-        "zh_summary": "立法者希望质询英伟达首席执行官黄仁勋，因其与一名涉嫌中国情报资产的关系。",
+        "id": 8,
+        "zh_title": "Nvidia首席执行官黄仁勋面临国会两党审查",
+        "zh_summary": "立法者希望质询Nvidia首席执行官黄仁勋，因其与一名涉嫌中国情报人员的关系。",
         "en_title": "Nvidia CEO Jensen Huang faces bipartisan congressional scrutiny over reported China spy link",
         "en_summary": "Lawmakers want to question Nvidia CEO Jensen Huang following reports about his relationship with an alleged Chinese intelligence asset."
       }
     },
-    "8": {
+    "9": {
       "topic": "World News / Global",
       "article": {
-        "title": "Democrats amp up Trump investigation threats, Blanche counters he may probe lawmakers",
-        "description": "Democrats have vowed to investigate both President Donald Trump's White House and businesses that have worked with the administration.",
-        "url": "https://www.cnbc.com/2026/11/08/democrats-trump-oversight-blanche-doj-investigations.html",
-        "source": "CNBC",
-        "published": "2026-11-08T18:57:56+00:00",
-        "image": "assets/news/f84ecf9b5c68b447f80e4194.jpg",
+        "title": "UFC's Dana White says he will meet with Trump Monday over offer to be White House press secretary",
+        "description": "President Donald Trump said Saturday that he has offered the job of White House press secretary to his friend and UFC boss Dana White.",
+        "url": "https://www.npr.org/2026/11/08/nx-s1-6033900/ufc-dana-white-trump-white-house-press-secretary",
+        "source": "NPR",
+        "published": "2026-11-08T07:35:29+00:00",
+        "image": "assets/news/de3f4ebffe9b361d2155b7c1.webp",
         "placeholder": false,
         "topic": "World News / Global"
       },
       "summary": {
-        "id": 8,
-        "zh_title": "民主党加大对特朗普调查的威胁，布兰奇反击称他可能调查立法者",
-        "zh_summary": "民主党誓言调查特朗普总统的白宫及与政府合作的企业。",
-        "en_title": "Democrats amp up Trump investigation threats, Blanche counters he may probe lawmakers",
-        "en_summary": "Democrats have vowed to investigate both President Donald Trump's White House and businesses that have worked with the administration."
+        "id": 9,
+        "zh_title": "UFC的Dana White表示他将于周一与特朗普会面",
+        "zh_summary": "特朗普表示已向UFC老板Dana White提供白宫新闻秘书的职位。",
+        "en_title": "UFC's Dana White says he will meet with Trump Monday over offer to be White House press secretary",
+        "en_summary": "Trump has offered the job of White House press secretary to Dana White."
       }
     },
-    "9": {
+    "10": {
       "topic": "World News / Global",
       "article": {
         "title": "Health intel-sharing group warns industry in wake of cyberattack on French blood bank",
@@ -174,14 +194,14 @@
         "topic": "World News / Global"
       },
       "summary": {
-        "id": 9,
-        "zh_title": "健康情报共享组织在法国血库网络攻击后警告行业",
-        "zh_summary": "一家医疗保健情报共享组织警告其成员在冷藏系统遭受网络攻击后锁定系统。",
+        "id": 10,
+        "zh_title": "健康情报共享组织在法国血库网络攻击后发出警告",
+        "zh_summary": "一家医疗健康情报共享组织警告其成员在网络攻击后锁定系统。",
         "en_title": "Health intel-sharing group warns industry in wake of cyberattack on French blood bank",
         "en_summary": "A healthcare intelligence-sharing organization is warning its members to lock down systems following cyberattacks."
       }
     },
-    "10": {
+    "11": {
       "topic": "World News / Global",
       "article": {
         "title": "Stephen Miller replaces Susie Wiles as White House chief of staff",
@@ -194,31 +214,11 @@
         "topic": "World News / Global"
       },
       "summary": {
-        "id": 10,
-        "zh_title": "斯蒂芬·米勒取代苏茜·怀尔斯担任白宫幕僚长",
-        "zh_summary": "特朗普总统表示，白宫幕僚长苏茜·怀尔斯将被斯蒂芬·米勒取代。",
-        "en_title": "Stephen Miller replaces Susie Wiles as White House chief of staff",
-        "en_summary": "White House chief of staff Susie Wiles is being replaced by Stephen Miller."
-      }
-    },
-    "11": {
-      "topic": "World News / Global",
-      "article": {
-        "title": "Israel's president taps opposition candidate, not Netanyahu, to form a government",
-        "description": "Gadi Eisenkot ran as the main rival to Prime Minister Benjamin Netanyahu, but neither won enough support to command a majority. Israel's main parties have recommended Eisenkot form a new government.",
-        "url": "https://www.npr.org/2026/11/07/g-s1-152536/netanyahu-israel-government-eisenkot-herzog",
-        "source": "NPR",
-        "published": "2026-11-07T20:18:18+00:00",
-        "image": "assets/news/50e0d360811f3d65d2d92f47.webp",
-        "placeholder": false,
-        "topic": "World News / Global"
-      },
-      "summary": {
         "id": 11,
-        "zh_title": "以色列总统选择反对派候选人，而非内塔尼亚胡，组建政府",
-        "zh_summary": "加迪·艾森科特作为内塔尼亚胡的主要对手参选，但都未能获得足够支持。",
-        "en_title": "Israel's president taps opposition candidate, not Netanyahu, to form a government",
-        "en_summary": "Gadi Eisenkot ran as the main rival to Prime Minister Benjamin Netanyahu, but neither won enough support."
+        "zh_title": "斯蒂芬·米勒取代苏茜·怀尔斯担任白宫幕僚长",
+        "zh_summary": "特朗普表示，斯蒂芬·米勒将取代苏茜·怀尔斯担任白宫幕僚长。",
+        "en_title": "Stephen Miller replaces Susie Wiles as White House chief of staff",
+        "en_summary": "Stephen Miller is replacing Susie Wiles as White House chief of staff."
       }
     },
     "12": {
@@ -235,30 +235,10 @@
       },
       "summary": {
         "id": 12,
-        "zh_title": "美国提供2000万美元奖励以获取伊朗核计划的信息",
-        "zh_summary": "特朗普多次提到可能恢复对伊朗核设施的打击。",
+        "zh_title": "美国提供2000万美元奖励以获取伊朗核计划信息",
+        "zh_summary": "特朗普多次提到可能重新打击伊朗核设施的前景。",
         "en_title": "US offers $20m reward for information about Iran's nuclear programme",
-        "en_summary": "Donald Trump has repeatedly raised the prospecting of renewing strikes against Iran's nuclear facilities."
-      }
-    },
-    "13": {
-      "topic": "World News / Global",
-      "article": {
-        "title": "'Please take the job!' - Trump asks UFC boss Dane White to be White House press secretary",
-        "description": "'Please take the job!' - Trump asks UFC boss Dane White to be White House press secretarybbc.com",
-        "url": "https://www.bbc.com/news/articles/cvze47p9jeexo",
-        "source": "BBC News",
-        "published": "2026-11-07T19:09:02Z",
-        "image": "assets/news/f369313e1ef46c726d8b294f.jpg",
-        "placeholder": false,
-        "topic": "World News / Global"
-      },
-      "summary": {
-        "id": 13,
-        "zh_title": "‘请接受这个职位！’ - 特朗普要求UFC老板丹·怀特担任白宫新闻秘书",
-        "zh_summary": "特朗普请求UFC老板丹·怀特担任白宫新闻秘书。",
-        "en_title": "'Please take the job!' - Trump asks UFC boss Dane White to be White House press secretary",
-        "en_summary": "'Please take the job!' - Trump asks UFC boss Dane White to be White House press secretary."
+        "en_summary": "Donald Trump has raised the prospect of renewing strikes against Iran's nuclear facilities."
       }
     }
   }
