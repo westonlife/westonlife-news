@@ -1,0 +1,49 @@
+name: Install Qibushi on poetry page
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/install-qibushi.yml'
+permissions:
+  contents: write
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Add third poem without changing other pages
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          page=Path('poetry.html')
+          js=Path('poetry-third-qibushi.js')
+          if not page.is_file() or not js.is_file():
+              raise SystemExit('Missing poetry.html or poetry-third-qibushi.js; nothing changed')
+          text=page.read_text(encoding='utf-8')
+          tag='<script defer src="/poetry-third-qibushi.js"></script>'
+          if tag not in text:
+              if '</body>' not in text.lower():
+                  raise SystemExit('Cannot find closing body tag; nothing changed')
+              import re
+              text=re.sub(r'</body\s*>',tag+'\n</body>',text,count=1,flags=re.I)
+              page.write_text(text,encoding='utf-8')
+          # Uploaded assets are in /assets rather than /poetry-assets
+          source=js.read_text(encoding='utf-8')
+          fixed=source.replace('/poetry-assets/','/assets/')
+          if fixed!=source:
+              js.write_text(fixed,encoding='utf-8')
+          for name in ('qibushi-story.webp','caozhi-portrait.webp','qibushi-recitation.m4a','qibushi-explanation.m4a'):
+              if not (Path('assets')/name).is_file():
+                  print('WARNING: missing assets/'+name)
+          PY
+      - name: Commit only poetry page and Qibushi script
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- poetry.html poetry-third-qibushi.js
+          if ! git diff --cached --quiet; then
+            git commit -m "Add third poem Qibushi to poetry page"
+            git push
+          fi
