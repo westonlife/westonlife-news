@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-08",
+  "checked_at": "2026-11-09",
   "slots": {
     "1": {
       "topic": "Weston / Boston / Massachusetts",
@@ -35,8 +35,8 @@
       },
       "summary": {
         "id": 2,
-        "zh_title": "Nvidia对黄仁勋与中国间谍关系展开调查",
-        "zh_summary": "黄仁勋承认与一名被美国官员认定为中国情报人员的商业高管有亲密关系。",
+        "zh_title": "英伟达调查黄仁勋与中国间谍的关系",
+        "zh_summary": "黄仁勋承认与一名被美国官员认定为中国情报工作的商业高管有亲密关系。",
         "en_title": "Nvidia opens investigation into Jensen Huang’s relationship with Chinese spy",
         "en_summary": "Huang acknowledged being intimate with a business executive determined by U.S. officials to be working for Chinese intelligence."
       }
@@ -56,7 +56,7 @@
       "summary": {
         "id": 3,
         "zh_title": "2026年实时选举结果：马萨诸塞州投票问题7，‘入门住房’措施",
-        "zh_summary": "在选举之夜，关注投票计数的进展。",
+        "zh_summary": "在选举之夜关注投票计数。",
         "en_title": "2026 live election results: Mass. Ballot Question 7, the ‘starter homes’ measure",
         "en_summary": "Follow along as votes are counted on election night."
       }
@@ -75,7 +75,7 @@
       },
       "summary": {
         "id": 4,
-        "zh_title": "加尔文秘书在‘记录中’谈选民投票率和投票问题",
+        "zh_title": "加尔文秘书在‘记录上’谈选民投票率和投票问题",
         "zh_summary": "马萨诸塞州国务卿比尔·加尔文讨论了选举日、选民投票率和创纪录的投票问题。",
         "en_title": "Secretary Galvin goes 'On the Record' about voter turnout, ballot questions",
         "en_summary": "Massachusetts Secretary of State Bill Galvin discussed Election Day, voter turnout, and the record-tying slate of ballot questions."
@@ -95,150 +95,90 @@
       },
       "summary": {
         "id": 5,
-        "zh_title": "UFC的达纳·怀特表示将于周一与特朗普会面，讨论白宫新闻秘书职位",
-        "zh_summary": "特朗普在其白宫经历重大转型之际，向怀特提供了这一职位。",
+        "zh_title": "UFC的达纳·怀特表示将于周一与特朗普会面，讨论担任白宫新闻秘书的提议",
+        "zh_summary": "特朗普的帖子发布时，他的白宫正经历重大过渡，并在周二的中期选举中遭遇重大损失。",
         "en_title": "UFC’s Dana White says he will meet with Trump Monday over offer to be White House press secretary",
-        "en_summary": "Trump's post came as his White House is in a period of major transition."
+        "en_summary": "Trump's post came as his White House is in a period of major transition and struggling with his party's deep losses."
       }
     },
     "6": {
+      "topic": "World News / Global",
+      "article": {
+        "title": "Millions of dollars poured into prediction markets on election night, trading on Democratic control of Congress and Texas governor's race",
+        "description": "Election night showed how traders reacted in real time to midterm results, as trading activity surged and market prices shifted to Democrats on Nov. 3.",
+        "url": "https://www.cnbc.com/2026/11/09/millions-of-dollars-poured-into-prediction-markets-on-election-night.html",
+        "source": "CNBC",
+        "published": "2026-11-09T19:41:13+00:00",
+        "image": "assets/news/c6ee179349c2bdd4a3513e50.jpg",
+        "placeholder": false,
+        "topic": "World News / Global"
+      },
+      "summary": {
+        "id": 6,
+        "zh_title": "数百万美元涌入预测市场，交易国会民主控制和德克萨斯州州长竞选",
+        "zh_summary": "选举之夜显示交易者如何实时反应中期结果，交易活动激增，市场价格在11月3日转向民主党。",
+        "en_title": "Millions of dollars poured into prediction markets on election night, trading on Democratic control of Congress and Texas governor's race",
+        "en_summary": "Election night showed how traders reacted in real time to midterm results."
+      }
+    },
+    "7": {
+      "topic": "World News / Global",
+      "article": {
+        "title": "Trump questions midterm election results, revives voting-machine conspiracy",
+        "description": "President Trump's questioning of the legitimacy of his loss in the 2020 election culminated with an attack on the U.S. Capitol by a mob of his supporters.",
+        "url": "https://www.cnbc.com/2026/11/09/trump-election-results-democrats.html",
+        "source": "CNBC",
+        "published": "2026-11-09T22:40:09+00:00",
+        "image": "assets/news/07b8f9b5a4744f13224f6848.jpg",
+        "placeholder": false,
+        "topic": "World News / Global"
+      },
+      "summary": {
+        "id": 7,
+        "zh_title": "特朗普质疑中期选举结果，重提投票机阴谋",
+        "zh_summary": "特朗普对2020年选举失利的合法性提出质疑， culminated with an attack on the U.S. Capitol by a mob of his supporters.",
+        "en_title": "Trump questions midterm election results, revives voting-machine conspiracy",
+        "en_summary": "President Trump's questioning of the legitimacy of his loss culminated with an attack on the U.S. Capitol."
+      }
+    },
+    "8": {
       "topic": "World News / Global",
       "article": {
         "title": "Trump says renewed Iran strikes ‘highly unlikely’ if talks progress but warns he could still strike",
         "description": "Trump tied avoiding renewed U.S. strikes to progress in talks over Iran’s nuclear program and the Strait of Hormuz.",
         "url": "https://www.cnbc.com/2026/11/08/trump-iran-strikes-unlikely-talks-hormuz.html",
         "source": "CNBC",
-        "published": "2026-11-08T21:53:02+00:00",
+        "published": "2026-11-08T21:28:12Z",
         "image": "assets/news/08fa032469133b4032e9b692.jpg",
         "placeholder": false,
         "topic": "World News / Global"
       },
       "summary": {
-        "id": 6,
-        "zh_title": "特朗普称如果谈判进展，伊朗重新打击‘极不可能’但警告仍可能打击",
+        "id": 8,
+        "zh_title": "特朗普表示如果谈判进展，伊朗重新打击‘极不可能’，但警告仍可能打击",
         "zh_summary": "特朗普将避免美国重新打击与伊朗核计划和霍尔木兹海的谈判进展联系在一起。",
         "en_title": "Trump says renewed Iran strikes ‘highly unlikely’ if talks progress but warns he could still strike",
         "en_summary": "Trump tied avoiding renewed U.S. strikes to progress in talks over Iran’s nuclear program."
       }
     },
-    "7": {
-      "topic": "World News / Global",
-      "article": {
-        "title": "Crude oil prices fall below $90 a barrel as Vance blames GOP election defeat on Iran war",
-        "description": "Crude oil prices tumbled Wednesday after Vice President JD Vance blamed the Republicans' steep midterm election losses on the Iran war.",
-        "url": "https://www.cnbc.com/2026/11/04/oil-price-iran-war-us-election-strait-hormuz.html",
-        "source": "CNBC",
-        "published": "2026-11-04T20:14:52+00:00",
-        "image": "assets/news/b4f552ab58363000b45b0bda.jpg",
-        "placeholder": false,
-        "topic": "World News / Global"
-      },
-      "summary": {
-        "id": 7,
-        "zh_title": "原油价格跌破每桶90美元，范斯将共和党选举失败归咎于伊朗战争",
-        "zh_summary": "原油价格在副总统JD范斯将共和党在中期选举中的重大损失归咎于伊朗战争后暴跌。",
-        "en_title": "Crude oil prices fall below $90 a barrel as Vance blames GOP election defeat on Iran war",
-        "en_summary": "Crude oil prices tumbled after Vice President JD Vance blamed the Republicans' steep midterm election losses on the Iran war."
-      }
-    },
-    "8": {
-      "topic": "World News / Global",
-      "article": {
-        "title": "Nvidia CEO Jensen Huang faces bipartisan congressional scrutiny over reported China spy link",
-        "description": "Lawmakers want to question Nvidia CEO Jensen Huang following reports about his relationship with an alleged Chinese intelligence asset.",
-        "url": "https://www.cnbc.com/2026/11/08/jensen-huang-nvidia-china-spy-congress.html",
-        "source": "CNBC",
-        "published": "2026-11-08T18:18:30+00:00",
-        "image": "assets/news/58c57668b7c82ba463cc55cb.jpg",
-        "placeholder": false,
-        "topic": "World News / Global"
-      },
-      "summary": {
-        "id": 8,
-        "zh_title": "Nvidia首席执行官黄仁勋因与中国间谍的关系面临两党国会审查",
-        "zh_summary": "立法者希望对Nvidia首席执行官黄仁勋与一名被指控为中国情报资产的关系进行质询。",
-        "en_title": "Nvidia CEO Jensen Huang faces bipartisan congressional scrutiny over reported China spy link",
-        "en_summary": "Lawmakers want to question Nvidia CEO Jensen Huang following reports about his relationship with an alleged Chinese intelligence asset."
-      }
-    },
     "9": {
       "topic": "World News / Global",
       "article": {
-        "title": "UFC's Dana White says he will meet with Trump Monday over offer to be White House press secretary",
-        "description": "President Donald Trump said Saturday that he has offered the job of White House press secretary to his friend and UFC boss Dana White.",
-        "url": "https://www.npr.org/2026/11/08/nx-s1-6033900/ufc-dana-white-trump-white-house-press-secretary",
+        "title": "France accuses Iran of cyber 'sabotage' in fridge attacks",
+        "description": "France says Iranian military hackers took over refrigeration controllers at around 700 different retail sites last month, turning up temperatures in the middle of the night and spoiling millions of dollars' worth of food.",
+        "url": "https://www.npr.org/2026/11/09/g-s1-152724/france-iran-cyber-sabotage-fridge-attacks",
         "source": "NPR",
-        "published": "2026-11-08T07:35:29+00:00",
-        "image": "assets/news/de3f4ebffe9b361d2155b7c1.webp",
+        "published": "2026-11-09T22:30:49+00:00",
+        "image": "assets/news/bad4e1942c50310e3776cda0.webp",
         "placeholder": false,
         "topic": "World News / Global"
       },
       "summary": {
         "id": 9,
-        "zh_title": "UFC的达纳·怀特表示将于周一与特朗普会面，讨论白宫新闻秘书职位",
-        "zh_summary": "特朗普表示已向怀特提供白宫新闻秘书的职位。",
-        "en_title": "UFC's Dana White says he will meet with Trump Monday over offer to be White House press secretary",
-        "en_summary": "President Trump said he has offered the job of White House press secretary to Dana White."
-      }
-    },
-    "10": {
-      "topic": "World News / Global",
-      "article": {
-        "title": "Health intel-sharing group warns industry in wake of cyberattack on French blood bank",
-        "description": "A healthcare intelligence-sharing organization is warning its members to lock down systems following cyberattacks on cold storage systems, including a French blood bank.",
-        "url": "https://www.npr.org/2026/11/06/nx-s1-6032602/cyberattack-blood-bank-healthcare",
-        "source": "NPR",
-        "published": "2026-11-06T19:00:21Z",
-        "image": "assets/news/cc160d54890cc23ff106608f.webp",
-        "placeholder": false,
-        "topic": "World News / Global"
-      },
-      "summary": {
-        "id": 10,
-        "zh_title": "健康情报共享组织在法国血库网络攻击后警告行业",
-        "zh_summary": "一家医疗保健情报共享组织警告其成员在网络攻击后锁定系统。",
-        "en_title": "Health intel-sharing group warns industry in wake of cyberattack on French blood bank",
-        "en_summary": "A healthcare intelligence-sharing organization is warning its members to lock down systems following cyberattacks."
-      }
-    },
-    "11": {
-      "topic": "World News / Global",
-      "article": {
-        "title": "Stephen Miller replaces Susie Wiles as White House chief of staff",
-        "description": "White House chief of staff Susie Wiles is being replaced by Stephen Miller, President Trump said Friday. The change comes after Republicans were swept out of power in the midterm elections.",
-        "url": "https://www.npr.org/2026/11/06/nx-s1-6032810/stephen-miller-replaces-susie-wiles-as-white-house-chief-of-staff",
-        "source": "NPR",
-        "published": "2026-11-06T22:21:35Z",
-        "image": "assets/news/fd469057e03db00e45979793.jpg",
-        "placeholder": false,
-        "topic": "World News / Global"
-      },
-      "summary": {
-        "id": 11,
-        "zh_title": "斯蒂芬·米勒取代苏茜·怀尔斯担任白宫幕僚长",
-        "zh_summary": "特朗普表示，苏茜·怀尔斯将被斯蒂芬·米勒取代，因共和党在中期选举中失去权力。",
-        "en_title": "Stephen Miller replaces Susie Wiles as White House chief of staff",
-        "en_summary": "White House chief of staff Susie Wiles is being replaced by Stephen Miller."
-      }
-    },
-    "12": {
-      "topic": "World News / Global",
-      "article": {
-        "title": "US offers $20m reward for information about Iran's nuclear programme",
-        "description": "Donald Trump has repeatedly raised the prospecting of renewing strikes against Iran's nuclear facilities.",
-        "url": "https://www.bbc.com/news/articles/c6d091ev3p0jo",
-        "source": "BBC News",
-        "published": "2026-11-07T18:16:52Z",
-        "image": "assets/news/794172aac9516a3e55f5246e.jpg",
-        "placeholder": false,
-        "topic": "World News / Global"
-      },
-      "summary": {
-        "id": 12,
-        "zh_title": "美国提供2000万美元奖励以获取伊朗核计划信息",
-        "zh_summary": "特朗普多次提到可能会重新打击伊朗的核设施。",
-        "en_title": "US offers $20m reward for information about Iran's nuclear programme",
-        "en_summary": "Donald Trump has repeatedly raised the prospect of renewing strikes against Iran's nuclear facilities."
+        "zh_title": "法国指责伊朗在冰箱攻击中进行网络‘破坏’",
+        "zh_summary": "法国称伊朗军事黑客上个月接管了约700个零售地点的制冷控制器，导致数百万美元的食品变质。",
+        "en_title": "France accuses Iran of cyber 'sabotage' in fridge attacks",
+        "en_summary": "France says Iranian military hackers took over refrigeration controllers at around 700 different retail sites."
       }
     }
   }
