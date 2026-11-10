@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-09",
+  "checked_at": "2026-11-10",
   "slots": {
     "1": {
       "topic": "Weston / Boston / Massachusetts",
@@ -16,9 +16,9 @@
       "summary": {
         "id": 1,
         "zh_title": "公众信息会议：园艺噪音条例",
-        "zh_summary": "了解关于提议的燃气动力吹叶机条例的信息。",
+        "zh_summary": "了解在特别市镇会议之前提议的燃气动力吹叶机条例。",
         "en_title": "Public Information Session: Landscaping Noise Bylaw",
-        "en_summary": "Learn more about the proposed gas-powered leaf blower bylaw."
+        "en_summary": "Learn more about the proposed gas-powered leaf blower bylaw before Special Town Meeting."
       }
     },
     "2": {
@@ -35,70 +35,70 @@
       },
       "summary": {
         "id": 2,
-        "zh_title": "英伟达调查黄仁勋与中国间谍的关系",
-        "zh_summary": "黄仁勋承认与一名被美国官员认定为中国情报工作的商业高管有亲密关系。",
+        "zh_title": "Nvidia对Jensen Huang与中国间谍的关系展开调查",
+        "zh_summary": "Huang承认与一名被美国官员认定为中国情报工作的商业高管有亲密关系。",
         "en_title": "Nvidia opens investigation into Jensen Huang’s relationship with Chinese spy",
-        "en_summary": "Huang acknowledged being intimate with a business executive determined by U.S. officials to be working for Chinese intelligence."
+        "en_summary": "Huang, the company's chief executive, acknowledged that he was intimate with a business executive who U.S. officials had determined was working for Chinese intelligence."
       }
     },
     "3": {
       "topic": "Weston / Boston / Massachusetts",
       "article": {
-        "title": "2026 live election results: Mass. Ballot Question 7, the ‘starter homes’ measure",
-        "description": "Follow along below as votes are counted on election night. The post 2026 live election results: Mass. Ballot Question 7, the ‘starter homes’ measure appeared first on Boston.com .",
-        "url": "https://www.boston.com/news/politics/2026/11/03/2026-live-election-results-mass-ballot-question-7-the-starter-homes-measure/",
+        "title": "For Greater Boston renters, the jump to homeownership keeps getting harder",
+        "description": "A new housing report finds that just 17% of renter households earn enough to buy a starter home, down from 29% in 2021. The post For Greater Boston renters, the jump to homeownership keeps getting harder appeared first on Boston.com .",
+        "url": "https://www.boston.com/news/local-news/2026/11/10/for-greater-boston-renters-the-jump-to-homeownership-keeps-getting-harder/",
         "source": "Boston.com",
-        "published": "2026-11-03T18:31:38+00:00",
-        "image": "assets/news/227a027fa15e55a0a7984b5c.webp",
+        "published": "2026-11-10T18:32:26+00:00",
+        "image": "assets/news/9238c23e9f54f3656918cd1c.webp",
         "placeholder": false,
         "topic": "Weston / Boston / Massachusetts"
       },
       "summary": {
         "id": 3,
-        "zh_title": "2026年实时选举结果：马萨诸塞州投票问题7，‘入门住房’措施",
-        "zh_summary": "在选举之夜关注投票计数。",
-        "en_title": "2026 live election results: Mass. Ballot Question 7, the ‘starter homes’ measure",
-        "en_summary": "Follow along as votes are counted on election night."
+        "zh_title": "大波士顿地区租户购房难度加大",
+        "zh_summary": "一项新的住房报告发现，仅有17%的租户家庭收入足以购买入门级住房，低于2021年的29%。",
+        "en_title": "For Greater Boston renters, the jump to homeownership keeps getting harder",
+        "en_summary": "A new housing report finds that just 17% of renter households earn enough to buy a starter home, down from 29% in 2021."
       }
     },
     "4": {
       "topic": "Weston / Boston / Massachusetts",
       "article": {
-        "title": "Secretary Galvin goes 'On the Record' about voter turnout, ballot questions",
-        "description": "Massachusetts Secretary of State Bill Galvin joined WCVB's \"On the Record\" to discuss Election Day, voter turnout and the record-tying slate of ballot questions.",
-        "url": "https://www.wcvb.com/article/secretary-galvin-goes-on-the-record-about-voter-turnout-ballot-questions/74360006",
-        "source": "WCVB Boston",
-        "published": "2026-11-08T16:30:00+00:00",
-        "image": "assets/news/925536e06d075b71946d25e2.jpg",
+        "title": "Massachusetts State Police agree to pay Karen Read $100K to settle lawsuit",
+        "description": "Read, who is currently embroiled in several civil suits, agreed to the State Police settlement in the interest of avoiding “somewhat duplicative and inefficient litigation,” her lawyer said. The post Massachusetts State Police agree to pay Karen Read $100K to settle lawsuit appeared first on Boston.com .",
+        "url": "https://www.boston.com/news/local-news/2026/11/10/karen-read-state-police-lawsuit-settlement/",
+        "source": "Boston.com",
+        "published": "2026-11-10T18:51:35+00:00",
+        "image": "assets/news/39bc74ae47ab855d8667fb1c.webp",
         "placeholder": false,
         "topic": "Weston / Boston / Massachusetts"
       },
       "summary": {
         "id": 4,
-        "zh_title": "加尔文秘书在‘记录上’谈选民投票率和投票问题",
-        "zh_summary": "马萨诸塞州国务卿比尔·加尔文讨论了选举日、选民投票率和创纪录的投票问题。",
-        "en_title": "Secretary Galvin goes 'On the Record' about voter turnout, ballot questions",
-        "en_summary": "Massachusetts Secretary of State Bill Galvin discussed Election Day, voter turnout, and the record-tying slate of ballot questions."
+        "zh_title": "马萨诸塞州警察同意支付Karen Read 10万美元以和解诉讼",
+        "zh_summary": "Read同意州警察的和解，以避免“有些重复和低效的诉讼”。",
+        "en_title": "Massachusetts State Police agree to pay Karen Read $100K to settle lawsuit",
+        "en_summary": "Read agreed to the State Police settlement in the interest of avoiding 'somewhat duplicative and inefficient litigation,' her lawyer said."
       }
     },
     "5": {
-      "topic": "Weston / Boston / Massachusetts",
+      "topic": "World News / Global",
       "article": {
-        "title": "UFC’s Dana White says he will meet with Trump Monday over offer to be White House press secretary",
-        "description": "Trump's post came as his White House is in a period of major transition and struggling with his party's deep losses in Tuesday's midterm elections. The post UFC’s Dana White says he will meet with Trump Monday over offer to be White House press secretary appeared first on Boston.com .",
-        "url": "https://www.boston.com/news/politics/2026/11/08/ufcs-dana-white-says-he-will-meet-with-trump-monday-over-offer-to-be-white-house-press-secretary/",
-        "source": "Boston.com",
-        "published": "2026-11-08T13:58:17+00:00",
-        "image": "assets/news/11a01939f64f74e309840dad.webp",
+        "title": "10-year Treasury yield races back to 5% as inflation data, Waller comments drive rate hike expectations",
+        "description": "Treasury yields moved higher after a hotter-than-expected CPI report.",
+        "url": "https://www.cnbc.com/2026/11/10/us-bonds-treasurys-yields.html",
+        "source": "CNBC",
+        "published": "2026-11-10T21:06:07+00:00",
+        "image": "assets/news/bff373c3b6abfc344843d430.jpg",
         "placeholder": false,
-        "topic": "Weston / Boston / Massachusetts"
+        "topic": "World News / Global"
       },
       "summary": {
         "id": 5,
-        "zh_title": "UFC的达纳·怀特表示将于周一与特朗普会面，讨论担任白宫新闻秘书的提议",
-        "zh_summary": "特朗普的帖子发布时，他的白宫正经历重大过渡，并在周二的中期选举中遭遇重大损失。",
-        "en_title": "UFC’s Dana White says he will meet with Trump Monday over offer to be White House press secretary",
-        "en_summary": "Trump's post came as his White House is in a period of major transition and struggling with his party's deep losses."
+        "zh_title": "10年期国债收益率回升至5%，通胀数据和Waller评论推动加息预期",
+        "zh_summary": "在一份高于预期的CPI报告后，国债收益率上升。",
+        "en_title": "10-year Treasury yield races back to 5% as inflation data, Waller comments drive rate hike expectations",
+        "en_summary": "Treasury yields moved higher after a hotter-than-expected CPI report."
       }
     },
     "6": {
@@ -115,10 +115,10 @@
       },
       "summary": {
         "id": 6,
-        "zh_title": "数百万美元涌入预测市场，交易国会民主控制和德克萨斯州州长竞选",
-        "zh_summary": "选举之夜显示交易者如何实时反应中期结果，交易活动激增，市场价格在11月3日转向民主党。",
+        "zh_title": "数百万美元涌入预测市场，交易民主党控制国会和德克萨斯州州长竞选",
+        "zh_summary": "选举之夜显示交易者如何实时反应中期选举结果，交易活动激增，市场价格转向民主党。",
         "en_title": "Millions of dollars poured into prediction markets on election night, trading on Democratic control of Congress and Texas governor's race",
-        "en_summary": "Election night showed how traders reacted in real time to midterm results."
+        "en_summary": "Election night showed how traders reacted in real time to midterm results, as trading activity surged and market prices shifted to Democrats."
       }
     },
     "7": {
@@ -136,49 +136,49 @@
       "summary": {
         "id": 7,
         "zh_title": "特朗普质疑中期选举结果，重提投票机阴谋",
-        "zh_summary": "特朗普对2020年选举失利的合法性提出质疑， culminated with an attack on the U.S. Capitol by a mob of his supporters.",
+        "zh_summary": "特朗普总统质疑2020年选举失利的合法性， culminated with an attack on the U.S. Capitol by a mob of his supporters.",
         "en_title": "Trump questions midterm election results, revives voting-machine conspiracy",
-        "en_summary": "President Trump's questioning of the legitimacy of his loss culminated with an attack on the U.S. Capitol."
+        "en_summary": "President Trump's questioning of the legitimacy of his loss in the 2020 election culminated with an attack on the U.S. Capitol by a mob of his supporters."
       }
     },
     "8": {
       "topic": "World News / Global",
       "article": {
-        "title": "Trump says renewed Iran strikes ‘highly unlikely’ if talks progress but warns he could still strike",
-        "description": "Trump tied avoiding renewed U.S. strikes to progress in talks over Iran’s nuclear program and the Strait of Hormuz.",
-        "url": "https://www.cnbc.com/2026/11/08/trump-iran-strikes-unlikely-talks-hormuz.html",
-        "source": "CNBC",
-        "published": "2026-11-08T21:28:12Z",
-        "image": "assets/news/08fa032469133b4032e9b692.jpg",
+        "title": "Trump says Nvidia CEO told him he had no idea woman he had affair with was Chinese spy",
+        "description": "The US president said the FBI is now investigating the affair. He said he spoke with Jensen Huang and asked him about the affair.",
+        "url": "https://www.bbc.com/news/articles/cqg7x7dpvym8o",
+        "source": "BBC News",
+        "published": "2026-11-09T22:50:07Z",
+        "image": "assets/news/4d05c6d8d67bb6a379a35f95.jpg",
         "placeholder": false,
         "topic": "World News / Global"
       },
       "summary": {
         "id": 8,
-        "zh_title": "特朗普表示如果谈判进展，伊朗重新打击‘极不可能’，但警告仍可能打击",
-        "zh_summary": "特朗普将避免美国重新打击与伊朗核计划和霍尔木兹海的谈判进展联系在一起。",
-        "en_title": "Trump says renewed Iran strikes ‘highly unlikely’ if talks progress but warns he could still strike",
-        "en_summary": "Trump tied avoiding renewed U.S. strikes to progress in talks over Iran’s nuclear program."
+        "zh_title": "特朗普称Nvidia首席执行官告诉他对与中国间谍的绯闻毫不知情",
+        "zh_summary": "美国总统表示，FBI正在调查这段绯闻，他与Jensen Huang进行了交谈。",
+        "en_title": "Trump says Nvidia CEO told him he had no idea woman he had affair with was Chinese spy",
+        "en_summary": "The US president said the FBI is now investigating the affair and that he spoke with Jensen Huang about it."
       }
     },
     "9": {
       "topic": "World News / Global",
       "article": {
-        "title": "France accuses Iran of cyber 'sabotage' in fridge attacks",
-        "description": "France says Iranian military hackers took over refrigeration controllers at around 700 different retail sites last month, turning up temperatures in the middle of the night and spoiling millions of dollars' worth of food.",
-        "url": "https://www.npr.org/2026/11/09/g-s1-152724/france-iran-cyber-sabotage-fridge-attacks",
-        "source": "NPR",
-        "published": "2026-11-09T22:30:49+00:00",
-        "image": "assets/news/bad4e1942c50310e3776cda0.webp",
+        "title": "MIT Schwarzman College of Computing welcomes seven new faculty for 2026",
+        "description": "Faculty members serve in core computing and shared roles, bringing a wide range of experiences and areas of expertise to the MIT community.",
+        "url": "https://news.mit.edu/2026/mit-schwarzman-college-computing-welcomes-new-faculty-1110",
+        "source": "MIT News",
+        "published": "2026-11-10T22:00:00+00:00",
+        "image": "assets/news/52700eeff0e93b9a861670c4.jpg",
         "placeholder": false,
         "topic": "World News / Global"
       },
       "summary": {
         "id": 9,
-        "zh_title": "法国指责伊朗在冰箱攻击中进行网络‘破坏’",
-        "zh_summary": "法国称伊朗军事黑客上个月接管了约700个零售地点的制冷控制器，导致数百万美元的食品变质。",
-        "en_title": "France accuses Iran of cyber 'sabotage' in fridge attacks",
-        "en_summary": "France says Iranian military hackers took over refrigeration controllers at around 700 different retail sites."
+        "zh_title": "麻省理工学院施瓦茨曼计算学院欢迎七位新教师加入2026年",
+        "zh_summary": "新教师在核心计算和共享角色中服务，带来广泛的经验和专业领域。",
+        "en_title": "MIT Schwarzman College of Computing welcomes seven new faculty for 2026",
+        "en_summary": "Faculty members serve in core computing and shared roles, bringing a wide range of experiences and areas of expertise to the MIT community."
       }
     }
   }
