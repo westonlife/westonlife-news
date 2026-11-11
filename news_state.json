@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-10",
+  "checked_at": "2026-11-11",
   "slots": {
     "1": {
       "topic": "Weston / Boston / Massachusetts",
@@ -15,7 +15,7 @@
       },
       "summary": {
         "id": 1,
-        "zh_title": "公众信息会议：园艺噪音条例",
+        "zh_title": "公众信息会议：景观噪音条例",
         "zh_summary": "了解在特别市镇会议之前提议的燃气动力吹叶机条例。",
         "en_title": "Public Information Session: Landscaping Noise Bylaw",
         "en_summary": "Learn more about the proposed gas-powered leaf blower bylaw before Special Town Meeting."
@@ -24,21 +24,21 @@
     "2": {
       "topic": "Weston / Boston / Massachusetts",
       "article": {
-        "title": "Nvidia opens investigation into Jensen Huang’s relationship with Chinese spy",
-        "description": "Huang, the company's chief executive, acknowledged on Sunday that he was intimate with a business executive who U.S. officials had determined was working for Chinese intelligence. The post Nvidia opens investigation into Jensen Huang’s relationship with Chinese spy appeared first on Boston.com .",
-        "url": "https://www.boston.com/news/national-news/2026/11/08/nvidia-opens-investigation-into-jensen-huangs-relationship-with-chinese-spy/",
+        "title": "White House confronts Democrats over planned probes, claiming possible ‘criminality’",
+        "description": "Democrats are preparing a vast oversight agenda to look at how Trump and his family have become wealthier since he returned to office. The post White House confronts Democrats over planned probes, claiming possible ‘criminality’ appeared first on Boston.com .",
+        "url": "https://www.boston.com/news/politics/2026/11/11/white-house-confronts-democrats-over-planned-probes-claiming-possible-criminality/",
         "source": "Boston.com",
-        "published": "2026-11-08T22:28:51+00:00",
-        "image": "assets/news/6ef8b30706f99b0b4054eb56.webp",
+        "published": "2026-11-11T21:26:34+00:00",
+        "image": "assets/news/6a7c2b556bc166cc3127174b.webp",
         "placeholder": false,
         "topic": "Weston / Boston / Massachusetts"
       },
       "summary": {
         "id": 2,
-        "zh_title": "Nvidia对Jensen Huang与中国间谍的关系展开调查",
-        "zh_summary": "Huang承认与一名被美国官员认定为中国情报工作的商业高管有亲密关系。",
-        "en_title": "Nvidia opens investigation into Jensen Huang’s relationship with Chinese spy",
-        "en_summary": "Huang, the company's chief executive, acknowledged that he was intimate with a business executive who U.S. officials had determined was working for Chinese intelligence."
+        "zh_title": "白宫就计划调查与民主党对峙，声称可能存在‘犯罪行为’",
+        "zh_summary": "民主党正在准备一项广泛的监督议程，以调查特朗普及其家族自他重返办公室以来如何变得更加富有。",
+        "en_title": "White House confronts Democrats over planned probes, claiming possible ‘criminality’",
+        "en_summary": "Democrats are preparing a vast oversight agenda to look at how Trump and his family have become wealthier since he returned to office."
       }
     },
     "3": {
@@ -75,13 +75,53 @@
       },
       "summary": {
         "id": 4,
-        "zh_title": "马萨诸塞州警察同意支付Karen Read 10万美元以和解诉讼",
-        "zh_summary": "Read同意州警察的和解，以避免“有些重复和低效的诉讼”。",
+        "zh_title": "马萨诸塞州警察同意支付凯伦·里德10万美元以和解诉讼",
+        "zh_summary": "里德目前卷入几起民事诉讼，她的律师表示同意州警察的和解是为了避免“某种重复和低效的诉讼”。",
         "en_title": "Massachusetts State Police agree to pay Karen Read $100K to settle lawsuit",
-        "en_summary": "Read agreed to the State Police settlement in the interest of avoiding 'somewhat duplicative and inefficient litigation,' her lawyer said."
+        "en_summary": "Read, who is currently embroiled in several civil suits, agreed to the State Police settlement in the interest of avoiding 'somewhat duplicative and inefficient litigation,' her lawyer said."
       }
     },
     "5": {
+      "topic": "World News / Global",
+      "article": {
+        "title": "General strikes to paralyze Spain as protestors clash with police ahead of election campaign",
+        "description": "Spanish workers are expected to turn out in their millions on Wednesday for the country's first general strike in 14 years.",
+        "url": "https://www.cnbc.com/2026/11/11/spain-protests-general-strikes-election.html",
+        "source": "CNBC",
+        "published": "2026-11-11T18:02:32+00:00",
+        "image": "assets/news/4858f590aa321855cceb6913.jpg",
+        "placeholder": false,
+        "topic": "World News / Global"
+      },
+      "summary": {
+        "id": 5,
+        "zh_title": "西班牙将举行总罢工，抗议者与警方发生冲突",
+        "zh_summary": "西班牙工人预计将在周三参加该国14年来的第一次总罢工。",
+        "en_title": "General strikes to paralyze Spain as protestors clash with police ahead of election campaign",
+        "en_summary": "Spanish workers are expected to turn out in their millions on Wednesday for the country's first general strike in 14 years."
+      }
+    },
+    "6": {
+      "topic": "World News / Global",
+      "article": {
+        "title": "Zelenskyy warns Ukraine is 'not real estate' as experts say a Russia peace deal remains elusive",
+        "description": "President Zelenskyy warned Tuesday that his country \"was not real estate,\" as a second and final day of U.S.-brokered peace talks got underway.",
+        "url": "https://www.cnbc.com/2026/11/11/ukraine-russia-peace-talks-zelenskyy-putin.html",
+        "source": "CNBC",
+        "published": "2026-11-11T14:13:40+00:00",
+        "image": "assets/news/00546be5feb944f55499888a.jpg",
+        "placeholder": false,
+        "topic": "World News / Global"
+      },
+      "summary": {
+        "id": 6,
+        "zh_title": "泽连斯基警告乌克兰‘不是房地产’",
+        "zh_summary": "泽连斯基总统周二警告称他的国家“不是房地产”，同时美国主导的和平谈判进入第二天和最后一天。",
+        "en_title": "Zelenskyy warns Ukraine is 'not real estate' as experts say a Russia peace deal remains elusive",
+        "en_summary": "President Zelenskyy warned Tuesday that his country 'was not real estate,' as a second and final day of U.S.-brokered peace talks got underway."
+      }
+    },
+    "7": {
       "topic": "World News / Global",
       "article": {
         "title": "10-year Treasury yield races back to 5% as inflation data, Waller comments drive rate hike expectations",
@@ -94,91 +134,71 @@
         "topic": "World News / Global"
       },
       "summary": {
-        "id": 5,
-        "zh_title": "10年期国债收益率回升至5%，通胀数据和Waller评论推动加息预期",
-        "zh_summary": "在一份高于预期的CPI报告后，国债收益率上升。",
+        "id": 7,
+        "zh_title": "10年期国债收益率回升至5%",
+        "zh_summary": "在高于预期的消费者物价指数报告后，国债收益率上升。",
         "en_title": "10-year Treasury yield races back to 5% as inflation data, Waller comments drive rate hike expectations",
         "en_summary": "Treasury yields moved higher after a hotter-than-expected CPI report."
-      }
-    },
-    "6": {
-      "topic": "World News / Global",
-      "article": {
-        "title": "Millions of dollars poured into prediction markets on election night, trading on Democratic control of Congress and Texas governor's race",
-        "description": "Election night showed how traders reacted in real time to midterm results, as trading activity surged and market prices shifted to Democrats on Nov. 3.",
-        "url": "https://www.cnbc.com/2026/11/09/millions-of-dollars-poured-into-prediction-markets-on-election-night.html",
-        "source": "CNBC",
-        "published": "2026-11-09T19:41:13+00:00",
-        "image": "assets/news/c6ee179349c2bdd4a3513e50.jpg",
-        "placeholder": false,
-        "topic": "World News / Global"
-      },
-      "summary": {
-        "id": 6,
-        "zh_title": "数百万美元涌入预测市场，交易民主党控制国会和德克萨斯州州长竞选",
-        "zh_summary": "选举之夜显示交易者如何实时反应中期选举结果，交易活动激增，市场价格转向民主党。",
-        "en_title": "Millions of dollars poured into prediction markets on election night, trading on Democratic control of Congress and Texas governor's race",
-        "en_summary": "Election night showed how traders reacted in real time to midterm results, as trading activity surged and market prices shifted to Democrats."
-      }
-    },
-    "7": {
-      "topic": "World News / Global",
-      "article": {
-        "title": "Trump questions midterm election results, revives voting-machine conspiracy",
-        "description": "President Trump's questioning of the legitimacy of his loss in the 2020 election culminated with an attack on the U.S. Capitol by a mob of his supporters.",
-        "url": "https://www.cnbc.com/2026/11/09/trump-election-results-democrats.html",
-        "source": "CNBC",
-        "published": "2026-11-09T22:40:09+00:00",
-        "image": "assets/news/07b8f9b5a4744f13224f6848.jpg",
-        "placeholder": false,
-        "topic": "World News / Global"
-      },
-      "summary": {
-        "id": 7,
-        "zh_title": "特朗普质疑中期选举结果，重提投票机阴谋",
-        "zh_summary": "特朗普总统质疑2020年选举失利的合法性， culminated with an attack on the U.S. Capitol by a mob of his supporters.",
-        "en_title": "Trump questions midterm election results, revives voting-machine conspiracy",
-        "en_summary": "President Trump's questioning of the legitimacy of his loss in the 2020 election culminated with an attack on the U.S. Capitol by a mob of his supporters."
       }
     },
     "8": {
       "topic": "World News / Global",
       "article": {
-        "title": "Trump says Nvidia CEO told him he had no idea woman he had affair with was Chinese spy",
-        "description": "The US president said the FBI is now investigating the affair. He said he spoke with Jensen Huang and asked him about the affair.",
-        "url": "https://www.bbc.com/news/articles/cqg7x7dpvym8o",
+        "title": "Nvidia hires major New York law firm to investigate Huang affair",
+        "description": "The appointment was made after it emerged Jensen Huang had an affair with a woman believed to be a spy for China.",
+        "url": "https://www.bbc.com/news/articles/ck1wvwwl3x0go",
         "source": "BBC News",
-        "published": "2026-11-09T22:50:07Z",
-        "image": "assets/news/4d05c6d8d67bb6a379a35f95.jpg",
+        "published": "2026-11-10T20:06:22Z",
+        "image": "assets/news/3f0175b524fed5cbd94575be.jpg",
         "placeholder": false,
         "topic": "World News / Global"
       },
       "summary": {
         "id": 8,
-        "zh_title": "特朗普称Nvidia首席执行官告诉他对与中国间谍的绯闻毫不知情",
-        "zh_summary": "美国总统表示，FBI正在调查这段绯闻，他与Jensen Huang进行了交谈。",
-        "en_title": "Trump says Nvidia CEO told him he had no idea woman he had affair with was Chinese spy",
-        "en_summary": "The US president said the FBI is now investigating the affair and that he spoke with Jensen Huang about it."
+        "zh_title": "英伟达聘请纽约大型律师事务所调查黄仁勋事件",
+        "zh_summary": "此任命是在黄仁勋与一名被认为是中国间谍的女性发生关系后做出的。",
+        "en_title": "Nvidia hires major New York law firm to investigate Huang affair",
+        "en_summary": "The appointment was made after it emerged Jensen Huang had an affair with a woman believed to be a spy for China."
       }
     },
     "9": {
       "topic": "World News / Global",
       "article": {
-        "title": "MIT Schwarzman College of Computing welcomes seven new faculty for 2026",
-        "description": "Faculty members serve in core computing and shared roles, bringing a wide range of experiences and areas of expertise to the MIT community.",
-        "url": "https://news.mit.edu/2026/mit-schwarzman-college-computing-welcomes-new-faculty-1110",
-        "source": "MIT News",
-        "published": "2026-11-10T22:00:00+00:00",
-        "image": "assets/news/52700eeff0e93b9a861670c4.jpg",
+        "title": "Russia and Ukraine agree to a prisoner exchange as talks end with no big breakthrough",
+        "description": "Russia and Ukraine have agreed to a large exchange of prisoners of war. U.S.-mediated talks in Abu Dhabi led to this decision, marking the biggest humanitarian release since the war began in 2022.",
+        "url": "https://www.npr.org/2026/11/11/g-s1-152954/russia-ukraine-war-talks",
+        "source": "NPR",
+        "published": "2026-11-11T13:30:00+00:00",
+        "image": "assets/news/1e92a2df9619dcf0ef946f7e.webp",
         "placeholder": false,
         "topic": "World News / Global"
       },
       "summary": {
         "id": 9,
-        "zh_title": "麻省理工学院施瓦茨曼计算学院欢迎七位新教师加入2026年",
-        "zh_summary": "新教师在核心计算和共享角色中服务，带来广泛的经验和专业领域。",
-        "en_title": "MIT Schwarzman College of Computing welcomes seven new faculty for 2026",
-        "en_summary": "Faculty members serve in core computing and shared roles, bringing a wide range of experiences and areas of expertise to the MIT community."
+        "zh_title": "俄罗斯与乌克兰同意进行战俘交换",
+        "zh_summary": "俄罗斯与乌克兰同意进行大规模战俘交换，阿布扎比的美国调解谈判促成了这一决定。",
+        "en_title": "Russia and Ukraine agree to a prisoner exchange as talks end with no big breakthrough",
+        "en_summary": "Russia and Ukraine have agreed to a large exchange of prisoners of war. U.S.-mediated talks in Abu Dhabi led to this decision, marking the biggest humanitarian release since the war began in 2022."
+      }
+    },
+    "10": {
+      "topic": "World News / Global",
+      "article": {
+        "title": "What the U.S. midterms mean for Ukrainians heading into their 5th winter at war",
+        "description": "Ukrainians are heading into their fifth winter at war. Russia has stepped up its bombing campaign of Ukraine's critical infrastructure. But Ukrainians see one bright spot — the U.S. midterm elections.",
+        "url": "https://www.npr.org/2026/11/10/nx-s1-6035022/what-the-u-s-midterms-mean-for-ukrainians-heading-into-their-5th-winter-at-war",
+        "source": "NPR",
+        "published": "2026-11-10T22:18:32Z",
+        "image": "assets/news/fd469057e03db00e45979793.jpg",
+        "placeholder": false,
+        "topic": "World News / Global"
+      },
+      "summary": {
+        "id": 10,
+        "zh_title": "美国中期选举对乌克兰的影响",
+        "zh_summary": "乌克兰人正迎接他们在战争中度过的第五个冬天，俄罗斯加大了对乌克兰关键基础设施的轰炸，但乌克兰人看到一个亮点——美国中期选举。",
+        "en_title": "What the U.S. midterms mean for Ukrainians heading into their 5th winter at war",
+        "en_summary": "Ukrainians are heading into their fifth winter at war. Russia has stepped up its bombing campaign of Ukraine's critical infrastructure. But Ukrainians see one bright spot — the U.S. midterm elections."
       }
     }
   }
