@@ -8,7 +8,7 @@
     if (!card) return;
     var cover = card.querySelector('img');
     if (cover) {
-      cover.src = '/assets/poetry/taoyuanming-cover.jpg';
+      cover.src = '/assets/taoyuanming-cover.jpg';
       cover.alt = '陶渊明采菊东篱下、南山菊花田园诗画';
       cover.style.objectFit = 'contain';
       cover.style.background = '#f7f3ea';
