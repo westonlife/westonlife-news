@@ -1544,68 +1544,108 @@ def _wl_v3_choose_one(candidates, selected):
 
 
 def discover():
-    """Local slots: Weston civic, Boston, Massachusetts housing, MA state, metro.
-    No Weston High School announcement may enter a general news card.
-    """
+    """Select 5 local and 10 world reports with verified photos."""
     pool = _editorial_collect()
     used = set()
-    local_pool = list(pool['local'].values())
-    def blob(a):
-        return _editorial_text(a)
-    def gov(a):
-        t = blob(a)
-        return ('weston' in t and any(w in t for w in ('town', 'government', 'select board',
-                'planning', 'municipal', 'library', 'public safety', 'zoning')))
-    def boston(a):
-        return 'boston' in blob(a) and not _wl_v3_has_housing(a)
-    def state(a):
-        t = blob(a)
-        return ('massachusetts' in t and any(w in t for w in (
-            'governor', 'legislature', 'state', 'policy', 'economy', 'transit', 'transport')))
-    # Housing gets first pick to guarantee it is not crowded out by other stories.
-    housing = _wl_v3_choose_one([a for a in local_pool if _wl_v3_has_housing(a)], used)
-    if housing is None:
-        try:
-            old = _get_ma_housing_candidate(used)
-            if old and _wl_v3_valid_source(old):
-                housing = old
-                used.add(old['url'])
-        except (OSError, ValueError, KeyError) as exc:
-            print('Housing backup not available: ' + str(exc)[:120], file=sys.stderr)
-    weston = _wl_v3_choose_one([a for a in local_pool if gov(a)], used)
-    city = _wl_v3_choose_one([a for a in local_pool if boston(a)], used)
-    mass = _wl_v3_choose_one([a for a in local_pool if state(a)], used)
-    region = _wl_v3_choose_one([a for a in local_pool if not _wl_v3_has_housing(a)], used)
-    slots = [weston, city, housing, mass, region]
-    if any(a is None for a in slots):
-        extras = _editorial_choose([a for a in local_pool if not _wl_v3_is_school(a)],
-                                  5, local=True, used=used)
-        it = iter(extras)
-        slots = [a if a is not None else next(it, None) for a in slots]
-    local = [a for a in slots if a is not None]
-    world_candidates = [a for a in pool['world'].values() if _wl_v3_valid_source(a)]
-    world = _editorial_choose(world_candidates, 14, local=False, used=used)
-    # Deduplicate near-identical headlines (including syndicated articles).
+
+    def text_of(article):
+        return _editorial_text(article)
+
+    def valid(article):
+        return (
+            _wl_v3_valid_source(article)
+            and not _wl_v3_is_school(article)
+        )
+
+    def select(candidates, count, local):
+        return _editorial_choose(
+            [a for a in candidates if valid(a)],
+            count,
+            local=local,
+            used=used
+        )
+
+    local_pool = list(pool["local"].values())
+
+    weston = []
+    boston = []
+    massachusetts = []
+
+    for article in local_pool:
+        if not valid(article):
+            continue
+
+        content = text_of(article)
+
+        if "weston" in content:
+            weston.append(article)
+        elif any(x in content for x in (
+            "boston", "cambridge", "newton",
+            "waltham", "brookline", "needham",
+            "wellesley", "lexington"
+        )):
+            boston.append(article)
+        else:
+            massachusetts.append(article)
+
+    local = []
+
+    for candidates in (weston, boston, massachusetts):
+        needed = 5 - len(local)
+        if needed <= 0:
+            break
+        local.extend(select(candidates, needed, True))
+
+    world_pool = list(pool["world"].values())
+    world = select(world_pool, 10, False)
+
     def dedupe(items):
-        output, seen_titles, sources = [], set(), {}
-        for a in items:
-            key = re.sub('[^a-z0-9]+', '', a['title'].lower())[:65]
-            host = (urlparse(a.get('url') or '').hostname or '').lower()
-            if key in seen_titles or sources.get(host, 0) >= 3:
+        output = []
+        seen = set()
+        hosts = {}
+
+        for article in items:
+            title = re.sub(
+                r"[^a-z0-9]+", "",
+                article["title"].lower()
+            )[:65]
+
+            host = (
+                urlparse(article.get("url") or "").hostname
+                or ""
+            ).lower()
+
+            if title in seen or hosts.get(host, 0) >= 3:
                 continue
-            seen_titles.add(key)
-            sources[host] = sources.get(host, 0) + 1
-            output.append(a)
+
+            seen.add(title)
+            hosts[host] = hosts.get(host, 0) + 1
+            output.append(article)
+
         return output
-    local = dedupe(local)
+
+    local = dedupe(local)[:5]
     world = dedupe(world)[:10]
-    if not local and not world:
-        raise RuntimeError('No original-source articles verified; previous edition retained')
+
+    if len(local) != 5 or len(world) != 10:
+        raise RuntimeError(
+            f"Incomplete edition: {len(local)} local, "
+            f"{len(world)} world. Previous edition retained."
+        )
+
     update_index._local_stories = local
     update_index._school_stories = []
-    print('V3 editorial: %d local, %d world; school posts isolated, housing=%s' %
-          (len(local), len(world), 'yes' if housing else 'no'))
-    return [('Weston / Boston / Massachusetts', local), ('World News / Global', world)]
+
+    print(
+        f"Verified news: {len(local)} local, "
+        f"{len(world)} world"
+    )
+
+    return [
+        ("Weston / Boston / Massachusetts", local),
+        ("World News / Global", world)
+    ]
+
 
 
 def _wl_v3_school_articles():
