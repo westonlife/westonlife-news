@@ -16,7 +16,7 @@
       "summary": {
         "id": 1,
         "zh_title": "韦斯顿电力选择",
-        "zh_summary": "韦斯顿电力选择是一个城镇电力供应计划，旨在让居民和企业主对社区的电力供应有更多选择和控制。",
+        "zh_summary": "韦斯顿电力选择是一个城镇电力供应计划，旨在为居民和企业主提供更多选择和控制权。",
         "en_title": "Weston Power Choice",
         "en_summary": "Weston Power Choice is a Town electricity supply program that gives residents and business owners more choice and control over how we power our community."
       }
@@ -35,10 +35,10 @@
       },
       "summary": {
         "id": 2,
-        "zh_title": "公羊明星外接手的任期‘可能结束’",
+        "zh_title": "公羊明星外接手的任期“可能结束”",
         "zh_summary": "NFL内部人士表示，公羊明星外接手的任期可能即将结束。",
         "en_title": "Rams star wide receiver’s tenure ‘probably ending’ according to NFL insider",
-        "en_summary": "NFL insider suggests that the Rams star wide receiver's tenure is probably ending."
+        "en_summary": "NFL insider suggests that the Rams star wide receiver's tenure is likely coming to an end."
       }
     },
     "3": {
@@ -78,7 +78,7 @@
         "zh_title": "穆雷最后5秒的补篮帮助国王以97-96战胜凯尔特人",
         "zh_summary": "穆雷在最后5秒的补篮帮助国王以97-96战胜凯尔特人。",
         "en_title": "Murray’s putback with 5 seconds left lifts Kings to 97-96 win over Celtics",
-        "en_summary": "Murray's putback with 5 seconds left lifted the Kings to a 97-96 win over the Celtics."
+        "en_summary": "Murray's putback with 5 seconds left lifted the Kings to a 97-96 victory over the Celtics."
       }
     },
     "5": {
@@ -95,10 +95,10 @@
       },
       "summary": {
         "id": 5,
-        "zh_title": "大波士顿地区‘低价城镇’的房屋现已达到60万美元",
-        "zh_summary": "一份新报告显示，大波士顿地区‘低价城镇’的房屋现已达到60万美元。",
+        "zh_title": "大波士顿地区“低价城镇”的房屋现已达到60万美元",
+        "zh_summary": "一份新报告显示，大波士顿地区“低价城镇”的房屋现已达到60万美元。",
         "en_title": "Homes in a ‘low-priced town’ in Greater Boston are now $600,000, a new report says.",
-        "en_summary": "A new report states that homes in a ‘low-priced town’ in Greater Boston are now $600,000."
+        "en_summary": "A new report indicates that homes in a 'low-priced town' in Greater Boston are now priced at $600,000."
       }
     },
     "6": {
@@ -115,10 +115,10 @@
       },
       "summary": {
         "id": 6,
-        "zh_title": "Anthropic创纪录的IPO与华尔街自2020年以来最糟糕的一周相撞",
-        "zh_summary": "Anthropic在纳斯达克的历史性首次公开募股与Nvidia股票的长期下跌相遇。",
+        "zh_title": "Anthropic的创纪录首次公开募股与华尔街最糟糕的一周相撞",
+        "zh_summary": "Anthropic在纳斯达克的历史性首次公开募股与华尔街自2020年以来最糟糕的一周相撞。",
         "en_title": "Anthropic’s record IPO collides with tech’s worst week on Wall Street since 2020",
-        "en_summary": "Anthropic held its historic Nasdaq debut a day before Nvidia's stock closed out its longest weekly losing streak since 2008."
+        "en_summary": "Anthropic's historic IPO coincided with the worst week for tech on Wall Street since 2020."
       }
     },
     "7": {
@@ -136,9 +136,9 @@
       "summary": {
         "id": 7,
         "zh_title": "特朗普命令联邦承包商在回应国会前咨询白宫",
-        "zh_summary": "特朗普总统指示联邦承包商在回应国会询问时咨询白宫。",
+        "zh_summary": "特朗普总统指示联邦承包商在回应国会询问前咨询白宫。",
         "en_title": "Trump orders federal contractors to check with White House before responding to Congress",
-        "en_summary": "President Trump is directing federal contractors to consult the White House about inquiries from Congress."
+        "en_summary": "President Trump has ordered federal contractors to consult the White House before responding to Congress."
       }
     },
     "8": {
@@ -156,12 +156,32 @@
       "summary": {
         "id": 8,
         "zh_title": "标准普尔500指数修正：市场抛售背后的五大力量",
-        "zh_summary": "标准普尔500指数和道琼斯工业平均指数已进入修正区间，较历史最高点下跌10%。",
+        "zh_summary": "标准普尔500指数和道琼斯工业平均指数已进入修正区间，较其记录下跌10%。",
         "en_title": "S&P 500 correction: Five forces behind the market sell-off",
-        "en_summary": "The S&P 500 and Dow Jones Industrial Average closed in correction territory, off 10% from their records."
+        "en_summary": "The S&P 500 and Dow Jones Industrial Average have entered correction territory, down 10% from their records."
       }
     },
     "9": {
+      "topic": "World News / Global",
+      "article": {
+        "title": "Zelensky says Crimean Bridge strikes 'fair response' as he meets UK's Streeting",
+        "description": "Ukraine's president says Kyiv acted after 109 separate Russian aerial attacks on bridges in Ukraine.",
+        "url": "https://www.bbc.com/news/articles/c6wy0qj7w5zqo",
+        "source": "BBC News",
+        "published": "2026-11-21T12:02:54Z",
+        "image": "assets/news/31ceeb6930a6c88c21fe963e.jpg",
+        "placeholder": false,
+        "topic": "World News / Global"
+      },
+      "summary": {
+        "id": 9,
+        "zh_title": "泽连斯基称克里米亚大桥袭击是“公平回应”",
+        "zh_summary": "乌克兰总统表示，基辅是在经历了109次俄罗斯空袭后采取行动的。",
+        "en_title": "Zelensky says Crimean Bridge strikes 'fair response' as he meets UK's Streeting",
+        "en_summary": "Ukraine's president claims the strikes on the Crimean Bridge were a fair response after numerous Russian attacks."
+      }
+    },
+    "10": {
       "topic": "World News / Global",
       "article": {
         "title": "Warren Buffett quadruples Thanksgiving gifts: A breakdown of how much wealth he's giving away",
@@ -174,14 +194,14 @@
         "topic": "World News / Global"
       },
       "summary": {
-        "id": 9,
+        "id": 10,
         "zh_title": "沃伦·巴菲特四倍增加感恩节捐赠",
         "zh_summary": "沃伦·巴菲特今年将其感恩节捐赠增加到55亿美元，四倍于往年。",
         "en_title": "Warren Buffett quadruples Thanksgiving gifts: A breakdown of how much wealth he's giving away",
-        "en_summary": "Warren Buffett more than quadrupled his Thanksgiving donations to four family foundations this year to $5.5 billion."
+        "en_summary": "Warren Buffett has quadrupled his Thanksgiving donations to $5.5 billion this year."
       }
     },
-    "10": {
+    "11": {
       "topic": "World News / Global",
       "article": {
         "title": "Anthropic worker claims to have solved a Holy Grail of math problems with the help of AI",
@@ -194,14 +214,14 @@
         "topic": "World News / Global"
       },
       "summary": {
-        "id": 10,
-        "zh_title": "Anthropic员工声称在AI帮助下解决了数学难题的圣杯",
-        "zh_summary": "一名在Anthropic工作的数学家声称，他在公司的AI工具Claude的帮助下解决了数学难题的圣杯。",
+        "id": 11,
+        "zh_title": "Anthropic员工声称在AI帮助下解决了数学难题",
+        "zh_summary": "一名为人工智能公司Anthropic工作的数学家声称，他在公司的AI工具Claude的帮助下解决了一个数学难题。",
         "en_title": "Anthropic worker claims to have solved a Holy Grail of math problems with the help of AI",
-        "en_summary": "A mathematician at Anthropic claims to have solved a Holy Grail of math problems with the help of the company's AI tool Claude."
+        "en_summary": "An Anthropic mathematician claims to have solved a significant math problem with the help of the company's AI tool."
       }
     },
-    "11": {
+    "12": {
       "topic": "World News / Global",
       "article": {
         "title": "Anthropic says it will put humanity first. Will its IPO change that?",
@@ -214,14 +234,14 @@
         "topic": "World News / Global"
       },
       "summary": {
-        "id": 11,
-        "zh_title": "Anthropic表示将把人类放在首位，IPO会改变这一点吗？",
-        "zh_summary": "批评者表示，作为一家上市公司，Anthropic将面临将安全置于商业成功之上的承诺的考验。",
+        "id": 12,
+        "zh_title": "Anthropic表示将把人类放在首位，首次公开募股是否会改变这一点？",
+        "zh_summary": "批评者表示，作为一家上市公司，Anthropic在安全与商业成功之间的承诺将受到考验。",
         "en_title": "Anthropic says it will put humanity first. Will its IPO change that?",
-        "en_summary": "Critics say now that the AI giant is a public company, its commitment to put safety ahead of commercial success will be tested."
+        "en_summary": "Critics argue that Anthropic's commitment to prioritize safety over commercial success will be tested as a public company."
       }
     },
-    "12": {
+    "13": {
       "topic": "World News / Global",
       "article": {
         "title": "Nvidia stock plunges 14%, wraps up longest weekly losing streak since 2008 financial crisis",
@@ -234,14 +254,14 @@
         "topic": "World News / Global"
       },
       "summary": {
-        "id": 12,
+        "id": 13,
         "zh_title": "英伟达股票暴跌14%，结束自2008年金融危机以来最长的周跌势",
-        "zh_summary": "英伟达股票暴跌14%，结束了自2008年金融危机以来的最长周跌势。",
+        "zh_summary": "曾经是全球最有价值的公司，英伟达现在排名第四，落后于苹果、微软和Alphabet。",
         "en_title": "Nvidia stock plunges 14%, wraps up longest weekly losing streak since 2008 financial crisis",
-        "en_summary": "Nvidia stock plunged 14%, wrapping up its longest weekly losing streak since the 2008 financial crisis."
+        "en_summary": "Nvidia's stock has dropped 14%, marking its longest weekly losing streak since the 2008 financial crisis."
       }
     },
-    "13": {
+    "14": {
       "topic": "World News / Global",
       "article": {
         "title": "Zscaler stock jumps 18% on report that CrowdStrike in talks to buy security vendor",
@@ -254,14 +274,14 @@
         "topic": "World News / Global"
       },
       "summary": {
-        "id": 13,
-        "zh_title": "Zscaler股票因CrowdStrike洽谈收购安全供应商而上涨18%",
-        "zh_summary": "网络安全公司在AI时代积极寻找收购机会。",
+        "id": 14,
+        "zh_title": "Zscaler股票因CrowdStrike洽谈收购而上涨18%",
+        "zh_summary": "网络安全公司在人工智能时代积极寻求收购。",
         "en_title": "Zscaler stock jumps 18% on report that CrowdStrike in talks to buy security vendor",
-        "en_summary": "Cybersecurity companies have been hunting for acquisitions in the AI era."
+        "en_summary": "Zscaler's stock rose 18% amid reports of CrowdStrike negotiating to acquire a security vendor."
       }
     },
-    "14": {
+    "15": {
       "topic": "World News / Global",
       "article": {
         "title": "Warsh wants Fed officials to talk less. Instead, they’re talking more",
@@ -274,31 +294,11 @@
         "topic": "World News / Global"
       },
       "summary": {
-        "id": 14,
+        "id": 15,
         "zh_title": "Warsh希望美联储官员少说话，但他们却说得更多",
         "zh_summary": "美联储官员最近频繁发言，而美联储主席则保持沉默。",
         "en_title": "Warsh wants Fed officials to talk less. Instead, they’re talking more",
-        "en_summary": "Fed officials have been rushing to the microphones lately while the Fed chairman stays on the sidelines."
-      }
-    },
-    "15": {
-      "topic": "World News / Global",
-      "article": {
-        "title": "Trump says he still has confidence in Lutnick",
-        "description": "President Donald Trump, when asked by CNBC's Eamon Javers, said he has not lost confidence in Commerce Secretary Howard Lutnick.",
-        "url": "https://www.cnbc.com/2026/11/20/trump-lutnick-commerce-china-ai.html",
-        "source": "CNBC",
-        "published": "2026-11-20T20:52:08+00:00",
-        "image": "assets/news/4f424e9bf5a41c55cc08e4c5.jpg",
-        "placeholder": false,
-        "topic": "World News / Global"
-      },
-      "summary": {
-        "id": 15,
-        "zh_title": "特朗普表示他仍然对卢特尼克有信心",
-        "zh_summary": "特朗普总统表示，他对商务部长霍华德·卢特尼克仍然有信心。",
-        "en_title": "Trump says he still has confidence in Lutnick",
-        "en_summary": "President Donald Trump stated he has not lost confidence in Commerce Secretary Howard Lutnick."
+        "en_summary": "Fed officials have been increasingly vocal lately, while the Fed chairman remains on the sidelines."
       }
     }
   }
