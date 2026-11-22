@@ -1,224 +1,204 @@
 {
-  "checked_at": "2026-11-17",
+  "checked_at": "2026-11-22",
   "slots": {
     "1": {
       "topic": "Weston / Boston / Massachusetts",
       "article": {
-        "title": "Public Information Session: Landscaping Noise Bylaw",
-        "description": "Learn more about the proposed gas-powered leaf blower bylaw before Special Town Meeting.",
-        "url": "https://www.westonma.gov/CivicAlerts.aspx?aid=1232",
+        "title": "Weston Power Choice",
+        "description": "Weston Power Choice is a Town electricity supply program that gives residents and business owners more choice and control over how we power our community.",
+        "url": "https://www.westonma.gov/CivicAlerts.aspx?aid=1231",
         "source": "Town of Weston Massachusetts",
-        "published": "2026-11-05T17:26:00+00:00",
+        "published": "2026-11-05T13:25:00+00:00",
         "image": "assets/news/1609065c7729f16ec137afec.png",
         "placeholder": false,
         "topic": "Weston / Boston / Massachusetts"
       },
       "summary": {
         "id": 1,
-        "zh_title": "公众信息会议：景观噪音条例",
-        "zh_summary": "了解在特别市镇会议之前提议的燃气动力吹叶机条例。",
-        "en_title": "Public Information Session: Landscaping Noise Bylaw",
-        "en_summary": "Learn more about the proposed gas-powered leaf blower bylaw before Special Town Meeting."
+        "zh_title": "韦斯顿电力选择",
+        "zh_summary": "韦斯顿电力选择是一个为居民和商业业主提供更多选择和控制权的电力供应项目。",
+        "en_title": "Weston Power Choice",
+        "en_summary": "Weston Power Choice is a Town electricity supply program that gives residents and business owners more choice and control over how we power our community."
       }
     },
     "2": {
       "topic": "Weston / Boston / Massachusetts",
       "article": {
-        "title": "Kevin Byard acknowledges on WEEI that Drake Maye is ‘probably done’ for season",
-        "description": "\"And the reality of the situation is, is that we're going to have to get behind Tommy Two Chains [Tommy DeVito] at the end of the day.\" The post Kevin Byard acknowledges on WEEI that Drake Maye is ‘probably done’ for season appeared first on Boston.com .",
-        "url": "https://www.boston.com/sports/new-england-patriots/2026/11/17/drake-maye-injury-weei-nfl-football-new-england-patriots-kevin-byard/",
+        "title": "Rams star wide receiver’s tenure ‘probably ending’ according to NFL insider",
+        "description": "Could the Patriots enter the bidding war for Puka Nacua? The post Rams star wide receiver’s tenure ‘probably ending’ according to NFL insider appeared first on Boston.com .",
+        "url": "https://www.boston.com/sports/new-england-patriots/2026/11/21/nfl-patriots-rams-puka-nacua-free-agency-update/",
         "source": "Boston.com",
-        "published": "2026-11-17T22:39:17+00:00",
-        "image": "assets/news/497534ee81d8e4e24f5b112a.webp",
+        "published": "2026-11-22T02:45:04+00:00",
+        "image": "assets/news/a44bf85baebbe5961aca2bc3.webp",
         "placeholder": false,
         "topic": "Weston / Boston / Massachusetts"
       },
       "summary": {
         "id": 2,
-        "zh_title": "凯文·比亚德在WEEI上承认德雷克·梅耶可能本赛季报销",
-        "zh_summary": "凯文·比亚德在WEEI上表示，德雷克·梅耶可能本赛季结束。",
-        "en_title": "Kevin Byard acknowledges on WEEI that Drake Maye is ‘probably done’ for season",
-        "en_summary": "Kevin Byard acknowledges on WEEI that Drake Maye is ‘probably done’ for season."
+        "zh_title": "公羊队明星外接手的任期“可能结束”",
+        "zh_summary": "NFL内部人士表示，公羊队明星外接手的任期可能即将结束。",
+        "en_title": "Rams star wide receiver’s tenure ‘probably ending’ according to NFL insider",
+        "en_summary": "Could the Patriots enter the bidding war for Puka Nacua?"
       }
     },
     "3": {
       "topic": "Weston / Boston / Massachusetts",
       "article": {
-        "title": "A measure pitched as promising more ‘starter homes’ failed at the ballot. Maura Healey wants the Legislature to pass it.",
-        "description": "Governor Maura Healey wants the state Legislature to make it easier to build so-called “starter homes” on smaller lots around the state after voters narrowly rejected a ballot question that would have reshaped zoning law statewide. In an interview Tuesday at this year’s Globe Summit, Healey said the Legislature should take a statewide approach to […] The post A measure pitched as promising more ‘starter homes’ failed at the ballot. Maura Healey wants the Legislature to pass it. appeared first on",
-        "url": "https://www.boston.com/news/politics/2026/11/17/a-measure-pitched-as-promising-more-starter-homes-failed-at-the-ballot-maura-healey-wants-the-legislature-to-pass-it/",
+        "title": "Homes in a ‘low-priced town’ in Greater Boston are now $600,000, a new report says. Here are five striking findings.",
+        "description": "The report paints a grim picture overall for Boston’s housing market. The post Homes in a ‘low-priced town’ in Greater Boston are now $600,000, a new report says. Here are five striking findings. appeared first on Boston.com .",
+        "url": "https://www.boston.com/news/the-boston-globe/2026/11/22/homes-in-a-low-priced-town-in-greater-boston-are-now-600000-a-new-report-says-here-are-five-striking-findings/",
         "source": "Boston.com",
-        "published": "2026-11-17T18:37:53+00:00",
-        "image": "assets/news/9388c284faa254110713b83e.webp",
+        "published": "2026-11-22T10:00:00+00:00",
+        "image": "assets/news/7db01db82e26f182ba4a5bab.webp",
         "placeholder": false,
         "topic": "Weston / Boston / Massachusetts"
       },
       "summary": {
         "id": 3,
-        "zh_title": "一项承诺提供更多‘起步房屋’的措施在投票中失败，毛拉·希利希望立法机构通过",
-        "zh_summary": "毛拉·希利希望州立法机构简化在小地块上建设‘起步房屋’的程序。",
-        "en_title": "A measure pitched as promising more ‘starter homes’ failed at the ballot. Maura Healey wants the Legislature to pass it.",
-        "en_summary": "Governor Maura Healey wants the state Legislature to make it easier to build so-called 'starter homes' on smaller lots around the state after voters narrowly rejected a ballot question."
+        "zh_title": "大波士顿地区“低价城镇”的房屋现已售价60万美元",
+        "zh_summary": "一份新报告显示，大波士顿地区的“低价城镇”房屋现已售价60万美元。",
+        "en_title": "Homes in a ‘low-priced town’ in Greater Boston are now $600,000, a new report says.",
+        "en_summary": "The report paints a grim picture overall for Boston’s housing market."
       }
     },
     "4": {
       "topic": "Weston / Boston / Massachusetts",
       "article": {
-        "title": "Mass. auditor Diana DiZoglio fights to keep lawsuit alive over Senate audit records",
-        "description": "Massachusetts State Auditor Diana DiZoglio is back in court, asking a judge not to dismiss her lawsuit against the legislature.",
-        "url": "https://www.wcvb.com/article/mass-auditor-diana-dizoglio-fights-to-keep-lawsuit-alive/74456831",
-        "source": "WCVB Boston",
-        "published": "2026-11-17T22:15:00+00:00",
-        "image": "assets/news/894a8932634ab0818332e57b.png",
+        "title": "CREDA Massachusetts Names Patrick Sousa 2027 President; Melissa Schrock to Serve as Board Chair",
+        "description": "Commercial real estate association elects new leadership, welcomes 17 board members and recognizes industry leaders and outstanding development projects across Massachusetts. BOSTON— CREDA Massachusetts, the Commercial Real Estate Development Association, […] The post CREDA Massachusetts Names Patrick Sousa 2027 President; Melissa Schrock to Serve as Board Chair appeared first on Boston Real Estate Times .",
+        "url": "https://bostonrealestatetimes.com/creda-massachusetts-names-patrick-sousa-2027-president-melissa-schrock-to-serve-as-board-chair/",
+        "source": "Boston Real Estate Times",
+        "published": "2026-11-20T16:52:55+00:00",
+        "image": "assets/news/753312e1b560c07c1a31c77f.png",
         "placeholder": false,
         "topic": "Weston / Boston / Massachusetts"
       },
       "summary": {
         "id": 4,
-        "zh_title": "马萨诸塞州审计员戴安娜·迪佐格里努力维持对参议院审计记录的诉讼",
-        "zh_summary": "马萨诸塞州审计员戴安娜·迪佐格里在法庭上请求法官不要驳回她对立法机构的诉讼。",
-        "en_title": "Mass. auditor Diana DiZoglio fights to keep lawsuit alive over Senate audit records",
-        "en_summary": "Massachusetts State Auditor Diana DiZoglio is back in court, asking a judge not to dismiss her lawsuit against the legislature."
+        "zh_title": "CREDA马萨诸塞州任命帕特里克·苏萨为2027年主席",
+        "zh_summary": "CREDA马萨诸塞州选举新领导层，并欢迎17名董事会成员。",
+        "en_title": "CREDA Massachusetts Names Patrick Sousa 2027 President; Melissa Schrock to Serve as Board Chair",
+        "en_summary": "Commercial real estate association elects new leadership, welcomes 17 board members and recognizes industry leaders and outstanding development projects across Massachusetts."
       }
     },
     "5": {
       "topic": "Weston / Boston / Massachusetts",
       "article": {
-        "title": "Jayson Tatum details his frustrations with 2024 Olympics benching: ‘It was hard to process’",
-        "description": "Tatum revealed the moment when he knew something fishy was going on and spoke about why the process was frustrating. The post Jayson Tatum details his frustrations with 2024 Olympics benching: ‘It was hard to process’ appeared first on Boston.com .",
-        "url": "https://www.boston.com/sports/boston-celtics/2026/11/17/celtics-jayson-tatum-2024-olympics-benching-comments/",
+        "title": "FBI investigating apparent hack of its key national criminal justice database, AP source says",
+        "description": "Asked about the subject on Saturday, President Donald Trump said in a Fox News Channel interview: “We just heard about it, and I will say that it’s not good.” The post FBI investigating apparent hack of its key national criminal justice database, AP source says appeared first on Boston.com .",
+        "url": "https://www.boston.com/news/crime/2026/11/21/fbi-investigating-apparent-hack-of-its-key-national-criminal-justice-database-ap-source-says/",
         "source": "Boston.com",
-        "published": "2026-11-17T20:50:33+00:00",
-        "image": "assets/news/75958b4bb6db1686bd3dccea.webp",
+        "published": "2026-11-21T23:23:48+00:00",
+        "image": "assets/news/f37d182e1dc255d22da70f2b.webp",
         "placeholder": false,
         "topic": "Weston / Boston / Massachusetts"
       },
       "summary": {
         "id": 5,
-        "zh_title": "杰森·塔图姆详细描述他对2024年奥运会替补的沮丧：‘很难处理’",
-        "zh_summary": "塔图姆透露了他意识到事情不对劲的时刻，并谈到了这一过程为何令人沮丧。",
-        "en_title": "Jayson Tatum details his frustrations with 2024 Olympics benching: ‘It was hard to process’",
-        "en_summary": "Tatum revealed the moment when he knew something fishy was going on and spoke about why the process was frustrating."
+        "zh_title": "FBI调查其国家刑事司法数据库的明显黑客事件",
+        "zh_summary": "FBI正在调查其关键国家刑事司法数据库的明显黑客事件。",
+        "en_title": "FBI investigating apparent hack of its key national criminal justice database, AP source says",
+        "en_summary": "Asked about the subject on Saturday, President Donald Trump said in a Fox News Channel interview: “We just heard about it, and I will say that it’s not good.”"
       }
     },
     "6": {
       "topic": "World News / Global",
       "article": {
-        "title": "Investors look to Nvidia's earnings and Anthropic's IPO to refresh the tech rally",
-        "description": "How the market set-up is more favorable for the Anthropic IPO than the lead-up to SpaceX's debut.",
-        "url": "https://www.cnbc.com/2026/11/17/nvidia-earnings-anthropic-ipo-tech-rally.html",
+        "title": "Anthropic’s record IPO collides with tech’s worst week on Wall Street since 2020",
+        "description": "Anthropic held its historic Nasdaq debut a day before Nvidia's stock closed out its longest weekly losing streak since 2008.",
+        "url": "https://www.cnbc.com/2026/11/21/anthropic-ipo-tech-selloff.html",
         "source": "CNBC",
-        "published": "2026-11-17T13:11:40+00:00",
-        "image": "assets/news/8d57390c5fcebced89e471b1.jpg",
+        "published": "2026-11-21T16:40:05+00:00",
+        "image": "assets/news/3eb29749baeea3a5a31e4061.jpg",
         "placeholder": false,
         "topic": "World News / Global"
       },
       "summary": {
         "id": 6,
-        "zh_title": "投资者期待英伟达的收益和Anthropic的IPO来振兴科技反弹",
-        "zh_summary": "市场环境对Anthropic的IPO比SpaceX的首次亮相更为有利。",
-        "en_title": "Investors look to Nvidia's earnings and Anthropic's IPO to refresh the tech rally",
-        "en_summary": "How the market set-up is more favorable for the Anthropic IPO than the lead-up to SpaceX's debut."
+        "zh_title": "Anthropic的创纪录IPO与华尔街自2020年以来最糟糕的一周相撞",
+        "zh_summary": "Anthropic在纳斯达克的历史性首次公开募股与Nvidia股票的长期下跌相遇。",
+        "en_title": "Anthropic’s record IPO collides with tech’s worst week on Wall Street since 2020",
+        "en_summary": "Anthropic held its historic Nasdaq debut a day before Nvidia's stock closed out its longest weekly losing streak since 2008."
       }
     },
     "7": {
       "topic": "World News / Global",
       "article": {
-        "title": "Nvidia closes lower ahead of earnings as company reels from Huang resignation",
-        "description": "Investors have been weighing the fallout from former CEO Jensen Huang's resignation.",
-        "url": "https://www.cnbc.com/2026/11/17/nvidia-stock-earnings-jensen-huang-resignation.html",
-        "source": "CNBC",
-        "published": "2026-11-17T21:05:24+00:00",
-        "image": "assets/news/c419d4be38080d420c03b425.jpg",
+        "title": "Trump orders federal contractors to check with White House before responding to Congress",
+        "description": "President Trump is directing federal contractors to consult the White House about inquiries from Congress and to withhold any communications that his administration considers privileged.",
+        "url": "https://www.npr.org/2026/11/21/g-s1-154966/trump-contractors-congress",
+        "source": "NPR",
+        "published": "2026-11-21T22:40:36+00:00",
+        "image": "assets/news/f4fda5aa4b21d7ed9e2d376e.webp",
         "placeholder": false,
         "topic": "World News / Global"
       },
       "summary": {
         "id": 7,
-        "zh_title": "英伟达在收益前收盘下跌，因公司受到黄仁勋辞职的影响",
-        "zh_summary": "投资者正在权衡前首席执行官黄仁勋辞职的后果。",
-        "en_title": "Nvidia closes lower ahead of earnings as company reels from Huang resignation",
-        "en_summary": "Investors have been weighing the fallout from former CEO Jensen Huang's resignation."
+        "zh_title": "特朗普命令联邦承包商在回应国会前咨询白宫",
+        "zh_summary": "特朗普总统指示联邦承包商在回应国会询问时咨询白宫。",
+        "en_title": "Trump orders federal contractors to check with White House before responding to Congress",
+        "en_summary": "President Trump is directing federal contractors to consult the White House about inquiries from Congress and to withhold any communications that his administration considers privileged."
       }
     },
     "8": {
       "topic": "World News / Global",
       "article": {
-        "title": "Republicans outspent Democrats for first time in over a decade in record 2026 midterm election political ad blitz",
-        "description": "Republicans slightly outspent Democrats for the first time as Democrats swept national and state elections.",
-        "url": "https://www.cnbc.com/2026/11/17/2026-election-political-ad-spending.html",
+        "title": "S&P 500 correction: Five forces behind the market sell-off",
+        "description": "The S&P 500 and Dow Jones Industrial Average closed in correction territory, off 10% from their records. The Nasdaq Composite lost its gain for the year.",
+        "url": "https://www.cnbc.com/2026/11/20/sp-500-correction-market-sell-off.html",
         "source": "CNBC",
-        "published": "2026-11-17T14:00:02+00:00",
-        "image": "assets/news/708ed04914f42512278cd2b0.jpg",
+        "published": "2026-11-21T11:29:25Z",
+        "image": "assets/news/3242bb6fb2e042f574c38ae4.jpg",
         "placeholder": false,
         "topic": "World News / Global"
       },
       "summary": {
         "id": 8,
-        "zh_title": "共和党在创纪录的2026年中期选举政治广告中首次超越民主党",
-        "zh_summary": "共和党在全国和州选举中首次略微超越民主党。",
-        "en_title": "Republicans outspent Democrats for first time in over a decade in record 2026 midterm election political ad blitz",
-        "en_summary": "Republicans slightly outspent Democrats for the first time as Democrats swept national and state elections."
+        "zh_title": "标准普尔500指数修正：市场抛售的五大原因",
+        "zh_summary": "标准普尔500指数和道琼斯工业平均指数已进入修正区间，较纪录下跌10%。",
+        "en_title": "S&P 500 correction: Five forces behind the market sell-off",
+        "en_summary": "The S&P 500 and Dow Jones Industrial Average closed in correction territory, off 10% from their records."
       }
     },
     "9": {
       "topic": "World News / Global",
       "article": {
-        "title": "Trump is in Asia ahead of Xi, Putin summit. And, tech leaders want Huang back at Nvidia",
-        "description": "Trump says he plans to discuss Ukraine during his Asia trip, which contradicts what the White House previously announced. And, Silicon Valley leaders are pushing for Jensen Huang's return to Nvidia.",
-        "url": "https://www.npr.org/2026/11/17/g-s1-153950/up-first-newsletter-faa-ground-stop-trump-asia-trip-nvidia-lindsay-clancy",
-        "source": "NPR",
-        "published": "2026-11-17T12:20:57+00:00",
-        "image": "assets/news/ef9aacdc954debfcf9806e92.webp",
+        "title": "Trump orders federal contractors to notify White House before giving Congress information",
+        "description": "Companies that fail to comply could face cancelation of existing contracts or suspension from future federal business.",
+        "url": "https://www.cnbc.com/2026/11/21/trump-orders-federal-contractors-to-notify-white-house-before-giving-congress-information.html",
+        "source": "CNBC",
+        "published": "2026-11-21T08:54:22Z",
+        "image": "assets/news/0dab63978585189739b925b6.jpg",
         "placeholder": false,
         "topic": "World News / Global"
       },
       "summary": {
         "id": 9,
-        "zh_title": "特朗普在习近平、普京峰会前访问亚洲，科技领袖希望黄仁勋回归英伟达",
-        "zh_summary": "特朗普表示他计划在亚洲之行中讨论乌克兰，矛盾于白宫之前的声明。",
-        "en_title": "Trump is in Asia ahead of Xi, Putin summit. And, tech leaders want Huang back at Nvidia",
-        "en_summary": "Trump says he plans to discuss Ukraine during his Asia trip, which contradicts what the White House previously announced."
+        "zh_title": "特朗普命令联邦承包商在向国会提供信息前通知白宫",
+        "zh_summary": "未遵守的公司可能面临现有合同的取消或未来联邦业务的暂停。",
+        "en_title": "Trump orders federal contractors to notify White House before giving Congress information",
+        "en_summary": "Companies that fail to comply could face cancelation of existing contracts or suspension from future federal business."
       }
     },
     "10": {
       "topic": "World News / Global",
       "article": {
-        "title": "California sues OpenAI over hacking risks",
-        "description": "The state's attorney general started investigating OpenAI after the Hugging Face attack and now says this attack was \"entirely foreseeable\" due to OpenAI's poor security practices.",
-        "url": "https://www.npr.org/2026/11/16/nx-s1-6042920/california-sues-openai-hugging-face-hacking-incident",
+        "title": "Anthropic says it will put humanity first. Will its IPO change that?",
+        "description": "Critics say now that the AI giant is a public company, its commitment to put safety ahead of commercial success will be tested.",
+        "url": "https://www.npr.org/2026/11/21/nx-s1-6048678/anthropic-ipo-mission-ai-safety",
         "source": "NPR",
-        "published": "2026-11-16T22:06:22Z",
-        "image": "assets/news/0c397abbcc97790a4d41262b.webp",
+        "published": "2026-11-21T10:00:00Z",
+        "image": "assets/news/9f6d7954cf3c78e455116739.webp",
         "placeholder": false,
         "topic": "World News / Global"
       },
       "summary": {
         "id": 10,
-        "zh_title": "加州起诉OpenAI，指控其存在黑客风险",
-        "zh_summary": "加州检察长在Hugging Face攻击后开始调查OpenAI，并表示此次攻击是由于OpenAI的安全措施不当而‘完全可以预见’。",
-        "en_title": "California sues OpenAI over hacking risks",
-        "en_summary": "The state's attorney general started investigating OpenAI after the Hugging Face attack and now says this attack was 'entirely foreseeable' due to OpenAI's poor security practices."
-      }
-    },
-    "11": {
-      "topic": "World News / Global",
-      "article": {
-        "title": "Iran launches a third round of strikes on Bahrain, host of U.S. Navy's 5th Fleet",
-        "description": "Iran fired drones on Tuesday at a U.S. radar facility in Bahrain, and the U.S. retaliated by firing at Iranian targets along an important shipping route.",
-        "url": "https://www.npr.org/2026/11/17/nx-s1-6044255/us-iran-war-latest-bahrain",
-        "source": "NPR",
-        "published": "2026-11-17T18:34:31+00:00",
-        "image": "assets/news/eee7eae34c9323bc416abb78.webp",
-        "placeholder": false,
-        "topic": "World News / Global"
-      },
-      "summary": {
-        "id": 11,
-        "zh_title": "伊朗对巴林进行第三轮打击，巴林是美国海军第五舰队的驻地",
-        "zh_summary": "伊朗在周二向巴林的一处美国雷达设施发射无人机，美国对此进行了报复。",
-        "en_title": "Iran launches a third round of strikes on Bahrain, host of U.S. Navy's 5th Fleet",
-        "en_summary": "Iran fired drones on Tuesday at a U.S. radar facility in Bahrain, and the U.S. retaliated by firing at Iranian targets along an important shipping route."
+        "zh_title": "Anthropic表示将把人类放在首位，IPO会改变这一点吗？",
+        "zh_summary": "批评者表示，作为一家上市公司，Anthropic在安全与商业成功之间的承诺将受到考验。",
+        "en_title": "Anthropic says it will put humanity first. Will its IPO change that?",
+        "en_summary": "Critics say now that the AI giant is a public company, its commitment to put safety ahead of commercial success will be tested."
       }
     }
   }
