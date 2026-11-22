@@ -4,26 +4,6 @@
     "1": {
       "topic": "Weston / Boston / Massachusetts",
       "article": {
-        "title": "Weston Power Choice",
-        "description": "Weston Power Choice is a Town electricity supply program that gives residents and business owners more choice and control over how we power our community.",
-        "url": "https://www.westonma.gov/CivicAlerts.aspx?aid=1231",
-        "source": "Town of Weston Massachusetts",
-        "published": "2026-11-05T13:25:00+00:00",
-        "image": "assets/news/1609065c7729f16ec137afec.png",
-        "placeholder": false,
-        "topic": "Weston / Boston / Massachusetts"
-      },
-      "summary": {
-        "id": 1,
-        "zh_title": "韦斯顿电力选择",
-        "zh_summary": "韦斯顿电力选择是一个城镇电力供应计划，旨在为居民和企业主提供更多选择和控制权。",
-        "en_title": "Weston Power Choice",
-        "en_summary": "Weston Power Choice is a Town electricity supply program that gives residents and business owners more choice and control over how we power our community."
-      }
-    },
-    "2": {
-      "topic": "Weston / Boston / Massachusetts",
-      "article": {
         "title": "Rams star wide receiver’s tenure ‘probably ending’ according to NFL insider",
         "description": "Could the Patriots enter the bidding war for Puka Nacua? The post Rams star wide receiver’s tenure ‘probably ending’ according to NFL insider appeared first on Boston.com .",
         "url": "https://www.boston.com/sports/new-england-patriots/2026/11/21/nfl-patriots-rams-puka-nacua-free-agency-update/",
@@ -34,14 +14,14 @@
         "topic": "Weston / Boston / Massachusetts"
       },
       "summary": {
-        "id": 2,
+        "id": 1,
         "zh_title": "公羊队明星外接手的任期“可能结束”",
-        "zh_summary": "NFL内部人士表示，公羊队明星外接手的任期可能即将结束。",
+        "zh_summary": "NFL内部人士表示公羊队明星外接手的任期“可能结束”。",
         "en_title": "Rams star wide receiver’s tenure ‘probably ending’ according to NFL insider",
-        "en_summary": "NFL insider suggests that the Rams star wide receiver's tenure is probably ending."
+        "en_summary": "An NFL insider suggests that the tenure of the Rams star wide receiver is 'probably ending'."
       }
     },
-    "3": {
+    "2": {
       "topic": "Weston / Boston / Massachusetts",
       "article": {
         "title": "FBI investigating apparent hack of its key national criminal justice database, AP source says",
@@ -54,14 +34,14 @@
         "topic": "Weston / Boston / Massachusetts"
       },
       "summary": {
-        "id": 3,
+        "id": 2,
         "zh_title": "FBI调查其关键国家刑事司法数据库的明显黑客事件",
-        "zh_summary": "FBI正在调查其关键国家刑事司法数据库的明显黑客事件。",
+        "zh_summary": "据美联社消息，FBI正在调查其关键国家刑事司法数据库的明显黑客事件。",
         "en_title": "FBI investigating apparent hack of its key national criminal justice database, AP source says",
-        "en_summary": "The FBI is investigating an apparent hack of its key national criminal justice database."
+        "en_summary": "The FBI is investigating an apparent hack of its key national criminal justice database, according to an AP source."
       }
     },
-    "4": {
+    "3": {
       "topic": "Weston / Boston / Massachusetts",
       "article": {
         "title": "Murray’s putback with 5 seconds left lifts Kings to 97-96 win over Celtics",
@@ -74,14 +54,14 @@
         "topic": "Weston / Boston / Massachusetts"
       },
       "summary": {
-        "id": 4,
+        "id": 3,
         "zh_title": "穆雷最后5秒的补篮帮助国王以97-96战胜凯尔特人",
         "zh_summary": "穆雷在最后5秒的补篮帮助国王以97-96战胜凯尔特人。",
         "en_title": "Murray’s putback with 5 seconds left lifts Kings to 97-96 win over Celtics",
-        "en_summary": "Murray's putback with 5 seconds left lifted the Kings to a 97-96 win over the Celtics."
+        "en_summary": "Murray's putback with 5 seconds left lifted the Kings to a 97-96 victory over the Celtics."
       }
     },
-    "5": {
+    "4": {
       "topic": "Weston / Boston / Massachusetts",
       "article": {
         "title": "Homes in a ‘low-priced town’ in Greater Boston are now $600,000, a new report says. Here are five striking findings.",
@@ -94,11 +74,31 @@
         "topic": "Weston / Boston / Massachusetts"
       },
       "summary": {
-        "id": 5,
+        "id": 4,
         "zh_title": "大波士顿地区“低价城镇”的房屋现已达到60万美元",
-        "zh_summary": "一份新报告显示，大波士顿地区“低价城镇”的房屋现已达到60万美元。",
+        "zh_summary": "一份新报告称，大波士顿地区“低价城镇”的房屋现已达到60万美元。",
         "en_title": "Homes in a ‘low-priced town’ in Greater Boston are now $600,000, a new report says.",
-        "en_summary": "A new report states that homes in a ‘low-priced town’ in Greater Boston are now $600,000."
+        "en_summary": "A new report states that homes in a 'low-priced town' in Greater Boston are now $600,000."
+      }
+    },
+    "5": {
+      "topic": "Weston / Boston / Massachusetts",
+      "article": {
+        "title": "Elias Lindholm’s big night at TD Garden included 4-goal game, delayed hat-trick tribute",
+        "description": "“I'm gonna be honest. I actually also didn't know that was his third goal.\" The post Elias Lindholm’s big night at TD Garden included 4-goal game, delayed hat-trick tribute appeared first on Boston.com .",
+        "url": "https://www.boston.com/sports/boston-bruins/2026/11/21/elias-lindholm-boston-bruins-nhl-hockey-hat-trick-celebration-nhl-hockey/",
+        "source": "Boston.com",
+        "published": "2026-11-22T04:43:21+00:00",
+        "image": "assets/news/aaf55ec4b3799f7c459b1486.webp",
+        "placeholder": false,
+        "topic": "Weston / Boston / Massachusetts"
+      },
+      "summary": {
+        "id": 5,
+        "zh_title": "埃利亚斯·林德霍姆在TD花园的精彩之夜包括4球比赛和延迟的帽子戏法致敬",
+        "zh_summary": "埃利亚斯·林德霍姆在TD花园的精彩之夜包括4球比赛和延迟的帽子戏法致敬。",
+        "en_title": "Elias Lindholm’s big night at TD Garden included 4-goal game, delayed hat-trick tribute",
+        "en_summary": "Elias Lindholm's big night at TD Garden featured a 4-goal game and a delayed hat-trick tribute."
       }
     },
     "6": {
@@ -115,10 +115,10 @@
       },
       "summary": {
         "id": 6,
-        "zh_title": "Anthropic创纪录的首次公开募股与华尔街最糟糕的一周相撞",
-        "zh_summary": "Anthropic在纳斯达克的历史性首次公开募股与华尔街自2020年以来最糟糕的一周相撞。",
+        "zh_title": "Anthropic的创纪录IPO与华尔街自2020年以来最糟糕的一周相撞",
+        "zh_summary": "Anthropic在纳斯达克的历史性首秀恰逢华尔街自2020年以来最糟糕的一周。",
         "en_title": "Anthropic’s record IPO collides with tech’s worst week on Wall Street since 2020",
-        "en_summary": "Anthropic held its historic Nasdaq debut a day before Nvidia's stock closed out its longest weekly losing streak since 2008."
+        "en_summary": "Anthropic's historic IPO coincided with Wall Street's worst week for tech since 2020."
       }
     },
     "7": {
@@ -138,7 +138,7 @@
         "zh_title": "特朗普命令联邦承包商在回应国会前咨询白宫",
         "zh_summary": "特朗普总统指示联邦承包商在回应国会询问前咨询白宫。",
         "en_title": "Trump orders federal contractors to check with White House before responding to Congress",
-        "en_summary": "President Trump is directing federal contractors to consult the White House about inquiries from Congress."
+        "en_summary": "President Trump has ordered federal contractors to consult the White House before responding to Congress."
       }
     },
     "8": {
@@ -155,30 +155,30 @@
       },
       "summary": {
         "id": 8,
-        "zh_title": "标准普尔500指数修正：市场抛售的五大原因",
-        "zh_summary": "标准普尔500指数和道琼斯工业平均指数已进入修正区间，较其纪录下跌10%。",
+        "zh_title": "标准普尔500指数修正：市场抛售背后的五大力量",
+        "zh_summary": "标准普尔500指数和道琼斯工业平均指数已进入修正区间，较历史最高点下跌10%。",
         "en_title": "S&P 500 correction: Five forces behind the market sell-off",
-        "en_summary": "The S&P 500 and Dow Jones Industrial Average closed in correction territory, off 10% from their records."
+        "en_summary": "The S&P 500 and Dow Jones Industrial Average have entered correction territory, down 10% from their records."
       }
     },
     "9": {
       "topic": "World News / Global",
       "article": {
-        "title": "Zelensky says Crimean Bridge strikes 'fair response' as he meets UK's Streeting",
-        "description": "Ukraine's president says Kyiv acted after 109 separate Russian aerial attacks on bridges in Ukraine.",
-        "url": "https://www.bbc.com/news/articles/c6wy0qj7w5zqo",
-        "source": "BBC News",
-        "published": "2026-11-21T12:02:54Z",
-        "image": "assets/news/31ceeb6930a6c88c21fe963e.jpg",
+        "title": "The Nasdaq is in freefall. Here's one stock to look at",
+        "description": "Elevated options premiums are creating an opportunity in Amazon",
+        "url": "https://www.cnbc.com/2026/11/22/the-nasdaq-is-in-freefall-heres-one-stock-to-look-at.html",
+        "source": "CNBC",
+        "published": "2026-11-22T12:10:39+00:00",
+        "image": "assets/news/b4c9affa86b9341c7e3b61c8.jpg",
         "placeholder": false,
         "topic": "World News / Global"
       },
       "summary": {
         "id": 9,
-        "zh_title": "泽连斯基称克里米亚大桥袭击是“公平回应”",
-        "zh_summary": "乌克兰总统泽连斯基表示，基辅是在经历了109次俄罗斯空袭后采取行动的。",
-        "en_title": "Zelensky says Crimean Bridge strikes 'fair response' as he meets UK's Streeting",
-        "en_summary": "Ukraine's president says Kyiv acted after 109 separate Russian aerial attacks on bridges in Ukraine."
+        "zh_title": "纳斯达克暴跌。这里有一只值得关注的股票",
+        "zh_summary": "高昂的期权溢价为亚马逊创造了机会。",
+        "en_title": "The Nasdaq is in freefall. Here's one stock to look at",
+        "en_summary": "Elevated options premiums are creating an opportunity in Amazon."
       }
     },
     "10": {
@@ -195,53 +195,13 @@
       },
       "summary": {
         "id": 10,
-        "zh_title": "沃伦·巴菲特四倍增加感恩节捐赠",
-        "zh_summary": "沃伦·巴菲特今年将其感恩节捐赠增加到55亿美元，四倍于往年。",
+        "zh_title": "沃伦·巴菲特四倍增加感恩节捐赠：他捐赠了多少财富",
+        "zh_summary": "沃伦·巴菲特今年将感恩节捐赠增加到55亿美元，超过四倍。",
         "en_title": "Warren Buffett quadruples Thanksgiving gifts: A breakdown of how much wealth he's giving away",
-        "en_summary": "Warren Buffett more than quadrupled his Thanksgiving donations to four family foundations this year to $5.5 billion."
+        "en_summary": "Warren Buffett has more than quadrupled his Thanksgiving donations to $5.5 billion this year."
       }
     },
     "11": {
-      "topic": "World News / Global",
-      "article": {
-        "title": "Anthropic worker claims to have solved a Holy Grail of math problems with the help of AI",
-        "description": "A mathematician who works for artificial intelligence giant Anthropic claims he has solved a Holy Grail of math problems with the help of the company's AI tool Claude. It marks the second time in recent months that an AI company or someone linked to one claim…",
-        "url": "https://www.npr.org/2026/11/21/g-s1-154922/anthropic-worker-claims-to-have-solved-a-holy-grail-of-math-problems-with-the-help-of-ai",
-        "source": "NPR",
-        "published": "2026-11-21T12:30:16Z",
-        "image": "assets/news/17addd8691d3c211159bcfd1.webp",
-        "placeholder": false,
-        "topic": "World News / Global"
-      },
-      "summary": {
-        "id": 11,
-        "zh_title": "Anthropic员工声称在AI帮助下解决了数学难题的圣杯",
-        "zh_summary": "一名在Anthropic工作的数学家声称，他在公司的AI工具Claude的帮助下解决了数学难题的圣杯。",
-        "en_title": "Anthropic worker claims to have solved a Holy Grail of math problems with the help of AI",
-        "en_summary": "A mathematician who works for Anthropic claims he has solved a Holy Grail of math problems with the help of the company's AI tool Claude."
-      }
-    },
-    "12": {
-      "topic": "World News / Global",
-      "article": {
-        "title": "Anthropic says it will put humanity first. Will its IPO change that?",
-        "description": "Critics say now that the AI giant is a public company, its commitment to put safety ahead of commercial success will be tested.",
-        "url": "https://www.npr.org/2026/11/21/nx-s1-6048678/anthropic-ipo-mission-ai-safety",
-        "source": "NPR",
-        "published": "2026-11-21T10:00:00Z",
-        "image": "assets/news/9f6d7954cf3c78e455116739.webp",
-        "placeholder": false,
-        "topic": "World News / Global"
-      },
-      "summary": {
-        "id": 12,
-        "zh_title": "Anthropic表示将把人类放在首位，首次公开募股是否会改变这一点？",
-        "zh_summary": "批评者表示，作为一家上市公司，Anthropic在安全与商业成功之间的承诺将受到考验。",
-        "en_title": "Anthropic says it will put humanity first. Will its IPO change that?",
-        "en_summary": "Critics say now that the AI giant is a public company, its commitment to put safety ahead of commercial success will be tested."
-      }
-    },
-    "13": {
       "topic": "World News / Global",
       "article": {
         "title": "Nvidia stock plunges 14%, wraps up longest weekly losing streak since 2008 financial crisis",
@@ -254,14 +214,14 @@
         "topic": "World News / Global"
       },
       "summary": {
-        "id": 13,
+        "id": 11,
         "zh_title": "英伟达股票暴跌14%，结束自2008年金融危机以来最长的周跌势",
-        "zh_summary": "英伟达曾是全球最有价值的公司，现在排名第四，落后于苹果、微软和Alphabet。",
+        "zh_summary": "曾经是世界上最有价值的公司，英伟达现在在苹果、微软和Alphabet之后排名第四。",
         "en_title": "Nvidia stock plunges 14%, wraps up longest weekly losing streak since 2008 financial crisis",
-        "en_summary": "Once the most valuable company in the world, Nvidia now ranks fourth behind Apple, Microsoft and Alphabet."
+        "en_summary": "Nvidia stock has plunged 14%, marking its longest weekly losing streak since the 2008 financial crisis."
       }
     },
-    "14": {
+    "12": {
       "topic": "World News / Global",
       "article": {
         "title": "Zscaler stock jumps 18% on report that CrowdStrike in talks to buy security vendor",
@@ -274,14 +234,14 @@
         "topic": "World News / Global"
       },
       "summary": {
-        "id": 14,
-        "zh_title": "Zscaler股票因CrowdStrike洽谈收购安全供应商而上涨18%",
-        "zh_summary": "网络安全公司在AI时代积极寻求收购机会。",
+        "id": 12,
+        "zh_title": "Zscaler股票因CrowdStrike与安全供应商洽谈收购而上涨18%",
+        "zh_summary": "网络安全公司在人工智能时代一直在寻找收购机会。",
         "en_title": "Zscaler stock jumps 18% on report that CrowdStrike in talks to buy security vendor",
-        "en_summary": "Cybersecurity companies have been hunting for acquisitions in the AI era."
+        "en_summary": "Zscaler stock rose 18% on reports that CrowdStrike is in talks to acquire a security vendor."
       }
     },
-    "15": {
+    "13": {
       "topic": "World News / Global",
       "article": {
         "title": "Warsh wants Fed officials to talk less. Instead, they’re talking more",
@@ -294,11 +254,51 @@
         "topic": "World News / Global"
       },
       "summary": {
-        "id": 15,
-        "zh_title": "Warsh希望美联储官员少说话，但他们却说得更多",
+        "id": 13,
+        "zh_title": "沃什希望美联储官员少说话，但他们却说得更多",
         "zh_summary": "美联储官员最近频繁发言，而美联储主席则保持沉默。",
         "en_title": "Warsh wants Fed officials to talk less. Instead, they’re talking more",
-        "en_summary": "Fed officials have been rushing to the microphones lately while the Fed chairman stays on the sidelines."
+        "en_summary": "Fed officials have been increasingly vocal lately while the Fed chairman remains on the sidelines."
+      }
+    },
+    "14": {
+      "topic": "World News / Global",
+      "article": {
+        "title": "Highlights and challenges from covering an historic month in South America",
+        "description": "NPR's South America Correspondent discusses her work covering an historic election upset and a papal visit.",
+        "url": "https://www.npr.org/2026/11/21/nx-s1-6044647/highlights-and-challenges-from-covering-an-historic-month-in-south-america",
+        "source": "NPR",
+        "published": "2026-11-21T22:01:35+00:00",
+        "image": "assets/news/fd469057e03db00e45979793.jpg",
+        "placeholder": false,
+        "topic": "World News / Global"
+      },
+      "summary": {
+        "id": 14,
+        "zh_title": "报道南美历史性月份的亮点与挑战",
+        "zh_summary": "NPR的南美记者讨论她在报道历史性选举和教皇访问中的工作。",
+        "en_title": "Highlights and challenges from covering an historic month in South America",
+        "en_summary": "NPR's South America Correspondent discusses her work covering a historic election upset and a papal visit."
+      }
+    },
+    "15": {
+      "topic": "World News / Global",
+      "article": {
+        "title": "AI is changing software engineering — and some developers miss the struggle",
+        "description": "AI coding tools are making software engineers faster, but developers tell CNBC the work has lost its \"sense of joy and fun.\"",
+        "url": "https://www.cnbc.com/2026/11/20/ai-coding-tools-software-engineers.html",
+        "source": "CNBC",
+        "published": "2026-11-20T06:00:01+00:00",
+        "image": "assets/news/e9c9829d6ed56f9b1ee6434a.jpg",
+        "placeholder": false,
+        "topic": "World News / Global"
+      },
+      "summary": {
+        "id": 15,
+        "zh_title": "人工智能正在改变软件工程——一些开发者怀念奋斗的过程",
+        "zh_summary": "人工智能编码工具使软件工程师更高效，但开发者表示工作失去了“乐趣和快乐”。",
+        "en_title": "AI is changing software engineering — and some developers miss the struggle",
+        "en_summary": "AI coding tools are making software engineers faster, but developers say the work has lost its 'sense of joy and fun.'"
       }
     }
   }
