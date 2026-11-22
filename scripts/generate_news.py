@@ -1303,14 +1303,17 @@ def homepage_panel(groups, summaries, date, filename):
 
     featured = []
     seen_topics = set()
+
     ranked = sorted(
         enumerate(world),
         key=lambda p: (
-            _editorial_score(p[1]),
-            str(p[1].get("published", ""))
+            _editorial_date(p[1]) >= datetime.now(timezone.utc) - timedelta(days=2),
+            _editorial_date(p[1]),
+            _editorial_score(p[1])
         ),
         reverse=True
     )
+
 
     for offset, article in ranked:
         title = article.get("title", "").lower()
@@ -1669,8 +1672,12 @@ def discover():
 
     def local_priority(a):
         text = _editorial_text(a).lower()
+
         if "weston" in text:
-            return 0
+            if _editorial_date(a) >= datetime.now(timezone.utc) - timedelta(days=3):
+                return 0
+            return 3
+
         if any(x in text for x in (
             "boston", "cambridge", "newton",
             "waltham", "brookline", "needham",
@@ -1697,12 +1704,54 @@ def discover():
             used=used
         ))
 
-    world = _editorial_choose(
+
+    world = []
+    topic_counts = {}
+
+    def topic_key(a):
+        title = (a.get("title") or "").lower()
+        for word in (
+            "anthropic", "openai", "nvidia",
+            "tesla", "trump", "ukraine",
+            "iran", "china", "federal reserve"
+        ):
+            if word in title:
+                return word
+        return None
+
+    candidates = sorted(
         world_pool,
-        10,
-        local=False,
-        used=used
+        key=lambda a: _editorial_score(a),
+        reverse=True
     )
+
+    for article in candidates:
+        if len(world) >= 10:
+            break
+
+        topic = topic_key(article)
+        if topic and topic_counts.get(topic, 0) >= 1:
+            continue
+
+        selected = _editorial_choose(
+            [article], 1, local=False, used=used
+        )
+
+        if selected:
+            world.extend(selected)
+            if topic:
+                topic_counts[topic] = (
+                    topic_counts.get(topic, 0) + 1
+                )
+
+    if len(world) < 10:
+        world.extend(_editorial_choose(
+            world_pool,
+            10 - len(world),
+            local=False,
+            used=used
+        ))
+
 
     if len(local) != 5 or len(world) != 10:
         raise RuntimeError(
