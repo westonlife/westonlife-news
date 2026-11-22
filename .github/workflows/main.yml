@@ -4,7 +4,10 @@ name: Weston Life Daily News
 on:
   workflow_dispatch:
   schedule:
-    - cron: '17 23 * * *'
+    - cron: '0 16 * * *'
+    - cron: '0 17 * * *'
+    - cron: '0 22 * * *'
+    - cron: '0 23 * * *'
 
 permissions:
   contents: write
@@ -17,31 +20,119 @@ jobs:
   daily-news:
     runs-on: ubuntu-latest
     steps:
+      - name: Check Boston time
+        id: clock
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          python - <<'PY'
+          import os
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+
+          now = datetime.now(
+              ZoneInfo("America/New_York")
+          )
+          allowed = now.hour in (12, 18)
+          manual = os.environ["EVENT_NAME"] == "workflow_dispatch"
+
+          with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+              f.write(
+                  "publish=" +
+                  str(allowed or manual).lower() +
+                  "\n"
+              )
+
+          print("Boston time:", now.isoformat())
+          print("Publication permitted:", allowed or manual)
+          PY
+
       - name: Download website files
+        if: steps.clock.outputs.publish == 'true'
         uses: actions/checkout@v4
 
       - name: Set up Python
+        if: steps.clock.outputs.publish == 'true'
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
 
       - name: Generate verified news
+        if: steps.clock.outputs.publish == 'true'
         run: python scripts/generate_news.py
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           NEWS_API_KEY: ${{ secrets.NEWS_API_KEY }}
 
       - name: Update daily oil price headline
+        if: steps.clock.outputs.publish == 'true'
         run: python scripts/add_oil_headline.py
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           NEWS_API_KEY: ${{ secrets.NEWS_API_KEY }}
 
+      - name: Validate news images
+        if: steps.clock.outputs.publish == 'true'
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from html.parser import HTMLParser
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+
+          root = Path.cwd()
+          today = datetime.now(
+              ZoneInfo("America/New_York")
+          ).strftime("%Y-%m-%d")
+
+          class Images(HTMLParser):
+              def __init__(self):
+                  super().__init__()
+                  self.sources = []
+
+              def handle_starttag(self, tag, attrs):
+                  if tag.lower() == "img":
+                      src = dict(attrs).get("src", "")
+                      if src.startswith("assets/news/"):
+                          self.sources.append(src)
+
+          missing = []
+          for filename in (
+              "index.html",
+              f"news-{today}.html"
+          ):
+              path = root / filename
+              if not path.is_file():
+                  missing.append(filename)
+                  continue
+
+              parser = Images()
+              parser.feed(path.read_text(encoding="utf-8"))
+
+              for src in parser.sources:
+                  photo = root / src
+                  if not photo.is_file():
+                      missing.append(src)
+                  elif photo.stat().st_size < 5000:
+                      missing.append(src)
+
+          if missing:
+              for item in sorted(set(missing)):
+                  print("Missing image:", item)
+              raise SystemExit(1)
+
+          print("All news images verified")
+          PY
+
       - name: Save updated website
+        if: steps.clock.outputs.publish == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add index.html news-*.html assets/news/ news_state.json
+
+          git add -f assets/news/
+          git add index.html news-*.html news_state.json
+
           if ! git diff --cached --quiet; then
             git commit -m "Update Weston Life daily news"
             git push
