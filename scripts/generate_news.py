@@ -1544,107 +1544,155 @@ def _wl_v3_choose_one(candidates, selected):
 
 
 def discover():
-    """Select 5 local and 10 world reports with verified photos."""
+    """Weston first, Boston second, Massachusetts third.
+    Select 5 local and 10 world stories with real photos.
+    """
     pool = _editorial_collect()
     used = set()
 
-    def text_of(article):
-        return _editorial_text(article)
-
-    def valid(article):
+    def valid(a):
         return (
-            _wl_v3_valid_source(article)
-            and not _wl_v3_is_school(article)
+            isinstance(a, dict)
+            and bool(a.get("title"))
+            and bool(a.get("url"))
+            and _wl_v3_valid_source(a)
+            and not _wl_v3_is_school(a)
         )
 
-    def select(candidates, count, local):
-        return _editorial_choose(
-            [a for a in candidates if valid(a)],
-            count,
-            local=local,
-            used=used
+    def unique(items):
+        result = []
+        seen_urls = set()
+        seen_titles = set()
+        for a in items:
+            if not valid(a):
+                continue
+            url = a["url"].split("?")[0].rstrip("/")
+            title = re.sub(
+                r"[^a-z0-9]+", "",
+                a["title"].lower()
+            )[:65]
+            if url in seen_urls or title in seen_titles:
+                continue
+            seen_urls.add(url)
+            seen_titles.add(title)
+            result.append(a)
+        return result
+
+    def extra_news(queries, local):
+        found = []
+        cutoff = (
+            datetime.now(timezone.utc)
+            - timedelta(days=10 if local else 5)
+        ).isoformat(timespec="seconds").replace(
+            "+00:00", "Z"
         )
 
-    local_pool = list(pool["local"].values())
+        for query in queries:
+            try:
+                rows = _fetch_news(
+                    query,
+                    cutoff,
+                    os.environ["NEWS_API_KEY"],
+                    page_size=80
+                )
+                seen = set()
+                for raw in rows:
+                    record = _article_record(
+                        raw, seen, local=local
+                    )
+                    if record and valid(record[0]):
+                        found.append(record[0])
+            except (OSError, ValueError, KeyError) as exc:
+                print("Source unavailable:", str(exc)[:150])
+        return unique(found)
 
-    weston = []
-    boston = []
-    massachusetts = []
+    local_pool = unique(list(pool["local"].values()))
+    world_pool = unique(list(pool["world"].values()))
 
-    for article in local_pool:
-        if not valid(article):
-            continue
+    if len(local_pool) < 40:
+        local_pool = unique(local_pool + extra_news([
+            '"Weston" AND "Massachusetts"',
+            '"Boston" AND "Massachusetts"',
+            '"Greater Boston" AND housing',
+            '"Massachusetts" AND economy',
+            '"Massachusetts" AND government',
+            '"Boston" AND business',
+            '"Massachusetts" AND transportation',
+            '"Boston" AND community'
+        ], True))
 
-        content = text_of(article)
+    if len(world_pool) < 70:
+        world_pool = unique(world_pool + extra_news([
+            'United States Congress White House',
+            'Federal Reserve inflation economy',
+            'Nasdaq Wall Street stocks',
+            'Nvidia Microsoft Tesla technology',
+            'OpenAI Anthropic artificial intelligence',
+            'China economy technology',
+            'Iran United States',
+            'Ukraine Russia war',
+            'Harvard MIT university research',
+            'United States housing mortgage',
+            'world international breaking news'
+        ], False))
 
-        if "weston" in content:
-            weston.append(article)
-        elif any(x in content for x in (
+    def local_priority(a):
+        text = _editorial_text(a).lower()
+        if "weston" in text:
+            return 0
+        if any(x in text for x in (
             "boston", "cambridge", "newton",
             "waltham", "brookline", "needham",
-            "wellesley", "lexington"
+            "wellesley", "lexington",
+            "greater boston"
         )):
-            boston.append(article)
-        else:
-            massachusetts.append(article)
+            return 1
+        return 2
 
     local = []
-
-    for candidates in (weston, boston, massachusetts):
+    for priority in (0, 1, 2):
         needed = 5 - len(local)
         if needed <= 0:
             break
-        local.extend(select(candidates, needed, True))
+        candidates = [
+            a for a in local_pool
+            if local_priority(a) == priority
+            and a["url"] not in used
+        ]
+        local.extend(_editorial_choose(
+            candidates,
+            needed,
+            local=True,
+            used=used
+        ))
 
-    world_pool = list(pool["world"].values())
-    world = select(world_pool, 10, False)
-
-    def dedupe(items):
-        output = []
-        seen = set()
-        hosts = {}
-
-        for article in items:
-            title = re.sub(
-                r"[^a-z0-9]+", "",
-                article["title"].lower()
-            )[:65]
-
-            host = (
-                urlparse(article.get("url") or "").hostname
-                or ""
-            ).lower()
-
-            if title in seen or hosts.get(host, 0) >= 3:
-                continue
-
-            seen.add(title)
-            hosts[host] = hosts.get(host, 0) + 1
-            output.append(article)
-
-        return output
-
-    local = dedupe(local)[:5]
-    world = dedupe(world)[:10]
+    world = _editorial_choose(
+        world_pool,
+        10,
+        local=False,
+        used=used
+    )
 
     if len(local) != 5 or len(world) != 10:
         raise RuntimeError(
-            f"Incomplete edition: {len(local)} local, "
-            f"{len(world)} world. Previous edition retained."
+            f"Insufficient verified reports: "
+            f"{len(local)} local, {len(world)} world. "
+            "Previous edition retained."
         )
 
     update_index._local_stories = local
     update_index._school_stories = []
 
     print(
-        f"Verified news: {len(local)} local, "
-        f"{len(world)} world"
+        f"Verified edition: "
+        f"{len(local)} local, {len(world)} world"
     )
 
     return [
         ("Weston / Boston / Massachusetts", local),
         ("World News / Global", world)
     ]
+
 
 
 
