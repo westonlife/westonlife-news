@@ -1,19 +1,18 @@
 {
-  "title": "春晓",
-  "author": "孟浩然（唐代）",
-  "poem_text": "春眠不觉晓，\n处处闻啼鸟。\n夜来风雨声，\n花落知多少。",
-  "translation": "春天里睡觉很舒服，不知不觉天已经大亮；到处都能听到鸟儿清脆的叫声。想到外面，能想起昨夜的阵阵风雨声，真不知春天的花被吹落了多少。",
-  "background": "本诗为唐代诗人孟浩然隐居鹿门山时的作品。据页面介绍，写作时期正赶上李隆基杀韦后后的开元盛世，这首诗描绘了诗人在春日清晨的感受，并表达了他淡泊名利但又渴望仕进的心理。作者及其经历、隐居生涯、与文学友人交往等史实按书中介绍录入。不过具体时地或诗意深层含义古今有不同解读，需以诗人自述为准。",
-  "analysis": "诗歌以平易自然的语言写出了春晨的恬静和内心的惆怅。开头写春眠难觉晓，表现春天睡觉的舒服和惬意；接着写清晨处处闻鸟鸣，点出环境之美。末两句由耳及思，夜来风雨声唤起诗人对花落无数的联想，道出了时光易逝与惜春之情。全诗音律和谐，语句自然，含蓄深远，被誉为千古传诵的绝唱。书中认为，这首诗的艺术魅力不在辞藻雕琢，而在自然流畅和情深意远。",
-  "explanation_script": "各位朋友，今天为大家分享唐代诗人孟浩然的名作——《春晓》。原诗是：“春眠不觉晓，处处闻啼鸟。夜来风雨声，花落知多少。”这首诗描绘了春天早晨慵懒而惬意的心情。头两句是说春天里睡得很舒服，不知不觉天已经亮了，到处都能听到小鸟欢快地叫声。后两句转而写诗人想起昨夜的风雨，禁不住担心院子里的花朵不知落了多少，表达了温和的惋惜和对春天美好事物的珍惜。作者孟浩然是唐代著名的山水田园派诗人，在鹿门山隐居时写下了这首诗。书中介绍，这首诗创作背景正值唐玄宗开元盛世，诗人虽热爱田园生活，却也怀有仕途抱负。全诗结构紧凑，音律和谐，意境清新深远，不事雕琢却情味无穷，被后人誉为写景情融合、淡中见深的经典之作。至今，这首《春晓》仍在民间广为传颂，影响深远，令人回味无穷。",
-  "number": 7,
-  "release_date": "2026-11-23",
+  "title": "宿建德江",
+  "author": "孟浩然（唐）",
+  "poem_text": "移舟泊烟渚，日暮客愁新。\n野旷天低树，江清月近人。",
+  "translation": "划动小船停靠在烟雾迷蒙的小洲头，日落时分游子的心头又增添了新的苦恼。原野空旷无边无际，远天比树还低沉，江水如此清澈明净，明月原来离人如此亲近。",
+  "background": "孟浩然于唐玄宗开元十八年（730年）时，因离乡赴长安求官未得，便漫游吴越。此诗写于他漫游途中的建德江，有烟渚、夜泊、冷江、明月等意象，抒发了旅途孤寂和愁思。相关史实仅能证实作者生平与漫游经历，具体写作地点及时间尚有争议。",
+  "analysis": "本诗借夜泊江边的景色，将诗人羁旅异乡的愁绪与广阔冷清的自然环境结合，以简练自然的笔调，表现深沉的情感。结句“江清月近人”历来被称道，用清澈江水与近人的明月，衬托心境孤高冷清。全诗构思严谨、意境幽远、含蓄不露，意象鲜明，极具画面感和感染力。",
+  "explanation_script": "今天为大家介绍孟浩然的《宿建德江》。原诗是：移舟泊烟渚，日暮客愁新。野旷天低树，江清月近人。这首诗写的是诗人在旅途中傍晚时分，将小船泊在烟雾缭绕的洲渚上，天色已晚，作为异乡的客子，他的离愁别绪又添新愁。前两句描写泊舟时的烟渚与心情，点出时空和愁苦。后两句“野旷天低树，江清月近人”，则展现出广阔寂静的江边景色，天仿佛比弯弯的树还要低，江水清清，月亮仿佛跟人特别接近。四句诗情景交融，使我们感受到诗人漂泊苦旅和孤独清冷的心境。作者孟浩然是唐代著名的山水田园诗人，这首作品完成于他四十余岁未得志、寄情江山之时，表达了客居异地的思乡忧愁。全诗语言简练自然，但意境深远，“江清月近人”更是成为千古绝唱，体现了中国古典诗歌高远清幽与含蓄的美。",
+  "number": 8,
+  "release_date": "2026-11-25",
   "book_pages": [
-    18,
-    19
+    20
   ],
-  "cover": "https://raw.githubusercontent.com/westonlife/westonlife-news/main/poetry-auto/media/007-cover.jpg",
-  "recitation": "https://raw.githubusercontent.com/westonlife/westonlife-news/main/poetry-auto/media/007-recitation.mp3",
-  "explanation": "https://raw.githubusercontent.com/westonlife/westonlife-news/main/poetry-auto/media/007-explanation.mp3",
-  "url": "/poetry-auto/poem.html?n=007"
+  "cover": "https://raw.githubusercontent.com/westonlife/westonlife-news/main/poetry-auto/media/008-cover.jpg",
+  "recitation": "https://raw.githubusercontent.com/westonlife/westonlife-news/main/poetry-auto/media/008-recitation.mp3",
+  "explanation": "https://raw.githubusercontent.com/westonlife/westonlife-news/main/poetry-auto/media/008-explanation.mp3",
+  "url": "/poetry-auto/poem.html?n=008"
 }

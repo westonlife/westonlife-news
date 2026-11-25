@@ -1,5 +1,13 @@
 [
   {
+    "number": 8,
+    "title": "宿建德江",
+    "author": "孟浩然（唐）",
+    "release_date": "2026-11-25",
+    "cover": "https://raw.githubusercontent.com/westonlife/westonlife-news/main/poetry-auto/media/008-cover.jpg",
+    "url": "/poetry-auto/poem.html?n=008"
+  },
+  {
     "number": 7,
     "title": "春晓",
     "author": "孟浩然（唐代）",
