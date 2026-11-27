@@ -1,107 +1,247 @@
 {
-  "checked_at": "2026-11-22",
+  "checked_at": "2026-11-27",
   "slots": {
     "1": {
       "topic": "Weston / Boston / Massachusetts",
       "article": {
-        "title": "Rams star wide receiver’s tenure ‘probably ending’ according to NFL insider",
-        "description": "Could the Patriots enter the bidding war for Puka Nacua? The post Rams star wide receiver’s tenure ‘probably ending’ according to NFL insider appeared first on Boston.com .",
-        "url": "https://www.boston.com/sports/new-england-patriots/2026/11/21/nfl-patriots-rams-puka-nacua-free-agency-update/",
-        "source": "Boston.com",
-        "published": "2026-11-22T02:45:04+00:00",
-        "image": "assets/news/a44bf85baebbe5961aca2bc3.webp",
+        "title": "Permanent Building Committee Public Hearing",
+        "description": "The Permanent Building Committee will hold a hybrid Public Hearing on 12/2/2026 at a meeting to start at 7:00 p.m. to present the proposed new Weston Fire Station to be located on Wellesley Street.",
+        "url": "https://www.westonma.gov/CivicAlerts.aspx?aid=1235",
+        "source": "Town of Weston Massachusetts",
+        "published": "2026-11-27T15:05:54+00:00",
+        "image": "assets/news/1609065c7729f16ec137afec.png",
         "placeholder": false,
         "topic": "Weston / Boston / Massachusetts"
       },
       "summary": {
         "id": 1,
-        "zh_title": "公羊队明星外接手的任期“可能结束”",
-        "zh_summary": "NFL内部人士表示公羊队明星外接手的任期可能即将结束。",
-        "en_title": "Rams star wide receiver’s tenure ‘probably ending’ according to NFL insider",
-        "en_summary": "An NFL insider suggests that the tenure of the Rams star wide receiver is likely coming to an end."
+        "zh_title": "常设建筑委员会公开听证会",
+        "zh_summary": "常设建筑委员会将于2026年12月2日举行混合形式的公开听证会，介绍拟建的新韦斯顿消防站。",
+        "en_title": "Permanent Building Committee Public Hearing",
+        "en_summary": "The Permanent Building Committee will hold a hybrid Public Hearing on December 2, 2026, to present the proposed new Weston Fire Station."
       }
     },
     "2": {
       "topic": "Weston / Boston / Massachusetts",
       "article": {
-        "title": "FBI investigating apparent hack of its key national criminal justice database, AP source says",
-        "description": "Asked about the subject on Saturday, President Donald Trump said in a Fox News Channel interview: “We just heard about it, and I will say that it’s not good.” The post FBI investigating apparent hack of its key national criminal justice database, AP source says appeared first on Boston.com .",
-        "url": "https://www.boston.com/news/crime/2026/11/21/fbi-investigating-apparent-hack-of-its-key-national-criminal-justice-database-ap-source-says/",
+        "title": "Patriots & Chargers expected to draw one of the least experienced non-rookie QB matchups in NFL history",
+        "description": "Tommy DeVito only has eight career starts, while D.J. Uiagalelei will be making his first career start Sunday. The post Patriots & Chargers expected to draw one of the least experienced non-rookie QB matchups in NFL history appeared first on Boston.com .",
+        "url": "https://www.boston.com/sports/new-england-patriots/2026/11/27/nfl-patriots-chargers-preview-tommy-devito-dj-uiagalelei/",
         "source": "Boston.com",
-        "published": "2026-11-21T23:23:48+00:00",
-        "image": "assets/news/f37d182e1dc255d22da70f2b.webp",
+        "published": "2026-11-27T23:54:00+00:00",
+        "image": "assets/news/0e5f27e135dc8308df361a29.webp",
         "placeholder": false,
         "topic": "Weston / Boston / Massachusetts"
       },
       "summary": {
         "id": 2,
-        "zh_title": "FBI调查其关键国家刑事司法数据库的明显黑客事件",
-        "zh_summary": "据美联社消息，FBI正在调查其关键国家刑事司法数据库的黑客事件。",
-        "en_title": "FBI investigating apparent hack of its key national criminal justice database, AP source says",
-        "en_summary": "The FBI is investigating an apparent hack of its key national criminal justice database, according to an AP source."
+        "zh_title": "爱国者与充电器预计将迎来NFL历史上最缺乏经验的非新秀四分卫对决",
+        "zh_summary": "汤米·德维托只有八场职业首发，而D.J. 乌亚加莱莱将在周日首次首发。",
+        "en_title": "Patriots & Chargers expected to draw one of the least experienced non-rookie QB matchups in NFL history",
+        "en_summary": "Tommy DeVito only has eight career starts, while D.J. Uiagalelei will be making his first career start Sunday."
       }
     },
     "3": {
       "topic": "Weston / Boston / Massachusetts",
       "article": {
-        "title": "It’s time to make the Doom-nuts",
-        "description": "Also this week: We're passing along the turkey trophy. The post It’s time to make the Doom-nuts appeared first on Boston.com .",
-        "url": "https://www.boston.com/community/off-beat/2026/11/22/its-time-to-make-the-doom-nuts/",
+        "title": "RI firefighters fly to Block Island to battle Thanksgiving blaze after storm scuttles ferry",
+        "description": "Volunteer firefighters stepped up to help put out a two-alarm fire during the stormy holiday. The post RI firefighters fly to Block Island to battle Thanksgiving blaze after storm scuttles ferry appeared first on Boston.com .",
+        "url": "https://www.boston.com/news/local-news/2026/11/27/ri-firefighters-fly-to-block-island-to-battle-thanksgiving-blaze-after-storm-scuttles-ferry/",
         "source": "Boston.com",
-        "published": "2026-11-22T13:00:00+00:00",
-        "image": "assets/news/6545a6657e65c3d410ea22c5.webp",
+        "published": "2026-11-27T23:21:55+00:00",
+        "image": "assets/news/0d89fead525b6b4e13146441.webp",
         "placeholder": false,
         "topic": "Weston / Boston / Massachusetts"
       },
       "summary": {
         "id": 3,
-        "zh_title": "是时候制作Doom-nuts了",
-        "zh_summary": "本周我们将传递火鸡奖杯。",
-        "en_title": "It’s time to make the Doom-nuts",
-        "en_summary": "This week, we are passing along the turkey trophy."
+        "zh_title": "罗德岛消防员飞往布洛克岛扑灭感恩节大火",
+        "zh_summary": "志愿消防员在风暴假期期间出动，帮助扑灭了一场两警报火灾。",
+        "en_title": "RI firefighters fly to Block Island to battle Thanksgiving blaze after storm scuttles ferry",
+        "en_summary": "Volunteer firefighters stepped up to help put out a two-alarm fire during the stormy holiday."
       }
     },
     "4": {
       "topic": "Weston / Boston / Massachusetts",
       "article": {
-        "title": "Let’s Rock Cancer concert returning to Somerville to benefit Dana-Farber",
-        "description": "The Dec. 11 Somerville concert will bring local musicians together to raise money for equitable cancer care. The post Let’s Rock Cancer concert returning to Somerville to benefit Dana-Farber appeared first on Boston.com .",
-        "url": "https://www.boston.com/news/local-news/2026/11/22/lets-rock-cancer-concert-returning-to-somerville-to-benefit-dana-farber/",
+        "title": "David Pastrnak leaves Bruins game with injury and more takeaways from loss to Maple Leafs",
+        "description": "\"I think sometimes people look for one guy to step up, but Pasta is Pasta. There is only one Pasta in the world.\" The post David Pastrnak leaves Bruins game with injury and more takeaways from loss to Maple Leafs appeared first on Boston.com .",
+        "url": "https://www.boston.com/sports/boston-bruins/2026/11/27/boston-bruins-david-pastrnak-injury-nhl-hockey-toronto-maple-leafs/",
         "source": "Boston.com",
-        "published": "2026-11-22T12:58:03+00:00",
-        "image": "assets/news/61ee8ed6a265ae8655e1af8e.webp",
+        "published": "2026-11-27T23:07:32+00:00",
+        "image": "assets/news/314bd87fad3ece9c419b5abd.webp",
         "placeholder": false,
         "topic": "Weston / Boston / Massachusetts"
       },
       "summary": {
         "id": 4,
-        "zh_title": "让我们摇滚癌症音乐会回归索默维尔以支持Dana-Farber",
-        "zh_summary": "12月11日的索默维尔音乐会将汇聚当地音乐家为公平癌症护理筹款。",
-        "en_title": "Let’s Rock Cancer concert returning to Somerville to benefit Dana-Farber",
-        "en_summary": "The December 11 concert in Somerville will bring local musicians together to raise money for equitable cancer care."
+        "zh_title": "大卫·帕斯特纳克因伤离开布鲁因斯比赛",
+        "zh_summary": "大卫·帕斯特纳克因伤离开比赛，更多关于输给枫叶队的总结。",
+        "en_title": "David Pastrnak leaves Bruins game with injury and more takeaways from loss to Maple Leafs",
+        "en_summary": "David Pastrnak leaves Bruins game with injury and more takeaways from loss to Maple Leafs."
       }
     },
     "5": {
       "topic": "Weston / Boston / Massachusetts",
       "article": {
-        "title": "Murray’s putback with 5 seconds left lifts Kings to 97-96 win over Celtics",
-        "description": "Payton Pritchard had a chance to win it for Boston at the buzzer, but his 20-footer was off. The post Murray’s putback with 5 seconds left lifts Kings to 97-96 win over Celtics appeared first on Boston.com .",
-        "url": "https://www.boston.com/sports/sports/2026/11/22/murrays-putback-with-5-seconds-left-lifts-kings-to-97-96-win-over-celtics/",
+        "title": "Patriots rule out four starters including A.J. Brown ahead of Chargers game",
+        "description": "Drake Maye, A.J. Brown, Romeo Doubs, and Carlton Davis are expected to miss Sunday's game. The post Patriots rule out four starters including A.J. Brown ahead of Chargers game appeared first on Boston.com .",
+        "url": "https://www.boston.com/sports/new-england-patriots/2026/11/27/patriots-rule-out-four-starters-including-a-j-brown-ahead-of-chargers-game/",
         "source": "Boston.com",
-        "published": "2026-11-22T12:08:39+00:00",
-        "image": "assets/news/3fbb42b35f1ce3735104565b.webp",
+        "published": "2026-11-27T22:50:41+00:00",
+        "image": "assets/news/b2b78c190037de023b48c20a.webp",
         "placeholder": false,
         "topic": "Weston / Boston / Massachusetts"
       },
       "summary": {
         "id": 5,
-        "zh_title": "穆雷最后5秒的补篮帮助国王以97-96战胜凯尔特人",
-        "zh_summary": "佩顿·普里查德在终场哨响时有机会为波士顿赢得比赛，但他的20英尺投篮未中。",
-        "en_title": "Murray’s putback with 5 seconds left lifts Kings to 97-96 win over Celtics",
-        "en_summary": "Murray's putback with 5 seconds left helped the Kings secure a 97-96 victory over the Celtics."
+        "zh_title": "爱国者队宣布四名首发球员缺席充电器比赛",
+        "zh_summary": "德雷克·梅耶、A.J.布朗、罗密欧·道布斯和卡尔顿·戴维斯预计将缺席周日的比赛。",
+        "en_title": "Patriots rule out four starters including A.J. Brown ahead of Chargers game",
+        "en_summary": "Drake Maye, A.J. Brown, Romeo Doubs, and Carlton Davis are expected to miss Sunday's game."
       }
     },
     "6": {
+      "topic": "World News / Global",
+      "article": {
+        "title": "Two Italians killed in Kuwait drone attack; Trump says Iran war ends ‘whenever I want it’",
+        "description": "Iran's foreign minister Abbas Araghchi said \"The incident is suspicious and looks like a precooked recipe for war.\"",
+        "url": "https://www.cnbc.com/2026/11/27/us-iran-war-trump-hormuz-italian-killed-trump.html",
+        "source": "CNBC",
+        "published": "2026-11-27T03:30:23+00:00",
+        "image": "assets/news/466e60bbb39f29609b40084c.jpg",
+        "placeholder": false,
+        "topic": "World News / Global"
+      },
+      "summary": {
+        "id": 6,
+        "zh_title": "两名意大利人在科威特无人机袭击中遇害；特朗普称伊朗战争“随时结束”",
+        "zh_summary": "伊朗外长阿巴斯·阿拉赫奇表示，“事件可疑，看起来像是为战争准备的预先策划。”",
+        "en_title": "Two Italians killed in Kuwait drone attack; Trump says Iran war ends ‘whenever I want it’",
+        "en_summary": "Iran's foreign minister Abbas Araghchi said 'The incident is suspicious and looks like a precooked recipe for war.'"
+      }
+    },
+    "7": {
+      "topic": "World News / Global",
+      "article": {
+        "title": "Thanksgiving storm batters East Coast. And, Black Friday sales to hit record levels",
+        "description": "A powerful storm knocked out power for nearly 1 million customers and flooded streets. And, experts predict inflation will not dampen American spending for the holidays",
+        "url": "https://www.npr.org/2026/11/27/g-s1-156004/up-first-newsletter-thanksgiving-storm-black-friday-shopping-asylum-supreme-court",
+        "source": "NPR",
+        "published": "2026-11-27T11:59:02+00:00",
+        "image": "assets/news/29c367b5df2b50796477de3f.webp",
+        "placeholder": false,
+        "topic": "World News / Global"
+      },
+      "summary": {
+        "id": 7,
+        "zh_title": "感恩节风暴袭击东海岸，黑色星期五销售将创纪录",
+        "zh_summary": "一场强风暴导致近100万用户停电并淹没街道，专家预测通货膨胀不会抑制美国的节日消费。",
+        "en_title": "Thanksgiving storm batters East Coast. And, Black Friday sales to hit record levels",
+        "en_summary": "A powerful storm knocked out power for nearly 1 million customers and flooded streets."
+      }
+    },
+    "8": {
+      "topic": "World News / Global",
+      "article": {
+        "title": "Inflation has shoppers hunting for value. That bodes well for Black Friday",
+        "description": "Even as consumers face macroeconomic headwinds, retailers are expecting robust holiday spending through Black Friday and beyond.",
+        "url": "https://www.cnbc.com/2026/11/27/black-friday-2026-inflation-value-deals.html",
+        "source": "CNBC",
+        "published": "2026-11-27T22:00:57+00:00",
+        "image": "assets/news/b18e4d43f4502c4f047af64d.jpg",
+        "placeholder": false,
+        "topic": "World News / Global"
+      },
+      "summary": {
+        "id": 8,
+        "zh_title": "通货膨胀促使购物者寻找价值，这对黑色星期五有利",
+        "zh_summary": "尽管消费者面临宏观经济挑战，零售商预计黑色星期五及之后的假期消费将强劲。",
+        "en_title": "Inflation has shoppers hunting for value. That bodes well for Black Friday",
+        "en_summary": "Even as consumers face macroeconomic headwinds, retailers are expecting robust holiday spending through Black Friday and beyond."
+      }
+    },
+    "9": {
+      "topic": "World News / Global",
+      "article": {
+        "title": "German software firm SAP is reportedly cutting at least 10,000 jobs in AI push",
+        "description": "SAP is reportedly considering cutting 10,000 jobs as it reshapes its software business around AI.",
+        "url": "https://www.cnbc.com/2026/11/27/sap-job-cuts-ai-restructuring.html",
+        "source": "CNBC",
+        "published": "2026-11-27T14:52:40+00:00",
+        "image": "assets/news/b9dc79629c05f8e1b6fe1b46.jpg",
+        "placeholder": false,
+        "topic": "World News / Global"
+      },
+      "summary": {
+        "id": 9,
+        "zh_title": "德国软件公司SAP据报道将在人工智能推动下裁员至少10,000人",
+        "zh_summary": "SAP据报道正在考虑裁员10,000人，以重塑其围绕人工智能的软件业务。",
+        "en_title": "German software firm SAP is reportedly cutting at least 10,000 jobs in AI push",
+        "en_summary": "SAP is reportedly considering cutting 10,000 jobs as it reshapes its software business around AI."
+      }
+    },
+    "10": {
+      "topic": "World News / Global",
+      "article": {
+        "title": "The S&P 500 is in a correction. Bear markets and recessions don't always follow",
+        "description": "The November sell-off has so far pushed the S&P 500 into a correction. History shows that a correction doesn't always lead to a bear market, or a recession.",
+        "url": "https://www.cnbc.com/2026/11/27/the-sp-500-is-in-a-correction-bear-markets-and-recessions-dont-always-follow.html",
+        "source": "CNBC",
+        "published": "2026-11-27T13:21:56+00:00",
+        "image": "assets/news/731c3204cd70d63563d30880.jpg",
+        "placeholder": false,
+        "topic": "World News / Global"
+      },
+      "summary": {
+        "id": 10,
+        "zh_title": "标准普尔500指数处于修正状态，熊市和衰退并不总是随之而来",
+        "zh_summary": "11月的抛售使标准普尔500指数进入修正状态，历史表明修正并不总是导致熊市或衰退。",
+        "en_title": "The S&P 500 is in a correction. Bear markets and recessions don't always follow",
+        "en_summary": "The November sell-off has so far pushed the S&P 500 into a correction."
+      }
+    },
+    "11": {
+      "topic": "World News / Global",
+      "article": {
+        "title": "New car prices are at a record high. Here's where to look for deals",
+        "description": "While the average price of a new car hit $51,109 in October, according to Kelley Blue Book, many buyers are spending far less on their purchase. Here's how.",
+        "url": "https://www.cnbc.com/2026/11/27/new-car-buying-deals-buying-tips.html",
+        "source": "CNBC",
+        "published": "2026-11-27T13:15:01+00:00",
+        "image": "assets/news/128f24e84d39eb2fcbc4414e.jpg",
+        "placeholder": false,
+        "topic": "World News / Global"
+      },
+      "summary": {
+        "id": 11,
+        "zh_title": "新车价格创历史新高，寻找优惠的地方",
+        "zh_summary": "根据凯利蓝皮书，10月份新车的平均价格达到51,109美元，但许多买家花费远低于此。",
+        "en_title": "New car prices are at a record high. Here's where to look for deals",
+        "en_summary": "While the average price of a new car hit $51,109 in October, many buyers are spending far less on their purchase."
+      }
+    },
+    "12": {
+      "topic": "World News / Global",
+      "article": {
+        "title": "Liesman: Why Greenspan could bet on productivity — and Warsh needs to hike",
+        "description": "Alan Greenspan famously held the line on interest rates because he believed in the productivity promise of the internet boom. Why can't Kevin Warsh do the same?",
+        "url": "https://www.cnbc.com/2026/11/25/kevin-warsh-greenspan-fed-rates-ai-inflation.html",
+        "source": "CNBC",
+        "published": "2026-11-25T21:56:43+00:00",
+        "image": "assets/news/f6d314700f1e1663311f237d.jpg",
+        "placeholder": false,
+        "topic": "World News / Global"
+      },
+      "summary": {
+        "id": 12,
+        "zh_title": "莱斯曼：格林斯潘为何可以押注于生产力——沃什需要加息",
+        "zh_summary": "艾伦·格林斯潘因相信互联网繁荣的生产力承诺而坚持利率，沃什为何不能这样做？",
+        "en_title": "Liesman: Why Greenspan could bet on productivity — and Warsh needs to hike",
+        "en_summary": "Alan Greenspan famously held the line on interest rates because he believed in the productivity promise of the internet boom."
+      }
+    },
+    "13": {
       "topic": "World News / Global",
       "article": {
         "title": "Anthropic’s record IPO collides with tech’s worst week on Wall Street since 2020",
@@ -114,191 +254,51 @@
         "topic": "World News / Global"
       },
       "summary": {
-        "id": 6,
-        "zh_title": "Anthropic的创纪录首次公开募股与华尔街自2020年以来最糟糕的一周相撞",
-        "zh_summary": "Anthropic在纳斯达克的历史性首次亮相恰逢英伟达股票结束自2008年以来最长的周跌势。",
-        "en_title": "Anthropic’s record IPO collides with tech’s worst week on Wall Street since 2020",
-        "en_summary": "Anthropic's historic Nasdaq debut coincided with the worst week for tech on Wall Street since 2020."
-      }
-    },
-    "7": {
-      "topic": "World News / Global",
-      "article": {
-        "title": "Trump orders federal contractors to check with White House before responding to Congress",
-        "description": "President Trump is directing federal contractors to consult the White House about inquiries from Congress and to withhold any communications that his administration considers privileged.",
-        "url": "https://www.npr.org/2026/11/21/g-s1-154966/trump-contractors-congress",
-        "source": "NPR",
-        "published": "2026-11-21T22:40:36+00:00",
-        "image": "assets/news/f4fda5aa4b21d7ed9e2d376e.webp",
-        "placeholder": false,
-        "topic": "World News / Global"
-      },
-      "summary": {
-        "id": 7,
-        "zh_title": "特朗普命令联邦承包商在回应国会前与白宫核对",
-        "zh_summary": "特朗普总统指示联邦承包商在回应国会询问时咨询白宫，并保留任何被其政府视为特权的通信。",
-        "en_title": "Trump orders federal contractors to check with White House before responding to Congress",
-        "en_summary": "President Trump is directing federal contractors to consult the White House before responding to Congress."
-      }
-    },
-    "8": {
-      "topic": "World News / Global",
-      "article": {
-        "title": "S&P 500 correction: Five forces behind the market sell-off",
-        "description": "The S&P 500 and Dow Jones Industrial Average closed in correction territory, off 10% from their records. The Nasdaq Composite lost its gain for the year.",
-        "url": "https://www.cnbc.com/2026/11/20/sp-500-correction-market-sell-off.html",
-        "source": "CNBC",
-        "published": "2026-11-21T11:29:25+00:00",
-        "image": "assets/news/99fdacfaa4344e1d10f3da38.jpg",
-        "placeholder": false,
-        "topic": "World News / Global"
-      },
-      "summary": {
-        "id": 8,
-        "zh_title": "标准普尔500指数修正：市场抛售背后的五大力量",
-        "zh_summary": "标准普尔500指数和道琼斯工业平均指数已进入修正区间，较历史最高点下跌10%。",
-        "en_title": "S&P 500 correction: Five forces behind the market sell-off",
-        "en_summary": "The S&P 500 and Dow Jones Industrial Average have entered correction territory, down 10% from their records."
-      }
-    },
-    "9": {
-      "topic": "World News / Global",
-      "article": {
-        "title": "The Nasdaq is in freefall. Here's one stock to look at",
-        "description": "Elevated options premiums are creating an opportunity in Amazon",
-        "url": "https://www.cnbc.com/2026/11/22/the-nasdaq-is-in-freefall-heres-one-stock-to-look-at.html",
-        "source": "CNBC",
-        "published": "2026-11-22T12:10:39+00:00",
-        "image": "assets/news/b4c9affa86b9341c7e3b61c8.jpg",
-        "placeholder": false,
-        "topic": "World News / Global"
-      },
-      "summary": {
-        "id": 9,
-        "zh_title": "纳斯达克正在自由下跌。这里有一只值得关注的股票",
-        "zh_summary": "高昂的期权溢价为亚马逊创造了机会。",
-        "en_title": "The Nasdaq is in freefall. Here's one stock to look at",
-        "en_summary": "Elevated options premiums are creating an opportunity in Amazon."
-      }
-    },
-    "10": {
-      "topic": "World News / Global",
-      "article": {
-        "title": "Warren Buffett quadruples Thanksgiving gifts: A breakdown of how much wealth he's giving away",
-        "description": "Warren Buffett more than quadrupled his Thanksgiving donations to four family foundations this year to $5.5 billion.",
-        "url": "https://www.cnbc.com/2026/11/21/warren-buffett-quadruples-thanksgiving-gifts.html",
-        "source": "CNBC",
-        "published": "2026-11-21T13:01:44+00:00",
-        "image": "assets/news/2b765173305242be089dcb37.jpg",
-        "placeholder": false,
-        "topic": "World News / Global"
-      },
-      "summary": {
-        "id": 10,
-        "zh_title": "沃伦·巴菲特四倍增加感恩节捐赠：他捐赠了多少财富的细分",
-        "zh_summary": "沃伦·巴菲特今年将其对四个家庭基金会的感恩节捐赠增加到55亿美元，超过四倍。",
-        "en_title": "Warren Buffett quadruples Thanksgiving gifts: A breakdown of how much wealth he's giving away",
-        "en_summary": "Warren Buffett has more than quadrupled his Thanksgiving donations to four family foundations this year to $5.5 billion."
-      }
-    },
-    "11": {
-      "topic": "World News / Global",
-      "article": {
-        "title": "Nvidia stock plunges 14%, wraps up longest weekly losing streak since 2008 financial crisis",
-        "description": "Once the most valuable company in the world, Nvidia now ranks fourth behind Apple, Microsoft and Alphabet.",
-        "url": "https://www.cnbc.com/2026/11/20/nvidias-7-week-losing-streak-is-longest-since-2008-financial-crisis.html",
-        "source": "CNBC",
-        "published": "2026-11-20T22:59:33+00:00",
-        "image": "assets/news/73f9c2c9336f43f00888d0d3.jpg",
-        "placeholder": false,
-        "topic": "World News / Global"
-      },
-      "summary": {
-        "id": 11,
-        "zh_title": "英伟达股票暴跌14%，结束自2008年金融危机以来最长的周跌势",
-        "zh_summary": "曾经是世界上最有价值的公司，英伟达现在在苹果、微软和谷歌之后排名第四。",
-        "en_title": "Nvidia stock plunges 14%, wraps up longest weekly losing streak since 2008 financial crisis",
-        "en_summary": "Nvidia stock has plunged 14%, marking its longest weekly losing streak since the 2008 financial crisis."
-      }
-    },
-    "12": {
-      "topic": "World News / Global",
-      "article": {
-        "title": "Zscaler stock jumps 18% on report that CrowdStrike in talks to buy security vendor",
-        "description": "Cybersecurity companies have been hunting for acquisitions in the AI era.",
-        "url": "https://www.cnbc.com/2026/11/20/zscaler-crowdstrike-deal.html",
-        "source": "CNBC",
-        "published": "2026-11-20T21:35:24+00:00",
-        "image": "assets/news/3d73be1cbe78ec2082250748.jpg",
-        "placeholder": false,
-        "topic": "World News / Global"
-      },
-      "summary": {
-        "id": 12,
-        "zh_title": "Zscaler股票因CrowdStrike与安全供应商洽谈收购而上涨18%",
-        "zh_summary": "网络安全公司在人工智能时代一直在寻找收购机会。",
-        "en_title": "Zscaler stock jumps 18% on report that CrowdStrike in talks to buy security vendor",
-        "en_summary": "Zscaler stock has jumped 18% following reports that CrowdStrike is in talks to acquire a security vendor."
-      }
-    },
-    "13": {
-      "topic": "World News / Global",
-      "article": {
-        "title": "Warsh wants Fed officials to talk less. Instead, they’re talking more",
-        "description": "Fed officials have been rushing to the microphones lately while the Fed chairman stays on the sidelines.",
-        "url": "https://www.cnbc.com/2026/11/20/warsh-fed-forward-guidance-rate-hikes.html",
-        "source": "CNBC",
-        "published": "2026-11-20T21:10:48+00:00",
-        "image": "assets/news/cd04b3cbbdfb8c12fd4c56fb.jpg",
-        "placeholder": false,
-        "topic": "World News / Global"
-      },
-      "summary": {
         "id": 13,
-        "zh_title": "Warsh希望美联储官员少说话，但他们却说得更多",
-        "zh_summary": "美联储官员最近频繁发言，而美联储主席则保持沉默。",
-        "en_title": "Warsh wants Fed officials to talk less. Instead, they’re talking more",
-        "en_summary": "Fed officials have been increasingly vocal lately while the Fed chairman remains on the sidelines."
+        "zh_title": "安索普的创纪录首次公开募股与华尔街自2020年以来最糟糕的一周相撞",
+        "zh_summary": "安索普在纳斯达克的历史性首秀恰逢英伟达的股票结束自2008年以来最长的周跌势。",
+        "en_title": "Anthropic’s record IPO collides with tech’s worst week on Wall Street since 2020",
+        "en_summary": "Anthropic held its historic Nasdaq debut a day before Nvidia's stock closed out its longest weekly losing streak since 2008."
       }
     },
     "14": {
       "topic": "World News / Global",
       "article": {
-        "title": "Highlights and challenges from covering an historic month in South America",
-        "description": "NPR's South America Correspondent discusses her work covering an historic election upset and a papal visit.",
-        "url": "https://www.npr.org/2026/11/21/nx-s1-6044647/highlights-and-challenges-from-covering-an-historic-month-in-south-america",
-        "source": "NPR",
-        "published": "2026-11-21T22:01:35+00:00",
-        "image": "assets/news/fd469057e03db00e45979793.jpg",
+        "title": "Stock market today: Live updates",
+        "description": "Investors are wrapping up a turbulent trading week that was shortened due to the Thanksgiving holiday.",
+        "url": "https://www.cnbc.com/2026/11/26/stock-market-today-live-updates.html",
+        "source": "CNBC",
+        "published": "2026-11-26T23:06:12Z",
+        "image": "assets/news/a26c4bc794d93d14dbf18123.jpg",
         "placeholder": false,
         "topic": "World News / Global"
       },
       "summary": {
         "id": 14,
-        "zh_title": "报道南美历史性月份的亮点和挑战",
-        "zh_summary": "NPR的南美记者讨论她在报道历史性选举逆转和教皇访问时的工作。",
-        "en_title": "Highlights and challenges from covering an historic month in South America",
-        "en_summary": "NPR's South America Correspondent discusses her work covering an historic election upset and a papal visit."
+        "zh_title": "今日股市：实时更新",
+        "zh_summary": "投资者正在结束因感恩节假期缩短的动荡交易周。",
+        "en_title": "Stock market today: Live updates",
+        "en_summary": "Investors are wrapping up a turbulent trading week that was shortened due to the Thanksgiving holiday."
       }
     },
     "15": {
       "topic": "World News / Global",
       "article": {
-        "title": "AI is changing software engineering — and some developers miss the struggle",
-        "description": "AI coding tools are making software engineers faster, but developers tell CNBC the work has lost its \"sense of joy and fun.\"",
-        "url": "https://www.cnbc.com/2026/11/20/ai-coding-tools-software-engineers.html",
+        "title": "Nvidia chip buyers told to rule out Chinese renters to purchase GPUs, sources say",
+        "description": "A new BIS rule was intended to close \"loopholes,\" U.S. Trade Representative Jamieson Greer told CNBC's \"Squawk Box\" on Wednesday.",
+        "url": "https://www.cnbc.com/2026/11/26/neoclouds-nvidia-china-ai.html",
         "source": "CNBC",
-        "published": "2026-11-20T06:00:01+00:00",
-        "image": "assets/news/e9c9829d6ed56f9b1ee6434a.jpg",
+        "published": "2026-11-26T17:04:54+00:00",
+        "image": "assets/news/042d4b6c49a21dd93b5107e4.jpg",
         "placeholder": false,
         "topic": "World News / Global"
       },
       "summary": {
         "id": 15,
-        "zh_title": "人工智能正在改变软件工程——一些开发者怀念奋斗的过程",
-        "zh_summary": "人工智能编码工具使软件工程师的工作更高效，但开发者表示工作失去了“乐趣和快乐”。",
-        "en_title": "AI is changing software engineering — and some developers miss the struggle",
-        "en_summary": "AI coding tools are making software engineers faster, but developers say the work has lost its 'sense of joy and fun.'"
+        "zh_title": "英伟达芯片买家被告知排除中国租户购买GPU",
+        "zh_summary": "一项新的BIS规则旨在关闭“漏洞”，美国贸易代表詹米森·格里尔在周三的节目中表示。",
+        "en_title": "Nvidia chip buyers told to rule out Chinese renters to purchase GPUs, sources say",
+        "en_summary": "A new BIS rule was intended to close 'loopholes,' U.S. Trade Representative Jamieson Greer told CNBC's 'Squawk Box' on Wednesday."
       }
     }
   }
