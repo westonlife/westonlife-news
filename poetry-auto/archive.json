@@ -1,5 +1,13 @@
 [
   {
+    "number": 9,
+    "title": "过故人庄",
+    "author": "孟浩然（唐代）",
+    "release_date": "2026-11-27",
+    "cover": "https://raw.githubusercontent.com/westonlife/westonlife-news/main/poetry-auto/media/009-cover.jpg",
+    "url": "/poetry-auto/poem.html?n=009"
+  },
+  {
     "number": 8,
     "title": "宿建德江",
     "author": "孟浩然（唐）",
